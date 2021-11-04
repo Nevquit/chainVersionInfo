@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <style media="all" type="text/css">
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 0.8em;
+                color: black;
+                background: white;
+            }
+
+             h1 {
+                text-align: center;
+             }
+
+            /* dataframe table */
+            .dataframe {
+                width: 90%;
+                border-collapse: collapse;
+                empty-cells: show;
+                margin-bottom: 0.2em;
+            }
+
+            .dataframe tr:hover {
+                background: #ECECF7;
+                cursor: pointer;
+            }
+            .dataframe th, .dataframe td {
+                border: 1px solid;
+
+            }
+            .dataframe th {
+                background-color: #DCDCF0;
+
+            }
+            .dataframe td {
+                vertical-align: middle;
+            }
+
+        </style>
+    </head>
+<body><h1>chain-node-version-Monitor</h1> </br><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;background :#C0C0C0">
+      <th></th>
+      <th>Node</th>
+      <th>UsingVersion</th>
+      <th>GithubLatestVersion</th>
+      <th>ReleaseDate</th>
+      <th>ReleaseNotes</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>bitcoin</td>
+      <td>22.0</td>
+      <td>22.0</td>
+      <td>2021-09-14T11:32:48Z</td>
+      <td>Bitcoin Core version 22.0 is now available from:</br></br>https://bitcoincore.org/bin/bitcoin-core-22.0/</br></br>For the release notes please see the git repository:</br></br>https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md</br></br>Do not use the links provided by GitHub, rather use the above download links, they are guaranteed to be generated deterministically and signed.</td>
+      <td>Latest</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dogecoin</td>
+      <td>1.14.4</td>
+      <td>1.14.4</td>
+      <td>2021-08-21T00:30:41Z</td>
+      <td>This is a new minor version release, including various bugfixes and performance improvements. It is a recommended update for all users.</br></br>This release can be installed over an existing 1.14 installation seamlessly, without the need for uninstallation, re-indexation or re-download. Simply shut down your running Dogecoin-QT or dogecoind, perform the installation and restart your node.</br></br>Enabling Future Fee Reductions</br>--------------------------------</br></br>Prepares the network for a reduction of the recommended fees by reducing the default fee requirement 1000x for transaction relay and 100x for mining. At the same time it increases freedom for miner, wallet and node operators to agree on fees regardless of defaults coded into the Dogecoin Core software by solidifying fine-grained controls for operators to deviate from built-in defaults.</br></br>This realizes the first part of a two-stage update to lower the fee recommendation - a followup release will implement the lower fee recommendatio...</td>
+      <td>Latest</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>geth</td>
+      <td>1.10.8</td>
+      <td>1.10.11</td>
+      <td>2021-10-20T12:16:08Z</td>
+      <td>Geth v1.10.11 is another bug fix release, fixing an issue with sender not being recovered on pending transactions, and fixing a data corruption issue. </br></br>#### Changes in this release</br></br>- For pending transactions returned by RPC, the sender address is again reported correctly. This was broken in the previous release. ([#23765](https://github.com/ethereum/go-ethereum/pull/23765))</br>- The rlpdump command can now turn structured text into RLP. ([#23745](https://github.com/ethereum/go-ethereum/pull/23745))</br>- A database corruption issue caused by the snapshot system is resolved. ([#23635](https://github.com/ethereum/go-ethereum/pull/23635))</br>- The evm tool's t9n mode performs even stricter transaction validation. ([#23743](https://github.com/ethereum/go-ethereum/pull/23743))</br>- You can now use line editing at the puppeth prompt. ([#23718](https://github.com/ethereum/go-ethereum/pull/23718))</br>- The `geth db` subcommands now accept (non-hex) string keys. ([#23744](https://github.com/ethe...</td>
+      <td>Version Behind</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gwan</td>
+      <td>2.2.0</td>
+      <td>2.2.0</td>
+      <td>2021-04-06T09:46:03Z</td>
+      <td>## Checksums</br>File | CheckSum(MD5) </br>----|------</br>gwan-mac-amd64-2.2.0-2fc9c68b.tar.gz|37919027381d72f585e5b702cf020935</br>gwan-linux-amd64-2.2.0-2fc9c68b.tar.gz|85298fa7a3c58c3b0c365725aa546b05</br>gwan-windows-amd64-2.2.0-2fc9c68b.zip|620a428dc80942a57268333e661c63d6</br></br>## Updates</br>* Jupiter hard-folk for mainnet, all of Gwan nodes should be upgraded</br>* Hard fork time is 0:00 AM, April. 15th, 2021 UTC (Epoch 18732) on mainnet</br>* Hard fork time is 0:00 AM, March. 12th, 2021 UTC (Epoch 18698) on testnet</br>* Support EIP-155 protocol</br>* Chain ID 888 for mainnet</br>* Chain ID 999 for testnet</br>* Support all tools for Ethereum, such as MetaMask, remix, truffle, and so on</br>* Fixed bugs</br></br>## Docker</br>Docker image: wanchain/client-go:2.2.0</br></td>
+      <td>Latest</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>litecoin</td>
+      <td>0.18.1</td>
+      <td>0.18.1</td>
+      <td>2020-06-11T19:52:19Z</td>
+      <td># Litecoin Core v0.18.1 Release</br></br>*Follow our *[*Twitter*](https://twitter.com/litecoinproject)* for the latest dev news.*</br></br>We are pleased to release Litecoin Core 0.18.1. This is a new major version release, including new features, various bugfixes and performance improvements, as well as updated translations. It is recommended for all users to upgrade to this version.</br></br>How to Upgrade</br>==============</br></br>If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over `/Applications/Litecoin-Qt` (on Mac) or `litecoind`/`litecoin-qt` (on Linux).</br></br>The first time you run version 0.15.0 or newer, your chainstate database will be converted to a new format, which will take anywhere from a few minutes to half an hour, depending on the speed of your machine.</br></br>Note that the block database format also changed in version 0.8.0 and there is no automatic u...</td>
+      <td>Latest</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>polkadot</td>
+      <td>0.9.11</td>
+      <td>0.9.12-1</td>
+      <td>2021-10-28T13:33:06Z</td>
+      <td>**NOTE** This is a **runtime-only** release. Node operators do not need to upgrade. As such, no binaries, package files or docker images have been created for this release.</br></br>Native runtimes:</br></br>- Polkadot: **9122**</br>- Kusama: **9122**</br>- Westend: **9122**</br></br>This release was tested against the following versions of `rustc`. Other versions may work.</br></br>- rustc 1.55.0 (c8dfcfe04 2021-09-06)</br>- rustc 1.57.0-nightly (51e514c0f 2021-09-12)</br></br>WASM runtimes built with [srtool v0.9.17](https://github.com/paritytech/srtool) using `rustc 1.53.0 (53cb7b09b 2021-06-17)`.</br></br>Proposal hashes:</br>* `polkadot_runtime-v9122.compact.compressed.wasm`: `0x0f598b97de6adfb2c5edffb7e8e5aed6408d29382a9de372ed229391a20c4a86`</br>* `kusama_runtime-v9122.compact.compressed.wasm`: `0x0ea3de05886579ae1148cfc7db4ac704e0825414a89e09ab66da9a30c5994b07`</br></br></br></br>## Runtime</br></br>* ✅ `not live` Allow queries subscriptions - backport v0.9.12 (#4157)</br>* ⏳ `pending non-critical audit` Fix XCM Teleport Benchmark (backport) (#...</td>
+      <td>Version Behind</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>xrp</td>
+      <td>1.7.3</td>
+      <td>1.7.3</td>
+      <td>2021-08-27T21:29:32Z</td>
+      <td>## Version 1.7.3</br>This is the 1.7.3 release of rippled, the reference implementation of the XRP Ledger protocol. This release addresses an OOB memory read identified by Guido Vranken, as well as an unrelated issue identified by the Ripple C++ team that could result in incorrect use of SLEs. Additionally, this version also introduces the NegativeUNL amendment, which corresponds to the feature which was introduced with the 1.6.0 release.</br></br>## Action Required</br>If you operate an XRP Ledger server, then you should upgrade to version 1.7.3 at your earliest convenience to mitigate the issues addressed in this hotfix. If a sufficient majority of servers on the network upgrade, the NegativeUNL amendment may gain a majority, at which point a two week activation countdown will begin. If the NegativeUNL amendment activates, servers running versions of rippled prior to 1.7.3 will become amendment blocked.</br></br>## Bug Fixes</br>Improve SLE usage in check cashing: Fixes a situation which could result...</td>
+      <td>Latest</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>bch</td>
+      <td>23.1.0</td>
+      <td>23.1.0</td>
+      <td>2021-08-15T00:46:39Z</td>
+      <td># Release Notes for Bitcoin Cash Node version 23.1.0</br></br>Bitcoin Cash Node version 23.1.0 is now available from:</br></br>  &lt;https://bitcoincashnode.org&gt;</br></br>## Overview</br></br>This is a minor release of Bitcoin Cash Node (BCHN) containing several minor bugfixes and some performance improvements, such as:</br></br>- Mempool: 40% performance speedup in removing confirmed txs and multiple speedups for other operations as well.</br>- Mempool: removal of all pre-May 15 2021 logic and data structures, including structures dealing with unconfirmed ancestor limits, saving memory and CPU cycles.</br>- Scalenet: Ensure the "disconnected block transactions" pool has enough memory.</br>- Added the JSON-RPC command: `getdsproofscore`.</br>- Save known DSProofs across restarts to `dsproofs.dat`.</br>- Fixed misspelling of "hexstring" param name in the "signrawtransactionwithwallet" method.</br>- Fix bug where `-txbroadcastinterval=0` would lead to a numerical singularity where no txs were sent. Instead, with this arg at 0, txs ar...</td>
+      <td>Latest</td>
+    </tr>
+  </tbody>
+</table></body>
