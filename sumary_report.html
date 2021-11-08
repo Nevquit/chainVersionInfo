@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2021-11-08 08:55:03.152479 UTC</td>
+      <td>2021-11-08 16:55:03.302279 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2021-11-08 08:55:03.395741 UTC</td>
+      <td>2021-11-08 16:55:03.519641 UTC</td>
       <td>1.14.4</td>
       <td>1.14.4</td>
       <td>1.14.4</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2021-11-08 08:55:03.615307 UTC</td>
+      <td>2021-11-08 16:55:03.753878 UTC</td>
       <td>1.10.8</td>
-      <td>1.10.11</td>
-      <td>1.10.11</td>
-      <td>Version Behind</td>
-      <td>2021-10-20T12:16:08Z</td>
-      <td>Geth v1.10.11 is another bug fix release, fixing an issue with sender not being recovered on pending transactions, and fixing a data corruption issue. </br></br>#### Changes in this release</br></br>- For pending transactions returned by RPC, the sender address is again reported correctly. This was broken in the previous release. ([#23765](https://github.com/ethereum/go-ethereum/pull/23765))</br>- The rlpdump command can now turn structured text into RLP. ([#23745](https://github.com/ethereum/go-ethereum/pull/23745))</br>- A database corruption issue caused by the snapshot system is resolved. ([#23635](https://github.com/ethereum/go-ethereum/pull/23635))</br>- The evm tool's t9n mode performs even stricter transaction validation. ([#23743](https://github.com/ethereum/go-ethereum/pull/23743))</br>- You can now use line editing at the puppeth prompt. ([#23718](https://github.com/ethereum/go-ethereum/pull/23718))</br>- The `geth db` subcommands now accept (non-hex) string keys. ([#23744](https://github.com/ethereum/go-ethereum/pull/23744))</br></br></br>For a full rundown of the changes please consult the Geth 1.10.11 [release milestone](https://github.com/ethereum/go-ethereum/milestone/123?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.10.12</td>
+      <td>1.10.12</td>
+      <td>Node version has update</td>
+      <td>2021-11-08T13:45:20Z</td>
+      <td>Geth v1.10.12 is a scheduled maintenance release, but also contains some significant features!</br></br>**The release enables the [Arrow Glacier hard-fork](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md), scheduled approximately for the 8th of December. The sole change is to [postpone the difficulty-bomb](https://eips.ethereum.org/EIPS/eip-4345) until summer 2022, by which time hopefully The Merge will have happened.**</br></br>The release also ships support for a new PoW testnet called *Sepolia*. This testnet was dreamed up during the merge interop in Athens and it's purpose is to replace Ropsten after the merge as the main cross client testnet. You can access it via `geth --sepolia`. Being a PoW testnet, it's possible to mine it for Ether to use as test funds. </br></br>Lastly, the release also contains a brand new call tracer implemented in Go, which should be significantly (**2.5x**) faster than the one currently used. You can use the new tracer via `debug.traceTransaction("0xhash", {tracer: "callTracer"})`. The original JavaScript tracer is still available for fallback purposes called `callTracerLegacy`. The latter will be dropped if nobody reports issues with the native one.</br></br>Improvements:</br></br>- Implement the Arrow Glacier hard fork and schedule ([#23810](https://github.com/ethereum/go-ethereum/pull/23810)).</br>- Bake in support for the Sepolia PoW test network ([#23730](https://github.com/ethereum/go-ethereum/pull/23730)).</br>- Switch the call tracer to a fast native Go implementation ([#23867](https://github.com/ethereum/go-ethereum/pull/23867), [#23708](https://github.com/ethereum/go-ethereum/pull/23708)).</br>- Optimize nonce handling performance in the txpool ([#22231](https://github.com/ethereum/go-ethereum/pull/22231)).</br>- Support password protected SSH key files in `puppeth` ([#22148](https://github.com/ethereum/go-ethereum/pull/22148)).</br>- Optimize request/response matching in RPC batch queries ([#23856](https://github.com/ethereum/go-ethereum/pull/23856)).</br>- Support transferring snapshots via `geth db export snapshot` ([#22931](https://github.com/ethereum/go-ethereum/pull/22931)).</br>- Read chain data atomically from ancients/leveldb, avoiding an extra read ([#23566](https://github.com/ethereum/go-ethereum/pull/23566)).</br>- Improve the `hexutil` package's big-int encoding performance by 50% ([#23780](https://github.com/ethereum/go-ethereum/pull/23780))</br>- Remove the `xgo` cross compiler as docker auto-build limits killed it ([#23800](https://github.com/ethereum/go-ethereum/pull/23800)).</br>- Support invalid RLP blobs (at least fail gracefully) in the state `t8n` tool ([#23771](https://github.com/ethereum/go-ethereum/pull/23771)).</br></br>Bug-fixes:</br></br>- Fix a crash in LES serving code ([#23865](https://github.com/ethereum/go-ethereum/pull/23865)).</br>- Fix a data race in the miner's receipt copying code ([#23835](https://github.com/ethereum/go-ethereum/pull/23835)).</br>- Fix a missing snapshot error after recovering from a crash ([#23496](https://github.com/ethereum/go-ethereum/pull/23496)).</br>- Fix a memory leak in Clique if the network temporarilly halts ([#23861](https://github.com/ethereum/go-ethereum/pull/23861)).</br>- Fix a crash if the disk gets full during ethash DAG generation ([#23799](https://github.com/ethereum/go-ethereum/pull/23799)).</br>- Fix chain tracing to not go OOM during long running sessions ([#23736](https://github.com/ethereum/go-ethereum/pull/23736)).</br>- Fix the simulated backend to allow running EIP-1559 transactions ([#23838](https://github.com/ethereum/go-ethereum/pull/23838), [#23840](https://github.com/ethereum/go-ethereum/pull/23840)).</br>- Fix an RPC crash when getting the signer of an empty Clique chain ([#23832](https://github.com/ethereum/go-ethereum/pull/23832)).</br>- Fix the total difficulty number of nil-diff genesis blocks in the database ([#23793](https://github.com/ethereum/go-ethereum/pull/23793)).</br>- Fix a crash in `abigen` generated code if backend header retrieval fails ([#23781](https://github.com/ethereum/go-ethereum/pull/23781)).</br></br>For a full rundown of the changes please consult the Geth 1.10.12 [release milestone](https://github.com/ethereum/go-ethereum/milestone/124?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2021-11-08 08:55:03.885845 UTC</td>
+      <td>2021-11-08 16:55:03.998950 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2021-11-08 08:55:04.082232 UTC</td>
+      <td>2021-11-08 16:55:04.233280 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2021-11-08 08:55:04.390382 UTC</td>
+      <td>2021-11-08 16:55:04.485627 UTC</td>
       <td>0.9.11</td>
       <td>0.9.12-1</td>
       <td>0.9.12-1</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2021-11-08 08:55:04.582983 UTC</td>
+      <td>2021-11-08 16:55:04.710102 UTC</td>
       <td>1.7.3</td>
       <td>1.7.3</td>
       <td>1.7.3</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2021-11-08 08:55:04.911998 UTC</td>
+      <td>2021-11-08 16:55:04.970936 UTC</td>
       <td>23.1.0</td>
       <td>23.1.0</td>
       <td>23.1.0</td>
