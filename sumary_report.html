@@ -56,29 +56,29 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2021-11-09 00:55:03.398343 UTC</td>
+      <td>2021-11-09 06:12:13.534510 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
-      <td>Latest</td>
+      <td>Node version has update</td>
       <td>2021-09-14T11:32:48Z</td>
       <td>Bitcoin Core version 22.0 is now available from:</br></br>https://bitcoincore.org/bin/bitcoin-core-22.0/</br></br>For the release notes please see the git repository:</br></br>https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md</br></br>Do not use the links provided by GitHub, rather use the above download links, they are guaranteed to be generated deterministically and signed.</td>
     </tr>
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2021-11-09 00:55:03.621397 UTC</td>
+      <td>2021-11-09 06:12:13.794034 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2021-11-08T18:52:11Z</td>
       <td>This is a new minor version release, including important security updates and changes to network policies. All Dogecoin Core users, miners, services, relay operators and wallet users are strongly recommended to upgrade.</br></br>This release can be installed over an existing 1.14 installation seamlessly, without the need for uninstallation, re-indexation or re-download. Simply shut down your running Dogecoin-QT or dogecoind, perform the installation and restart your node.</br></br>Important Security Updates</br>--------------------------</br></br>This release contains fixes for 2 high severity vulnerabilities that affect most Dogecoin Core users:</br></br>* Remote Code Execution in Dogecoin QT (CVE-2021-3401)</br>* Sensitive Information Exposure on Unix platforms (CVE-2019-15947)</br></br>**Dogecoin QT (Graphical User Interface) users on all platforms and wallet users on the Linux platform are urged to please update their installations to this version immediately**, to prevent malicious actors from exploiting these vulnerabilities.</br></br>Fee Reductions</br>--------------</br></br>This release finalizes a new minimum fee recommendation for all participants on the Dogecoin network, following the reduction of relay and mining defaults in 1.14.4. With this release, the minimum fees when creating transactions are recommended to be as follows:</br></br>* the recommended minimum transaction fee is 0.01 DOGE/kb, and</br>* the recommended dust limit is 1 DOGE, and</br>* the recommended RBF increment is 0.001 DOGE.</br></br>See the full recommendation [here](https://github.com/dogecoin/dogecoin/blob/master/doc/fee-recommendation.md)</br></br>RPC API Changes</br>---------------</br></br>* Added `softdustlimit` and `harddustlimit` fields to `getnetworkinfo`</br>* Added `createauxblock` and `submitauxblock` methods</br>* Added `-rpcnamecoinapi` that allows miners to use Namecoin-compatible AuxPoW APIs, for both `getauxblock` and `createauxblock` methods.</br></br>Other notable changes</br>---------------------</br></br>* Updated Berkely DB to 5.3 and OpenSSL to 1.0.2u.</br>* The version displayed on QT's overview page has been changed to display the full version</br>* Updated the HD wallet derivation path to be compliant with [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) </br>* Updated [the FreeBSD build](https://github.com/dogecoin/dogecoin/blob/master/doc/build-freebsd.md).</br>* Added xkbcommon 0.8.4 as a separate dependency to fix keyboard compatibility issues</br>* Added a [getting started guide](https://github.com/dogecoin/dogecoin/blob/master/doc/getting-started.md)</br></br>See the [release notes](https://github.com/dogecoin/dogecoin/blob/master/doc/release-notes.md) for a full description of this release.</br></td>
     </tr>
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2021-11-09 00:55:03.846221 UTC</td>
+      <td>2021-11-09 06:12:14.004287 UTC</td>
       <td>1.10.8</td>
       <td>1.10.12</td>
       <td>1.10.12</td>
@@ -89,18 +89,18 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2021-11-09 00:55:04.014448 UTC</td>
+      <td>2021-11-09 06:12:14.202607 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
-      <td>Latest</td>
+      <td>Node version has update</td>
       <td>2021-04-06T09:46:03Z</td>
       <td>## Checksums</br>File | CheckSum(MD5) </br>----|------</br>gwan-mac-amd64-2.2.0-2fc9c68b.tar.gz|37919027381d72f585e5b702cf020935</br>gwan-linux-amd64-2.2.0-2fc9c68b.tar.gz|85298fa7a3c58c3b0c365725aa546b05</br>gwan-windows-amd64-2.2.0-2fc9c68b.zip|620a428dc80942a57268333e661c63d6</br></br>## Updates</br>* Jupiter hard-folk for mainnet, all of Gwan nodes should be upgraded</br>* Hard fork time is 0:00 AM, April. 15th, 2021 UTC (Epoch 18732) on mainnet</br>* Hard fork time is 0:00 AM, March. 12th, 2021 UTC (Epoch 18698) on testnet</br>* Support EIP-155 protocol</br>* Chain ID 888 for mainnet</br>* Chain ID 999 for testnet</br>* Support all tools for Ethereum, such as MetaMask, remix, truffle, and so on</br>* Fixed bugs</br></br>## Docker</br>Docker image: wanchain/client-go:2.2.0</br></td>
     </tr>
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2021-11-09 00:55:04.217545 UTC</td>
+      <td>2021-11-09 06:12:14.413913 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2021-11-09 00:55:04.492000 UTC</td>
+      <td>2021-11-09 06:12:14.612285 UTC</td>
       <td>0.9.11</td>
       <td>0.9.12-1</td>
       <td>0.9.12-1</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2021-11-09 00:55:04.670288 UTC</td>
+      <td>2021-11-09 06:12:14.814662 UTC</td>
       <td>1.7.3</td>
       <td>1.7.3</td>
       <td>1.7.3</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2021-11-09 00:55:04.882342 UTC</td>
+      <td>2021-11-09 06:12:14.928392 UTC</td>
       <td>23.1.0</td>
       <td>23.1.0</td>
       <td>23.1.0</td>
