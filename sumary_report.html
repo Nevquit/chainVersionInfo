@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2021-11-25 02:31:41.926035 UTC</td>
+      <td>2021-11-25 02:35:18.379071 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2021-11-25 02:31:42.174084 UTC</td>
+      <td>2021-11-25 02:35:18.675552 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2021-11-25 02:31:42.440838 UTC</td>
+      <td>2021-11-25 02:35:18.954895 UTC</td>
       <td>1.10.8</td>
       <td>1.10.13</td>
       <td>1.10.13</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2021-11-25 02:31:42.664939 UTC</td>
+      <td>2021-11-25 02:35:19.209745 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2021-11-25 02:31:42.925211 UTC</td>
+      <td>2021-11-25 02:35:19.456478 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2021-11-25 02:31:43.153881 UTC</td>
+      <td>2021-11-25 02:35:19.943175 UTC</td>
       <td>0.9.11</td>
       <td>0.9.12-1</td>
       <td>0.9.12-1</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2021-11-25 02:31:43.395176 UTC</td>
+      <td>2021-11-25 02:35:20.026351 UTC</td>
       <td>1.7.3</td>
       <td>1.8.1</td>
       <td>1.8.1</td>
-      <td>Version Behind</td>
+      <td>Node version has update</td>
       <td>2021-11-25T00:32:26Z</td>
       <td>## Version 1.8.0</br>Ripple has released version 1.8.0 of rippled, the reference server implementation of the XRP Ledger protocol. This release brings several features and improvements.</br></br>### New and Improved Features</br></br>- **Improve History Sharding**: Shards of ledger history are now assembled in a deterministic way so that any server can make a binary-identical shard for a given range of ledgers. This makes it possible to retrieve a shard from multiple sources in parallel, then verify its integrity by comparing checksums with peers' checksums for the same shard. Additionally, there's a new admin RPC command to import ledger history from the shard store, and the crawl_shards command has been expanded with more info. ([#2688](https://github.com/ripple/rippled/issues/2688), [#3726](https://github.com/ripple/rippled/pull/3726), [#3875](https://github.com/ripple/rippled/pull/3875))</br>- **New CheckCashMakesTrustLine Amendment**: If enabled, this amendment will change the CheckCash transaction type so that cashing a check for an issued token automatically creates a trust line to hold the token, similar to how purchasing a token in the decentralized exchange creates a trust line to hold the token. This change provides a way for issuers to send tokens to a user before that user has set up a trust line, but without forcing anyone to hold tokens they don't want. ([#3823](https://github.com/ripple/rippled/pull/3823))</br>- **Automatically determine the node size**: The server now selects an appropriate `[node_size]` configuration value by default if it is not explicitly specified. This parameter tunes various settings to the specs of the hardware that the server is running on, especially the amount of RAM and the number of CPU threads available in the system. Previously the server always chose the smallest value by default.</br>- **Improve transaction relaying logic**: Previously, the server relayed every transaction to all its peers (except the one that it received the transaction from). To reduce redundant messages, the server now relays transactions to a subset of peers using a randomized algorithm. Peers can determine whether there are transactions they have not seen and can request them from a peer that has them. It is expected that this feature will further reduce the bandwidth needed to operate a server.</br>- **Improve the Byzantine validator detector**: This expands the detection capabilities of the Byzantine validation detector. Previously, the server only monitored validators on its own UNL. Now, the server monitors for Byzantine behavior in all validations it sees.</br>- **Experimental tx stream with history for sidechains**: Adds an experimental subscription stream for sidechain federators to track messages on the main chain in canonical order. This stream is expected to change or be replaced in future versions as work on sidechains matures.</br>- **Support Debian 11 Bullseye**: This is the first release that is compatible with Debian Linux version 11.x, "Bullseye." The .deb packages now use absolute paths only, for compatibility with Bullseye's stricter package requirements. ([#3909](https://github.com/ripple/rippled/pull/3909))</br>- **Improve Cache Performance**: The server uses a new storage structure for several in-memory caches for greatly improved overall performance. The process of purging old data from these caches, called "sweeping", was time-consuming and blocked other important activities necessary for maintaining ledger state and participating in consensus. The new structure divides the caches into smaller partitions that can be swept in parallel.</br>- **Amendment default votes:** Introduces variable default votes per amendment. Previously the server always voted "yes" on any new amendment unless an admin explicitly configured a voting preference for that amendment. Now the server's default vote can be "yes" or "no" in the source code. This should allow a safer, more gradual roll-out of new amendments, as new releases can be configured to understand a new amendment but not vote for it by default. ([#3877](https://github.com/ripple/rippled/pull/3877))</br>- **More fields in the `validations` stream:** The `validations` subscription stream in the API now reports additional fields that were added to validation messages by the HardenedValidations amendment. These fields make it easier to detect misconfigurations such as multiple servers sharing a validation key pair. ([#3865](https://github.com/ripple/rippled/pull/3865))</br>- **Reporting mode supports `validations` and `manifests` streams:** In the API it is now possible to connect to these streams when connected to a servers running in reporting. Previously, attempting to subscribe to these streams on a reporting server failed with the error `reportingUnsupported`. ([#3905](https://github.com/ripple/rippled/pull/3905))</br></br>### Bug Fixes</br></br>- **Clarify the safety of NetClock::time_point arithmetic**: * NetClock::rep is uint32_t and can be error-prone when   used with subtraction. * Fixes [#3656](https://github.com/ripple/rippled/pull/3656)</br>- **Fix out-of-bounds reserve, and some minor optimizations**</br>- **Fix nested locks in ValidatorSite**</br>- **Fix clang warnings about copies vs references**</br>- **Fix reporting mode build issue**</br>- **Fix potential deadlock in Validator sites**</br>- **Use libsecp256k1 instead of OpenSSL for key derivation**: The deterministic key derivation code was still using calls to OpenSSL. This replaces the OpenSSL-based routines with new libsecp256k1-based implementations</br>- **Improve NodeStore to ShardStore imports**: This runs the import process in a background thread while preventing online_delete from removing ledgers pending import</br>- **Simplify SHAMapItem construction**: The existing class offered several constructors which were mostly unnecessary. This eliminates all existing constructors and introduces a single new one, taking a `Slice`. The internal buffer is switched from `std::vector` to `Buffer` to save a minimum of 8 bytes (plus the buffer slack that is inherent in `std::vector`) per SHAMapItem instance.</br>- **Redesign stoppable objects**: Stoppable is no longer an abstract base class, but a pattern, modeled after the well-understood `std::thread`. The immediate benefits are less code, less synchronization, less runtime work, and (subjectively) more readable code. The end goal is to adhere to RAII in our object design, and this is one necessary step on that path.</br></td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2021-11-25 02:31:43.646536 UTC</td>
+      <td>2021-11-25 02:35:20.264142 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2021-11-25 02:31:43.858664 UTC</td>
+      <td>2021-11-25 02:35:20.494846 UTC</td>
       <td>6.7.1</td>
       <td>6.9.2</td>
       <td>6.9.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2021-11-25 02:31:44.142894 UTC</td>
+      <td>2021-11-25 02:35:20.745337 UTC</td>
       <td>1.2.19</td>
       <td>1.2.21</td>
       <td>1.2.21</td>
