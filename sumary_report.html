@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2021-12-10 16:55:02.311992 UTC</td>
+      <td>2021-12-11 00:55:02.491636 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2021-12-10 16:55:02.591450 UTC</td>
+      <td>2021-12-11 00:55:02.738272 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2021-12-10 16:55:02.866882 UTC</td>
+      <td>2021-12-11 00:55:02.960982 UTC</td>
       <td>1.10.8</td>
       <td>1.10.13</td>
       <td>1.10.13</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2021-12-10 16:55:03.240066 UTC</td>
+      <td>2021-12-11 00:55:03.179522 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2021-12-10 16:55:03.538952 UTC</td>
+      <td>2021-12-11 00:55:03.479747 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,18 +111,18 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2021-12-10 16:55:03.869313 UTC</td>
+      <td>2021-12-11 00:55:03.797201 UTC</td>
       <td>0.9.11</td>
-      <td>0.9.13</td>
-      <td>0.9.13</td>
-      <td>Version Behind</td>
-      <td>2021-12-02T19:43:23Z</td>
-      <td>Upgrade priority: ❗ HIGH ❗ Please upgrade your node as soon as possible due to changes: #4270 and #4273 (see details below).</br></br>&lt;!--</br>Upgrade priority: **Medium** (timely upgrade recommended) due to changes: *Limit the number of PVF workers (#4273), Update CI image to the latest rustc (paritytech/substrate#10142), Removal of light client from substrate (paritytech/substrate#9684)*</br>--&gt;</br></br>Native runtimes:</br></br>- Polkadot: **9130**</br>- Kusama: **9130**</br>- Westend: **9130**</br></br>This release was tested against the following versions of `rustc`. Other versions may work.</br></br>- rustc 1.56.1 (59eed8a2a 2021-11-01)</br>- rustc 1.58.0-nightly (46b8e7488 2021-11-07)</br></br>WASM runtimes built with [srtool v0.9.18](https://github.com/paritytech/srtool) using `rustc 1.56.1 (59eed8a2a 2021-11-01)`.</br></br>Proposal hashes:</br>* `polkadot_runtime-v9130.compact.compressed.wasm`: `0x70d1a30b4f562b540ff69109cac8259d97ef5f36388202dacf7ca60c02c35bcf`</br>* `kusama_runtime-v9130.compact.compressed.wasm`: `0xd1f2e86456642553fc7a6d00728b108d2e5d6e06506bf152936cc0255e3eed40`</br></br>## Changes</br></br>* Limit the number of PVF workers (#4273)</br>* Increase preparation timeout (#4270)</br>* Per subsystem CPU usage tracking (#4239)</br>* remove duplicate Deposit from OnUnbalanced implementation (#4180)</br>* polkadot: remove call filters on registrar pallets (#4093)</br></br>## Client</br></br>* Add group name in task metrics  (paritytech/substrate#10196)</br>* Add a `trie_root_hash` variant for chain specs genesis (paritytech/substrate#10140)</br>* Don't print "Discovered new external" line for private IPs (paritytech/substrate#10055)</br>* Removal of light client from substrate (paritytech/substrate#9684)</br></br>## Runtime</br></br>* ⏳ `pending non-critical audit` Add disputes to Kusama runtime (#4356)</br>* ⏳ `pending non-critical audit` Enable full use of pallet-bags-list in westend and kusama runtimes (#4195)</br>* ✅ `not live` Allow Queries and Subscriptions (#4150)</br>* ⏳ `pending non-critical audit` Fix XCM Teleport Benchmark (#4146)</br>* ✅ `not live` Fix weights on hard-coded XCM fragments (#4144)</br>* ✅ `audited` Enable bags-list pallet in polkadot (#4080)</br>* ✅ `trivial` Introduce new Runtime API endpoint for fetching the validation data (#3728)</br>* ✅ `not live` Fix Weight Handlebar Template (paritytech/substrate#10302)</br>* ✅ `trivial` Offence implementations can disable offenders independently from slashing (paritytech/substrate#10201)</br>* ⏳ `pending non-critical audit` rework `staking::reap_stash` (paritytech/substrate#10178)</br>* ✅ `not live` contracts: Fix account counter isn't persisted (paritytech/substrate#10112)</br>* ✅ `trivial` Kill the light client, CHTs and change tries. (paritytech/substrate#10080)</br>* ✅ `audited` implement dispatch_as (paritytech/substrate#9934)</br>* ✅ `not live` Support MMR Pruning (paritytech/substrate#9700)</br>* ✅ `not live` Add Baseline FRAME Benchmarks (paritytech/substrate#9691)</br></td>
+      <td>0.9.14</td>
+      <td>0.9.14</td>
+      <td>Node version has update</td>
+      <td>2021-12-10T18:19:21Z</td>
+      <td>Upgrade priority: **Low** (upgrade at your convenience) </br></br>**NOTE:** This is a runtime-only release. You do not need to update your nodes.</br></br>Native runtimes:</br></br>- Polkadot: **9140**</br>- Kusama: **9140**</br>- Westend: **9140**</br></br>This release was tested against the following versions of `rustc`. Other versions may work.</br></br>- rustc 1.56.1 (59eed8a2a 2021-11-01)</br>- rustc 1.58.0-nightly (46b8e7488 2021-11-07)</br></br>WASM runtimes built with [srtool v0.9.18](https://github.com/paritytech/srtool) using `rustc 1.56.1 (59eed8a2a 2021-11-01)`.</br></br>Proposal hashes:</br>* `polkadot_runtime-v9140.compact.compressed.wasm`: `0x317c7862dc523bd083e4dd6545079bdc18058f561bada9e5e5646935b1cc04af`</br>* `kusama_runtime-v9140.compact.compressed.wasm`: `0xf019744924a5812fbaa0298c8a2455b654d8028cb9db6aa3b808c076ee8006f8`</br></br>## Runtime</br></br>* ✅ `trivial` Disable asset transfers on Polkadot (#4475)</td>
     </tr>
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2021-12-10 16:55:04.129983 UTC</td>
+      <td>2021-12-11 00:55:04.007333 UTC</td>
       <td>1.7.3</td>
       <td>1.8.1</td>
       <td>1.8.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2021-12-10 16:55:04.469015 UTC</td>
+      <td>2021-12-11 00:55:04.221097 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2021-12-10 16:55:04.792272 UTC</td>
+      <td>2021-12-11 00:55:04.454102 UTC</td>
       <td>6.7.1</td>
       <td>6.11.1</td>
       <td>6.11.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2021-12-10 16:55:05.053189 UTC</td>
+      <td>2021-12-11 00:55:04.692725 UTC</td>
       <td>1.2.19</td>
       <td>1.3.2</td>
       <td>1.3.2</td>
