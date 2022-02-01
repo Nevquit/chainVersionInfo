@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-02-01 00:55:02.388944 UTC</td>
+      <td>2022-02-01 08:55:03.770446 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-02-01 00:55:02.723255 UTC</td>
+      <td>2022-02-01 08:55:04.159906 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-02-01 00:55:03.069412 UTC</td>
+      <td>2022-02-01 08:55:04.384361 UTC</td>
       <td>1.10.8</td>
       <td>1.10.15</td>
       <td>1.10.15</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-02-01 00:55:03.343629 UTC</td>
+      <td>2022-02-01 08:55:04.735543 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-02-01 00:55:03.578528 UTC</td>
+      <td>2022-02-01 08:55:04.984183 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-02-01 00:55:03.793042 UTC</td>
+      <td>2022-02-01 08:55:05.223020 UTC</td>
       <td>0.9.11</td>
       <td>0.9.15-1</td>
       <td>0.9.15-1</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-02-01 00:55:03.981390 UTC</td>
+      <td>2022-02-01 08:55:05.408713 UTC</td>
       <td>1.7.3</td>
       <td>1.8.4</td>
       <td>1.8.4</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-01-31T20:48:34Z</td>
       <td>## Version 1.8.4</br>This is the 1.8.4 release of `rippled`, the reference implementation of the XRP Ledger protocol.</br></br>This release corrects a technical flaw introduced with 1.8.3 that may result in failures if the newly-introduced 'fast loading' is enabled. The release also adjusts default parameters used to configure the pathfinding engine to reduce resource usage.</br></br>### Bug Fixes</br>- **Adjust mutex scope in `walkMapParallel`**: This commit corrects a technical flaw introduced with commit 7c12f0135897361398917ad2c8cda888249d42ae that would result in undefined behavior if the server operator configured their server to use the 'fast loading' mechanism introduced with 1.8.3.</br></br>- **Adjust pathfinding configuration defaults**: This commit adjusts the default configuration of the pathfinding engine, to account for the size of the XRP Ledger mainnet. Unless explicitly overriden, the changes mean that pathfinding operations will return fewer, shallower paths than previous releases.</br></br></br>## Version 1.8.3</br>This is the 1.8.3 release of `rippled`, the reference implementation of the XRP Ledger protocol.</br></br>This release implements changes that improve the syncing performance of peers on the network, adds countermeasures to several routines involving LZ4 to defend against CVE-2021-3520, corrects a minor technical flaw that would result in the server not using a cache for nodestore operations, and adjusts tunable values to optimize disk I/O.</br></br>### Summary of Issues</br>Recently, servers in the XRP Ledger network have been taking an increasingly long time to sync back to the network after restartiningg. This is one of several releases which will be made to improve on this issue. </br></br></br>### Bug Fixes</br></br>- **Parallel ledger loader &amp; I/O performance improvements**: This commit makes several changes that, together, should decrease the time needed for a server to sync to the network. To make full use of this change, `rippled` needs to be using storage with high IOPS and operators need to explicitly enable this behavior by adding the following to their config file, under the `[node_db]` stanza:</br></br>    [node_db]</br>    ...</br>    fast_load=1</br></br>Note that when 'fast loading' is enabled the server will not open RPC and WebSocket interfaces until after the initial load is completed. Because of this, it may appear unresponsive or down.</br></br>- **Detect CVE-2021-3520 when decompressing using LZ4**: This commit adds code to detect LZ4 payloads that may result in out-of-bounds memory accesses.</br></br>- **Provide sensible default values for nodestore cache:**: The nodestore includes a built-in cache to reduce the disk I/O load but, by default, this cache was not initialized unless it was explicitly configured by the server operator. This commit introduces sensible defaults based on the server's configured node size. </br></br>- **Adjust the number of concurrent ledger data jobs**: Processing a large amount of data at once can effectively bottleneck a server's I/O subsystem. This commits helps optimize I/O performance by controlling how many jobs can concurrently process ledger data.</br></br>- **Two small SHAMapSync improvements**: This commit makes minor changes to optimize the way memory is used and control the amount of background I/O performed when attempting to fetch missing `SHAMap` nodes.</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-02-01 00:55:04.205755 UTC</td>
+      <td>2022-02-01 08:55:05.604908 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-02-01 00:55:04.451637 UTC</td>
+      <td>2022-02-01 08:55:05.851763 UTC</td>
       <td>6.7.1</td>
       <td>7.6.1</td>
       <td>7.6.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-02-01 00:55:04.648395 UTC</td>
+      <td>2022-02-01 08:55:06.100666 UTC</td>
       <td>1.2.19</td>
       <td>1.5.1</td>
       <td>1.5.1</td>
