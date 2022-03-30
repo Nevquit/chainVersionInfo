@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-03-29 16:55:02.089054 UTC</td>
+      <td>2022-03-30 00:55:02.011330 UTC</td>
       <td>22.0</td>
       <td>22.0</td>
       <td>22.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-03-29 16:55:02.331308 UTC</td>
+      <td>2022-03-30 00:55:02.218826 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-03-29 16:55:02.554059 UTC</td>
+      <td>2022-03-30 00:55:02.425921 UTC</td>
       <td>1.10.8</td>
-      <td>1.10.16</td>
-      <td>1.10.16</td>
-      <td>Version Behind</td>
-      <td>2022-02-16T12:27:58Z</td>
-      <td>The focus of this release is bugfixes.</br></br>#### Bugfixes</br></br>- Block tracing via `debug.traceBlockByHash` has sometimes produced inconsistent/corrupt results. Fixed via ([#24286](https://github.com/ethereum/go-ethereum/pull/24286)).</br>- The `--whitelist` CLI parameter functionality was broken in `v1.10.14`, and is fixed in this release ([#24210](https://github.com/ethereum/go-ethereum/pull/24210)).</br>- A bug was introduced, and subsequently fixed, which could cause data corruption during mining ([#24349](https://github.com/ethereum/go-ethereum/pull/24349)).</br>- When signing complex datatypes in EIP712-type data, the signing-hash was incorrect. Fixed via ([#24220](https://github.com/ethereum/go-ethereum/pull/24220)).</br>- Evm execution times exported via `metrics`, were sometimes incorrect. Fixed in ([#24304](https://github.com/ethereum/go-ethereum/pull/24304)).</br>- Range prover edgecases found and fixed ([#24266](https://github.com/ethereum/go-ethereum/pull/24266), [#24257](https://github.com/ethereum/go-ethereum/pull/24257)).</br>- Fix an error related to `HTTP2` handling ([#24292](https://github.com/ethereum/go-ethereum/pull/24292)).</br>- A lot of spleling-mistkaes and issues related to correctness were fixed ([#24194](https://github.com/ethereum/go-ethereum/pull/24194), [#24196](https://github.com/ethereum/go-ethereum/pull/24196), [#24198](https://github.com/ethereum/go-ethereum/pull/24198), [#24205](https://github.com/ethereum/go-ethereum/pull/24205), [#24207](https://github.com/ethereum/go-ethereum/pull/24207), [#24244](https://github.com/ethereum/go-ethereum/pull/24244), [#24270](https://github.com/ethereum/go-ethereum/pull/24270), [#24271](https://github.com/ethereum/go-ethereum/pull/24271), [#24224](https://github.com/ethereum/go-ethereum/pull/24224), [#24372](https://github.com/ethereum/go-ethereum/pull/24372), [#24323](https://github.com/ethereum/go-ethereum/pull/24323), [#24289](https://github.com/ethereum/go-ethereum/pull/24289), [#24263](https://github.com/ethereum/go-ethereum/pull/24263) and [#24211](https://github.com/ethereum/go-ethereum/pull/24211)).</br></br>#### New features</br></br>- Work on The Merge includes support for `RANDOM` opcode ([#24141](https://github.com/ethereum/go-ethereum/pull/24141)) and various other internal refactorings ([#24328](https://github.com/ethereum/go-ethereum/pull/24328), [#24280](https://github.com/ethereum/go-ethereum/pull/24280), [#24236](https://github.com/ethereum/go-ethereum/pull/24236), [#23256](https://github.com/ethereum/go-ethereum/pull/23256)).</br>-  The `devp2p` binary now supports doing `snap/v1` protocol testing against a remote node, which can be used for Hive-testing ([#24276](https://github.com/ethereum/go-ethereum/pull/24276)).</br>- New diagnostic command to show database metadata ([#23900](https://github.com/ethereum/go-ethereum/pull/23900))</br>- `ethclient` support for `CallContractAtHash` ([#24355](https://github.com/ethereum/go-ethereum/pull/24355)).</br>- Support chainId for GnosisSafeTx ([#24231](https://github.com/ethereum/go-ethereum/pull/24231)).</br></br></br>#### Performance</br></br>- Tracing was improved by making the `prestate` tracer be a native tracer ([#24320](https://github.com/ethereum/go-ethereum/pull/24320), [#24268](https://github.com/ethereum/go-ethereum/pull/24268)).</br>- Potentially reduce database allocations in some cases ([#24117](https://github.com/ethereum/go-ethereum/pull/24117)).</br>- Add a set of cross-client external benchmarks ([#24050](https://github.com/ethereum/go-ethereum/pull/24050)).</br>- Improve transaction indexing performance ([#24197](https://github.com/ethereum/go-ethereum/pull/24197)).</br></br></br>For a full rundown of the changes please consult the Geth 1.10.16 [release milestone](https://github.com/ethereum/go-ethereum/milestone/128?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.10.17</td>
+      <td>1.10.17</td>
+      <td>Node version has update</td>
+      <td>2022-03-29T17:20:22Z</td>
+      <td>This is a maintenance release. This release contains a lot of work in preparation for The Merge, and work for an upcoming change to the way state is stored in go-ethereum. </br></br>This release also adds a new tool to convert 'legacy' receipts into a newer format. During startup, geth will check the database and tell you if you need to perform the conversion. Converting receipts is only needed if geth's `ancients` database has not been resynced from scratch during the last couple of years. It is recommended to back-up your receipts freezer table (`ancients/receipts*`) before performing the conversion.</br></br>Compatibility note about `core/types`: For optimization purposes, `types.Header` and other types in this package now implement the `rlp.Encoder` interface. This change can cause incompatibilities because the new method is implemented with pointer receiver. Attempting to RLP-encode unadressable (i.e. non-pointer) values of type `Header` does not work anymore and will result in an error.</br></br>### Change Log</br></br>- A lot of work towards "The Merge" (TM) was performed ([#24574](https://github.com/ethereum/go-ethereum/pull/24574), [#24569](https://github.com/ethereum/go-ethereum/pull/24569), [#24550](https://github.com/ethereum/go-ethereum/pull/24550), [#24548](https://github.com/ethereum/go-ethereum/pull/24548), [#24506](https://github.com/ethereum/go-ethereum/pull/24506), [#24545](https://github.com/ethereum/go-ethereum/pull/24545), [#23982](https://github.com/ethereum/go-ethereum/pull/23982), [#24522](https://github.com/ethereum/go-ethereum/pull/24522), [#24364](https://github.com/ethereum/go-ethereum/pull/24364))</br>- A lot optimizations for RLP encoding and package trie were added (roughly 20-30% improvement) ([#24126](https://github.com/ethereum/go-ethereum/pull/24126), [#24425](https://github.com/ethereum/go-ethereum/pull/24425), [#24420](https://github.com/ethereum/go-ethereum/pull/24420), [#24251](https://github.com/ethereum/go-ethereum/pull/24251))</br>- Preparatory work for an upcoming for state layout change ([#24460](https://github.com/ethereum/go-ethereum/pull/24460), [#23954](https://github.com/ethereum/go-ethereum/pull/23954), [#24486](https://github.com/ethereum/go-ethereum/pull/24486), [#24391](https://github.com/ethereum/go-ethereum/pull/24391), [#24392](https://github.com/ethereum/go-ethereum/pull/24392))</br>- GraphQL: fee history API methods were added, along with nonce for pending accounts ([#24452](https://github.com/ethereum/go-ethereum/pull/24452))</br>- The non-cgo fallback secp256k1 crypto library was updated and is now ~25% faster ([#24533](https://github.com/ethereum/go-ethereum/pull/24533)) </br>- Support for signing nested types via `clef` ([#24407](https://github.com/ethereum/go-ethereum/pull/24407))</br>- Receipt converter tool ([#24028](https://github.com/ethereum/go-ethereum/pull/24028))</br>- Our builds were updated to use Go 1.18</br></br>For a full rundown of the changes please consult the Geth 1.10.17 [release milestone](https://github.com/ethereum/go-ethereum/milestone/129?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-03-29 16:55:02.789647 UTC</td>
+      <td>2022-03-30 00:55:02.642632 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-03-29 16:55:03.053034 UTC</td>
+      <td>2022-03-30 00:55:02.872378 UTC</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
       <td>0.18.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-03-29 16:55:03.293221 UTC</td>
+      <td>2022-03-30 00:55:03.184313 UTC</td>
       <td>0.9.16</td>
       <td>0.9.18</td>
       <td>0.9.18</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-03-29 16:55:03.525893 UTC</td>
+      <td>2022-03-30 00:55:03.500195 UTC</td>
       <td>1.8.1</td>
       <td>1.8.5</td>
       <td>1.8.5</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-03-29 16:55:03.769404 UTC</td>
+      <td>2022-03-30 00:55:03.857189 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-03-29 16:55:03.964662 UTC</td>
+      <td>2022-03-30 00:55:04.120113 UTC</td>
       <td>6.7.1</td>
       <td>7.14.3</td>
       <td>7.14.3</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-03-29 16:55:04.205427 UTC</td>
+      <td>2022-03-30 00:55:04.370219 UTC</td>
       <td>1.2.19</td>
       <td>1.5.8</td>
       <td>1.5.8</td>
