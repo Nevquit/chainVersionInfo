@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-05-09 00:55:10.472339 UTC</td>
+      <td>2022-05-09 08:55:03.406171 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-05-09 00:55:10.733601 UTC</td>
+      <td>2022-05-09 08:55:03.603561 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-05-09 00:55:10.958524 UTC</td>
+      <td>2022-05-09 08:55:03.850499 UTC</td>
       <td>1.10.8</td>
       <td>1.10.17</td>
       <td>1.10.17</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-05-09 00:55:11.222098 UTC</td>
+      <td>2022-05-09 08:55:04.026105 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,18 +100,18 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-05-09 00:55:11.451478 UTC</td>
+      <td>2022-05-09 08:55:04.327682 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-05-08T17:55:18Z</td>
       <td>Litecoin Core v0.21.2 Release</br>==============</br></br>Follow our [Twitter](https://twitter.com/litecoinproject) for the latest dev news.</br></br>We are pleased to release Litecoin Core 0.21.2. This is a new major version release, including new features, various bugfixes and performance improvements, as well as updated translations. This update includes full node, wallet and mining support for MWEB. It is recommended for all users to upgrade to this version.</br></br>How to upgrade: </br>==============</br></br>Firstly, thank you for running Litecoin Core and helping secure the network!</br></br>As you’re running an older version of Litecoin Core, shut it down. Wait until it’s completely shut down  - which might take a few minutes for older versions - then follow these simple steps:</br>For Windows: simply run the installer </br>For Mac: copy over to `/Applications/Litecoin-Qt` </br>For Linux: copy cover `litecoind`/`litecoin-qt`.</br></br>NB: upgrading directly from an ‘end of life’ version of Litecoin Core is possible, but it might take a while if the data directory needs to be migrated. Old wallet versions of Litecoin Core are generally supported.</br> </br></br>Compatibility:</br>==============</br></br>Litecoin Core is supported and extensively tested on operating systems using the Linux kernel, macOS 10.10+,  Windows 7 and newer. It’s not recommended to use Litecoin Core on unsupported systems.</br></br>Litecoin Core should also work on most other Unix-like systems, but is not as frequently tested on them.</br></br>MWEB fields added to BlockIndex, and block serialization format has changed. Downgrading to older versions is unsafe.</br></br>If upgrading to 0.21.2 *after* MWEB has activated, you must resync to download MWEB blocks.</br></br>Notable changes</br>===============</br></br>Consensus changes</br>-----------------</br></br>- This release implements the proposed MWEB consensus rules</br>  ([LIP002](https://github.com/litecoin-project/lips/blob/master/lip-0002.mediawiki),</br>  [LIP003](https://github.com/litecoin-project/lips/blob/master/lip-0003.mediawiki), and</br>  [LIP004](https://github.com/litecoin-project/lips/blob/master/lip-0004.mediawiki))</br></br>P2P and network changes</br>-----------------------</br></br>- A new service flag, NODE_MWEB (1 &lt;&lt; 24), was added to signal to peers that the node supports MWEB.</br>  When connected peers both advertise this capability, they are expected to provide all MWEB data when</br>  sharing transactions, blocks, and compact blocks with each other.</br></br>- Nodes now announce compact block version 3 support, informing peers that they can provide MWEB data</br>  in compact blocks.</br></br></br>Updated RPCs</br>------------</br></br>- `getblockheader` now returns an additional `mweb_header` field containing</br>  all of the MWEB header data, and an `mweb_amount` field containing the total</br>  number of coins pegged-in to the MWEB after applying the block.</br></br>- `getblock` now returns an additional `mweb` field containing MWEB header info,</br>  and all of the inputs, outputs, and kernels in the MWEB block.</br></br>- Added `mwebweight`, `descendantmwebweight`, `ancestormwebweight`, and `mweb`</br>  fields to `getrawmempool`, `getmempoolancestors`, `getmempooldescendants`,</br>  and `getmempoolentry`.</br></br>- Added new fields to describe MWEB transaction inputs, outputs, and kernels</br>  for `getrawtransaction`.</br></br>Changes to Wallet or GUI related RPCs can be found in the GUI or Wallet section below.</br></br>New settings</br>------------</br></br>- Added "fMWEBFeatures" option for enabling the new "Advanced MWEB Features"</br>  control.</br></br>Wallet Database</br>---------------</br></br>- Added "mweb_coin" type which stores MWEB coins and their derived keys.</br></br>- Added CHDChain version 4 which includes an MWEB key index counter and</br>  the stealth address scan key.</br></br>- Added CKeyMetadata version 14 which includes the MWEB key index.</br></br>- Added FEATURE_MWEB = 210000 minimum database version.</br></br>Wallet RPC changes</br>------------------</br></br>- Added 'listwallettransactions' which matches the transaction list display values.</br></br>GUI changes</br>-----------</br></br>- Added an "Advanced MWEB Features" control for testing. It’s only available</br>  when the "-debug" argument is supplied, and the option is turned on in the</br>  settings dialog.</br></br>Download Binaries</br>=======</br></br>To download, please visit the download page [here](https://litecoin.org/). Alternatively, you can view the download folder [here](https://download.litecoin.org/litecoin-0.21.2/).</br></br>Please use GPG to verify the integrity of the release binaries. This ensures that the binary you have downloaded has not been tampered with. Linux, MacOS and Win32 cygwin command line GPG instructions are available [here](https://download.litecoin.org/README-HOWTO-GPG-VERIFY-TEAM-MEMBERS-KEY.txt). Please also note that we GPG sign the binaries as a convenience to you, the ultimate way to verify the integrity of the builds is to build them yourself using Gitian. Instructions on how to perform these builds, can be found [here](https://github.com/litecoin-project/litecoin/blob/master/doc/gitian-building.md).</br></br>For this release, the binaries have been signed with key identifier [0x3620e9d387e55666 ](https://pgp.mit.edu/pks/lookup?op=get&amp;search=0x3620E9D387E55666)(davidburkett38’s key).</br></br>WARNING</br>=======</br></br>Despite this version being heavily tested, this version may still contain bugs. Always backup your wallet.dat file before upgrading. If you encounter any issues, please let us know by posting to the bug reporting section below.</br>Source code &amp; Build instructions</br></br>The master branch contains the latest commits to the next stable releases of Litecoin Core.</br></br>Source code &amp; Build instructions</br>=======</br></br>The master branch contains the latest commits to the next stable releases of Litecoin Core.</br>https://github.com/litecoin-project/litecoin/commits/master</br></br>Build instructions for Linux can be found [here](https://github.com/litecoin-project/litecoin/blob/v0.21.2/doc/build-unix.md).</br></br>Build instructions for OSX can be found [here](https://github.com/litecoin-project/litecoin/blob/v0.21.2/doc/build-osx.md).</br></br>Builds instructions for Windows can be found [here](https://github.com/litecoin-project/litecoin/blob/v0.21.2/doc/build-windows.md).</br></br>Bug Reporting</br>=======</br></br>Submit any issues you encounter here and one of the Litecoin developers will assist you.</br></br>https://github.com/litecoin-project/litecoin/issues</br></br>Mailing Lists</br>=======</br></br>Sign up for announcements only or development discussion.</br></br>https://groups.google.com/forum/#!forum/litecoin-announce</br>https://groups.google.com/forum/#!forum/litecoin-dev</br></br>Hashes for verification</br>---------</br></br>These are the SHA-256 hashes of the released files:</br></br>```</br>b5a0b5bdf45c5e1f26c73a0be751ceb90c93fad8679aebe22ed5f64f615aea6b litecoin-0.21.2-aarch64-linux-gnu.tar.gz</br>e15b4d9db8807706c3492c05287f04c44956e3cdb77ebf4f87e19a296aa3a06b litecoin-0.21.2-arm-linux-gnueabihf.tar.gz</br>cb2a1504f151646d735d198ce77a1c1e4fea3ff672ed60549d6aa9f1d4a19b09 litecoin-0.21.2-riscv64-linux-gnu.tar.gz</br>94a10a217d91d29e97e7a0088bc1545f34b188297c3ce5b87b07e775d8d00b12 litecoin-0.21.2-x86_64-linux-gnu.tar.gz</br>39d0df6aecace19e91c9849d09aaeb60c0bb73b34a97c7b8ccae402da634cfa2 litecoin-0.21.2-osx.dmg</br>b0ab5fc95d8b7cfe990cc6d90d0af6f6f2d447b6a0bca162a72d12c3df1676a7 litecoin-0.21.2-win64-setup.exe</br>```</br></br>Credits</br>=======</br></br>Thanks to everyone who directly contributed to this release:</br></br>- [The Bitcoin Core Developers](https://github.com/bitcoin/bitcoin/tree/master/doc/release-notes)</br>- DavidBurkett</br>- hectorchu</br>- losh11</td>
     </tr>
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-05-09 00:55:11.673229 UTC</td>
+      <td>2022-05-09 08:55:04.584325 UTC</td>
       <td>0.9.16</td>
       <td>0.9.20</td>
       <td>0.9.20</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-05-09 00:55:11.902732 UTC</td>
+      <td>2022-05-09 08:55:04.782677 UTC</td>
       <td>1.8.1</td>
       <td>1.9.0</td>
       <td>1.9.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-05-09 00:55:12.127745 UTC</td>
+      <td>2022-05-09 08:55:05.111246 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-05-09 00:55:12.359850 UTC</td>
+      <td>2022-05-09 08:55:05.468732 UTC</td>
       <td>6.7.1</td>
       <td>8.3.2</td>
       <td>8.3.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-05-09 00:55:12.590685 UTC</td>
+      <td>2022-05-09 08:55:05.742498 UTC</td>
       <td>1.2.19</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
