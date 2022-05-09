@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-05-09 08:55:03.406171 UTC</td>
+      <td>2022-05-09 16:55:03.876812 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-05-09 08:55:03.603561 UTC</td>
+      <td>2022-05-09 16:55:04.148584 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-05-09 08:55:03.850499 UTC</td>
+      <td>2022-05-09 16:55:04.407039 UTC</td>
       <td>1.10.8</td>
-      <td>1.10.17</td>
-      <td>1.10.17</td>
-      <td>Version Behind</td>
-      <td>2022-03-29T17:20:22Z</td>
-      <td>This is a maintenance release. This release contains a lot of work in preparation for The Merge, and work for an upcoming change to the way state is stored in go-ethereum. </br></br>This release also adds a new tool to convert 'legacy' receipts into a newer format. During startup, geth will check the database and tell you if you need to perform the conversion. Converting receipts is only needed if geth's `ancients` database has not been resynced from scratch during the last couple of years. It is recommended to back-up your receipts freezer table (`ancients/receipts*`) before performing the conversion.</br></br>Compatibility note about `core/types`: For optimization purposes, `types.Header` and other types in this package now implement the `rlp.Encoder` interface. This change can cause incompatibilities because the new method is implemented with pointer receiver. Attempting to RLP-encode unadressable (i.e. non-pointer) values of type `Header` does not work anymore and will result in an error.</br></br>### Change Log</br></br>- A lot of work towards "The Merge" (TM) was performed ([#24574](https://github.com/ethereum/go-ethereum/pull/24574), [#24569](https://github.com/ethereum/go-ethereum/pull/24569), [#24550](https://github.com/ethereum/go-ethereum/pull/24550), [#24548](https://github.com/ethereum/go-ethereum/pull/24548), [#24506](https://github.com/ethereum/go-ethereum/pull/24506), [#24545](https://github.com/ethereum/go-ethereum/pull/24545), [#23982](https://github.com/ethereum/go-ethereum/pull/23982), [#24522](https://github.com/ethereum/go-ethereum/pull/24522), [#24364](https://github.com/ethereum/go-ethereum/pull/24364))</br>- A lot optimizations for RLP encoding and package trie were added (roughly 20-30% improvement) ([#24126](https://github.com/ethereum/go-ethereum/pull/24126), [#24425](https://github.com/ethereum/go-ethereum/pull/24425), [#24420](https://github.com/ethereum/go-ethereum/pull/24420), [#24251](https://github.com/ethereum/go-ethereum/pull/24251))</br>- Preparatory work for an upcoming for state layout change ([#24460](https://github.com/ethereum/go-ethereum/pull/24460), [#23954](https://github.com/ethereum/go-ethereum/pull/23954), [#24486](https://github.com/ethereum/go-ethereum/pull/24486), [#24391](https://github.com/ethereum/go-ethereum/pull/24391), [#24392](https://github.com/ethereum/go-ethereum/pull/24392))</br>- GraphQL: fee history API methods were added, along with nonce for pending accounts ([#24452](https://github.com/ethereum/go-ethereum/pull/24452))</br>- The non-cgo fallback secp256k1 crypto library was updated and is now ~25% faster ([#24533](https://github.com/ethereum/go-ethereum/pull/24533)) </br>- Support for signing nested types via `clef` ([#24407](https://github.com/ethereum/go-ethereum/pull/24407))</br>- Receipt converter tool ([#24028](https://github.com/ethereum/go-ethereum/pull/24028))</br>- Our builds were updated to use Go 1.18</br></br>For a full rundown of the changes please consult the Geth 1.10.17 [release milestone](https://github.com/ethereum/go-ethereum/milestone/129?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
+      <td>1.10.15</td>
+      <td>1.10.15</td>
+      <td>Node version has update</td>
+      <td>2022-01-05T16:18:35Z</td>
+      <td>This release resolves a few regressions introduced by the previous release. Most importantly, it fixes an issue that could cause peer-to-peer 'eth' connections to lock up. </br></br>Please upgrade ASAP if you are running geth v1.10.12 / .13 / .14.</br></br>- A hang in ancient data serving caused by double-locking is fixed. (#24189)</br>- A crash in the LES server related to reorg handling is resolved. (#24189)</br>- The SyncProgress method of ethclient.Client works again. (#24199)</br>- Several inconsistencies in the GraphQL API are also fixed in this release. (#24190, #24188, #24191)</br></br>For a full rundown of the changes please consult the Geth 1.10.15 [release milestone](https://github.com/ethereum/go-ethereum/milestone/127?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-05-09 08:55:04.026105 UTC</td>
+      <td>2022-05-09 16:55:04.609584 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-05-09 08:55:04.327682 UTC</td>
+      <td>2022-05-09 16:55:04.835381 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
@@ -111,18 +111,18 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-05-09 08:55:04.584325 UTC</td>
+      <td>2022-05-09 16:55:05.051299 UTC</td>
       <td>0.9.16</td>
-      <td>0.9.20</td>
-      <td>0.9.20</td>
-      <td>Version Behind</td>
-      <td>2022-05-04T14:14:39Z</td>
-      <td></br>&lt;!-- repository: polkadot --&gt;</br>&lt;!-- NOT a pre-release--&gt;</br>This release contains the changes from `v0.9.19` to `v0.9.20`.</br></br>&lt;!--</br>## Debug</br></br>changes:</br> - total: 71</br> - silent: 62</br> - remaining: 9</br>--&gt;</br></br>## Upgrade Priority</br></br>&lt;!-- detected max prio is: 3 --&gt;</br>❗️ Medium: This is a medium priority release and you should upgrade in a timely manner.</br></br>The changes motivating this priority level are:</br></br>- [P] [`#5164`](https://github.com/paritytech/polkadot/pull/5164) ❗️ Medium - Reduce network bandwidth, improve parablock times: optimize …</br></br>&lt;!--</br>- Polkadot: 3</br>- Substrate: 1</br>--&gt;</br></br>&lt;!-- 0 host functions were detected --&gt;</br>&lt;!-- ℹ️ This release does not contain any new host functions. --&gt;</br></br>## Rust compiler versions</br></br>This release was tested against the following versions of `rustc`. Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (e745b4ddb 2022-04-07)`</br>## Database Migrations</br></br>No Database migration detected in this release.</br></br>## Runtime Migrations</br></br>No Runtime migration detected in this release.</br></br>## Runtimes</br></br>The information about the runtimes included in this release can be found below.</br>The runtimes have been built using [srtool v0.9.19](https://github.com/paritytech/srtool) and `rustc 1.57.0 (f1edd0429 2021-11-29)`.</br></br>### Kusama</br>&lt;!-- commit : 568169b41aea59a54ab8cfa23c31e84a26708280 --&gt;</br>&lt;!-- tag    : v0.9.20-rc9 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : kusama-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.26 MB (1326166 bytes)</br>🔥 Core Version:\t\tkusama-9200 (parity-kusama-0.tx11.au2)</br>🗜 Compressed:\t\t\tYes: 80.98%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x4a6baf1a8e29618fda342a2ef8aab3163f5547573d84ec559f7625426fba5852</br>🗳️ authorizeUpgrade hash:\t0xb245095ad7202fbc4cc480e01f20e1782e637219593b1398f7f519dce3dfd1b0</br>#️⃣ Blake2-256 hash:\t\t0xc9afd314fb9ef320a9d11bad5e421832a3a79b8aa7193efc9ef910a58b275ab4</br>📦 IPFS:\t\t\tQmVTGZ99EgsJwzhFVfYCGi4mFzayYqucnoqZtEQAJfgE29</br>```</br></br>### Polkadot</br>&lt;!-- commit : 568169b41aea59a54ab8cfa23c31e84a26708280 --&gt;</br>&lt;!-- tag    : v0.9.20 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : polkadot-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.19 MB (1244837 bytes)</br>🔥 Core Version:\t\tpolkadot-9200 (parity-polkadot-0.tx12.au0)</br>🗜 Compressed:\t\t\tYes: 80.84%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0xf94667fb9411092c1c0b2f157021ff871d92c60becfe8cd467a16e6d6ccf4a92</br>🗳️ authorizeUpgrade hash:\t0xd9fe2fb18af05adea64f2b7f37ea1d6f6164cdffa17e7d06ef8098c38ee167a1</br>#️⃣ Blake2-256 hash:\t\t0x97c9a3b6ba8d0cabb713519313e06edea544b2fb1399fee2338b81673bff70c5</br>📦 IPFS:\t\t\tQmSG4GMb6Vhi4H6ouW796GR3CB8HdvChgeVnTdH6QSEZEk</br>```</br></br>### Rococo</br>&lt;!-- commit : 568169b41aea59a54ab8cfa23c31e84a26708280 --&gt;</br>&lt;!-- tag    : v0.9.20-rc9 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : rococo-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t968.74 KB (991987 bytes)</br>🔥 Core Version:\t\trococo-9200 (parity-rococo-v2.0-0.tx0.au0)</br>🗜 Compressed:\t\t\tYes: 81.23%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x5be5813cbc9b1cb58ec0db5c45de348679a57d7d71679f96f5a87be341f715b6</br>🗳️ authorizeUpgrade hash:\t0x554616eec22c9e352737fa61a17eabd7cfc67c2a96c59c8bfd21bb7a00c884ae</br>#️⃣ Blake2-256 hash:\t\t0x25c0d84a97b34deaf2cb073d211f823adfa5155b793f0120276436963414cf35</br>📦 IPFS:\t\t\tQmdKyRiU8Jm3YeNVc6xmz8tCdiTvULqprSHhXvhZ3zkCJH</br>```</br></br>### Westend</br>&lt;!-- commit : 568169b41aea59a54ab8cfa23c31e84a26708280 --&gt;</br>&lt;!-- tag    : v0.9.20-rc9 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : westend-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.16 MB (1211796 bytes)</br>🔥 Core Version:\t\twestend-9201 (parity-westend-0.tx11.au2)</br>🗜 Compressed:\t\t\tYes: 80.89%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0xa6281dc8984537e984b65fe34557821db920f90bd2ceac50cd50df31df1bd81e</br>🗳️ authorizeUpgrade hash:\t0x52333606984c54154d6243c02778eb312b30703a99bc2b19cecf26ae48fd8af7</br>#️⃣ Blake2-256 hash:\t\t0xda4fa8431710d94c3197a86232b29d9790dcad5cdf78b528ce1c92725ef529cc</br>📦 IPFS:\t\t\tQmSY3sGp2aKUuGrfBQEy5nW4XuGrj4FgZFirB89Zkz62aK</br>```</br></br>## Changes</br></br>### Legend</br></br>- [P] Polkadot</br>- [S] Substrate</br></br>### Client</br>- [S] ✅ trivial [`#11062`](https://github.com/paritytech/substrate/pull/11062) Low - Add new hardware and software metrics</br>- [S] ✅ trivial [`#11200`](https://github.com/paritytech/substrate/pull/11200) Low - Finality notification: optimize calculation of stale heads</br>- [S] ✅ trivial [`#11198`](https://github.com/paritytech/substrate/pull/11198) Low - Add `benchmark machine`</br></br></br>### Runtime</br>- [S] ✅ trivial [`#11206`](https://github.com/paritytech/substrate/pull/11206) Low - Fix wasm block producer panic</br>- [P] [`#4442`](https://github.com/paritytech/polkadot/pull/4442) Low - Add xcm benchmarks to kusama</br>- [S] ✅ trivial [`#10827`](https://github.com/paritytech/substrate/pull/10827) Low - Rb staking pallet validator commission change event</br>- [P] ✅ trivial [`#5405`](https://github.com/paritytech/polkadot/pull/5405) Low - Add nomination pools to westend runtime</br></br></br></br></br>### Misc</br></br></br>- [S] ✅ trivial [`#11062`](https://github.com/paritytech/substrate/pull/11062) Low - Add new hardware and software metrics</br>- [S] ✅ trivial [`#11200`](https://github.com/paritytech/substrate/pull/11200) Low - Finality notification: optimize calculation of stale heads</br>- [S] ✅ trivial [`#11206`](https://github.com/paritytech/substrate/pull/11206) Low - Fix wasm block producer panic</br>- [P] [`#4442`](https://github.com/paritytech/polkadot/pull/4442) Low - Add xcm benchmarks to kusama</br>- [S] ✅ trivial [`#10827`](https://github.com/paritytech/substrate/pull/10827) Low - Rb staking pallet validator commission change event</br>- [S] ✅ trivial [`#11198`](https://github.com/paritytech/substrate/pull/11198) Low - Add `benchmark machine`</br>- [P] ✅ trivial [`#5326`](https://github.com/paritytech/polkadot/pull/5326) Low - Co #11198: expose `benchmark machine` command</br>- [P] [`#5164`](https://github.com/paritytech/polkadot/pull/5164) ❗️ Medium - Reduce network bandwidth, improve parablock times: optimize …</br>- [P] ✅ trivial [`#5405`](https://github.com/paritytech/polkadot/pull/5405) Low - Add nomination pools to westend runtime</br></br></br>&lt;!--</br>## Docker images</br></br>The docker image for this release can be found in [Docker hub](https://hub.docker.com/r/parity/polkadot-collator/tags?page=1&amp;ordering=last_updated).</br></br>You may also pull it with:</br></br>```</br>docker pull parity/polkadot-collator:latest</br>```</br>--&gt;</br></br></td>
+      <td>0.9.21</td>
+      <td>0.9.21</td>
+      <td>Node version has update</td>
+      <td>2022-05-09T15:41:07Z</td>
+      <td>## Upgrade Priority</br></br></br>This is a **High** priority release for Kusama and Polkadot, please update nodes as soon as possible.</br></br>**Once enough Kusama validators have upgraded to this release, parachain block times for Kusama should significantly decrease.**</br></br></br>## Rust compiler versions</br></br>This release was compiled with following versions of `rustc`. Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (e745b4ddb 2022-04-07)`</br></br></br># Runtimes</br></br>_This is a client only release - there will be no corresponding 9210 runtime upgrade for Polkadot or Kusama_</br></br></br># Changes</br></br>The only notable change is [#5471](https://github.com/paritytech/polkadot/pull/5471) -  _Improve dispute-coordinator message burstiness handling_:</br>- Based on these changes on testnets, this change should decrease Parachain block times on Kusama to a significant degree.</br>- Previously, the `dispute-coordinator` was the parachain subsystem that took up a large amount of resources, causing generation of offchain information about parachain progress for the runtime to time out (the inherent data was empty and thus, no progress on enacting/backing of parachains from the runtime side could happen). This manifested in longer parachain block times. The fix to this problem is that certain internal queries of the dispute coordinator are now prioritized.</br>- Some more context can be found [In this issue](https://github.com/paritytech/polkadot/issues/5445)</br></br></td>
     </tr>
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-05-09 08:55:04.782677 UTC</td>
+      <td>2022-05-09 16:55:05.270637 UTC</td>
       <td>1.8.1</td>
       <td>1.9.0</td>
       <td>1.9.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-05-09 08:55:05.111246 UTC</td>
+      <td>2022-05-09 16:55:05.529210 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-05-09 08:55:05.468732 UTC</td>
+      <td>2022-05-09 16:55:05.754326 UTC</td>
       <td>6.7.1</td>
       <td>8.3.2</td>
       <td>8.3.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-05-09 08:55:05.742498 UTC</td>
+      <td>2022-05-09 16:55:06.014376 UTC</td>
       <td>1.2.19</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
