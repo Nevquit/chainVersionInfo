@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-05-09 16:55:03.876812 UTC</td>
+      <td>2022-05-10 00:55:01.759421 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-05-09 16:55:04.148584 UTC</td>
+      <td>2022-05-10 00:55:01.967884 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-05-09 16:55:04.407039 UTC</td>
+      <td>2022-05-10 00:55:02.165462 UTC</td>
       <td>1.10.8</td>
       <td>1.10.15</td>
       <td>1.10.15</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-01-05T16:18:35Z</td>
       <td>This release resolves a few regressions introduced by the previous release. Most importantly, it fixes an issue that could cause peer-to-peer 'eth' connections to lock up. </br></br>Please upgrade ASAP if you are running geth v1.10.12 / .13 / .14.</br></br>- A hang in ancient data serving caused by double-locking is fixed. (#24189)</br>- A crash in the LES server related to reorg handling is resolved. (#24189)</br>- The SyncProgress method of ethclient.Client works again. (#24199)</br>- Several inconsistencies in the GraphQL API are also fixed in this release. (#24190, #24188, #24191)</br></br>For a full rundown of the changes please consult the Geth 1.10.15 [release milestone](https://github.com/ethereum/go-ethereum/milestone/127?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-05-09 16:55:04.609584 UTC</td>
+      <td>2022-05-10 00:55:02.373625 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-05-09 16:55:04.835381 UTC</td>
+      <td>2022-05-10 00:55:02.610926 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
@@ -111,18 +111,18 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-05-09 16:55:05.051299 UTC</td>
+      <td>2022-05-10 00:55:02.807504 UTC</td>
       <td>0.9.16</td>
       <td>0.9.21</td>
       <td>0.9.21</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-05-09T15:41:07Z</td>
       <td>## Upgrade Priority</br></br></br>This is a **High** priority release for Kusama and Polkadot, please update nodes as soon as possible.</br></br>**Once enough Kusama validators have upgraded to this release, parachain block times for Kusama should significantly decrease.**</br></br></br>## Rust compiler versions</br></br>This release was compiled with following versions of `rustc`. Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (e745b4ddb 2022-04-07)`</br></br></br># Runtimes</br></br>_This is a client only release - there will be no corresponding 9210 runtime upgrade for Polkadot or Kusama_</br></br></br># Changes</br></br>The only notable change is [#5471](https://github.com/paritytech/polkadot/pull/5471) -  _Improve dispute-coordinator message burstiness handling_:</br>- Based on these changes on testnets, this change should decrease Parachain block times on Kusama to a significant degree.</br>- Previously, the `dispute-coordinator` was the parachain subsystem that took up a large amount of resources, causing generation of offchain information about parachain progress for the runtime to time out (the inherent data was empty and thus, no progress on enacting/backing of parachains from the runtime side could happen). This manifested in longer parachain block times. The fix to this problem is that certain internal queries of the dispute coordinator are now prioritized.</br>- Some more context can be found [In this issue](https://github.com/paritytech/polkadot/issues/5445)</br></br></td>
     </tr>
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-05-09 16:55:05.270637 UTC</td>
+      <td>2022-05-10 00:55:03.040172 UTC</td>
       <td>1.8.1</td>
       <td>1.9.0</td>
       <td>1.9.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-05-09 16:55:05.529210 UTC</td>
+      <td>2022-05-10 00:55:03.250051 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-05-09 16:55:05.754326 UTC</td>
+      <td>2022-05-10 00:55:03.478767 UTC</td>
       <td>6.7.1</td>
       <td>8.3.2</td>
       <td>8.3.2</td>
@@ -155,13 +155,13 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-05-09 16:55:06.014376 UTC</td>
+      <td>2022-05-10 00:55:03.748347 UTC</td>
       <td>1.2.19</td>
-      <td>3.0.1</td>
-      <td>3.0.1</td>
-      <td>Version Behind</td>
-      <td>2022-05-04T16:09:58Z</td>
-      <td>## [3.0.1](https://github.com/paritytech/txwrapper-core/compare/v3.0.0...v3.0.1) (2022-05-04)### Bug Fixes* **bug:** test-helpers removed ([#216](https://github.com/paritytech/txwrapper-core/issues/216)) ([f858c4a](https://github.com/paritytech/txwrapper-core/commit/f858c4af23bb8e0d239602f65ad333565020a431))</td>
+      <td>3.0.2</td>
+      <td>3.0.2</td>
+      <td>Node version has update</td>
+      <td>2022-05-09T21:24:24Z</td>
+      <td>## [3.0.2](https://github.com/paritytech/txwrapper-core/compare/v3.0.1...v3.0.2) (2022-05-09)</br></br></br>### Bug Fixes</br></br>* **deps:** Update pjs deps([#217](https://github.com/paritytech/txwrapper-core/issues/217)) ([247ce58](https://github.com/paritytech/txwrapper-core/commit/247ce5869081f24ded7ae7f35703df6907a05273))</br>"@polkadot/api": "8.3.2"</br></br></br></br></td>
     </tr>
   </tbody>
 </table></body>
