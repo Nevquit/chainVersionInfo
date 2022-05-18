@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-05-18 08:55:03.150776 UTC</td>
+      <td>2022-05-18 16:55:03.898782 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-05-18 08:55:03.479226 UTC</td>
+      <td>2022-05-18 16:55:04.171386 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-05-18 08:55:03.758209 UTC</td>
+      <td>2022-05-18 16:55:04.506646 UTC</td>
       <td>1.10.8</td>
       <td>1.10.17</td>
       <td>1.10.17</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-05-18 08:55:04.050377 UTC</td>
+      <td>2022-05-18 16:55:04.760632 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-05-18 08:55:04.392883 UTC</td>
+      <td>2022-05-18 16:55:05.135230 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
@@ -111,18 +111,18 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-05-18 08:55:04.632058 UTC</td>
+      <td>2022-05-18 16:55:05.500951 UTC</td>
       <td>0.9.16</td>
-      <td>0.9.21</td>
-      <td>0.9.21</td>
-      <td>Version Behind</td>
-      <td>2022-05-09T15:41:07Z</td>
-      <td>## Upgrade Priority</br></br></br>This is a **High** priority release for Kusama and Polkadot, please update nodes as soon as possible.</br></br>**Once enough Kusama validators have upgraded to this release, parachain block times for Kusama should significantly decrease.**</br></br></br>## Rust compiler versions</br></br>This release was compiled with following versions of `rustc`. Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (e745b4ddb 2022-04-07)`</br></br></br># Runtimes</br></br>_This is a client only release - there will be no corresponding 9210 runtime upgrade for Polkadot or Kusama_</br></br></br># Changes</br></br>The only notable change is [#5471](https://github.com/paritytech/polkadot/pull/5471) -  _Improve dispute-coordinator message burstiness handling_:</br>- Based on these changes on testnets, this change should decrease Parachain block times on Kusama to a significant degree.</br>- Previously, the `dispute-coordinator` was the parachain subsystem that took up a large amount of resources, causing generation of offchain information about parachain progress for the runtime to time out (the inherent data was empty and thus, no progress on enacting/backing of parachains from the runtime side could happen). This manifested in longer parachain block times. The fix to this problem is that certain internal queries of the dispute coordinator are now prioritized.</br>- Some more context can be found [In this issue](https://github.com/paritytech/polkadot/issues/5445)</br></br></td>
+      <td>0.9.22</td>
+      <td>0.9.22</td>
+      <td>Node version has update</td>
+      <td>2022-05-18T15:39:11Z</td>
+      <td></br>&lt;!-- repository: polkadot --&gt;</br>&lt;!-- NOT a pre-release--&gt;</br>This release contains the changes from `v0.9.21` to `v0.9.22`.</br></br></br>&lt;!--</br>changes:</br> - total: 153</br> - silent: 132</br> - remaining: 21</br>--&gt;</br></br></br>&lt;!-- Such a comment will be rendered but remain invisible in the rendered markdown --&gt;</br>&lt;!-- Edit below this line --&gt;</br>&lt;!-- Edit above this line --&gt;</br>## Notes</br></br>### RPC Server</br></br>This release switches to a new JSON-RPC server library, which imposes the following changes:</br>- IPC transport support has been removed.</br>- **DEPRECATED** CLI `--rpc-max-payload`: has been deprecated in favor of `--rpc-max-request-size` or `rpc-max-response-size`.</br>- **DEPRECATED** CLI `--ws-max-out-buffer-capacity`: has been been deprecated in favour of `rpc-max-response-size`.</br>- **DEPRECATED** CLI `--ipc-path`: has been been deprecated and does nothing.</br>- NEW CLI `--ws-max-request-size`: to limit maximum size of a incoming request.</br>- NEW CLI `--ws-max-response-size`: to limit max size of a produced response.</br>- The maximum number of subscriptions per connection has been hardcoded to 1024, this will be configurable in the next release via a `CLI flag`.</br>- The logging has slightly changed: If you rely on waiting for the output `Listening for new connections &lt;ADDR&gt;`, it has changed to `Running JSON-RPC WS server: addr=&lt;ADDR&gt;` to determine when RPC servers has been started.</br></br>### Weights</br></br>As with every release, the weights have been adjusted according to the latest benchmarks. </br>The details can be found [here](https://github.com/paritytech/polkadot/pull/5511/files).</br></br>## Upgrade Priority</br></br>&lt;!-- detected max prio is: 1 --&gt;</br>Low: This is a low priority release and you may upgrade at your convenience.</br></br>&lt;!-- No relevant Priority label as been detected for p=1 --&gt;</br></br>&lt;!--</br>- Polkadot: 1</br>- Substrate: 1</br>--&gt;</br></br>&lt;!-- 0 host functions were detected --&gt;</br></br>## Host functions</br>ℹ️ This release does not contain any new host functions.</br></br>## Database Migrations</br></br>ℹ️ There is no database migration in this release.</br></br>## Runtime Migrations</br></br>Runtime migrations are operations running once during a runtime upgrade.</br>⚠️ There is one runtime migration in this release:</br>- [P] ✅ trivial [`#5447`](https://github.com/paritytech/polkadot/pull/5447) Low - Add nomination pools to kusama</br></br>## Rust compiler versions</br></br>This release was built and tested against the following versions of `rustc`.</br>Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (6dd68402c 2022-05-11)`</br>## Runtimes</br></br>The information about the runtimes included in this release can be found below.</br>The runtimes have been built using [srtool v0.9.20](https://github.com/paritytech/srtool) and `rustc 1.60.0 (7737e0b5c 2022-04-04)`.</br></br>### Kusama</br>&lt;!-- commit : 17c7b9594aedbfc644d7e6e26f7bd244e68ccf4d --&gt;</br>&lt;!-- tag    : v0.9.22-rc5 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : kusama-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.27 MB (1334927 bytes)</br>🔥 Core Version:\t\tkusama-9220 (parity-kusama-0.tx11.au2)</br>🗜 Compressed:\t\t\tYes: 79.93%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x72f60c5db391e6b93ce5326e62787e78409570564f3d9eac47d373b5290e7e96</br>🗳️ authorizeUpgrade hash:\t0x1d3a6412f2d1b3bdee87db4a517e8468a834fe2a675c4f62ee633694b279e61a</br>#️⃣ Blake2-256 hash:\t\t0xfa7a00ce83b9c72eed224bcfaa7ad7ac206f55c1470efbcc280b842b611e154d</br>📦 IPFS:\t\t\tQmbmSJHDwMs2DdrXhrVFTRtGcweMeUjjMuxDZQLG85ewCR</br>```</br></br>### Polkadot</br>&lt;!-- commit : 17c7b9594aedbfc644d7e6e26f7bd244e68ccf4d --&gt;</br>&lt;!-- tag    : v0.9.22-rc5 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : polkadot-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.15 MB (1204340 bytes)</br>🔥 Core Version:\t\tpolkadot-9220 (parity-polkadot-0.tx12.au0)</br>🗜 Compressed:\t\t\tYes: 79.89%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x061f7d9c2994b388cf69da9c4bef9f8c1ea1b00a66c43531f515aeacbe0a76a8</br>🗳️ authorizeUpgrade hash:\t0x90fd786b77ad94745d1fa31ee5f5c547bdb1a57e214216b7dbec48232aecd3db</br>#️⃣ Blake2-256 hash:\t\t0xc0ebe1fe04e21861f236448c53a4a2eface547a857aac3fdcaa7397bd5978edb</br>📦 IPFS:\t\t\tQmWxoj1i7FoVCXSRasExQZSDM11NRkEVAc9txyeBExnzXk</br>```</br></br>### Rococo</br>&lt;!-- commit : 17c7b9594aedbfc644d7e6e26f7bd244e68ccf4d --&gt;</br>&lt;!-- tag    : v0.9.22-rc5 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : rococo-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t938.43 KB (960949 bytes)</br>🔥 Core Version:\t\trococo-9220 (parity-rococo-v2.0-0.tx0.au0)</br>🗜 Compressed:\t\t\tYes: 80.45%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0xcfd9f759a7eb15624c7db05570368c8af862e9f920db6340b03e179554424abd</br>🗳️ authorizeUpgrade hash:\t0xf04fa645fc752ca8ad40fdf5adafcef0ad1b2901ffdb30578cc4c76bf45398e3</br>#️⃣ Blake2-256 hash:\t\t0x1da9b54e284acec427450f69590d9fb2828fa6c0468d9ec42df6a266ac1112ca</br>📦 IPFS:\t\t\tQmUVdeEarTjksz9v5Fxw4KPbz8NDRdQMMr9UnZEhz3e7wB</br>```</br></br>### Westend</br>&lt;!-- commit : 17c7b9594aedbfc644d7e6e26f7bd244e68ccf4d --&gt;</br>&lt;!-- tag    : v0.9.22-rc5 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : westend-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.12 MB (1175176 bytes)</br>🔥 Core Version:\t\twestend-9220 (parity-westend-0.tx11.au2)</br>🗜 Compressed:\t\t\tYes: 79.99%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x9f04da18a613cc848f0b04c2d60cd640459aa220144c91c5f13343f7fcdc38c9</br>🗳️ authorizeUpgrade hash:\t0xae57c9107e72975cd8bd2e03d81fcb4c202419ba284180f0ef1bd2d30282cc8d</br>#️⃣ Blake2-256 hash:\t\t0x226249ecff1e887bff022790b22d7805984da854eb497d8ae714a2795a2a2894</br>📦 IPFS:\t\t\tQmak16rKA6HnpR3PUs8rTXGZjSxRUejLGnKejj464Hz6uX</br>```</br></br>## Changes</br></br>### Legend</br></br>- [P] Polkadot</br>- [S] Substrate</br></br>### Client</br></br>- [S] ✅ trivial [`#11250`](https://github.com/paritytech/substrate/pull/11250) Low - Add `chain-info` subcommand</br>- [S] ✅ trivial [`#11259`](https://github.com/paritytech/substrate/pull/11259) Low - Make wildcard storage change subscriptions rpc-unsafe</br></br></br>### Runtime</br></br>- [S] ⏳ pending non-critical audit [`#10698`](https://github.com/paritytech/substrate/pull/10698) Low - Remark storage</br>- [S] ✅ audited [`#11002`](https://github.com/paritytech/substrate/pull/11002) Low - Configurable call fee refund for signed submissions</br>- [S] ✅ audited [`#10982`](https://github.com/paritytech/substrate/pull/10982) Low - Staking: proportional ledger slashing</br>- [S] ✅ audited [`#10694`](https://github.com/paritytech/substrate/pull/10694) Low - Nomination pools</br>- [S] ✅ trivial [`#11025`](https://github.com/paritytech/substrate/pull/11025) Low - Dependency injection trait locker for uniques pallet</br>- [S] ✅ audited [`#11148`](https://github.com/paritytech/substrate/pull/11148) Low - Add force_batch to utility pallet</br>- [S] ✅ trivial [`#11372`](https://github.com/paritytech/substrate/pull/11372) Low - Contracts: prevent pov attack vector with minimal viable sol…</br>- [P] ✅ trivial [`#5447`](https://github.com/paritytech/polkadot/pull/5447) Low - Add nomination pools to kusama</br>- [P] ✅ trivial [`#5511`](https://github.com/paritytech/polkadot/pull/5511) Low - Update weights (#5507)</br></br></br>### Misc</br></br>There are other misc. changes. You can expand the list below to view them all.</br>&lt;details&gt;&lt;summary&gt;Other misc. changes&lt;/summary&gt;</br></br>- [S] ✅ trivial [`#11087`](https://github.com/paritytech/substrate/pull/11087) Low - Add `frame_support::crypto::ecdsa::public.to_eth_address()` …</br>- [S] ⏳ pending non-critical audit [`#10698`](https://github.com/paritytech/substrate/pull/10698) Low - Remark storage</br>- [S] ✅ audited [`#11002`](https://github.com/paritytech/substrate/pull/11002) Low - Configurable call fee refund for signed submissions</br>- [S] ✅ audited [`#10982`](https://github.com/paritytech/substrate/pull/10982) Low - Staking: proportional ledger slashing</br>- [P] ✅ trivial [`#5369`](https://github.com/paritytech/polkadot/pull/5369) Low - Polkadot-like testnets should be 10 decimal places</br>- [S] ✅ trivial [`#11250`](https://github.com/paritytech/substrate/pull/11250) Low - Add `chain-info` subcommand</br>- [P] ✅ trivial [`#5331`](https://github.com/paritytech/polkadot/pull/5331) Low - Service: use deny-list instead of allow-list for beefy</br>- [S] ✅ trivial [`#11259`](https://github.com/paritytech/substrate/pull/11259) Low - Make wildcard storage change subscriptions rpc-unsafe</br>- [S] ✅ audited [`#10694`](https://github.com/paritytech/substrate/pull/10694) Low - Nomination pools</br>- [S] ✅ trivial [`#11025`](https://github.com/paritytech/substrate/pull/11025) Low - Dependency injection trait locker for uniques pallet</br>- [S] ✅ trivial [`#11337`](https://github.com/paritytech/substrate/pull/11337) Low - [contracts] stabilize `seal_code_hash`, `seal_set_code_hash`…</br>- [S] ✅ audited [`#11148`](https://github.com/paritytech/substrate/pull/11148) Low - Add force_batch to utility pallet</br>- [S] ✅ trivial [`#10995`](https://github.com/paritytech/substrate/pull/10995) Low - Remove the `--unsafe-pruning` cli-argument (step 1)</br>- [S] ✅ trivial [`#11372`](https://github.com/paritytech/substrate/pull/11372) Low - Contracts: prevent pov attack vector with minimal viable sol…</br>- [S] ✅ trivial [`#11378`](https://github.com/paritytech/substrate/pull/11378) Low - [contracts] stabilize `seal_contains_storage`(v`seal0`) and …</br>- [S] ✅ trivial [`#8783`](https://github.com/paritytech/substrate/pull/8783) Low - Jsonrpsee integration</br>- [P] ✅ trivial [`#5447`](https://github.com/paritytech/polkadot/pull/5447) Low - Add nomination pools to kusama</br>- [P] ✅ trivial [`#5511`](https://github.com/paritytech/polkadot/pull/5511) Low - Update weights (#5507)</br></br>&lt;/details&gt;</br></br></br>## Docker images</br></br>The docker image for this release can be found on [Docker hub](https://hub.docker.com/r/parity/polkadot/tags?page=1&amp;ordering=last_updated)</br>(It will be available a few minutes after this release was published).</br></br>You may also pull it with:</br></br>```</br>docker pull parity/polkadot:latest</br>```</br></td>
     </tr>
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-05-18 08:55:04.909414 UTC</td>
+      <td>2022-05-18 16:55:05.756077 UTC</td>
       <td>1.8.1</td>
       <td>1.9.0</td>
       <td>1.9.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-05-18 08:55:05.137808 UTC</td>
+      <td>2022-05-18 16:55:06.041532 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-05-18 08:55:05.362960 UTC</td>
+      <td>2022-05-18 16:55:06.305524 UTC</td>
       <td>6.7.1</td>
       <td>8.4.2</td>
       <td>8.4.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-05-18 08:55:05.618276 UTC</td>
+      <td>2022-05-18 16:55:06.524909 UTC</td>
       <td>1.2.19</td>
       <td>3.0.3</td>
       <td>3.0.3</td>
