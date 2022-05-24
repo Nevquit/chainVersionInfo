@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-05-23 16:55:04.789155 UTC</td>
+      <td>2022-05-24 00:55:02.932887 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-05-23 16:55:05.050252 UTC</td>
+      <td>2022-05-24 00:55:03.187067 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-05-23 16:55:05.349193 UTC</td>
+      <td>2022-05-24 00:55:03.448740 UTC</td>
       <td>1.10.8</td>
       <td>1.10.17</td>
       <td>1.10.17</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-05-23 16:55:05.587481 UTC</td>
+      <td>2022-05-24 00:55:03.665008 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-05-23 16:55:05.839156 UTC</td>
+      <td>2022-05-24 00:55:03.964168 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-05-23 16:55:06.159641 UTC</td>
+      <td>2022-05-24 00:55:04.168113 UTC</td>
       <td>0.9.16</td>
       <td>0.9.22</td>
       <td>0.9.22</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-05-23 16:55:06.425856 UTC</td>
+      <td>2022-05-24 00:55:04.456617 UTC</td>
       <td>1.8.1</td>
-      <td>1.9.0</td>
-      <td>1.9.0</td>
-      <td>Version Behind</td>
-      <td>2022-04-07T17:32:09Z</td>
-      <td>## Version 1.9.0</br>This is the 1.9.0 release of `rippled`, the reference implementation of the XRP Ledger protocol. This release brings several features and improvements.</br></br>### New and Improved Features</br>- **Introduce NFT support (XLS-20):** This release introduces support for non-fungible tokens, currently available to the developer community for broader review and testing.  Developers can create applications that allow users to mint, transfer, and ultimately burn (if desired) NFTs on the XRP Ledger. You can try out the new NFT transactions using the [nft-devnet](https://xrpl.org/xrp-testnet-faucet.html). Note that some fields and error codes from earlier releases of the supporting code have been refactored for this release, shown in the Code Refactoring section, below. ([70779f](https://github.com/ripple/rippled/commit/70779f6850b5f33cdbb9cf4129bc1c259af0013e))</br></br>- **Simplify the Job Queue:** This is a refactor aimed at cleaning up and simplifying the existing job queue. Currently, all jobs are canceled at the same time and in the same way, so this commit removes the unnecessary per-job cancellation token. ([#3656](https://github.com/ripple/rippled/pull/3656))</br></br>- **Optimize trust line caching:** The existing trust line caching code was suboptimal in that it stored redundant information, pinned SLEs into memory, and required multiple memory allocations per cached object. This commit eliminates redundant data, reduces the size of cached objects and unpinning SLEs from memory, and uses value types to avoid the need for `std::shared_ptr`. As a result of these changes, the effective size of a cached object includes the overhead of the memory allocator, and the `std::shared_ptr` should be reduced by at least 64 bytes. This is significant, as there can easily be tens of millions of these objects. ([4d5459](https://github.com/ripple/rippled/commit/4d5459d041da8f5a349c5f458d664e5865e1f1b5))</br></br>- **Incremental improvements to pathfinding memory usage:** This commit aborts background pathfinding when closed or disconnected, exits the pathfinding job thread if there are no requests left, does not create the path find a job if there are no requests, and refactors to remove the circular dependency between InfoSub and PathRequest. ([#4111](https://github.com/ripple/rippled/pull/4111))</br></br>- **Improve deterministic transaction sorting in TxQ:** This commit ensures that transactions with the same fee level are sorted by TxID XORed with the parent ledger hash, the TxQ is re-sorted after every ledger, and attempts to future-proof the TxQ tie-breaking test. ([#4077](https://github.com/ripple/rippled/pull/4077))</br></br>- **Improve stop signaling for Application:** ([34ca45](https://github.com/ripple/rippled/commit/34ca45713244d0defc39549dd43821784b2a5c1d))</br></br>- **Eliminate SHAMapInnerNode lock contention:** The `SHAMapInnerNode` class had a global mutex to protect the array of node children. Profiling suggested that around 4% of all attempts to lock the global would block. This commit removes that global mutex, and replaces it with a new per-node 16-way spinlock (implemented so as not to affect the size of an inner node object), effectively eliminating the lock contention. ([1b9387](https://github.com/ripple/rippled/commit/1b9387eddc1f52165d3243d2ace9be0c62495eea))</br></br>- **Improve ledger-fetching logic:** When fetching ledgers, the existing code would isolate the peer that sent the most useful responses, and issue follow-up queries only to that peer. This commit increases the query aggressiveness, and changes the mechanism used to select which peers to issue follow-up queries to so as to more evenly spread the load among those peers that provided useful responses. ([48803a](https://github.com/ripple/rippled/commit/48803a48afc3bede55d71618c2ee38fd9dbfd3b0))</br></br>- **Simplify and improve order book tracking:** The order book tracking code would use `std::shared_ptr` to track the lifetime of objects. This commit changes the logic to eliminate the overhead of `std::shared_ptr` by using value types, resulting in significant memory savings. ([b9903b](https://github.com/ripple/rippled/commit/b9903bbcc483a384decf8d2665f559d123baaba2))</br></br>- **Negative cache support for node store:** This commit allows the cache to service requests for nodes that were previously looked up but not found, reducing the need to perform I/O in several common scenarios. ([3eb8aa](https://github.com/ripple/rippled/commit/3eb8aa8b80bd818f04c99cee2cfc243192709667))</br></br>- **Improve asynchronous database handlers:** This commit optimizes the way asynchronous node store operations are processed, both by reducing the number of times locks are held and by minimizing the number of memory allocations and data copying. ([6faaa9](https://github.com/ripple/rippled/commit/6faaa91850d6b2eb9fbf16c1256bf7ef11ac4646))</br></br>- **Cleanup AcceptedLedger and AcceptedLedgerTx:** This commit modernizes the `AcceptedLedger` and `AcceptedLedgerTx` classes, reduces their memory footprint, and reduces unnecessary dynamic memory allocations. ([8f5868](https://github.com/ripple/rippled/commit/8f586870917818133924bf2e11acab5321c2b588))</br></br>### Code Refactoring</br></br>This release includes name changes in the NFToken API for SFields, RPC return labels, and error codes for clarity and consistency. To refactor your code, migrate the names of these items to the new names as listed below.</br> </br>#### `SField` name changes:</br>* `TokenTaxon -&gt; NFTokenTaxon`</br>* `MintedTokens -&gt; MintedNFTokens`</br>* `BurnedTokens -&gt; BurnedNFTokens`</br>* `TokenID -&gt; NFTokenID`</br>* `TokenOffers -&gt; NFTokenOffers`</br>* `BrokerFee -&gt; NFTokenBrokerFee`</br>* `Minter -&gt; NFTokenMinter`</br>* `NonFungibleToken -&gt; NFToken`</br>* `NonFungibleTokens -&gt; NFTokens`</br>* `BuyOffer -&gt; NFTokenBuyOffer`</br>* `SellOffer -&gt; NFTokenSellOffer`</br>* `OfferNode -&gt; NFTokenOfferNode`</br> </br>#### RPC return labels</br>* `tokenid -&gt; nft_id`</br>* `index -&gt; nft_offer_index`</br> </br>#### Error codes</br>* `temBAD_TRANSFER_FEE -&gt; temBAD_NFTOKEN_TRANSFER_FEE`</br>* `tefTOKEN_IS_NOT_TRANSFERABLE -&gt; tefNFTOKEN_IS_NOT_TRANSFERABLE`</br>* `tecNO_SUITABLE_PAGE -&gt; tecNO_SUITABLE_NFTOKEN_PAGE`</br>* `tecBUY_SELL_MISMATCH -&gt; tecNFTOKEN_BUY_SELL_MISMATCH`</br>* `tecOFFER_TYPE_MISMATCH -&gt; tecNFTOKEN_OFFER_TYPE_MISMATCH`</br>* `tecCANT_ACCEPT_OWN_OFFER -&gt; tecCANT_ACCEPT_OWN_NFTOKEN_OFFER`</br></br></br>### Bug Fixes</br>- **Fix deletion of orphan node store directories:** Orphaned node store directories should only be deleted if the proper node store directories are confirmed to exist. [06e87e](https://github.com/ripple/rippled/commit/06e87e0f6add5b880d647e14ab3d950decfcf416)</td>
+      <td>1.9.1</td>
+      <td>1.9.1</td>
+      <td>Node version has update</td>
+      <td>2022-05-23T21:58:48Z</td>
+      <td>Version 1.9.1 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available. This release includes several important fixes, including a fix for a syncing issue from 1.9.0, a new fix amendment to correct a bug in the new Non-Fungible Tokens (NFTs) code, and a new amendment to allow multi-signing by up to 32 signers.</br></br>&lt;!-- BREAK --&gt;</br></br></br>## Action Required</br></br>This release introduces two new amendments to the XRP Ledger protocol. These amendments are now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, then you should upgrade to version 1.9.1 within two weeks, to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br>The **fixNFTokenDirV1** amendment fixes a bug in code associated with the **NonFungibleTokensV1** amendment, so the fixNFTokenDirV1 amendment should be enabled first. All validator operators are encouraged to [configure amendment voting](https://xrpl.org/configure-amendment-voting.html) to oppose the NonFungibleTokensV1 amendment until _after_ the fixNFTokenDirV1 amendment has become enabled. For more information about NFTs on the XRP Ledger, see [NFT Conceptual Overview](https://xrpl.org/nft-conceptual-overview.html).</br></br>The **ExpandedSignerList** amendment extends the ledger's built-in multi-signing functionality so that each list can contain up to 32 entries instead of the current limit of 8. Additionally, this amendment allows each signer to have an arbitrary 256-bit data field associated with it. This data can be used to identify the signer or provide other metadata that is useful for organizations, smart contracts, or other purposes.</br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br>## Changelog</br></br>This release contains the following features and improvements.</br></br>## New Features and Amendments</br></br>- **Introduce fixNFTokenDirV1 Amendment** - This amendment fixes an off-by-one error that occurred in some corner cases when determining which `NFTokenPage` an `NFToken` object belongs on. It also adjusts the constraints of `NFTokenPage` invariant checks, so that certain error cases fail with a suitable error code such as `tecNO_SUITABLE_TOKEN_PAGE` instead of failing with a `tecINVARIANT_FAILED` error code. ([#4155](https://github.com/ripple/rippled/pull/4155))</br></br>- **Introduce ExpandedSignerList Amendment** - This amendment expands the maximum signer list size to 32 entries and allows each signer to have an optional 256-bit `WalletLocator` field containing arbitrary data. ([#4097](https://github.com/ripple/rippled/pull/4097))</br></br>- **Pause online deletion rather than canceling it if the server fails health check** - The server stops performing online deletion of old ledger history if the server fails its internal health check during this time. Online deletion can now resume after the server recovers, rather than having to start over. ([#4139](https://github.com/ripple/rippled/pull/4139))</br></br></br>## Bug Fixes and Performance Improvements</br></br>- **Fix performance issues introduced in 1.9.0** - Readjusts some parameters of the ledger acquisition engine to revert some changes introduced in 1.9.0 that had adverse effects on some systems, including causing some systems to fail to sync to the network. ([#4152](https://github.com/ripple/rippled/pull/4152))</br></br>- **Improve Memory Efficiency of Path Finding** - Finding paths for cross-currency payments is a resource-intensive operation. While that remains true, this fix improves memory usage of pathfinding by discarding trust line results that cannot be used before those results are fully loaded or cached. ([#4111](https://github.com/ripple/rippled/pull/4111))</br></br>- **Fix incorrect CMake behavior on Windows when platform is unspecified or x64** - Fixes handling of platform selection when using the cmake-gui tool to build on Windows. The generator expects `Win64` but the GUI only provides `x64` as an option, which raises an error. This fix only raises an error if the platform is `Win32` instead, allowing the generation of solution files to succeed. ([#4150](https://github.com/ripple/rippled/pull/4150))</br></br>- **Fix test failures with newer MSVC compilers on Windows** - Fixes some cases where the API handler code used string pointer comparisons, which may not work correctly with some versions of the MSVC compiler. ([#4149](https://github.com/ripple/rippled/pull/4149))</br></br>- **Update minimum Boost version to 1.71.0** - This release is compatible with Boost library versions 1.71.0 through 1.77.0. The build configuration and documentation have been updated to reflect this. ([#4134](https://github.com/ripple/rippled/pull/4134))</br></br>- **Fix unit test failures for DatabaseDownloader** - Increases a timeout in the `DatabaseDownloader` code and adjusts unit tests so that the code does not return spurious failures, and more data is logged if it does fail. ([#4021](https://github.com/ripple/rippled/pull/4021))</br></br>- **Refactor relational database interface** - Improves code comments, naming, and organization of the module that interfaces with relational databases (such as the SQLite database used for tracking transaction history). ([#3965](https://github.com/ripple/rippled/pull/3965))</br></br></br>## Contributions</br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/ripple/rippled&gt;.</br></br>We welcome contributions, big and small, and invite everyone to join the community of XRP Ledger developers and help us build the Internet of Value.</br></br></br>### Credits</br></br>The following people contributed directly to this release:</br></br>- Devon White &lt;dwhite@ripple.com&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Gregory Popovitch &lt;greg7mdp@gmail.com&gt;</br>- Mark Travis &lt;mtravis@ripple.com&gt;</br>- Manoj Doshi &lt;mdoshi@ripple.com&gt;</br>- Nik Bougalis &lt;nikb@bougalis.net&gt;</br>- Richard Holland &lt;richard.holland@starstone.co.nz&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br></br>For a real-time view of all lifetime contributors, including links to the commits made by each, please visit the "Contributors" section of the GitHub repository: &lt;https://github.com/ripple/rippled/graphs/contributors&gt;.</br></br>We welcome external contributions and are excited to see the broader XRP Ledger community continue to grow and thrive.</br></td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-05-23 16:55:06.665908 UTC</td>
+      <td>2022-05-24 00:55:04.649060 UTC</td>
       <td>23.1.0</td>
       <td>24.0.0</td>
       <td>24.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-05-23 16:55:07.028155 UTC</td>
+      <td>2022-05-24 00:55:04.826040 UTC</td>
       <td>6.7.1</td>
       <td>8.5.1</td>
       <td>8.5.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-05-23 16:55:07.366383 UTC</td>
+      <td>2022-05-24 00:55:05.020316 UTC</td>
       <td>1.2.19</td>
       <td>3.0.3</td>
       <td>3.0.3</td>
