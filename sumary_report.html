@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-06-16 16:55:03.669753 UTC</td>
+      <td>2022-06-17 00:55:04.692754 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-06-16 16:55:03.913016 UTC</td>
+      <td>2022-06-17 00:55:04.942206 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-06-16 16:55:04.208730 UTC</td>
+      <td>2022-06-17 00:55:05.156691 UTC</td>
       <td>1.10.8</td>
       <td>1.10.19</td>
       <td>1.10.19</td>
       <td>Version Behind</td>
       <td>2022-06-15T12:57:11Z</td>
-      <td>Geth v1.10.19 is yet another feature release.</br></br>**The release contains the Gray Glacier fork definition**. The [Gray Glacier](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5133.md) fork is a difficulty-bomb postponement, which is expected to go live on Ethereum Mainnet towards the end of June.</br></br>In other words: **all users are required to upgrade** before the Gray Glacier hardfork activates at block `15050000` ([#25088](https://github.com/ethereum/go-ethereum/pull/25088))</br></br>Changes which may cause incompatibilities:</br></br>- The `engine` API is now _only_ available with JWT authentication.</br>- Geth will refuse to start if legacy receipts are present in the database. The check can be disabled with `--ignore-legacy-receipts`, but we strongly recommend you run the conversion in this case ([#24943](https://github.com/ethereum/go-ethereum/pull/24943)).</br>- The RPC method `debug_traceCall` will now reject execution against the `pending` block ([#24871](https://github.com/ethereum/go-ethereum/pull/24871)).</br>- RPC timer metrics have been changed into histograms ([#25044](https://github.com/ethereum/go-ethereum/pull/25044)).</br></br>Other changes in this release:</br></br>- Updates related to The Merge on Ropsten, which is now a proof-of-stake network ([#25018](https://github.com/ethereum/go-ethereum/pull/25018), [#24975](https://github.com/ethereum/go-ethereum/pull/24975), [#25078](https://github.com/ethereum/go-ethereum/pull/25078))!</br>- The `debug_traceCall` RPC method now also supports block overrides; making fields like timestamp or the block number settable by the caller ([#24871](https://github.com/ethereum/go-ethereum/pull/24871)).</br>- A new diagnostic tool, `geth snapshot inspect-account`, allows investigations of snapshot data ([#24765](https://github.com/ethereum/go-ethereum/pull/24765)).</br>- Fixes and preparatory work related to The Merge ([#24946](https://github.com/ethereum/go-ethereum/pull/24946), [#25006](https://github.com/ethereum/go-ethereum/pull/25006), [#24955](https://github.com/ethereum/go-ethereum/pull/24955), [#24997](https://github.com/ethereum/go-ethereum/pull/24997)).</br>- Preparatory work for the upcoming path-based trie storage feature ([#24750](https://github.com/ethereum/go-ethereum/pull/24750)).</br>- Introduce `eth/67` protocol, dopping support for GetNodeData ([#24093](https://github.com/ethereum/go-ethereum/pull/24093)).</br>- Optimizations related to block processing ([#23500](https://github.com/ethereum/go-ethereum/pull/23500), [#24958](https://github.com/ethereum/go-ethereum/pull/24958), [#24616](https://github.com/ethereum/go-ethereum/pull/24616)).</br>- Tests/fuzzing improvements ([#25033](https://github.com/ethereum/go-ethereum/pull/25033), [#25038](https://github.com/ethereum/go-ethereum/pull/25038), [#25037](https://github.com/ethereum/go-ethereum/pull/25037), [#25036](https://github.com/ethereum/go-ethereum/pull/25036), [#25016](https://github.com/ethereum/go-ethereum/pull/25016), [#24249](https://github.com/ethereum/go-ethereum/pull/24249) [#24928](https://github.com/ethereum/go-ethereum/pull/24928)).</br>- Many updates to documentation ([#25086](https://github.com/ethereum/go-ethereum/pull/25086), [#25058](https://github.com/ethereum/go-ethereum/pull/25058), [#25057](https://github.com/ethereum/go-ethereum/pull/25057), [#25056](https://github.com/ethereum/go-ethereum/pull/25056), [#25040](https://github.com/ethereum/go-ethereum/pull/25040), [#25032](https://github.com/ethereum/go-ethereum/pull/25032)).</br>- Nicer format when showing chain config ([#24904](https://github.com/ethereum/go-ethereum/pull/24904)).</br></br>For a full rundown of the changes please consult the Geth 1.10.19 [release milestone](https://github.com/ethereum/go-ethereum/milestone/131?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>Geth v1.10.19 is yet another feature release.</br></br>**The release contains the Gray Glacier fork definition**. The [Gray Glacier](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5133.md) fork is a difficulty-bomb postponement, which is expected to go live on Ethereum Mainnet towards the end of June.</br></br>In other words: **all users are required to upgrade** before the Gray Glacier hardfork activates at block `15050000` ([#25088](https://github.com/ethereum/go-ethereum/pull/25088))</br></br>Changes which may cause incompatibilities:</br></br>- The `engine` API is now _only_ available with JWT authentication.</br>- Geth will refuse to start if legacy receipts are present in the database. The check can be disabled with `--ignore-legacy-receipts`, but we strongly recommend you run the conversion in this case ([#24943](https://github.com/ethereum/go-ethereum/pull/24943)).</br>- The RPC method `debug_traceCall` will now reject execution against the `pending` block ([#24871](https://github.com/ethereum/go-ethereum/pull/24871)).</br>- RPC timer metrics have been changed into histograms ([#25044](https://github.com/ethereum/go-ethereum/pull/25044)).</br></br>Other changes in this release:</br></br>- Updates related to The Merge on Ropsten, which is now a proof-of-stake network ([#25018](https://github.com/ethereum/go-ethereum/pull/25018), [#24975](https://github.com/ethereum/go-ethereum/pull/24975), [#25078](https://github.com/ethereum/go-ethereum/pull/25078))!</br>- The `debug_traceCall` RPC method now also supports block overrides; making fields like timestamp or the block number settable by the caller ([#24871](https://github.com/ethereum/go-ethereum/pull/24871)).</br>- A new diagnostic tool, `geth snapshot inspect-account`, allows investigations of snapshot data ([#24765](https://github.com/ethereum/go-ethereum/pull/24765)).</br>- Fixes and preparatory work related to The Merge ([#24946](https://github.com/ethereum/go-ethereum/pull/24946), [#25006](https://github.com/ethereum/go-ethereum/pull/25006), [#24955](https://github.com/ethereum/go-ethereum/pull/24955), [#24997](https://github.com/ethereum/go-ethereum/pull/24997)).</br>- Preparatory work for the upcoming path-based trie storage feature ([#24750](https://github.com/ethereum/go-ethereum/pull/24750)).</br>- Introduce `eth/67` protocol, dropping support for GetNodeData ([#24093](https://github.com/ethereum/go-ethereum/pull/24093)).</br>- Optimizations related to block processing ([#23500](https://github.com/ethereum/go-ethereum/pull/23500), [#24958](https://github.com/ethereum/go-ethereum/pull/24958), [#24616](https://github.com/ethereum/go-ethereum/pull/24616)).</br>- Tests/fuzzing improvements ([#25033](https://github.com/ethereum/go-ethereum/pull/25033), [#25038](https://github.com/ethereum/go-ethereum/pull/25038), [#25037](https://github.com/ethereum/go-ethereum/pull/25037), [#25036](https://github.com/ethereum/go-ethereum/pull/25036), [#25016](https://github.com/ethereum/go-ethereum/pull/25016), [#24249](https://github.com/ethereum/go-ethereum/pull/24249) [#24928](https://github.com/ethereum/go-ethereum/pull/24928)).</br>- Many updates to documentation ([#25086](https://github.com/ethereum/go-ethereum/pull/25086), [#25058](https://github.com/ethereum/go-ethereum/pull/25058), [#25057](https://github.com/ethereum/go-ethereum/pull/25057), [#25056](https://github.com/ethereum/go-ethereum/pull/25056), [#25040](https://github.com/ethereum/go-ethereum/pull/25040), [#25032](https://github.com/ethereum/go-ethereum/pull/25032)).</br>- Nicer format when showing chain config ([#24904](https://github.com/ethereum/go-ethereum/pull/24904)).</br></br>For a full rundown of the changes please consult the Geth 1.10.19 [release milestone](https://github.com/ethereum/go-ethereum/milestone/131?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-06-16 16:55:04.491844 UTC</td>
+      <td>2022-06-17 00:55:05.434129 UTC</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-06-16 16:55:04.759746 UTC</td>
+      <td>2022-06-17 00:55:05.766004 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2</td>
       <td>0.21.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-06-16 16:55:04.970574 UTC</td>
+      <td>2022-06-17 00:55:06.048224 UTC</td>
       <td>0.9.16</td>
       <td>0.9.24</td>
       <td>0.9.24</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-06-16 16:55:05.261003 UTC</td>
+      <td>2022-06-17 00:55:06.264763 UTC</td>
       <td>1.8.1</td>
       <td>1.9.1</td>
       <td>1.9.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-06-16 16:55:05.556165 UTC</td>
+      <td>2022-06-17 00:55:06.522394 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-06-16 16:55:05.788929 UTC</td>
+      <td>2022-06-17 00:55:06.815234 UTC</td>
       <td>6.7.1</td>
       <td>8.8.2</td>
       <td>8.8.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-06-16 16:55:06.117608 UTC</td>
+      <td>2022-06-17 00:55:07.085453 UTC</td>
       <td>1.2.19</td>
       <td>3.1.2</td>
       <td>3.1.2</td>
