@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-07-05 08:55:03.874036 UTC</td>
+      <td>2022-07-05 16:55:04.206763 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-07-05 08:55:04.097682 UTC</td>
+      <td>2022-07-05 16:55:04.511423 UTC</td>
       <td>1.14.4</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-07-05 08:55:04.440559 UTC</td>
+      <td>2022-07-05 16:55:04.796210 UTC</td>
       <td>1.10.8</td>
       <td>1.10.20</td>
       <td>1.10.20</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-07-05 08:55:04.679281 UTC</td>
+      <td>2022-07-05 16:55:05.052305 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-07-05 08:55:04.908989 UTC</td>
+      <td>2022-07-05 16:55:05.299255 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,18 +111,18 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-07-05 08:55:05.141432 UTC</td>
+      <td>2022-07-05 16:55:05.548185 UTC</td>
       <td>0.9.16</td>
-      <td>0.9.24</td>
-      <td>0.9.24</td>
-      <td>Version Behind</td>
-      <td>2022-06-15T09:38:47Z</td>
-      <td>&lt;!-- repository: polkadot --&gt;</br>&lt;!-- NOT a pre-release--&gt;</br>This release contains the changes from `v0.9.23` to `v0.9.24`.</br></br>&lt;!--</br>changes:</br> - total: 3</br> - silent: 3</br> - remaining: 0</br>--&gt;</br></br>&lt;!-- Such a comment will be rendered but remain invisible in the rendered markdown --&gt;</br>&lt;!-- Edit below this line --&gt;</br>&lt;!-- Edit above this line --&gt;</br></br>## Upgrade Priority</br></br>&lt;!-- detected max prio is: 1 --&gt;</br>❗️High ❗️: This is a **HIGH priority release** and you should upgrade as soon as possible. This release contains important networking improvements required for parachains. It is a client-only release; there are no corresponding runtimes.</br></br>&lt;!-- No relevant Priority label as been detected for p=1 --&gt;</br></br>&lt;!--</br>- Polkadot: 0</br>- Substrate: 1</br>--&gt;</br></br>&lt;!-- 0 host functions were detected --&gt;</br></br>## Host functions</br>ℹ️ This release does not contain any new host functions.</br></br>## Database Migrations</br></br>Database migrations are operations upgrading the database to the latest stand.</br>Some migrations may break compatibility, making a backup of your database is highly recommended.</br></br>ℹ️ There is no database migration in this release.</br></br>## Rust compiler versions</br></br>This release was built and tested against the following versions of `rustc`.</br>Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (6dd68402c 2022-05-11)`</br></br>## Changes</br></br>### Legend</br></br>- [P] Polkadot</br>- [S] Substrate</br></br>### Client</br></br>- [S] Networking update</br>- [P] Networking update</br></br>## Docker image</br></br>The docker image for this release can be found at [Docker hub](https://hub.docker.com/r/parity/polkadot/tags?page=1&amp;ordering=last_updated)</br>(It will be available a few minutes after the release has been published).</br></br>You may pull it using:</br></br>```</br>docker pull parity/polkadot:latest</br>```</br></td>
+      <td>0.9.25</td>
+      <td>0.9.25</td>
+      <td>Node version has update</td>
+      <td>2022-07-05T15:05:55Z</td>
+      <td>&lt;!-- repository: polkadot --&gt;</br>&lt;!-- NOT a pre-release--&gt;</br>This release contains the changes from `v0.9.24` to `v0.9.25`.</br></br>&lt;!--</br>changes:</br> - total: 113</br> - silent: 101</br> - remaining: 12</br>--&gt;</br></br>&lt;!-- Such a comment will be rendered but remain invisible in the rendered markdown --&gt;</br>&lt;!-- Edit below this line --&gt;</br>## ⚠️ Notes</br></br>This release requires a database migration on the _parachains_ db. While this is handled automatically for the _rocksdb_ users, it is not automatic for _paritydb_.</br></br>Therefore users of paritydb are required to prune the _parachains_ database manually before upgrading.</br></br>**Note**: Only delete the `_parachains_` db and **_only_ if you are running your node on paritydb**!</br>If you are not sure, try upgrading and only delete the parachains folder if your node is not running properly and you get an error like this:</br></br>```</br>Error:</br> InvalidConfiguration("Column config mismatch for column 4. Expected</br> "preimage: false, uniform: false, refc: false, compression: 0, ordered: true", </br> got "preimage: false, uniform: false, refc: false, compression: 0, ordered: false")</br>```</br></br>Nodes run by default on rocksdb, so if you have not tweaked your configuration you should not be affected and should therefore not delete anything.</br></br>ParityDB users should delete the following folder (assuming using the default `--base-path`) before starting the new version:</br>- Linux: `$HOME/.local/share/polkadot/chains/polkadot/paritydb/parachains`</br>- MacOS `$HOME/Library/Application Support/polkadot/chains/polkadot/paritydb/parachains`</br></br>&lt;!-- Edit above this line --&gt;</br></br>## Upgrade Priority</br></br>&lt;!-- detected max prio is: 3 --&gt;</br>❗️ Medium: This is a medium priority release and you should upgrade in a timely manner.</br></br>The changes motivating this priority level are:</br></br></br>- [S] ⏳ pending non-critical audit [`#11490`](https://github.com/paritytech/substrate/pull/11490) ❗️ Medium - Safe and sane multi-item storage removal</br>(RUNTIME)</br></br>- [S] ✅ trivial [`#11590`](https://github.com/paritytech/substrate/pull/11590) ❗️ Medium - Remove `#[pallet::without_storage_info]` for pallet-remark</br>- [S] ✅ trivial [`#11591`](https://github.com/paritytech/substrate/pull/11591) ❗️ Medium - Remove `without_storage_info` for membership pallet</br>- [S] ✅ trivial [`#11584`](https://github.com/paritytech/substrate/pull/11584) ❗️ Medium - Implement maxencodedlen on pallet-beefy</br>- [S] ⏳ pending non-critical audit [`#11490`](https://github.com/paritytech/substrate/pull/11490) ❗️ Medium - Safe and sane multi-item storage removal</br></br>&lt;!--</br>- Polkadot: 1</br>- Substrate: 3</br>--&gt;</br></br>&lt;!-- 1 host functions were detected --&gt;</br></br>## Host functions</br></br>The runtimes in this release contain one new **host function** (not active yet)</br></br>&lt;!-- ⚠️ It is critical that you update your client before the chain switches to the new runtime. --&gt;</br></br>## Database Migrations</br></br>Database migrations are operations upgrading the database to the latest stand.</br>Some migrations may break compatibility, making a backup of your database is highly recommended.</br></br>ℹ️ There is no database migration in this release.</br>## Runtime Migrations</br></br>Runtime migrations are operations running once during a runtime upgrade.</br></br>ℹ️ There is no runtime migration in this release.</br></br></br>## Rust compiler versions</br></br>This release was built and tested against the following versions of `rustc`.</br>Other versions may work.</br></br>- Rust Stable: `rustc 1.60.0 (7737e0b5c 2022-04-04)`</br>- Rust Nightly: `rustc 1.62.0-nightly (6dd68402c 2022-05-11)`</br>## Runtimes</br></br>The information about the runtimes included in this release can be found below.</br>The runtimes have been built using [srtool v0.9.20](https://github.com/paritytech/srtool) and `rustc 1.60.0 (7737e0b5c 2022-04-04)`.</br></br>### Kusama</br>&lt;!-- commit : 5174e9ae75b6843ecc460dfaa15f5851230638b8 --&gt;</br>&lt;!-- tag    : v0.9.25-rc11 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : kusama-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.33 MB (1394165 bytes)</br>🔥 Core Version:\t\tkusama-9250 (parity-kusama-0.tx12.au2)</br>🗜 Compressed:\t\t\tYes: 80.46%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0xf8abac4497159bd4824c46d34995a1ccd5c5b9057003e9a25397c25624ff0033</br>🗳️ authorizeUpgrade hash:\t0xa96d87fda2cdf8f49b34dfede6149a055e030078b3f63964a35512c84120e4bf</br>🗳️ Blake2-256 hash:\t\t0x6b48b0bdd23e94e91133f532b10f6af68751b9f734084a2353aece4ffa4b5ef7</br>📦 IPFS:\t\t\tQmYHmbJYQ6C6Tp2ZvjZQwWBX6kH7EwvLKJrXjKYf97Gmax</br>```</br></br>### Polkadot</br>&lt;!-- commit : 5174e9ae75b6843ecc460dfaa15f5851230638b8 --&gt;</br>&lt;!-- tag    : v0.9.25-rc11 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : polkadot-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.20 MB (1262093 bytes)</br>🔥 Core Version:\t\tpolkadot-9250 (parity-polkadot-0.tx13.au0)</br>🗜 Compressed:\t\t\tYes: 80.48%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x73a9fe9a8dcced92ad7eb36963f64d7b49a4f66a2c5e626a812e5b6cd0e56d42</br>🗳️ authorizeUpgrade hash:\t0xeb3b31a55638186db35f55deebd4f1d72b22f414395857043370331d9090affe</br>🗳️ Blake2-256 hash:\t\t0xcc1272022f874fab8564fff672553b8e7440fa7e7ced2fca140a64eafab7ecac</br>📦 IPFS:\t\t\tQmP9MyaE7fg44YRuG1YLDY3jwHBaNVp8MH8sjZF8CpMgFX</br>```</br></br>### Rococo</br>&lt;!-- commit : 5174e9ae75b6843ecc460dfaa15f5851230638b8 --&gt;</br>&lt;!-- tag    : v0.9.25-rc11 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : rococo-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t969.00 KB (992261 bytes)</br>🔥 Core Version:\t\trococo-9250 (parity-rococo-v2.0-0.tx0.au0)</br>🗜 Compressed:\t\t\tYes: 80.94%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x3f77b1901992ee5494272ceebed3d29abff0482f367c6ce0587c3b308aeeded9</br>🗳️ authorizeUpgrade hash:\t0xbb1354084999a21419b589e525d21b2bf52e90bf193259ab17eaec786cfa2e34</br>🗳️ Blake2-256 hash:\t\t0x8548c58587be1b64e1df3b31047dd7779cac2a94c3eed6e66c550927ccc806ee</br>📦 IPFS:\t\t\tQmRKMzgku7ppKn9Z2K58md9vwQUAd2xNvW5q6QS8B3wNhn</br>```</br></br>### Westend</br>&lt;!-- commit : 5174e9ae75b6843ecc460dfaa15f5851230638b8 --&gt;</br>&lt;!-- tag    : v0.9.25-rc11 --&gt;</br>&lt;!-- branch : HEAD --&gt;</br>&lt;!-- pkg    : westend-runtime --&gt;</br></br>```</br>🏋️ Runtime Size:\t\t1.15 MB (1204306 bytes)</br>🔥 Core Version:\t\twestend-9251 (parity-westend-1.tx11.au2)</br>🗜 Compressed:\t\t\tYes: 80.54%</br>🎁 Metadata version:\t\tV14</br>🗳️ system.setCode hash:\t\t0x8bba7ad30dcb2d157abaffb4193060b45e2d63195e3e2b2ea9f608d4aeecb599</br>🗳️ authorizeUpgrade hash:\t0x6cc6c15857e565fbbab69e096032f9791ed54607a9a7dd795522bbed6e2b1665</br>🗳️ Blake2-256 hash:\t\t0x840867a6d21affcf49619b43a03ed3b2cb0453058704151479da4cfef5514c2f</br>📦 IPFS:\t\t\tQmcbhouBRq4Sg3u6zdHZFDH3btCyRHpPLQHzUVqdnKtvEw</br>```</br></br>## Changes</br></br>### Legend</br></br>- [P] Polkadot</br>- [S] Substrate</br></br>### Client</br></br></br>### Runtime</br>- [S] ✅ audited [`#11431`](https://github.com/paritytech/substrate/pull/11431) Low - Storage layer for all frame extrinsics</br>- [S] ⏳ pending non-critical audit [`#11490`](https://github.com/paritytech/substrate/pull/11490) ❗️ Medium - Safe and sane multi-item storage removal</br>- [P] ✅ trivial [`#5601`](https://github.com/paritytech/polkadot/pull/5601) Low - Update weights</br>- [S] ✅ audited [`#11124`](https://github.com/paritytech/substrate/pull/11124) Low - Several tweaks needed for governance 2.0</br>- [P] ✅ trivial [`#5634`](https://github.com/paritytech/polkadot/pull/5634) Low - Changed bonding &amp; slashdefer duration in westend</br>- [S] ⏳ pending non-critical audit [`#11112`](https://github.com/paritytech/substrate/pull/11112) Low - Pallet alliance</br>- [S] ✅ audited [`#11426`](https://github.com/paritytech/substrate/pull/11426) Low - Allow nomination pools to chill + fix dismantle scenario</br>- [P] ✅ trivial [`#5690`](https://github.com/paritytech/polkadot/pull/5690) Low - Bump transaction version (polkadot &amp; kusama)</br>- [P] ✅ trivial [`#5705`](https://github.com/paritytech/polkadot/pull/5705) Low - Update weights</br></br></br></br></br>### Misc</br></br></br>There are other misc. changes. You can expand the list below to view them all.</br>&lt;details&gt;&lt;summary&gt;Other misc. changes&lt;/summary&gt;</br></br>- [S] ✅ audited [`#11431`](https://github.com/paritytech/substrate/pull/11431) Low - Storage layer for all frame extrinsics</br>- [S] ⏳ pending non-critical audit [`#11490`](https://github.com/paritytech/substrate/pull/11490) ❗️ Medium - Safe and sane multi-item storage removal</br>- [P] ✅ trivial [`#5601`](https://github.com/paritytech/polkadot/pull/5601) Low - Update weights</br>- [S] ✅ audited [`#11124`](https://github.com/paritytech/substrate/pull/11124) Low - Several tweaks needed for governance 2.0</br>- [S] ✅ trivial [`#11578`](https://github.com/paritytech/substrate/pull/11578) Low - Reduce call size of referenda pallet</br>- [P] ✅ trivial [`#5634`](https://github.com/paritytech/polkadot/pull/5634) Low - Changed bonding &amp; slashdefer duration in westend</br>- [S] ⏳ pending non-critical audit [`#11112`](https://github.com/paritytech/substrate/pull/11112) Low - Pallet alliance</br>- [P] ✅ trivial [`#5594`](https://github.com/paritytech/polkadot/pull/5594) Low - Fix a storage leak in parachains db</br>- [S] ✅ audited [`#11426`](https://github.com/paritytech/substrate/pull/11426) Low - Allow nomination pools to chill + fix dismantle scenario</br>- [S] ✅ trivial [`#11537`](https://github.com/paritytech/substrate/pull/11537) Low - Make it possible to disable rocksdb completely</br>- [P] ✅ trivial [`#5690`](https://github.com/paritytech/polkadot/pull/5690) Low - Bump transaction version (polkadot &amp; kusama)</br>- [P] ✅ trivial [`#5705`](https://github.com/paritytech/polkadot/pull/5705) Low - Update weights</br></br></br>&lt;/details&gt;</br></br></br>## Docker image</br></br>The docker image for this release can be found at [Docker hub](https://hub.docker.com/r/parity/polkadot/tags?page=1&amp;ordering=last_updated)</br>(It will be available a few minutes after the release has been published).</br></br>You may pull it using:</br></br>```</br>docker pull parity/polkadot:latest</br>```</br></br></td>
     </tr>
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-07-05 08:55:05.535538 UTC</td>
+      <td>2022-07-05 16:55:05.913632 UTC</td>
       <td>1.8.1</td>
       <td>1.9.1</td>
       <td>1.9.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-07-05 08:55:05.850821 UTC</td>
+      <td>2022-07-05 16:55:06.218979 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-07-05 08:55:06.065090 UTC</td>
+      <td>2022-07-05 16:55:06.488098 UTC</td>
       <td>6.7.1</td>
       <td>8.11.3</td>
       <td>8.11.3</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-07-05T08:37:39Z</td>
       <td>Changes:</br></br>- Ensure historic `DispatchError` is always the non-current variant</br>- Adjust type signatures for non-required use of `@types/node`</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-07-05 08:55:06.334609 UTC</td>
+      <td>2022-07-05 16:55:06.783602 UTC</td>
       <td>1.2.19</td>
       <td>3.1.4</td>
       <td>3.1.4</td>
