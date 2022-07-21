@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-07-21 00:55:03.943479 UTC</td>
+      <td>2022-07-21 08:55:03.383236 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,18 +67,18 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-07-21 00:55:04.208545 UTC</td>
+      <td>2022-07-21 08:55:03.626345 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-07-20T23:58:01Z</td>
       <td>This is a new minor version release, including important security updates and changes to network efficiency.</br></br>**All Dogecoin Core users - miners, services, relay operators and wallet users - are strongly recommended to upgrade.**</br></br>A full description of all changes is available in the [release notes](https://github.com/dogecoin/dogecoin/blob/master/doc/release-notes.md)</br></br>### Security-related fixes</br></br>This release contains multiple security related fixes:</br></br>- The alert system has been removed and processing of alert messages has been disabled</br>- The transaction download system has been made more reliable</br>- The protocol implementation has been amended to reject buggy or malformed messages</br>- Memory management in events of high network traffic or when connected to extremely slow peers has been improved</br></br>### Fee Recommendation</br></br>This release changes the **recommended dust limit** for all participants on the Dogecoin network from 1 DOGE to **0.01 DOGE**. The full recommendation can be found [in the documentation](https://github.com/dogecoin/dogecoin/blob/1.14.6-dev/doc/fee-recommendation.md).</br></br>### Breaking changes</br></br>- The behavior of the `dumpwallet` and `backupwallet` RPC methods, to exclusively write to the directory specified by `-backupdir` and no longer overwrite files</br>- The maximum number of `addnode` records that a node will track has been limited to 800</br></br>### New features</br></br>- A new RPC method, `liststucktransactions` has been added to help wallet operators identify if any transactions are stuck (have not been mined and are not in the mempool) and enable resolution. This helps in cases where node-local fee or dust policies change, to prevent the node from sending out old transactions that got lost.</br>- Pruning configuration has been added to the UI, to make it easier to save diskspace for users of graphical (wallet) installations. </br>- A new RPC method, `setmaxconnections`, has been introduced that enables wallet and node operators to change the maximum number of connections their node allows without needing to restart allowing for more fine-grained control of the node's network capacities.</br>- The graph in the UI's traffic monitor has been significantly improved by keeping track of the traffic we see in the background and then rendering it on demand, at any desired scale.</br>- A new RPC method, `rescan`, has been added to allow node operators to rescan the chain for wallet transactions from a certain height. This can help speed up the rescan process for keys that are known to be generated after a certain date or block height.</br>- A new endpoint has been added to the REST server to find the current best known block at a certain height, without having to do RPC calls. This is useful for service implementations that need to track or query blocks.</br></br>### Translation updates</br></br>- Bulgarian</br>- Dutch</br>- French</br>- Italian</br>- Korean</br>- Persian</br>- Portuguese (pt_PT)</br>- Tamil</br></br>### RPC API Changes</br></br>- The `verifychain` RPC command no longer accepts negative values</br>- `addnode` will now return error -32 when the address provided is too long</br>- `getpeerinfo` provides 2 new fields per peer, `addr_processed` and `addr_rate_limited`</br></br>### Dependency updates</br></br>- Updated `zlib` to 1.2.12.</br>- Updated `libevent` to 2.1.12-stable.</br>- Update the LevelDB subtree to use the same version as Bitcoin 22.0, from the [bitcoin-core maintained fork](https://github.com/bitcoin-core/leveldb-subtree).</br></td>
     </tr>
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-07-21 00:55:04.459701 UTC</td>
+      <td>2022-07-21 08:55:03.851122 UTC</td>
       <td>1.10.8</td>
       <td>1.10.20</td>
       <td>1.10.20</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-07-21 00:55:04.729531 UTC</td>
+      <td>2022-07-21 08:55:04.106747 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-07-21 00:55:04.971053 UTC</td>
+      <td>2022-07-21 08:55:04.343855 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-07-21 00:55:05.307448 UTC</td>
+      <td>2022-07-21 08:55:04.656309 UTC</td>
       <td>0.9.16</td>
       <td>0.9.26</td>
       <td>0.9.26</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-07-21 00:55:05.680225 UTC</td>
+      <td>2022-07-21 08:55:04.990861 UTC</td>
       <td>1.8.1</td>
       <td>1.9.1</td>
       <td>1.9.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-07-21 00:55:05.982582 UTC</td>
+      <td>2022-07-21 08:55:05.275821 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-07-21 00:55:06.218457 UTC</td>
+      <td>2022-07-21 08:55:05.497516 UTC</td>
       <td>6.7.1</td>
       <td>8.13.1</td>
       <td>8.13.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-07-21 00:55:07.406017 UTC</td>
+      <td>2022-07-21 08:55:05.698845 UTC</td>
       <td>1.2.19</td>
       <td>3.1.6</td>
       <td>3.1.6</td>
