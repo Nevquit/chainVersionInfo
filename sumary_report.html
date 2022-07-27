@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-07-26 16:55:03.364959 UTC</td>
+      <td>2022-07-27 00:55:04.068680 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-07-26 16:55:03.580215 UTC</td>
+      <td>2022-07-27 00:55:04.340632 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-07-26 16:55:03.924415 UTC</td>
+      <td>2022-07-27 00:55:04.575072 UTC</td>
       <td>1.10.8</td>
       <td>1.10.20</td>
       <td>1.10.20</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-07-26 16:55:04.178177 UTC</td>
+      <td>2022-07-27 00:55:04.858711 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-07-26 16:55:04.471292 UTC</td>
+      <td>2022-07-27 00:55:05.157139 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-07-26 16:55:04.810764 UTC</td>
+      <td>2022-07-27 00:55:05.402428 UTC</td>
       <td>0.9.16</td>
       <td>0.9.26</td>
       <td>0.9.26</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-07-26 16:55:05.175971 UTC</td>
+      <td>2022-07-27 00:55:05.762738 UTC</td>
       <td>1.8.1</td>
-      <td>1.9.1</td>
-      <td>1.9.1</td>
-      <td>Version Behind</td>
-      <td>2022-05-23T21:58:48Z</td>
-      <td>Version 1.9.1 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available. This release includes several important fixes, including a fix for a syncing issue from 1.9.0, a new fix amendment to correct a bug in the new Non-Fungible Tokens (NFTs) code, and a new amendment to allow multi-signing by up to 32 signers.</br></br>&lt;!-- BREAK --&gt;</br></br></br>## Action Required</br></br>This release introduces two new amendments to the XRP Ledger protocol. These amendments are now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, then you should upgrade to version 1.9.1 within two weeks, to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br>The **fixNFTokenDirV1** amendment fixes a bug in code associated with the **NonFungibleTokensV1** amendment, so the fixNFTokenDirV1 amendment should be enabled first. All validator operators are encouraged to [configure amendment voting](https://xrpl.org/configure-amendment-voting.html) to oppose the NonFungibleTokensV1 amendment until _after_ the fixNFTokenDirV1 amendment has become enabled. For more information about NFTs on the XRP Ledger, see [NFT Conceptual Overview](https://xrpl.org/nft-conceptual-overview.html).</br></br>The **ExpandedSignerList** amendment extends the ledger's built-in multi-signing functionality so that each list can contain up to 32 entries instead of the current limit of 8. Additionally, this amendment allows each signer to have an arbitrary 256-bit data field associated with it. This data can be used to identify the signer or provide other metadata that is useful for organizations, smart contracts, or other purposes.</br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br>## Changelog</br></br>This release contains the following features and improvements.</br></br>## New Features and Amendments</br></br>- **Introduce fixNFTokenDirV1 Amendment** - This amendment fixes an off-by-one error that occurred in some corner cases when determining which `NFTokenPage` an `NFToken` object belongs on. It also adjusts the constraints of `NFTokenPage` invariant checks, so that certain error cases fail with a suitable error code such as `tecNO_SUITABLE_TOKEN_PAGE` instead of failing with a `tecINVARIANT_FAILED` error code. ([#4155](https://github.com/ripple/rippled/pull/4155))</br></br>- **Introduce ExpandedSignerList Amendment** - This amendment expands the maximum signer list size to 32 entries and allows each signer to have an optional 256-bit `WalletLocator` field containing arbitrary data. ([#4097](https://github.com/ripple/rippled/pull/4097))</br></br>- **Pause online deletion rather than canceling it if the server fails health check** - The server stops performing online deletion of old ledger history if the server fails its internal health check during this time. Online deletion can now resume after the server recovers, rather than having to start over. ([#4139](https://github.com/ripple/rippled/pull/4139))</br></br></br>## Bug Fixes and Performance Improvements</br></br>- **Fix performance issues introduced in 1.9.0** - Readjusts some parameters of the ledger acquisition engine to revert some changes introduced in 1.9.0 that had adverse effects on some systems, including causing some systems to fail to sync to the network. ([#4152](https://github.com/ripple/rippled/pull/4152))</br></br>- **Improve Memory Efficiency of Path Finding** - Finding paths for cross-currency payments is a resource-intensive operation. While that remains true, this fix improves memory usage of pathfinding by discarding trust line results that cannot be used before those results are fully loaded or cached. ([#4111](https://github.com/ripple/rippled/pull/4111))</br></br>- **Fix incorrect CMake behavior on Windows when platform is unspecified or x64** - Fixes handling of platform selection when using the cmake-gui tool to build on Windows. The generator expects `Win64` but the GUI only provides `x64` as an option, which raises an error. This fix only raises an error if the platform is `Win32` instead, allowing the generation of solution files to succeed. ([#4150](https://github.com/ripple/rippled/pull/4150))</br></br>- **Fix test failures with newer MSVC compilers on Windows** - Fixes some cases where the API handler code used string pointer comparisons, which may not work correctly with some versions of the MSVC compiler. ([#4149](https://github.com/ripple/rippled/pull/4149))</br></br>- **Update minimum Boost version to 1.71.0** - This release is compatible with Boost library versions 1.71.0 through 1.77.0. The build configuration and documentation have been updated to reflect this. ([#4134](https://github.com/ripple/rippled/pull/4134))</br></br>- **Fix unit test failures for DatabaseDownloader** - Increases a timeout in the `DatabaseDownloader` code and adjusts unit tests so that the code does not return spurious failures, and more data is logged if it does fail. ([#4021](https://github.com/ripple/rippled/pull/4021))</br></br>- **Refactor relational database interface** - Improves code comments, naming, and organization of the module that interfaces with relational databases (such as the SQLite database used for tracking transaction history). ([#3965](https://github.com/ripple/rippled/pull/3965))</br></br></br>## Contributions</br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/ripple/rippled&gt;.</br></br>We welcome contributions, big and small, and invite everyone to join the community of XRP Ledger developers and help us build the Internet of Value.</br></br></br>### Credits</br></br>The following people contributed directly to this release:</br></br>- Devon White &lt;dwhite@ripple.com&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Gregory Popovitch &lt;greg7mdp@gmail.com&gt;</br>- Mark Travis &lt;mtravis@ripple.com&gt;</br>- Manoj Doshi &lt;mdoshi@ripple.com&gt;</br>- Nik Bougalis &lt;nikb@bougalis.net&gt;</br>- Richard Holland &lt;richard.holland@starstone.co.nz&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br></br>For a real-time view of all lifetime contributors, including links to the commits made by each, please visit the "Contributors" section of the GitHub repository: &lt;https://github.com/ripple/rippled/graphs/contributors&gt;.</br></br>We welcome external contributions and are excited to see the broader XRP Ledger community continue to grow and thrive.</br></td>
+      <td>1.9.2</td>
+      <td>1.9.2</td>
+      <td>Node version has update</td>
+      <td>2022-07-26T20:19:11Z</td>
+      <td>Version 1.9.2 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available. This release includes several fixes and improvements, including a second new fix amendment to correct a bug in Non-Fungible Tokens (NFTs) code, a new API method for order book changes, less noisy logging, and other small fixes.</br></br>&lt;!-- BREAK --&gt;</br></br></br>## Action Required</br></br>This release introduces a two new amendments to the XRP Ledger protocol. The first, **fixNFTokenNegOffer**, fixes a bug in code associated with the **NonFungibleTokensV1** amendment, originally introduced in [version 1.9.0](https://xrpl.org/blog/2022/rippled-1.9.0.html). The second, **NonFungibleTokensV1_1**, is a "roll-up" amendment that enables the **NonFungibleTokensV1** feature plus the two fix amendments associated with it, **fixNFTokenDirV1** and **fixNFTokenNegOffer**.</br></br>If you want to enable NFT code on the XRP Ledger Mainnet, you can vote in favor of only the **NonFungibleTokensV1_1** amendment to support enabling the feature and fixes together, without risk that the unfixed NFT code may become enabled first.</br></br>These amendments are now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, then you should upgrade to version 1.9.2 within two weeks, to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br>For more information about NFTs on the XRP Ledger, see [NFT Conceptual Overview](https://xrpl.org/nft-conceptual-overview.html).</br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br>## Changelog</br></br>This release contains the following features and improvements.</br></br>- **Introduce fixNFTokenNegOffer amendment.** This amendment fixes a bug in the Non-Fungible Tokens (NFTs) functionality provided by the NonFungibleTokensV1 amendment (not currently enabled on Mainnet). The bug allowed users to place offers to buy tokens for negative amounts of money when using Brokered Mode. Anyone who accepted such an offer would transfer the token _and_ pay money. This amendment explicitly disallows offers to buy or sell NFTs for negative amounts of money, and returns an appropriate error code. This also corrects the error code returned when placing offers to buy or sell NFTs for negative amounts in Direct Mode. ([8266d9d](https://github.com/XRPLF/rippled/commit/8266d9d598d19f05e1155956b30ca443c27e119e))</br>- **Introduce `NonFungibleTokensV1_1` amendment.** This amendment encompasses three NFT-related amendments: the original NonFungibleTokensV1 amendment (from version 1.9.0), the fixNFTokenDirV1 amendment (from version 1.9.1), and the new fixNFTokenNegOffer amendment from this release. This amendment contains no changes other than enabling those three amendments together; this allows validators to vote in favor of _only_ enabling the feature and fixes at the same time. ([59326bb](https://github.com/XRPLF/rippled/commit/59326bbbc552287e44b3a0d7b8afbb1ddddb3e3b))</br>- **Handle invalid port numbers.** If the user specifies a URL with an invalid port number, the server would silently attempt to use port 0 instead. Now it raises an error instead. This affects admin API methods and config file parameters for downloading history shards and specifying validator list sites. ([#4213](https://github.com/XRPLF/rippled/pull/4213))</br>- **Reduce log noisiness.** Decreased the severity of benign log messages in several places: "addPathsForType" messages during regular operation, expected errors during unit tests, and missing optional documentation components when compiling from source. ([#4178](https://github.com/XRPLF/rippled/pull/4178), [#4166](https://github.com/XRPLF/rippled/pull/4166), [#4180](https://github.com/XRPLF/rippled/pull/4180))</br>- **Fix race condition in history shard implementation and support clang's ThreadSafetyAnalysis tool.**  Added build settings so that developers can use this feature of the clang compiler to analyze the code for correctness, and fix an error found by this tool, which was the source of rare crashes in unit tests. ([#4188](https://github.com/XRPLF/rippled/pull/4188))</br>- **Prevent crash when rotating a database with missing data.** When rotating databases, a missing entry could cause the server to crash. While there should never be a missing database entry, this change keeps the server running by aborting database rotation. ([#4182](https://github.com/XRPLF/rippled/pull/4182))</br>- **Fix bitwise comparison in OfferCreate.** Fixed an expression that incorrectly used a bitwise comparison for two boolean values rather than a true boolean comparison. The outcome of the two comparisons is equivalent, so this is not a transaction processing change, but the bitwise comparison relied on compilers to implicitly fix the expression. ([#4183](https://github.com/XRPLF/rippled/pull/4183))</br>- **Disable cluster timer when not in a cluster.** Disabled a timer that was unused on servers not running in clustered mode. The functionality of clustered servers is unchanged. ([#4173](https://github.com/XRPLF/rippled/pull/4173))</br>- **Limit how often to process peer discovery messages.** In the peer-to-peer network, servers periodically share IP addresses of their peers with each other to facilitate peer discovery. It is not necessary to process these types of messages too often; previously, the code tracked whether it needed to process new messages of this type but always processed them anyway. With this change, the server no longer processes peer discovery messages if it has done so recently. ([#4202](https://github.com/XRPLF/rippled/pull/4202))</br>- **Improve STVector256 deserialization.** Optimized the processing of this data type in protocol messages. This data type is used in several types of ledger entry that are important for bookkeeping, including directory pages that track other ledger types, amendments tracking, and the ledger hashes history. ([#4204](https://github.com/XRPLF/rippled/pull/4204))</br>- **Fix and refactor spinlock code.** The spinlock code, which protects the `SHAMapInnerNode` child lists, had a mistake that allowed the same child to be repeatedly locked under some circumstances. Fixed this bug and improved the spinlock code to make it easier to use correctly and easier to verify that the code works correctly. ([#4201](https://github.com/XRPLF/rippled/pull/4201))</br>- **Improve comments and contributor documentation.** Various minor documentation changes including some to reflect the fact that the source code repository is now owned by the XRP Ledger Foundation. ([#4214](https://github.com/XRPLF/rippled/pull/4214), [#4179](https://github.com/XRPLF/rippled/pull/4179), [#4222](https://github.com/XRPLF/rippled/pull/4222))</br>- **Introduces a new API book_changes to provide information in a format that is useful for building charts that highlight DEX activity at a per-ledger level.**  ([#4212](https://github.com/XRPLF/rippled/pull/4212))</br></br>## Contributions</br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/ripple/rippled&gt;.</br></br>We welcome contributions, big and small, and invite everyone to join the community of XRP Ledger developers and help us build the Internet of Value.</br></br>### Credits</br></br>The following people contributed directly to this release:</br></br>- Chenna Keshava B S &lt;ckbs.keshava56@gmail.com&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Ikko Ashimine &lt;eltociear@gmail.com&gt;</br>- Nik Bougalis &lt;nikb@bougalis.net&gt;</br>- Richard Holland &lt;richard.holland@starstone.co.nz&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br>- Scott Determan &lt;scott.determan@yahoo.com&gt;</br></br>For a real-time view of all lifetime contributors, including links to the commits made by each, please visit the "Contributors" section of the GitHub repository: &lt;https://github.com/ripple/rippled/graphs/contributors&gt;.</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-07-26 16:55:05.521494 UTC</td>
+      <td>2022-07-27 00:55:06.123161 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-07-26 16:55:05.835032 UTC</td>
+      <td>2022-07-27 00:55:06.359595 UTC</td>
       <td>6.7.1</td>
       <td>8.14.1</td>
       <td>8.14.1</td>
@@ -155,11 +155,11 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-07-26 16:55:06.160425 UTC</td>
+      <td>2022-07-27 00:55:06.629809 UTC</td>
       <td>1.2.19</td>
       <td>3.1.7</td>
       <td>3.1.7</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-07-26T10:44:05Z</td>
       <td>## [3.1.7](https://github.com/paritytech/txwrapper-core/compare/v3.1.6...v3.1.7) (2022-07-26)</br></br></br>### Bug Fixes</br></br>* **types:** Update polkadot-js deps to get the latest types ([#240](https://github.com/paritytech/txwrapper-core/issues/240)) ([813dfcb](https://github.com/paritytech/txwrapper-core/commit/813dfcb9a8f9947fc1aaa5b0fd168c47fada91d1))</br></br>* fix type in examples ([3c6f040](https://github.com/paritytech/txwrapper-core/commit/3c6f040b163aac35b744c747607565f2ec1ff1bd))</br></br>### Chores</br></br>* chore(dev): update dev dep in template ([6c80fca](https://github.com/paritytech/txwrapper-core/commit/6c80fcafd5456b2e0f41fc0363a9b1be35d4b0a6))</br></br>* chore(dev): update dev deps ([a92966d](https://github.com/paritytech/txwrapper-core/commit/a92966d648e2d2d0d5d97593ba553ddedc44c180))</br></br></td>
     </tr>
