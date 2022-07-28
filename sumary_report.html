@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-07-27 16:55:03.630405 UTC</td>
+      <td>2022-07-28 00:55:05.110401 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-07-27 16:55:03.938036 UTC</td>
+      <td>2022-07-28 00:55:05.329925 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-07-27 16:55:04.180190 UTC</td>
+      <td>2022-07-28 00:55:05.520427 UTC</td>
       <td>1.10.8</td>
       <td>1.10.21</td>
       <td>1.10.21</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-07-27T11:58:24Z</td>
       <td>Geth v1.10.21 is a maintenance release, adding built-in configuration for the merge fork on the Goerli testnet and the `mergeNetsplitBlock` for the Sepolia testnet.</br></br>Specifically, this release</br></br>- **defines a terminal total difficulty for Goerli as 10_790_000** ([#25324](https://github.com/ethereum/go-ethereum/pull/25324)) and</br>- **defines the mergeNetsplitBlock as 1735371 for Sepolia**. ([#25372](https://github.com/ethereum/go-ethereum/pull/25372))</br></br>### Command changes</br></br>- The `--netrestrict` option is now also applied for discv5. ([#25304](https://github.com/ethereum/go-ethereum/pull/25304))</br>- DNS discovery is now enabled for the Sepolia testnet. ([#25288](https://github.com/ethereum/go-ethereum/pull/25288))</br>- puppeth can no longer deploy parity and pyethapp because these clients are unmaintained. ([#25329](https://github.com/ethereum/go-ethereum/pull/25329))</br>- abigen now has a workaround for parameter names which are also Go keywords. ([#25307](https://github.com/ethereum/go-ethereum/pull/25307))</br>- A few minor regressions in geth CLI argument handling are fixed. ([#25234](https://github.com/ethereum/go-ethereum/pull/25234))</br></br>### RPC API changes</br></br>- In block-based RPC methods like `eth_getBlockByNumber`, the `safe` block specifier can now be used to refer to the "safe" block post-merge. ([#25165](https://github.com/ethereum/go-ethereum/pull/25165))</br>- The `baseFee` can now be overridden in block tracing. ([#25219](https://github.com/ethereum/go-ethereum/pull/25219))</br>- RPC methods returning transaction objects now return the `chainId` for legacy transactions. ([#25244](https://github.com/ethereum/go-ethereum/pull/25244))</br>- In `eth_sendTransaction`, the `chainId` parameter now verified even for legacy transactions. ([#25157](https://github.com/ethereum/go-ethereum/pull/25157))</br>- `eth_call`, `eth_estimateGas` no longer add tx fees to the coinbase account. ([#25214](https://github.com/ethereum/go-ethereum/pull/25214))</br>- A new built-in tracer, `revertReasonTracer`, has been added. ([#25265](https://github.com/ethereum/go-ethereum/pull/25265))</br></br>### Merge changes</br></br>- The engine API can no longer perform block insertion while the client is snap-syncing. ([#25210](https://github.com/ethereum/go-ethereum/pull/25210))</br>- When trying to set bad blocks retrieved via sync as canon, the API now returns INVALID. ([#25190](https://github.com/ethereum/go-ethereum/pull/25190))</br>- The engine API endpoint ('authrpc') is now enabled by default. ([#25152](https://github.com/ethereum/go-ethereum/pull/25152), [#25394](https://github.com/ethereum/go-ethereum/pull/25394))</br>- Several other engine API bugs found during #TestingTheMerge are fixed. ([#25230](https://github.com/ethereum/go-ethereum/pull/25230), [#25136](https://github.com/ethereum/go-ethereum/pull/25136), [#25236](https://github.com/ethereum/go-ethereum/pull/25236))</br></br>### Go Library Changes</br></br>- The snap sync implementation has been updated in preparation for 'path-based state storage'. ([#24898](https://github.com/ethereum/go-ethereum/pull/24898))</br>- The HTTP RPC server will no longer hang on shutdown even with very busy connections. ([#25258](https://github.com/ethereum/go-ethereum/pull/25258))</br>- Package signer/core/apitypes now provides a function to calculate the EIP-712 typed data hash. ([#25283](https://github.com/ethereum/go-ethereum/pull/25283))</br></br>### Build changes</br></br>- We have reverted to an older version of goleveldb because recent versions have buggy compaction and manifest handling. ([#25413](https://github.com/ethereum/go-ethereum/pull/25413))</br>- This release is built with Go 1.18.4 ([#25247](https://github.com/ethereum/go-ethereum/pull/25247), [#25293](https://github.com/ethereum/go-ethereum/pull/25293))</br>- Release tarballs have proper directory timestamps. ([#25290](https://github.com/ethereum/go-ethereum/pull/25290))</br></br>For a full rundown of the changes please consult the Geth [1.10.21 release milestone](https://github.com/ethereum/go-ethereum/milestone/133?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-07-27 16:55:04.400042 UTC</td>
+      <td>2022-07-28 00:55:05.750426 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-07-27 16:55:04.607561 UTC</td>
+      <td>2022-07-28 00:55:05.939439 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-07-27 16:55:04.853595 UTC</td>
+      <td>2022-07-28 00:55:06.132326 UTC</td>
       <td>0.9.16</td>
       <td>0.9.26</td>
       <td>0.9.26</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-07-27 16:55:05.191656 UTC</td>
+      <td>2022-07-28 00:55:06.445263 UTC</td>
       <td>1.8.1</td>
       <td>1.9.2</td>
       <td>1.9.2</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-07-27 16:55:05.542237 UTC</td>
+      <td>2022-07-28 00:55:06.667434 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-07-27 16:55:05.783533 UTC</td>
+      <td>2022-07-28 00:55:06.921897 UTC</td>
       <td>6.7.1</td>
       <td>8.14.1</td>
       <td>8.14.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-07-27 16:55:05.980092 UTC</td>
+      <td>2022-07-28 00:55:07.189794 UTC</td>
       <td>1.2.19</td>
       <td>3.1.7</td>
       <td>3.1.7</td>
