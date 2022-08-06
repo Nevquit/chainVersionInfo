@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-08-06 08:55:03.933272 UTC</td>
+      <td>2022-08-06 16:55:04.852111 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-08-06 08:55:04.163051 UTC</td>
+      <td>2022-08-06 16:55:05.095643 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-08-06 08:55:04.408293 UTC</td>
+      <td>2022-08-06 16:55:05.389553 UTC</td>
       <td>1.10.8</td>
       <td>1.10.21</td>
       <td>1.10.21</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-08-06 08:55:04.591629 UTC</td>
+      <td>2022-08-06 16:55:05.634130 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-08-06 08:55:04.877074 UTC</td>
+      <td>2022-08-06 16:55:05.877440 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-08-06 08:55:05.134735 UTC</td>
+      <td>2022-08-06 16:55:05.954075 UTC</td>
       <td>0.9.16</td>
       <td>0.9.27</td>
       <td>0.9.27</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-08-06 08:55:05.447941 UTC</td>
+      <td>2022-08-06 16:55:06.325798 UTC</td>
       <td>1.8.1</td>
       <td>1.9.2</td>
       <td>1.9.2</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-08-06 08:55:05.664434 UTC</td>
+      <td>2022-08-06 16:55:06.663373 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-08-06 08:55:05.845007 UTC</td>
+      <td>2022-08-06 16:55:07.004037 UTC</td>
       <td>6.7.1</td>
-      <td>9.0.1</td>
-      <td>9.0.1</td>
-      <td>Version Behind</td>
-      <td>2022-07-30T04:47:46Z</td>
-      <td>- **Breaking change** The decorated field getters on `Struct` were moved to the prototype class for performance reasons. While `struct.&lt;field&gt;` access still behaves in the same way, with the same results, this does mean that the prototype getters are not visible when doing an `Object.keys(struct)` or when doing an object spread.</br>- **Breaking change** Deprecated interfaces have been removed including `tx.sign(...)` (use `signAsync`), `Result.{is, as}Error` (use `{is, as}Err`) as well as storage `.range(...)` operations.</br>- **Breaking change** Deprecated interfaces on `api-contract` have been removed. Always ensure you pass an options object to construction and query methods.</br>- **Breaking change** Contracts access via `api-contract` will now detect the usage of `storageDepositLimit` in params, if not available the contract interfaces will not be decorated.</br></br>Changes:</br></br>- Decorate `Struct/Enum/Set` field getters on class prototypes</br>- Convert `api-contract` usage of `api.rpc.*` to `api.call.*`</br>- Drop support for contract runtimes without `storageDepositLimit` (runtime `contractsApi` only has support for latest)</br>- Export `api.rx.call.*` for internal usage (derive, contracts)</br>- Remove old-style param passing as opposed to options in `api-contract`</br>- Support for alliance/motion collective derives</br>- Add Kusama 9260 upgrade block</br>- Add Polkadot 9230 &amp; 9250 upgrade blocks</br>- Add Westend 9251, 9260 &amp; 9261 upgrade blocks</br>- Update to latest Substrate, Polkadot &amp; Kusama metadata</td>
+      <td>9.1.1</td>
+      <td>9.1.1</td>
+      <td>Node version has update</td>
+      <td>2022-08-06T12:49:29Z</td>
+      <td>Contributed:</br></br>- Update `@substrate/connect` to latest (Thanks to https://github.com/wirednkod)</br>- Handle both string and object keys in `CodecMap` (Thanks to https://github.com/CertainLach)</br></br>Changes:</br></br>- Add `noInitWarn: boolean` flag to API options, disabling runtime &amp; RPC warnings</br>- Only log missing runtime calls on new (detected) specVersion</br>- Add shallow/one-blockHash cache for `api.at(...)` instances</br>- Add Westend 9270 upgrade block</br>- Update to latest Substrate, Polkadot &amp; Kusama metadata</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-08-06 08:55:06.156189 UTC</td>
+      <td>2022-08-06 16:55:07.258757 UTC</td>
       <td>1.2.19</td>
       <td>3.1.7</td>
       <td>3.1.7</td>
