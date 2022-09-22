@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-09-21 16:55:03.398320 UTC</td>
+      <td>2022-09-22 00:55:02.059226 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-09-21 16:55:03.707571 UTC</td>
+      <td>2022-09-22 00:55:02.324972 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-09-21 16:55:04.013150 UTC</td>
+      <td>2022-09-22 00:55:02.401562 UTC</td>
       <td>1.10.8</td>
       <td>1.10.25</td>
       <td>1.10.25</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-09-21 16:55:04.242192 UTC</td>
+      <td>2022-09-22 00:55:02.666342 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-09-21 16:55:04.548551 UTC</td>
+      <td>2022-09-22 00:55:02.934684 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-09-21 16:55:04.804213 UTC</td>
+      <td>2022-09-22 00:55:03.250940 UTC</td>
       <td>0.9.16</td>
       <td>0.9.29</td>
       <td>0.9.29</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-09-21 16:55:05.208981 UTC</td>
+      <td>2022-09-22 00:55:03.582459 UTC</td>
       <td>1.8.1</td>
-      <td>1.9.3</td>
-      <td>1.9.3</td>
-      <td>Version Behind</td>
-      <td>2022-08-26T19:52:45Z</td>
-      <td>Version 1.9.3 of `rippled`, the reference server implementation of the XRP Ledger protocol is now available. This release corrects minor technical flaws with the code that loads configured amendment votes after a startup and the copy constructor of `PublicKey`.</br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br>## Changelog</br></br>## Contributions</br></br>This releases contains the following bug fixes:</br></br>- **Change by-value to by-reference to persist vote**: A minor technical flaw, caused by use of a copy instead of a reference, resulted in operator-configured "yes" votes to not be properly loaded after a restart. ([#4256](https://github.com/XRPLF/rippled/pull/4256))</br>- **Properly handle self-assignment of PublicKey**: The `PublicKey` copy assignment operator mishandled the case where a `PublicKey` would be assigned to itself, and could result in undefined behavior. </br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/XRPLF/rippled&gt;.</br></br>We welcome contributions, big and small, and invite everyone to join the community of XRP Ledger developers and help us build the Internet of Value.</br></br>### Credits</br></br>The following people contributed directly to this release:</br></br>- Howard Hinnant &lt;howard@ripple.com&gt;</br>- Crypto Brad Garlinghouse &lt;cryptobradgarlinghouse@protonmail.com&gt;</br>- Wo Jake &lt;87929946+wojake@users.noreply.github.com&gt;</td>
+      <td>1.9.4</td>
+      <td>1.9.4</td>
+      <td>Node version has update</td>
+      <td>2022-09-21T19:31:46Z</td>
+      <td>Version 1.9.4 of `rippled`, the reference implementation of the XRP Ledger protocol is now available. This release introduces an amendment that removes the ability for an NFT issuer to indicate that trust lines should be automatically created for royalty payments from secondary sales of NFTs, in response to a bug report that indicated how this functionality could be abused to mount a denial of service attack against the issuer.</br></br>## Action Required</br></br>This release introduces a new amendment to the XRP Ledger protocol, **`fixRemoveNFTokenAutoTrustLine`** to mitigate a potential denial-of-service attack against NFT issuers that minted NFTs and allowed secondary trading of those NFTs to create trust lines for any asset.</br></br>This amendment is open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, then you should upgrade to version 1.9.4 within two weeks, to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br>For more information about NFTs on the XRP Ledger, see [NFT Conceptual Overview](https://xrpl.org/nft-conceptual-overview.html).</br></br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br>## Changelog</br></br>## Contributions</br></br>The primary change in this release is the following bug fix:</br></br>- **Introduce fixRemoveNFTokenAutoTrustLine amendment**: Introduces the `fixRemoveNFTokenAutoTrustLine` amendment, which disables the `tfTrustLine` flag, which a malicious attacker could exploit to mount denial-of-service attacks against NFT issuers that specified the flag on their NFTs. ([#4301](https://github.com/XRPLF/rippled/4301))</br></br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/XRPLF/rippled&gt;.</br></br>We welcome all contributions and invite everyone to join the community of XRP Ledger developers and help us build the Internet of Value.</br></br>### Credits</br></br>The following people contributed directly to this release:</br></br>- Scott Schurr &lt;scott@ripple.com&gt;</br>- Howard Hinnant &lt;howard@ripple.com&gt;</br>- Scott Determan &lt;scott.determan@yahoo.com&gt;</br>- Ikko Ashimine &lt;eltociear@gmail.com&gt;</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-09-21 16:55:05.476706 UTC</td>
+      <td>2022-09-22 00:55:03.833465 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-09-21 16:55:05.754833 UTC</td>
+      <td>2022-09-22 00:55:04.022112 UTC</td>
       <td>6.7.1</td>
       <td>9.4.1</td>
       <td>9.4.1</td>
@@ -155,11 +155,11 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-09-21 16:55:06.026438 UTC</td>
+      <td>2022-09-22 00:55:04.227079 UTC</td>
       <td>1.2.19</td>
       <td>4.0.0</td>
       <td>4.0.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2022-09-21T15:30:10Z</td>
       <td># [4.0.0](https://github.com/paritytech/txwrapper-core/compare/v3.2.2...v4.0.0) (2022-09-21)</br></br></br>### Breaking Changes</br></br>* **txwrapper-registry** Txwrapper-registry no longer uses apps-config to fetch and retrieve types bundles for a specific chain. It now accepts a env var called TX_TYPES_BUNDLE with a path to your local types bundle package. You may use the [generate-type-bundle](https://github.com/paritytech/generate-type-bundle) to generate a types bundle JSON file. ([#232](https://github.com/paritytech/txwrapper-core/pull/232)) ([2dad84b](https://github.com/paritytech/txwrapper-core/commit/2dad84bb127472c738740c4f86ee7801c879b3be))</br></br>### Bug Fixes</br></br>* **types:** Update polkadot-js deps to get the latest types ([#258](https://github.com/paritytech/txwrapper-core/issues/258)) ([141dfbe](https://github.com/paritytech/txwrapper-core/commit/141dfbe35a7a032ac1e6a96cf7a5d0962b0bee53))</br></br></br></br></td>
     </tr>
