@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2022-10-08 00:55:03.560393 UTC</td>
+      <td>2022-10-08 08:55:04.458335 UTC</td>
       <td>22.0</td>
       <td>23.0</td>
       <td>23.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2022-10-08 00:55:03.843743 UTC</td>
+      <td>2022-10-08 08:55:04.736968 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2022-10-08 00:55:04.138172 UTC</td>
+      <td>2022-10-08 08:55:05.073201 UTC</td>
       <td>1.10.8</td>
       <td>1.10.25</td>
       <td>1.10.25</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2022-10-08 00:55:04.390542 UTC</td>
+      <td>2022-10-08 08:55:05.327661 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2022-10-08 00:55:04.747657 UTC</td>
+      <td>2022-10-08 08:55:05.528491 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2022-10-08 00:55:05.148845 UTC</td>
+      <td>2022-10-08 08:55:05.853253 UTC</td>
       <td>0.9.16</td>
       <td>0.9.29</td>
       <td>0.9.29</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2022-10-08 00:55:05.545141 UTC</td>
+      <td>2022-10-08 08:55:06.220772 UTC</td>
       <td>1.8.1</td>
       <td>1.9.4</td>
       <td>1.9.4</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2022-10-08 00:55:05.865762 UTC</td>
+      <td>2022-10-08 08:55:06.484780 UTC</td>
       <td>23.1.0</td>
       <td>24.1.0</td>
       <td>24.1.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2022-10-08 00:55:06.233651 UTC</td>
+      <td>2022-10-08 08:55:06.753542 UTC</td>
       <td>6.7.1</td>
-      <td>9.4.3</td>
-      <td>9.4.3</td>
-      <td>Version Behind</td>
-      <td>2022-10-02T10:05:00Z</td>
-      <td>Contributed:</br></br>- Allow for new `ink_primitives` types (Thanks to https://github.com/statictype)</br>- Fix contracts runtime `instantiate` call params (Thanks to https://github.com/statictype)</br></br>Changes:</br></br>- Align staking derive redeemableSum with Rust source (`currentEra` vs `activeEra` usage)</br>- Add `@deprecated` flag to RPC interface generation (`contracts_*` &amp; `state_get{Pairs/Keys}`)</br>- Polkadot 9280/9281, Kusama 9291 upgrade blocks</td>
+      <td>9.5.1</td>
+      <td>9.5.1</td>
+      <td>Node version has update</td>
+      <td>2022-10-08T06:10:43Z</td>
+      <td>- **Important** While the API witll detect and decorate the weight type based on V1 or V2, the default `Weight` type (used in runtime calls and RPCs) has not been swapped from the old `u64` variant. This means that on new chains using `WeightV2`, the TS decorated type will still reflect the old version.</br></br>Changes:</br></br>- Adjust handling of `Weight` type for V2 structures</br>- Add alis definitions for `Weight{V1, V2}` (used for type overrides)</br>- Cater for weight v2 (along with v1 pass-through) extrinsics in `api-contract`</br>- Update to latest Substrate, Polkadot &amp; Kusama metadata</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2022-10-08 00:55:06.478508 UTC</td>
+      <td>2022-10-08 08:55:07.004285 UTC</td>
       <td>1.2.19</td>
       <td>4.0.1</td>
       <td>4.0.1</td>
