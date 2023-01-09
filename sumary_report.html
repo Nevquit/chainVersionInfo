@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-01-09 00:55:03.912937 UTC</td>
+      <td>2023-01-09 08:55:04.666475 UTC</td>
       <td>22.0</td>
       <td>24.0.1</td>
       <td>24.0.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-01-09 00:55:04.262966 UTC</td>
+      <td>2023-01-09 08:55:05.024412 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-01-09 00:55:04.579691 UTC</td>
+      <td>2023-01-09 08:55:05.392962 UTC</td>
       <td>1.10.8</td>
       <td>1.10.26</td>
       <td>1.10.26</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-01-09 00:55:04.866136 UTC</td>
+      <td>2023-01-09 08:55:05.761263 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-01-09 00:55:05.097688 UTC</td>
+      <td>2023-01-09 08:55:06.072239 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.1</td>
       <td>0.21.2.1</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-01-09 00:55:05.348631 UTC</td>
+      <td>2023-01-09 08:55:06.349085 UTC</td>
       <td>0.9.16</td>
       <td>0.9.36</td>
       <td>0.9.36</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-01-09 00:55:05.785709 UTC</td>
+      <td>2023-01-09 08:55:06.834728 UTC</td>
       <td>1.8.1</td>
       <td>1.9.4</td>
       <td>1.9.4</td>
@@ -133,18 +133,18 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-01-09 00:55:06.059963 UTC</td>
+      <td>2023-01-09 08:55:07.074293 UTC</td>
       <td>23.1.0</td>
       <td>26.0.0</td>
       <td>26.0.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2023-01-08T17:46:59Z</td>
       <td># Release Notes for Bitcoin Cash Node version 26.0.0</br></br>Bitcoin Cash Node version 26.0.0 is now available from:</br></br>  &lt;https://bitcoincashnode.org&gt;</br></br>## Overview</br></br>This release of Bitcoin Cash Node (BCHN) is marked as a major release but not due to consensus changes - only because it changes an interface (the rpcbind / rpcallowip options) in a way that is not completely backward compatible, and therefore needs to be tagged as a major version in accordance with Semantic Versioning.</br></br>However, for practical purposes, this version is more like a minor release, containing corrections and improvements such as:</br></br>- RPC related bug fixes and output improvements</br>- Performance optimization for getblock</br>- A new benchmark performance bisection script</br>- Some support code for future UTXO commitments</br>- Minor documentation updates</br></br>Users who are running any of our previous releases (24.x.y or 25.0.0) are encouraged to upgrade to v26.0.0.</br></br>## Usage recommendations</br></br>If you have been using the `rpcallowip` or `rpcbind` options, please see the 'Modified functionality' subsection of this document to take</br>changes into account in your configuration.</br></br>## Network changes</br></br>A few RPC calls have been modified to support additional output fields.</br></br>## Added functionality</br></br>A new verbosity level (3) has been added to `getblock` RPC command. It is like level 2 but each transaction will include inputs' `prevout`</br>information.  The existing `/rest/block/` REST endpoint is modified to contain this information too. Every `vin` field will contain an additional `prevout` subfield describing the spent output. `prevout` contains the following keys:</br></br>- `generated` - true if the spent coin was a coinbase</br>- `height`</br>- `value`</br>- `scriptPubKey`</br>- `tokenData` (after May 2023 upgrade, appears if the transaction input had token data)</br></br>## Deprecated functionality</br></br>None.</br></br>## Modified functionality</br></br>- The `rpcallowip` option can no longer be used to automatically listen on all network interfaces. Instead, the `rpcbind` parameter must be used to specify the IP addresses to listen on. Listening for RPC commands over a public network connection is insecure and should be disabled, so a warning is now printed if a user selects such a configuration. If you need to expose RPC in order to use a tool like Docker, ensure you only bind RPC to your localhost, e.g. `docker run [...] -p 127.0.0.1:8332:8332` (this is an extra :8332 over the normal Docker port specification).</br></br>- The `getblock` RPC command has been modified: verbosity level 2 now returns `fee` information per transaction in the block.</br></br>- The `getblock` RPC command with verbosity level 0 now takes a faster path when returning raw block data to clients. It now skips some sanity checks, and assumes the block data read from disk is valid. Clients that read this serialized block data via this RPC call should be aware that it is not as stictly checked as it was previous to this release, and that it's now possible (in theory at least) to retrieve a corrupted block via the RPC interface.</br>  In practice, it's almost always the case that blocks are not corrupt on-disk and this changed guarantee yields significant performance improvements for RPC clients retrieving raw block data. Node admins can disable this new fast-path behavior by using the `-checkblockreads=1` configuration option, which will enable extra consistency checks for raw block reads via RPC.</br></br></br>## Removed functionality</br></br>None.</br></br>## New RPC methods</br></br>None.</br></br>## User interface changes</br></br>The semantics of the `rpcallowip` option have changed - see 'Modified functionality' subsection above.</br></br>## Regressions</br></br>Bitcoin Cash Node 26.0.0 does not introduce any known regressions as compared to 25.0.0.</br></br>## Limitations</br></br>Nothing new to report.</br></br>## Known Issues</br></br>Some issues could not be closed in time for release, but we are tracking all of them on our GitLab repository.</br></br>- The minimum macOS version is 10.14 (Mojave). Earlier macOS versions are no longer supported.</br></br>- Windows users are recommended not to run multiple instances of bitcoin-qt or bitcoind on the same machine if the wallet feature is enabled. There is risk of data corruption if instances are configured to use the same wallet folder.</br></br>- Some users have encountered unit tests failures when running in WSL environments (e.g. WSL/Ubuntu).  At this time, WSL is not considered a supported environment for the software. This may change in future.</br></br>  The functional failure on WSL is tracked in [Issue #33](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/33). It arises when competing node program instances are not prevented from opening the same wallet folder. Running multiple program instances with the same configured walletdir could potentially lead to data corruption. The failure has not been observed on other operating systems so far.</br></br>- `doc/dependencies.md` needs revision [(Issue #65)](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/65).</br></br>- For users running from sources built with BerkeleyDB releases newer than the 5.3 which is used in this release, please take into consideration the database format compatibility issues described in [Issue #34](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/34).  When building from source it is recommended to use BerkeleyDB 5.3 as this avoids wallet database incompatibility issues with the official release.</br></br>- The `test_bitcoin-qt` test executable fails on Linux Mint 20 (see [Issue #144](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/144)). This does not otherwise appear to impact the functioning of the BCHN software on that platform.</br></br>- With a certain combination of build flags that included disabling the QR code library, a build failure was observed where an erroneous</br>  linking against the QR code library (not present) was attempted ([Issue #138](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/138)).</br></br>- Possible out-of-memory error when starting bitcoind with high excessiveblocksize value ([Issue #156](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/156))</br></br>- A problem was observed on scalenet where nodes would sometimes hang for around 10 minutes, accepting RPC connections but not responding to them (see [#210](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/210)).</br></br>- At the time of writing, scalenet has not been mined for a while (since 10 August 2022), thus synchronization will stop at that block time. This isn't considered a BCHN issue per se, it depends on miners to resume mining this testnet.</br></br>- Startup and shutdown time of nodes on scalenet can be long (see [Issue #313](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/313)).</br></br>- Race condition in one of the `p2p_invalid_messages.py` tests (see [Issue #409](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/409)).</br></br>- Occasional failure in bchn-txbroadcastinterval.py (see [Issue #403](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/403)).</br></br>- wallet_keypool.py test failure when run as part of suite on certain many-core platforms (see [Issue #380](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/380)).</br></br>- Spurious 'insufficient funds' failure during p2p_stresstest.py benchmark (see [Issue #377](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/377)).</br></br>- If compiling from source, secp256k1 now no longer works with latest openssl3.x series. There are workarounds (see [Issue #364](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/364)).</br></br>- Spurious `AssertionError: Mempool sync timed out` in several tests (see [Issue #357](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/357)).</br></br>- For some platforms, there may be a need to install additional libraries in order to build from source (see [Issue #431](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/431) and discussion in MR 1523).</br></br>- More TorV3 static seeds may be needed to get `-onlynet=onion` working (see [Issue #429](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/429)).</br></br>- Memory usage can be very high if repeatedly doing RPC `getblock` with verbose=2 on a hash of known big blocks (see [Issue #466](https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/issues/466)).</br></br>---</br></br>## Changes since Bitcoin Cash Node 25.0.0</br></br>### New documents</br></br>None.</br></br>### Removed documents</br></br>None.</br></br>### Notable commits grouped by functionality</br></br>#### Security or consensus relevant fixes</br></br>The semantic changes to `rpcallowip` have been made in consideration of increased node security, as listening for RPC commands on public network interfaces is insecure and should be disabled. See the 'Modified functionality' section above for details.</br></br>#### Interfaces / RPC</br></br>- 1592a894a0dc0e7fb318c795babda03e7f3b95ff Don't log on success by default in ReadRawBlockFromDisk with `-checkblockreads=1`</br>- 751bb58b60e4355ef825bc9106e12454c5b1d2b1 Fix getblockstats feerate unit in the RPC command help</br>- 931fe7280dc48273fda3dc1540f0ba605e0f1519 Nit: Some formatting nits in rpc/rawtransaction.cpp, `getrawtransaction`</br>- b8c237ad0750f403efc2ae948a329732f333170e rpc: Add level 3 verbosity to `getblock` RPC call; Add `fee` to level 2</br>- cf7e12ce889786a5f9e3ca5a2a01683339efc1a6 Improvements to `getrawtransaction` with verbosity=2</br>- eb0b086aea2ec26ca9257eb4598a2702d6a94bac Nit: More nits for getrawtransaction in rpc/rawtransaction.cpp</br></br>#### Features in internal development: support for UTXO commitments</br></br>- 718e29e80e3ec96b17fa4dc5b00c05c82de8e202 Added new functions to secp256k1 for serializing the pubkey from a multiset</br>- ebc2a168bde73a0f1bf33efa5c90d808e70ccd64 Modify the generic code in `hash.h` to support alternate hashers</br>- eeab3ac8e7813e799898fe7bd847f16483111d34 Added C++ wrapper for EC multiset, plus tests</br></br>### Data directory changes</br></br>None.</br></br>#### Performance optimizations</br></br>- 4c30a7fcb6d9e0d042773eb3aaba89d16f595d34 RPC: Read block data directly from disk in `getblock verbosity=0`</br>- 7ae7d42f9452323c8235570b98e144ac4e7abe6c Remove spurious lock</br>- 8ba475f4c6a2e800859b52b4fe2446ebcfcf6ec3 Update chainparamsconstants.h for version v26.0.0</br>- e1d39e5c4d143a3561e8fbd1fe9fb64f8d567ff8 Update checkpoints for v26.0.0 (main, test, test4, and chip)</br></br>#### GUI</br></br>None.</br></br>#### Code quality</br></br>- 3be863dee2f06b556fbe53782a1b9051f73d6ad3 Some NITs (follow-up to MR 1600)</br>- 5379d1c67445c7f3e1f2c2a90af3183c3c7c55dc Minor nit: Fixed a typo and a formatting error in span.h</br>- 85728782f77b0eebd13f57e770bc975da89c084a Nit: Use CURRENCY_UNIT in `getblockstats` help rather than BCH</br>- 8757d2ae1413615c4911af235b978f24443b1e7e Fix bug: RPC &amp; REST API sometimes reads from ::ChainActive() without locks</br>- 8dc6789e7a5c95543ae25ae57ec215529c075b00 httpserver: Address review comments from !1429</br>- 9b5d13cb5aec78a5240b6befbf17816dd88b423a Add additional sanity checks and a unit test for ReadRawBlockFromDisk()</br>- a37951a013368c59690acc8a48799911f2c3d6df Fix bug where `getrawtransaction` with verbose=2 on a coinbase txn fails</br></br>#### Documentation updates</br></br>- 4f1ed0d6858a918c37b9c6a19dc96eaa6abc3912 [doc] Update the release version for signature verification instructions</br>- d0308cef252ecfd3bfaad55b91b7f0ab2bc56ea6 Add rpcthreads to example file.</br></br>#### Build / general</br></br>- 00202a246716ff50ca2acbfcecc700500e444f3d build: Check for dependency 'help2man'</br></br>#### Build / Linux</br></br>- 9b6d19c67bbfee46e261777d1c92bedeac7b4228 Fix breaking `ninja check-lint` on my system after latest flake8</br></br>#### Build / Windows</br></br>None.</br></br>#### Build / MacOSX</br></br>None.</br></br>#### Tests / test framework</br></br>- 24479388842befdc54751d4eb8b00e1ad91150fd Fix for rpc_blockchain.py intermittent failure.</br>- 4355d67db96fcef6a46cc5f79dda30081405081d Fix potential UB in wallet test fixture</br>- 48d8116976cbdf3898187fb39c1bb3d82b634a13 Prevent theoretical UB for CConnMan and PeerLogicValidation mis-use in tests</br>- 5256867daae1277108fafd7b629490b80405c504 [fuzz] Avoid double and triple copying of data when running fuzzers</br>- d7273ec070786b2eadbde50dad77a2b86be5c890 Tests for C++20 work-alike Span</br>- f3e488a853f3c02e45c6eb494c213bfab5e44537 Temporarily disable payment server tests which fail due to expired certificate</br></br>#### Benchmarks</br></br>- 61413d0c6162e7293b5467cb07cddd94762cc03c Benchmark bisect script improvements</br></br>#### Seeds / seeder software</br></br>- 88f1ac6f45860aa1cc44e3862466acdb0778318c Update regex in makeseeds.py to accept BCHN v26.x.x</br>- e8a8d5f1a71924b767bdbdd2b1e6f93f0d4fa8d0 Updated seeds for mainnet for v26.0.0</br></br>#### Maintainer tools</br></br>None.</br></br>#### Infrastructure</br></br>None.</br></br>#### Cleanup</br></br>None.</br></br>#### Continuous Integration (GitLab CI)</br></br>- 25bdba4f4732b118af86b3719c3665244f632398 [ci] Add sanitizer job for undefined behavior</br></br>#### Backports</br></br>- 44830d4cc984aa39d9fe4fc05df51d991deb7d15 [backport] net: Always default rpcbind to localhost, never "all interfaces"</br>- 50b7cb4fe3c242a5c147ca8a858ee758023c3483 [backport] tests: Modify rpc_bind to conform to #14532 behaviour.</br>- af4a29dd844f7347fa77bd70e9e9587542d5f083 [backport] CNetAddr: Add IsBindAny method to check for INADDR_ANY</br>- e07f97db146e61bbc8a8ab018cd09c6b73e86494 [backport] rpcbind: Warn about exposing RPC to untrusted networks</br>- 14cab1395fc845c2b3f2c654e5a4f18958dc16df [backport] net: fix use-after-free in tests</br></td>
     </tr>
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-01-09 00:55:06.263891 UTC</td>
+      <td>2023-01-09 08:55:07.316420 UTC</td>
       <td>6.7.1</td>
       <td>9.11.1</td>
       <td>9.11.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-01-09 00:55:06.506597 UTC</td>
+      <td>2023-01-09 08:55:07.607940 UTC</td>
       <td>1.2.19</td>
       <td>4.1.0</td>
       <td>4.1.0</td>
