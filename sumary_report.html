@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-03-21 00:55:04.004799 UTC</td>
+      <td>2023-03-21 08:55:05.200089 UTC</td>
       <td>22.0</td>
       <td>24.0.1</td>
       <td>24.0.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-03-21 00:55:04.260689 UTC</td>
+      <td>2023-03-21 08:55:05.514381 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-03-21 00:55:04.472306 UTC</td>
+      <td>2023-03-21 08:55:05.718531 UTC</td>
       <td>1.10.8</td>
-      <td>1.11.4</td>
-      <td>1.11.4</td>
-      <td>Version Behind</td>
-      <td>2023-03-10T19:03:56Z</td>
-      <td>This is a security release of Geth, improving resilience of the transaction pool against certain kinds of DoS attacks. These attacks have recently been observed in testnets.</br></br>Notable changes:</br></br>- TxPool validation rules have been tightened to defend against certain DoS attacks. The new checks are based on research by @dwn1998, @wangyibo0308, @ZhouYuxuan97, @tristartom, @fs3l. Thank you for your report and cooperation! ([#26648](https://github.com/ethereum/go-ethereum/pull/26648))</br>- EIP-712 signing in Clef now recognizes all primitive types of Solidity. ([#26770](https://github.com/ethereum/go-ethereum/pull/26770))</br>- EF bootstrap nodes on MS Azure have been removed because they will be decommissioned soon. ([#26828](https://github.com/ethereum/go-ethereum/pull/26828))</br>- The `core.Message` type has been changed from interface to struct and `types.Message` (in core/types) has been removed. This is a breaking API change in core/types. We believe the removal should not cause additional disruption for downstream projects because `types.Messages` had no meaningful use outside of package core. ([#25977](https://github.com/ethereum/go-ethereum/pull/25977))</br>- `core.BlockGen` has a new `Timestamp` method. ([#26844](https://github.com/ethereum/go-ethereum/pull/26844))</br></br>For a full rundown of the changes please consult the Geth [1.11.4 release milestone](https://github.com/ethereum/go-ethereum/milestone/142?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.11.5</td>
+      <td>1.11.5</td>
+      <td>Node version has update</td>
+      <td>2023-03-21T08:05:22Z</td>
+      <td>Geth v1.11.5 **enables the Shanghai upgrade on Wednesday, April 12, 2023 10:27:35 PM UTC**</br></br>The Shanghai upgrade contains the following EIPs:</br></br>- [EIP-3651: Warm COINBASE](https://eips.ethereum.org/EIPS/eip-3651)</br>- [EIP-3855: PUSH0 instruction](https://eips.ethereum.org/EIPS/eip-3855)</br>- [EIP-3860: Limit and meter initcode](https://eips.ethereum.org/EIPS/eip-3860)</br>- [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)</br>- [EIP-6049: Deprecate SELFDESTRUCT](https://eips.ethereum.org/EIPS/eip-6049)</br></br></br>:warning: In order to be able to follow the chain through the upgrade on Wednesday, April 12, 2023 10:27:35 PM UTC, this upgrade is **required**. :warning: </br></br>#### Notable changes:</br></br>- Enable Shanghai at `1681338455` unix time ([#26908](https://github.com/ethereum/go-ethereum/pull/26908))</br>- Improve error message on bad blocks ([#26870](https://github.com/ethereum/go-ethereum/pull/26870))</br></br>#### Minor changes and bugfixes </br>- Preparatory changes for path-based storage ([#26763](https://github.com/ethereum/go-ethereum/pull/26763))</br>- Changes needed use overlay protocols in discv5 ([#26699](https://github.com/ethereum/go-ethereum/pull/26699))</br>- Add support for encoding uint256.Int in RLP ([#26898](https://github.com/ethereum/go-ethereum/pull/26898))</br>- Fixed a bug where local transaction would be rejected with `-32000, future transaction tries to replace pending` when send out of order ([#26930](https://github.com/ethereum/go-ethereum/pull/26930))</br>- Reject keywords `safe` or `pending` over RPC pre merge ([#26862](https://github.com/ethereum/go-ethereum/pull/26862)</br>- Fix file permissions on `admin_exportChain` ([#26912](https://github.com/ethereum/go-ethereum/pull/26912))</br></br>For a full rundown of the changes please consult the Geth [1.11.5 release milestone](https://github.com/ethereum/go-ethereum/milestone/143?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-03-21 00:55:04.743772 UTC</td>
+      <td>2023-03-21 08:55:05.939917 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-03-21 00:55:04.965677 UTC</td>
+      <td>2023-03-21 08:55:06.188686 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-03-21 00:55:05.196603 UTC</td>
+      <td>2023-03-21 08:55:06.460934 UTC</td>
       <td>0.9.16</td>
       <td>0.9.39-1</td>
       <td>0.9.39-1</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-03-21 00:55:06.550371 UTC</td>
+      <td>2023-03-21 08:55:06.849691 UTC</td>
       <td>1.8.1</td>
       <td>1.10.0</td>
       <td>1.10.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-03-21 00:55:06.846607 UTC</td>
+      <td>2023-03-21 08:55:07.117434 UTC</td>
       <td>23.1.0</td>
       <td>26.0.0</td>
       <td>26.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-03-21 00:55:07.093113 UTC</td>
+      <td>2023-03-21 08:55:07.370058 UTC</td>
       <td>6.7.1</td>
       <td>10.1.4</td>
       <td>10.1.4</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-03-21 00:55:07.360065 UTC</td>
+      <td>2023-03-21 08:55:07.621265 UTC</td>
       <td>1.2.19</td>
       <td>5.0.1</td>
       <td>5.0.1</td>
