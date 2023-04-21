@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-04-20 16:55:04.252674 UTC</td>
+      <td>2023-04-21 00:55:13.852288 UTC</td>
       <td>22.0</td>
       <td>24.0.1</td>
       <td>24.0.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-04-20 16:55:04.543907 UTC</td>
+      <td>2023-04-21 00:55:14.044630 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-04-20 16:55:04.794555 UTC</td>
+      <td>2023-04-21 00:55:14.209269 UTC</td>
       <td>1.10.8</td>
-      <td>1.11.5</td>
-      <td>1.11.5</td>
-      <td>Version Behind</td>
-      <td>2023-03-21T08:05:22Z</td>
-      <td>Geth v1.11.5 **enables the Shanghai upgrade on Wednesday, April 12, 2023 10:27:35 PM UTC**</br></br>The Shanghai upgrade contains the following EIPs:</br></br>- [EIP-3651: Warm COINBASE](https://eips.ethereum.org/EIPS/eip-3651)</br>- [EIP-3855: PUSH0 instruction](https://eips.ethereum.org/EIPS/eip-3855)</br>- [EIP-3860: Limit and meter initcode](https://eips.ethereum.org/EIPS/eip-3860)</br>- [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)</br>- [EIP-6049: Deprecate SELFDESTRUCT](https://eips.ethereum.org/EIPS/eip-6049)</br></br></br>:warning: In order to be able to follow the chain through the upgrade on Wednesday, April 12, 2023 10:27:35 PM UTC, this upgrade is **required**. :warning: </br></br>#### Notable changes:</br></br>- Enable Shanghai at `1681338455` unix time ([#26908](https://github.com/ethereum/go-ethereum/pull/26908))</br>- Improve error message on bad blocks ([#26870](https://github.com/ethereum/go-ethereum/pull/26870))</br></br>#### Minor changes and bugfixes </br>- Preparatory changes for path-based storage ([#26763](https://github.com/ethereum/go-ethereum/pull/26763))</br>- Changes needed use overlay protocols in discv5 ([#26699](https://github.com/ethereum/go-ethereum/pull/26699))</br>- Add support for encoding uint256.Int in RLP ([#26898](https://github.com/ethereum/go-ethereum/pull/26898))</br>- Fixed a bug where local transaction would be rejected with `-32000, future transaction tries to replace pending` when send out of order ([#26930](https://github.com/ethereum/go-ethereum/pull/26930))</br>- Reject keywords `safe` or `pending` over RPC pre merge ([#26862](https://github.com/ethereum/go-ethereum/pull/26862)</br>- Fix file permissions on `admin_exportChain` ([#26912](https://github.com/ethereum/go-ethereum/pull/26912))</br></br>For a full rundown of the changes please consult the Geth [1.11.5 release milestone](https://github.com/ethereum/go-ethereum/milestone/143?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.11.6</td>
+      <td>1.11.6</td>
+      <td>Node version has update</td>
+      <td>2023-04-20T18:17:29Z</td>
+      <td>Geth v1.11.6 is a maintenance release, fixing some minor issues and adding some log management features.</br></br>#### Log management </br></br>Log rotation has landed in `geth`, via ([#26843](https://github.com/ethereum/go-ethereum/pull/26843)). Log rotation can be activated using the flag `--log.rotate`. Additional parameters that can be given are:</br></br>  - `--log.maxsize` to set maximum size before files are rotated,</br>  - `--log.maxbackups` to set how many files are retailed,</br>  - `--log.maxage` to configure max age of rotated files,</br>  - `--log.compress` whether to compress rotated files</br></br>The location the logfile(s) can be configured as previously, using the `--log.logfile` parameter. </br></br>A new log output format, [`logfmt`](https://brandur.org/logfmt) was added ([#27001](https://github.com/ethereum/go-ethereum/pull/27001), [#26970](https://github.com/ethereum/go-ethereum/pull/26970)). It can be enabled using `--log.format`, which currently supports the options `json`, `logfmt` or `terminal`. (Thus, the `--log.json` option is now deprecated). </br></br>And finally, the flag `--vmodule` was renamed to `--log.vmodule` ([#27071](https://github.com/ethereum/go-ethereum/pull/27071)). </br></br>#### Assorted</br></br>- New sepolia bootnodes managed by EF devops are added ([#27099](https://github.com/ethereum/go-ethereum/pull/27099))</br>- Converting the codebase to use `atomic` types ([#27068](https://github.com/ethereum/go-ethereum/pull/27068), [#27031](https://github.com/ethereum/go-ethereum/pull/27031), [#27030](https://github.com/ethereum/go-ethereum/pull/27030), [#27013](https://github.com/ethereum/go-ethereum/pull/27013),[#27014](https://github.com/ethereum/go-ethereum/pull/27014), [#27011](https://github.com/ethereum/go-ethereum/pull/27011), [#26992](https://github.com/ethereum/go-ethereum/pull/26992), [#26993](https://github.com/ethereum/go-ethereum/pull/26993), [#26951](https://github.com/ethereum/go-ethereum/pull/26951), [#26935](https://github.com/ethereum/go-ethereum/pull/26935), [#27121](https://github.com/ethereum/go-ethereum/pull/27121))</br>- Bugfixes to make tracers more correct avoid crashes ([#27029](https://github.com/ethereum/go-ethereum/pull/27029), [#26848](https://github.com/ethereum/go-ethereum/pull/26848))</br>- Fix race-conditions in `graphql` ([#26965](https://github.com/ethereum/go-ethereum/pull/26965))</br>- New CPU counter-typed metrics ([#26796](https://github.com/ethereum/go-ethereum/pull/26796))</br></br>For a full rundown of the changes please consult the Geth [1.11.6 release milestone](https://github.com/ethereum/go-ethereum/milestone/144?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-04-20 16:55:05.112655 UTC</td>
+      <td>2023-04-21 00:55:14.409307 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-04-20 16:55:05.338608 UTC</td>
+      <td>2023-04-21 00:55:14.573040 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-04-20 16:55:05.589855 UTC</td>
+      <td>2023-04-21 00:55:14.735993 UTC</td>
       <td>0.9.16</td>
       <td>0.9.41</td>
       <td>0.9.41</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-04-20 16:55:05.957551 UTC</td>
+      <td>2023-04-21 00:55:15.011731 UTC</td>
       <td>1.8.1</td>
       <td>1.10.1</td>
       <td>1.10.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-04-20 16:55:06.164896 UTC</td>
+      <td>2023-04-21 00:55:15.193318 UTC</td>
       <td>23.1.0</td>
       <td>26.0.0</td>
       <td>26.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-04-20 16:55:06.332716 UTC</td>
+      <td>2023-04-21 00:55:15.349401 UTC</td>
       <td>6.7.1</td>
       <td>10.3.4</td>
       <td>10.3.4</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-04-20 16:55:06.548692 UTC</td>
+      <td>2023-04-21 00:55:15.526842 UTC</td>
       <td>1.2.19</td>
       <td>5.0.1</td>
       <td>5.0.1</td>
