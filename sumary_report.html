@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-05-25 08:55:04.516439 UTC</td>
+      <td>2023-05-25 16:55:03.952751 UTC</td>
       <td>22.0</td>
       <td>24.1</td>
       <td>24.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-05-25 08:55:04.832725 UTC</td>
+      <td>2023-05-25 16:55:04.203424 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-05-25 08:55:05.065977 UTC</td>
+      <td>2023-05-25 16:55:04.440287 UTC</td>
       <td>1.10.8</td>
-      <td>1.11.6</td>
-      <td>1.11.6</td>
-      <td>Version Behind</td>
-      <td>2023-04-20T18:17:29Z</td>
-      <td>Geth v1.11.6 is a maintenance release, fixing some minor issues and adding some log management features.</br></br>#### Log management </br></br>Log rotation has landed in `geth`, via ([#26843](https://github.com/ethereum/go-ethereum/pull/26843)). Log rotation can be activated using the flag `--log.rotate`. Additional parameters that can be given are:</br></br>  - `--log.maxsize` to set maximum size before files are rotated,</br>  - `--log.maxbackups` to set how many files are retailed,</br>  - `--log.maxage` to configure max age of rotated files,</br>  - `--log.compress` whether to compress rotated files</br></br>The location the logfile(s) can be configured as previously, using the `--log.logfile` parameter. </br></br>A new log output format, [`logfmt`](https://brandur.org/logfmt) was added ([#27001](https://github.com/ethereum/go-ethereum/pull/27001), [#26970](https://github.com/ethereum/go-ethereum/pull/26970)). It can be enabled using `--log.format`, which currently supports the options `json`, `logfmt` or `terminal`. (Thus, the `--log.json` option is now deprecated). </br></br>And finally, the flag `--vmodule` was renamed to `--log.vmodule` ([#27071](https://github.com/ethereum/go-ethereum/pull/27071)). </br></br>#### Assorted</br></br>- New sepolia bootnodes managed by EF devops are added ([#27099](https://github.com/ethereum/go-ethereum/pull/27099))</br>- Converting the codebase to use `atomic` types ([#27068](https://github.com/ethereum/go-ethereum/pull/27068), [#27031](https://github.com/ethereum/go-ethereum/pull/27031), [#27030](https://github.com/ethereum/go-ethereum/pull/27030), [#27013](https://github.com/ethereum/go-ethereum/pull/27013),[#27014](https://github.com/ethereum/go-ethereum/pull/27014), [#27011](https://github.com/ethereum/go-ethereum/pull/27011), [#26992](https://github.com/ethereum/go-ethereum/pull/26992), [#26993](https://github.com/ethereum/go-ethereum/pull/26993), [#26951](https://github.com/ethereum/go-ethereum/pull/26951), [#26935](https://github.com/ethereum/go-ethereum/pull/26935), [#27121](https://github.com/ethereum/go-ethereum/pull/27121))</br>- Bugfixes to make tracers more correct avoid crashes ([#27029](https://github.com/ethereum/go-ethereum/pull/27029), [#26848](https://github.com/ethereum/go-ethereum/pull/26848))</br>- Fix race-conditions in `graphql` ([#26965](https://github.com/ethereum/go-ethereum/pull/26965))</br>- New CPU counter-typed metrics ([#26796](https://github.com/ethereum/go-ethereum/pull/26796))</br></br>For a full rundown of the changes please consult the Geth [1.11.6 release milestone](https://github.com/ethereum/go-ethereum/milestone/144?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.12.0</td>
+      <td>1.12.0</td>
+      <td>Node version has update</td>
+      <td>2023-05-25T10:02:50Z</td>
+      <td>**Geth v1.12.0 is a potentially breaking change, hence it was deemed to deserve  version bump, to `1.12`.**</br></br>The v1.12 release family drops support for proof-of-work, and thus can not be used any more on PoW-based private chains, or as an upstream library for projects depending on `ethash` PoW (#27178, #27147).</br></br>In our GraphQL API, a breaking change is that all numeric values are now encoded as hex strings (#26894). The internal GraphQL UI was updated to version 2.0. (#27294).</br></br>Regarding our move from `leveldb` to `pebble`, Geth now defaults to use Pebble as a backend if no existing database is found (#27136). If a previous LevelDB database exists Geth will keep using that, and if you must have LevelDB for some compatibility reasons, you can force it in Geth with the `--db.backend=leveldb` flag.</br></br>We have made progress on "EIP-4844: Shard Blob Transactions" (#27257, #27256, #27155, #27049), beacon light sync (#27292), and path-based state storage (#27176, #26813) but neither is finished as of yet.</br></br>Other improvements: </br>  - Add block overrides to eth_call (#26414)</br>  - Make batched state-test execution possible (#27318)</br></br>Assorted bugfixes: </br>  - Do not ignore `null` address while iterative dump (#27320)   </br>  - Fix flatCallTracer crasher (#27304)</br>  - Prevent pebble shutdown-panic (#27238)</br>  - Make websocket use default "HTTP_PROXY" by default (#27264)</br>  - Make `eth_estimateGas` use `latest` block by default (#24363)</br>  - Add `txHash` field on txTraceResult (#27183)</br>  - Fix crash on querying finalized block (#27162)</br></br>For a full rundown of the changes please consult the Geth [1.12.0 release milestone](https://github.com/ethereum/go-ethereum/milestone/145?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-05-25 08:55:05.450864 UTC</td>
+      <td>2023-05-25 16:55:04.702014 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-05-25 08:55:05.681837 UTC</td>
+      <td>2023-05-25 16:55:04.928556 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-05-25 08:55:06.247213 UTC</td>
+      <td>2023-05-25 16:55:05.228823 UTC</td>
       <td>0.9.16</td>
       <td>0.9.42</td>
       <td>0.9.42</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-05-25 08:55:06.575512 UTC</td>
+      <td>2023-05-25 16:55:05.572586 UTC</td>
       <td>1.8.1</td>
       <td>1.10.1</td>
       <td>1.10.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-05-25 08:55:06.958859 UTC</td>
+      <td>2023-05-25 16:55:05.759725 UTC</td>
       <td>23.1.0</td>
       <td>26.0.0</td>
       <td>26.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-05-25 08:55:07.249178 UTC</td>
+      <td>2023-05-25 16:55:05.981289 UTC</td>
       <td>6.7.1</td>
       <td>10.7.2</td>
       <td>10.7.2</td>
@@ -155,13 +155,13 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-05-25 08:55:07.489781 UTC</td>
+      <td>2023-05-25 16:55:06.240971 UTC</td>
       <td>1.2.19</td>
-      <td>6.0.0</td>
-      <td>6.0.0</td>
-      <td>Version Behind</td>
-      <td>2023-05-08T12:47:38Z</td>
-      <td># [6.0.0](https://github.com/paritytech/txwrapper-core/compare/v5.0.1...v6.0.0) (2023-05-08)</br></br>### Breaking Changes</br></br>* fix!: refactor the whole testing system with metadata, remove old calls, and fix some types (#295) ([58d026a](https://github.com/paritytech/txwrapper-core/commit/58d026ad7c0d9eaa0816fddf33735d4015e22edd)), closes [#295](https://github.com/paritytech/txwrapper-core/issues/295)</br>    NOTE: For more detail please read the PR on the changes removed. Below will be a list of things either removed or changed.</br>    </br>    - Removed `proxy::anonymous`</br>    - Removed `proxy::kill_anonymous`</br>    - The `keys` field in `session::set_keys` has changed from an `[]`, to an `object` (See PR for more detail on specifics)</br>    - The `dest` field in `balances::transfer` has changed from a `string` to an `object` (See PR for more detail on specifics)</br></br></br>### Bug Fixes</br></br>* add detectOpenHandles flag in tests (jest) ([#285](https://github.com/paritytech/txwrapper-core/issues/285)) ([90a231e](https://github.com/paritytech/txwrapper-core/commit/90a231e07e69de96602f92d37897493ac2e7b7f7))</br>* adjust memoization and cache ([#298](https://github.com/paritytech/txwrapper-core/issues/298)) ([a0ae8c7](https://github.com/paritytech/txwrapper-core/commit/a0ae8c72570910598ef6787228a559c11196d001))</br>    NOTE: For more detail please read the PR on the changes removed. Below will be a list of things affected.</br>    </br>    - Added `TXWRAPPER_METADATA_CACHE_MAX`</br>    - Added `TXWRAPPER_METADATA_CACHE_MAX_AGE`</br></br>* rework `deriveAddress` to have all schemes support ([#293](https://github.com/paritytech/txwrapper-core/issues/293)) ([5b99d23](https://github.com/paritytech/txwrapper-core/commit/5b99d2396a078186145377e11beb2faf1c4e7815))</br></br></br></br></br></br>### Features</br></br>* add `additionalTypes`, and `typesBundle` to `getRegistryBase` ([#294](https://github.com/paritytech/txwrapper-core/issues/294)) ([671a2d1](https://github.com/paritytech/txwrapper-core/commit/671a2d168a114866455aff2f01d0d019eeeed2d3))</br></br></br></br></br></td>
+      <td>6.0.1</td>
+      <td>6.0.1</td>
+      <td>Node version has update</td>
+      <td>2023-05-25T15:36:49Z</td>
+      <td>## [6.0.1](https://github.com/paritytech/txwrapper-core/compare/v6.0.0...v6.0.1) (2023-05-25)</br></br></br>### Bug Fixes</br></br>* safer process.env access ([#301](https://github.com/paritytech/txwrapper-core/issues/301)) ([0035d23](https://github.com/paritytech/txwrapper-core/commit/0035d236db34b33ced4a419c710890b566628980)) contributed by: ([alecdwm](https://github.com/alecdwm))</br></br></br></br></td>
     </tr>
   </tbody>
 </table></body>
