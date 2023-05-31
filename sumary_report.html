@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-05-31 00:55:02.943281 UTC</td>
+      <td>2023-05-31 08:55:03.850029 UTC</td>
       <td>22.0</td>
       <td>25.0</td>
       <td>25.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-05-31 00:55:03.205501 UTC</td>
+      <td>2023-05-31 08:55:04.110942 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-05-31 00:55:03.404957 UTC</td>
+      <td>2023-05-31 08:55:04.340704 UTC</td>
       <td>1.10.8</td>
       <td>1.12.0</td>
       <td>1.12.0</td>
       <td>Version Behind</td>
       <td>2023-05-25T10:02:50Z</td>
-      <td>**Geth v1.12.0 is a potentially breaking change, hence it was deemed to deserve  version bump, to `1.12`.**</br></br>The v1.12 release family drops support for proof-of-work, and thus can not be used any more on PoW-based private chains, or as an upstream library for projects depending on `ethash` PoW (#27178, #27147).</br></br>In our GraphQL API, a breaking change is that all numeric values are now encoded as hex strings (#26894). The internal GraphQL UI was updated to version 2.0. (#27294).</br></br>Regarding our move from `leveldb` to `pebble`, Geth now defaults to use Pebble as a backend if no existing database is found (#27136). If a previous LevelDB database exists Geth will keep using that, and if you must have LevelDB for some compatibility reasons, you can force it in Geth with the `--db.backend=leveldb` flag.</br></br>We have made progress on "EIP-4844: Shard Blob Transactions" (#27257, #27256, #27155, #27049), beacon light sync (#27292), and path-based state storage (#27176, #26813) but neither is finished as of yet.</br></br>Other improvements: </br>  - Add block overrides to eth_call (#26414)</br>  - Make batched state-test execution possible (#27318)</br></br>Assorted bugfixes: </br>  - Do not ignore `null` address while iterative dump (#27320)   </br>  - Fix flatCallTracer crasher (#27304)</br>  - Prevent pebble shutdown-panic (#27238)</br>  - Make websocket use default "HTTP_PROXY" by default (#27264)</br>  - Make `eth_estimateGas` use `latest` block by default (#24363)</br>  - Add `txHash` field on txTraceResult (#27183)</br>  - Fix crash on querying finalized block (#27162)</br></br>For a full rundown of the changes please consult the Geth [1.12.0 release milestone](https://github.com/ethereum/go-ethereum/milestone/145?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
+      <td>**Geth v1.12.0 is a potentially breaking change, hence it was deemed to deserve  version bump, to `1.12`.**</br></br>The v1.12 release family drops support for proof-of-work, and thus can not be used any more on PoW-based private chains, or as an upstream library for projects depending on `ethash` PoW (#27178, #27147).</br></br>In our GraphQL API, a breaking change is that all numeric values are now encoded as hex strings (#26894). The internal GraphQL UI was updated to version 2.0. (#27294).</br></br>Regarding our move from `leveldb` to `pebble`, Geth now defaults to use Pebble as a backend if no existing database is found (#27136). If a previous LevelDB database exists Geth will keep using that, and if you must have LevelDB for some compatibility reasons, you can force it in Geth with the `--db.engine=leveldb` flag.</br></br>We have made progress on "EIP-4844: Shard Blob Transactions" (#27257, #27256, #27155, #27049), beacon light sync (#27292), and path-based state storage (#27176, #26813) but neither is finished as of yet.</br></br>Other improvements: </br>  - Add block overrides to eth_call (#26414)</br>  - Make batched state-test execution possible (#27318)</br></br>Assorted bugfixes: </br>  - Do not ignore `null` address while iterative dump (#27320)   </br>  - Fix flatCallTracer crasher (#27304)</br>  - Prevent pebble shutdown-panic (#27238)</br>  - Make websocket use default "HTTP_PROXY" by default (#27264)</br>  - Make `eth_estimateGas` use `latest` block by default (#24363)</br>  - Add `txHash` field on txTraceResult (#27183)</br>  - Fix crash on querying finalized block (#27162)</br></br>For a full rundown of the changes please consult the Geth [1.12.0 release milestone](https://github.com/ethereum/go-ethereum/milestone/145?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-05-31 00:55:03.656953 UTC</td>
+      <td>2023-05-31 08:55:04.633526 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-05-31 00:55:03.875535 UTC</td>
+      <td>2023-05-31 08:55:04.883563 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-05-31 00:55:04.102856 UTC</td>
+      <td>2023-05-31 08:55:05.092153 UTC</td>
       <td>0.9.16</td>
       <td>0.9.42</td>
       <td>0.9.42</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-05-31 00:55:04.511324 UTC</td>
+      <td>2023-05-31 08:55:05.443926 UTC</td>
       <td>1.8.1</td>
       <td>1.10.1</td>
       <td>1.10.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-05-31 00:55:04.726350 UTC</td>
+      <td>2023-05-31 08:55:05.683564 UTC</td>
       <td>23.1.0</td>
       <td>26.0.0</td>
       <td>26.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-05-31 00:55:04.932536 UTC</td>
+      <td>2023-05-31 08:55:05.885449 UTC</td>
       <td>6.7.1</td>
       <td>10.7.3</td>
       <td>10.7.3</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-05-31 00:55:05.139042 UTC</td>
+      <td>2023-05-31 08:55:06.095369 UTC</td>
       <td>1.2.19</td>
       <td>6.0.1</td>
       <td>6.0.1</td>
