@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-06-21 00:55:03.961887 UTC</td>
+      <td>2023-06-21 08:55:03.310345 UTC</td>
       <td>22.0</td>
       <td>25.0</td>
       <td>25.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-06-21 00:55:04.223950 UTC</td>
+      <td>2023-06-21 08:55:04.144846 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-06-21 00:55:04.420133 UTC</td>
+      <td>2023-06-21 08:55:04.412332 UTC</td>
       <td>1.10.8</td>
       <td>1.12.0</td>
       <td>1.12.0</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-06-21 00:55:04.698255 UTC</td>
+      <td>2023-06-21 08:55:04.667571 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-06-21 00:55:04.897757 UTC</td>
+      <td>2023-06-21 08:55:04.902893 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-06-21 00:55:05.069062 UTC</td>
+      <td>2023-06-21 08:55:05.166650 UTC</td>
       <td>0.9.16</td>
       <td>0.9.43</td>
       <td>0.9.43</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-06-21 00:55:05.350314 UTC</td>
+      <td>2023-06-21 08:55:05.593378 UTC</td>
       <td>1.8.1</td>
       <td>1.11.0</td>
       <td>1.11.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2023-06-21T00:03:50Z</td>
       <td>Version 1.11.0 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available.</br></br>This release reduces memory usage, introduces the `fixNFTokenRemint` amendment, and adds new features and bug fixes. For example, the new NetworkID field in transactions helps to prevent replay attacks with side-chains.</br></br>[Sign Up for Future Release Announcements](https://groups.google.com/g/ripple-server)</br></br>&lt;!-- BREAK --&gt;</br></br>## Action Required</br></br>The `fixNFTokenRemint` amendment is now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, upgrade to version 1.11.0 by July 5 to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br></br>## What's Changed</br></br>### New Features and Improvements</br></br>* Allow port numbers be be specified using a either a colon or a space by @RichardAH in https://github.com/XRPLF/rippled/pull/4328</br>* Eliminate memory allocation from critical path: by @nbougalis in https://github.com/XRPLF/rippled/pull/4353</br>* Make it easy for projects to depend on libxrpl by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4449</br>* Add the ability to mark amendments as obsolete by @ximinez in https://github.com/XRPLF/rippled/pull/4291</br>* Always create the FeeSettings object in genesis ledger by @ximinez in https://github.com/XRPLF/rippled/pull/4319</br>* Log exception messages in several locations by @drlongle in https://github.com/XRPLF/rippled/pull/4400</br>* Parse flags in account_info method by @drlongle in https://github.com/XRPLF/rippled/pull/4459</br>* Add NFTokenPages to account_objects RPC by @RichardAH in https://github.com/XRPLF/rippled/pull/4352</br>* add jss fields used by clio `nft_info` by @ledhed2222 in https://github.com/XRPLF/rippled/pull/4320</br>* Introduce a slab-based memory allocator and optimize SHAMapItem by @nbougalis in https://github.com/XRPLF/rippled/pull/4218</br>* Add NetworkID field to transactions to help prevent replay attacks on and from side-chains by @RichardAH in https://github.com/XRPLF/rippled/pull/4370</br>* If present, set quorum based on command line. by @mtrippled in https://github.com/XRPLF/rippled/pull/4489</br>* API does not accept seed or public key for account by @drlongle in https://github.com/XRPLF/rippled/pull/4404</br>* Add `nftoken_id`, `nftoken_ids` and `offer_id` meta fields into NFT `Tx` responses by @shawnxie999 in https://github.com/XRPLF/rippled/pull/4447</br></br>### Bug Fixes</br></br>* fix(gateway_balances): handle overflow exception by @RichardAH in https://github.com/XRPLF/rippled/pull/4355</br>* fix(ValidatorSite): handle rare null pointer dereference in timeout by @ximinez in https://github.com/XRPLF/rippled/pull/4420</br>* RPC commands understand markers derived from all ledger object types by @ximinez in https://github.com/XRPLF/rippled/pull/4361</br>* `fixNFTokenRemint`: prevent NFT re-mint: by @shawnxie999 in https://github.com/XRPLF/rippled/pull/4406</br>* Fix a case where ripple::Expected returned a json array, not a value by @scottschurr in https://github.com/XRPLF/rippled/pull/4401</br>* fix: Ledger data returns an empty list (instead of null) when all entries are filtered out by @drlongle in https://github.com/XRPLF/rippled/pull/4398</br>* Fix unit test ripple.app.LedgerData by @drlongle in https://github.com/XRPLF/rippled/pull/4484</br>* Fix the fix for std::result_of by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4496</br>* Fix errors for Clang 16 by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4501</br>* Ensure that switchover vars are initialized before use: by @seelabs in https://github.com/XRPLF/rippled/pull/4527</br>* Move faulty assert by @ximinez in https://github.com/XRPLF/rippled/pull/4533</br>* Fix unaligned load and stores: (#4528) by @seelabs in https://github.com/XRPLF/rippled/pull/4531</br>* fix node size estimation by @dangell7 in https://github.com/XRPLF/rippled/pull/4536</br>* fix: remove redundant moves by @ckeshava in https://github.com/XRPLF/rippled/pull/4565</br></br>### Code Cleanup and Testing</br></br>* Replace compare() with the three-way comparison operator in base_uint, Issue and Book by @drlongle in https://github.com/XRPLF/rippled/pull/4411</br>* Rectify the import paths of boost::function_output_iterator by @ckeshava in https://github.com/XRPLF/rippled/pull/4293</br>* Expand Linux test matrix by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4454</br>* Add patched recipe for SOCI by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4510</br>* Switch to self-hosted runners for macOS by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4511</br>* [TRIVIAL] Add missing includes by @seelabs in https://github.com/XRPLF/rippled/pull/4555</br></br>### Docs</br></br>* Refactor build instructions by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4381</br>* Add install instructions for package managers by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4472</br>* Fix typo by @solmsted in https://github.com/XRPLF/rippled/pull/4508</br>* Update environment.md by @sappenin in https://github.com/XRPLF/rippled/pull/4498</br>* Update BUILD.md by @oeggert in https://github.com/XRPLF/rippled/pull/4514</br>* Trivial: add comments for NFToken-related invariants by @scottschurr in https://github.com/XRPLF/rippled/pull/4558</br></br>## New Contributors</br>* @drlongle made their first contribution in https://github.com/XRPLF/rippled/pull/4411</br>* @ckeshava made their first contribution in https://github.com/XRPLF/rippled/pull/4293</br>* @solmsted made their first contribution in https://github.com/XRPLF/rippled/pull/4508</br>* @sappenin made their first contribution in https://github.com/XRPLF/rippled/pull/4498</br>* @oeggert made their first contribution in https://github.com/XRPLF/rippled/pull/4514</br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/1.10.1...1.11.0</br></br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/XRPLF/rippled&gt;.</br></br>We welcome all contributions and invite everyone to join the community of XRP Ledger developers to help build the Internet of Value.</br></br>### Credits</br></br>The following people contributed directly to this release:</br>- Alloy Networks &lt;45832257+alloynetworks@users.noreply.github.com&gt;</br>- Brandon Wilson &lt;brandon@coil.com&gt;</br>- Chenna Keshava B S &lt;21219765+ckeshava@users.noreply.github.com&gt;</br>- David Fuelling &lt;sappenin@gmail.com&gt;</br>- Denis Angell &lt;dangell@transia.co&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Elliot Lee &lt;github.public@intelliot.com&gt;</br>- John Freeman &lt;jfreeman08@gmail.com&gt;</br>- Mark Travis &lt;mtrippled@users.noreply.github.com&gt;</br>- Nik Bougalis &lt;nikb@bougalis.net&gt;</br>- RichardAH &lt;richard.holland@starstone.co.nz&gt;</br>- Scott Determan &lt;scott.determan@yahoo.com&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br>- Shawn Xie &lt;35279399+shawnxie999@users.noreply.github.com&gt;</br>- drlongle &lt;drlongle@gmail.com&gt;</br>- ledhed2222 &lt;ledhed2222@users.noreply.github.com&gt;</br>- oeggert &lt;117319296+oeggert@users.noreply.github.com&gt;</br>- solmsted &lt;steven.olm@gmail.com&gt;</br></br></br>Bug Bounties and Responsible Disclosures:</br>We welcome reviews of the rippled code and urge researchers to</br>responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to:</br></br>    bugs@xrpl.org</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-06-21 00:55:05.545421 UTC</td>
+      <td>2023-06-21 08:55:05.851190 UTC</td>
       <td>23.1.0</td>
       <td>26.1.0</td>
       <td>26.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-06-21 00:55:05.701656 UTC</td>
+      <td>2023-06-21 08:55:06.097708 UTC</td>
       <td>6.7.1</td>
       <td>10.9.1</td>
       <td>10.9.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-06-21 00:55:05.870765 UTC</td>
+      <td>2023-06-21 08:55:06.296078 UTC</td>
       <td>1.2.19</td>
       <td>6.0.1</td>
       <td>6.0.1</td>
