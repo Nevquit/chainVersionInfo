@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-09-07 00:55:04.671347 UTC</td>
+      <td>2023-09-07 08:55:04.962957 UTC</td>
       <td>22.0</td>
       <td>25.0</td>
       <td>25.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-09-07 00:55:04.977539 UTC</td>
+      <td>2023-09-07 08:55:05.272545 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-09-07 00:55:05.183824 UTC</td>
+      <td>2023-09-07 08:55:05.486859 UTC</td>
       <td>1.10.8</td>
       <td>1.12.2</td>
       <td>1.12.2</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-09-07 00:55:05.423112 UTC</td>
+      <td>2023-09-07 08:55:05.729948 UTC</td>
       <td>2.2.0</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-09-07 00:55:05.640526 UTC</td>
+      <td>2023-09-07 08:55:06.067885 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-09-07 00:55:05.905183 UTC</td>
+      <td>2023-09-07 08:55:06.303332 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-09-07 00:55:06.286093 UTC</td>
+      <td>2023-09-07 08:55:06.694720 UTC</td>
       <td>1.8.1</td>
-      <td>1.12</td>
-      <td>1.12</td>
+      <td>1.12.0</td>
+      <td>1.12.0</td>
       <td>Node version has update</td>
       <td>2023-09-06T21:51:33Z</td>
-      <td>Version 1.12.0 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available. This release adds new features and bug fixes, and introduces these amendments:</br></br>- `AMM`</br>- `Clawback`</br>- `fixReducedOffersV1`</br></br>[Sign Up for Future Release Announcements](https://groups.google.com/g/ripple-server)</br></br>&lt;!-- BREAK --&gt;</br></br>## Action Required</br></br>Three new amendments are now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, upgrade to version 1.12.0 by September 20, 2023 to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br></br>## Changelog</br></br>### New Features and Amendments</br></br>- **`AMM`**: Introduces an automated market maker (AMM) protocol to the XRP Ledger's decentralized exchange, enabling you to trade assets without a counterparty. For more information about AMMs, see: [Automated Market Maker](https://opensource.ripple.com/docs/xls-30d-amm/amm-uc/). [#4294](https://github.com/XRPLF/rippled/pull/4294)</br></br>- **`Clawback`**: Allows issuers to add the `lsfAllowTrustLineClawback` flag to an issuing account. This enables the account to recover, or _claw back_, issued tokens after they're distributed to accounts. For additional documentation on this feature, see: [#4553](https://github.com/XRPLF/rippled/pull/4553).</br></br>- **`fixReducedOffersV1`**: Reduces the occurrence of order books that are blocked by reduced offers. [#4512](https://github.com/XRPLF/rippled/pull/4512)</br></br>- Added binary hardening and linker flags to enhance security during the build process. [#4603](https://github.com/XRPLF/rippled/pull/4603)</br></br>- Updated build dependencies to the most recent versions in Conan Center. [#4595](https://github.com/XRPLF/rippled/pull/4595)</br></br>- Updated Conan recipe for NuDB. [#4615](https://github.com/XRPLF/rippled/pull/4615)</br></br>- Added a pre-commit hook that runs the clang-format linter locally before committing changes. To install this feature, see: [CONTRIBUTING](https://github.com/XRPLF/xrpl-dev-portal/blob/master/CONTRIBUTING.md). [#4599](https://github.com/XRPLF/rippled/pull/4599)</br></br>- Added quality-of-life improvements to workflows, using new [concurrency control](https://docs.github.com/en/actions/using-jobs/using-concurrency) features. [#4597](https://github.com/XRPLF/rippled/pull/4597)</br></br>- Added an Artifactory to the `nix` workflow to improve build times. [#4556](https://github.com/XRPLF/rippled/pull/4556)</br></br>- Added WebSocket and RPC port info to `server_info` responses. [#4427](https://github.com/XRPLF/rippled/pull/4427)</br></br></br></br>### Bug Fixes and Performance Improvements</br></br>- Fixed an incorrect error response when there are missing fields in the API v2 `ledger_entry` method. [#4552](https://github.com/XRPLF/rippled/pull/4552)</br></br>- Updated checkout versions to resolve warnings during Github jobs. [#4598](https://github.com/XRPLF/rippled/pull/4598)</br></br>- Added an error response to the API v2 `account_info` method when you include an invalid `signer_lists` value. [#4585](https://github.com/XRPLF/rippled/pull/4585)</br></br>- Fixed an issue with the debug package build. [#4591](https://github.com/XRPLF/rippled/pull/4591)</br></br>- Added additional error responses to the API v2 `AccountTx` method. [#4571](https://github.com/XRPLF/rippled/pull/4571)</br></br>- Fixed build references to deleted `ServerHandlerImp`. [#4592](https://github.com/XRPLF/rippled/pull/4592)</br></br>- Fixed package definitions for Conan. [#4485](https://github.com/XRPLF/rippled/pull/4485)</br></br>- Changed the output type of the `mulDiv()` function from `std::pair&lt;bool, uint64_t&gt;` to `std::optional`. [#4243](https://github.com/XRPLF/rippled/pull/4243)</br></br>- Updated `Handler::Condition` enum values to make the code less brittle. [#4239](https://github.com/XRPLF/rippled/pull/4239)</br></br>- Renamed `ServerHandlerImp` to `ServerHandler`. [#4516](https://github.com/XRPLF/rippled/pull/4516)</br></br>- Removed the deprecated `accepted`, `seq`, `hash`, and `totalCoins` fields from the `ledger` method. [#4244](https://github.com/XRPLF/rippled/pull/4244)</br></br>- Replaced hand-rolled code with `std::from_chars` for better maintainability. [#4473](https://github.com/XRPLF/rippled/pull/4473)</br></br>- Removed an unused `TypedField` move constructor. [#4567](https://github.com/XRPLF/rippled/pull/4567)</br></br>- Enabled the `BETA_RPC_API` flag in the default unit tests config, making the API v2 available to all unit tests. [#4573](https://github.com/XRPLF/rippled/pull/4573)</br></br></br>### Docs</br></br>- Updated build instructions with additional steps to take after updating dependencies. [#4623](https://github.com/XRPLF/rippled/pull/4623)</br></br>- Updated contributing doc to clarify that beta releases should also be pushed to the `release` branch. [#4589](https://github.com/XRPLF/rippled/pull/4589)</br></br></br>[Full Commit Log](https://github.com/XRPLF/rippled/compare/1.11.0...1.12.0)</br></br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/XRPLF/rippled&gt;.</br></br>We welcome all contributions and invite everyone to join the community of XRP Ledger developers to help build the Internet of Value.</br></br></br>## Credits</br></br>The following people contributed directly to this release:</br></br>- Alphonse N. Mousse &lt;39067955+a-noni-mousse@users.noreply.github.com&gt;</br>- Arihant Kothari &lt;arihantkothari17@gmail.com&gt;</br>- Chenna Keshava B S &lt;21219765+ckeshava@users.noreply.github.com&gt;</br>- Denis Angell &lt;dangell@transia.co&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Elliot Lee &lt;github.public@intelliot.com&gt;</br>- Gregory Tsipenyuk &lt;gregtatcam@users.noreply.github.com&gt;</br>- Howard Hinnant &lt;howard.hinnant@gmail.com&gt;</br>- Ikko Eltociear Ashimine &lt;eltociear@gmail.com&gt;</br>- John Freeman &lt;jfreeman08@gmail.com&gt;</br>- Manoj Doshi &lt;mdoshi@ripple.com&gt;</br>- Mark Travis &lt;mtravis@ripple.com&gt;</br>- Mayukha Vadari &lt;mvadari@gmail.com&gt;</br>- Michael Legleux &lt;legleux@users.noreply.github.com&gt;</br>- Peter Chen &lt;34582813+PeterChen13579@users.noreply.github.com&gt;</br>- RichardAH &lt;richard.holland@starstone.co.nz&gt;</br>- Rome Reginelli &lt;rome@ripple.com&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br>- Shawn Xie &lt;35279399+shawnxie999@users.noreply.github.com&gt;</br>- drlongle &lt;drlongle@gmail.com&gt;</br></br>Bug Bounties and Responsible Disclosures:</br></br>We welcome reviews of the rippled code and urge researchers to responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to: &lt;bugs@xrpl.org&gt;</td>
+      <td>Version 1.12.0 of `rippled`, the reference server implementation of the XRP Ledger protocol, is now available. This release adds new features and bug fixes, and introduces these amendments:</br></br>- `AMM`</br>- `Clawback`</br>- `fixReducedOffersV1`</br></br>[Sign Up for Future Release Announcements](https://groups.google.com/g/ripple-server)</br></br>&lt;!-- BREAK --&gt;</br></br>## Action Required</br></br>Three new amendments are now open for voting according to the XRP Ledger's [amendment process](https://xrpl.org/amendments.html), which enables protocol changes following two weeks of &gt;80% support from trusted validators.</br></br>If you operate an XRP Ledger server, upgrade to version 1.12.0 by September 20, 2023 to ensure service continuity. The exact time that protocol changes take effect depends on the voting decisions of the decentralized network.</br></br></br>## Install / Upgrade</br></br>On supported platforms, see the [instructions on installing or updating `rippled`](https://xrpl.org/install-rippled.html).</br></br></br>## Changelog</br></br>### Amendments, New Features, and Changes</br>(These are changes which may impact or be useful to end users. For example, you may be able to update your code/workflow to take advantage of these changes.)</br></br>- **`AMM`**: Introduces an automated market maker (AMM) protocol to the XRP Ledger's decentralized exchange, enabling you to trade assets without a counterparty. For more information about AMMs, see: [Automated Market Maker](https://opensource.ripple.com/docs/xls-30d-amm/amm-uc/). [#4294](https://github.com/XRPLF/rippled/pull/4294)</br></br>- **`Clawback`**: Allows issuers to add the `lsfAllowTrustLineClawback` flag to an issuing account. This enables the account to recover, or _claw back_, issued tokens after they're distributed to accounts. For additional documentation on this feature, see: [#4553](https://github.com/XRPLF/rippled/pull/4553).</br></br>- **`fixReducedOffersV1`**: Reduces the occurrence of order books that are blocked by reduced offers. [#4512](https://github.com/XRPLF/rippled/pull/4512)</br></br>- Added WebSocket and RPC port info to `server_info` responses. [#4427](https://github.com/XRPLF/rippled/pull/4427)</br></br>- Removed the deprecated `accepted`, `seqNum`, `hash`, and `totalCoins` fields from the `ledger` method. [#4244](https://github.com/XRPLF/rippled/pull/4244)</br></br>- Conan dependency management</br>  - Fixed package definitions for Conan. [#4485](https://github.com/XRPLF/rippled/pull/4485)</br>  - Updated build dependencies to the most recent versions in Conan Center. [#4595](https://github.com/XRPLF/rippled/pull/4595)</br>  - Updated Conan recipe for NuDB. [#4615](https://github.com/XRPLF/rippled/pull/4615)</br></br>### Bug Fixes and Performance Improvements</br>(These are behind-the-scenes improvements, such as internal changes to the code and build system, which are not expected to impact end users.)</br></br>- Added binary hardening and linker flags to enhance security during the build process. [#4603](https://github.com/XRPLF/rippled/pull/4603)</br></br>- Added a pre-commit hook that runs the clang-format linter locally before committing changes. To install this feature, see: [CONTRIBUTING](https://github.com/XRPLF/xrpl-dev-portal/blob/master/CONTRIBUTING.md). [#4599](https://github.com/XRPLF/rippled/pull/4599)</br></br>- Added quality-of-life improvements to workflows, using new [concurrency control](https://docs.github.com/en/actions/using-jobs/using-concurrency) features. [#4597](https://github.com/XRPLF/rippled/pull/4597)</br></br>- Added an Artifactory to the `nix` workflow to improve build times. [#4556](https://github.com/XRPLF/rippled/pull/4556)</br></br>- In order to make it more straightforward to catch and handle overflows: changed the output type of the `mulDiv()` function from `std::pair&lt;bool, uint64_t&gt;` to `std::optional`. [#4243](https://github.com/XRPLF/rippled/pull/4243)</br></br>- Updated `Handler::Condition` enum values to make the code less brittle. [#4239](https://github.com/XRPLF/rippled/pull/4239)</br></br>- Renamed `ServerHandlerImp` to `ServerHandler`. [#4516](https://github.com/XRPLF/rippled/pull/4516), [#4592](https://github.com/XRPLF/rippled/pull/4592)</br></br>- Replaced hand-rolled code with `std::from_chars` for better maintainability. [#4473](https://github.com/XRPLF/rippled/pull/4473)</br></br>- Removed an unused `TypedField` move constructor. [#4567](https://github.com/XRPLF/rippled/pull/4567)</br></br>### Docs and Build System</br></br>- Updated checkout versions to resolve warnings during GitHub jobs. [#4598](https://github.com/XRPLF/rippled/pull/4598)</br></br>- Fixed an issue with the Debian package build. [#4591](https://github.com/XRPLF/rippled/pull/4591)</br></br>- Updated build instructions with additional steps to take after updating dependencies. [#4623](https://github.com/XRPLF/rippled/pull/4623)</br></br>- Updated contributing doc to clarify that beta releases should also be pushed to the `release` branch. [#4589](https://github.com/XRPLF/rippled/pull/4589)</br></br>- Enabled the `BETA_RPC_API` flag in the default unit tests config, making the API v2 (beta) available to unit tests. [#4573](https://github.com/XRPLF/rippled/pull/4573)</br></br></br>[Full Commit Log](https://github.com/XRPLF/rippled/compare/1.11.0...1.12.0)</br></br></br>### GitHub</br></br>The public source code repository for `rippled` is hosted on GitHub at &lt;https://github.com/XRPLF/rippled&gt;.</br></br>We welcome all contributions and invite everyone to join the community of XRP Ledger developers to help build the Internet of Value.</br></br></br>## Credits</br></br>The following people contributed directly to this release:</br></br>- Alphonse N. Mousse &lt;39067955+a-noni-mousse@users.noreply.github.com&gt;</br>- Arihant Kothari &lt;arihantkothari17@gmail.com&gt;</br>- Chenna Keshava B S &lt;21219765+ckeshava@users.noreply.github.com&gt;</br>- Denis Angell &lt;dangell@transia.co&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Elliot Lee &lt;github.public@intelliot.com&gt;</br>- Gregory Tsipenyuk &lt;gregtatcam@users.noreply.github.com&gt;</br>- Howard Hinnant &lt;howard.hinnant@gmail.com&gt;</br>- Ikko Eltociear Ashimine &lt;eltociear@gmail.com&gt;</br>- John Freeman &lt;jfreeman08@gmail.com&gt;</br>- Manoj Doshi &lt;mdoshi@ripple.com&gt;</br>- Mark Travis &lt;mtravis@ripple.com&gt;</br>- Mayukha Vadari &lt;mvadari@gmail.com&gt;</br>- Michael Legleux &lt;legleux@users.noreply.github.com&gt;</br>- Peter Chen &lt;34582813+PeterChen13579@users.noreply.github.com&gt;</br>- RichardAH &lt;richard.holland@starstone.co.nz&gt;</br>- Rome Reginelli &lt;rome@ripple.com&gt;</br>- Scott Schurr &lt;scott@ripple.com&gt;</br>- Shawn Xie &lt;35279399+shawnxie999@users.noreply.github.com&gt;</br>- drlongle &lt;drlongle@gmail.com&gt;</br></br>Bug Bounties and Responsible Disclosures:</br></br>We welcome reviews of the rippled code and urge researchers to responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to: &lt;bugs@xrpl.org&gt;</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-09-07 00:55:06.452663 UTC</td>
+      <td>2023-09-07 08:55:06.918085 UTC</td>
       <td>23.1.0</td>
       <td>26.1.0</td>
       <td>26.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-09-07 00:55:06.614012 UTC</td>
+      <td>2023-09-07 08:55:07.116168 UTC</td>
       <td>6.7.1</td>
       <td>10.9.1</td>
       <td>10.9.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-09-07 00:55:06.774827 UTC</td>
+      <td>2023-09-07 08:55:07.346117 UTC</td>
       <td>1.2.19</td>
       <td>7.0.1</td>
       <td>7.0.1</td>
