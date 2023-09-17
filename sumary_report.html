@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-09-17 08:55:04.879385 UTC</td>
+      <td>2023-09-17 16:55:04.860839 UTC</td>
       <td>22.0</td>
       <td>25.0</td>
       <td>25.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-09-17 08:55:05.130917 UTC</td>
+      <td>2023-09-17 16:55:05.096112 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-09-17 08:55:05.349855 UTC</td>
+      <td>2023-09-17 16:55:05.286141 UTC</td>
       <td>1.10.8</td>
-      <td>1.13.0</td>
-      <td>1.13.0</td>
-      <td>Version Behind</td>
-      <td>2023-09-12T11:03:34Z</td>
-      <td>Geth v1.13.0 is a major milestone in the lifetime of Geth, bits and bobs being in development for around 6 years now. Since a release note cannot do it justice, please see our [Geth v1.13.0 release blog post](https://blog.ethereum.org/2023/09/12/geth-v1-13-0).</br></br>Still, just to quickly recap, Geth v1.13.0 finally ships a new database model which supports proper, full pruning of historical states; meaning you will never need to take your node offline again to resync or to manually prune. The new database model is optional for now (you need to enable it via `--state.scheme=path`) and does require resyncing the state, since we need to store it completely different (you can keep your ancients, no need to resync the chain too).</br></br>The path database will become the default eventually, but for safety reasons, we're keeping it opt-in for the moment. The old database model is not going away soon, though long term - unless there's something fundamentally wrong with the path db -  it will. As for archive node users, we're working on a new model there too, but it does need a bit more work on top, so that's for another release.</br></br>***The all important disclaimer: Geth's new path-based storage is considered stable and production ready, but was obviously not battle tested yet outside of the team. Everyone is welcome to use it, but if you have significant risks if your node crashes or goes out of consensus, you might want to wait a bit to see if anyone with a lower risk profile hits any issues.***</br></br>---</br></br>Apart from the pruning work, the release contains:</br></br>- Built in support for the Holešky (Holešovice) testnet ([#28007](https://github.com/ethereum/go-ethereum/pull/28007)).</br>- Index transactions even if no blocks are received ([#27847](https://github.com/ethereum/go-ethereum/pull/27847)).</br>- Expose Geth version metadata into the metrics ([#24877](https://github.com/ethereum/go-ethereum/pull/24877)).</br>- Optimise `eth_estimateGas` to do fewer runs ([#27710](https://github.com/ethereum/go-ethereum/pull/27710)).</br>- Add `eth_getBlockReceipts` RPC API call ([#27702](https://github.com/ethereum/go-ethereum/pull/27702)).</br>- Support unpacking Solidity panic events ([#27868](https://github.com/ethereum/go-ethereum/pull/27868)).</br>- Reject GraphQL block queries where both number and hash is specified ([#27876](https://github.com/ethereum/go-ethereum/pull/27876)).</br>- Increase batch limits for RPC calls on the authenticated endpoint ([#27924](https://github.com/ethereum/go-ethereum/pull/27924)).</br>- Optimise logging library to avoid expensive call stack lookups ([#28069](https://github.com/ethereum/go-ethereum/pull/28069)).</br></br>And bugfixes:</br></br>- Fix forkid computation for genesis-merged non-zero timestamp networks ([#27895](https://github.com/ethereum/go-ethereum/pull/27895), [#28034](https://github.com/ethereum/go-ethereum/pull/28034)).</br>- Fix a potential data race in the websocket ping/pong mechanism ([#27733](https://github.com/ethereum/go-ethereum/pull/27733)).</br>- Fix js tracers to return the gas price in base 16, not base 10 ([#27903](https://github.com/ethereum/go-ethereum/pull/27903)).</br>- Fix finalized block number in dev (`--dev`) mode ([#27886](https://github.com/ethereum/go-ethereum/pull/27886)).</br></br>For a full rundown of the changes please consult the Geth 1.13.0 [release milestone](https://github.com/ethereum/go-ethereum/milestone/148?closed=1), though do note that the state scheme changes and pruner have been gradually merged over the past year so are not explicitly tagged in this milestone.</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
+      <td>1.13.1</td>
+      <td>1.13.1</td>
+      <td>Node version has update</td>
+      <td>2023-09-17T14:56:46Z</td>
+      <td>Geth v1.13.1 is a hotfix release for v1.13.0.</br></br>It fixes the following issues:</br></br>- Fix the active fork detection on the engine API, causing the signer to create invalid blocks ([#28135](https://github.com/ethereum/go-ethereum/pull/28135)).</br>- Fix a db corruption in `path` scheme caused by a weirdly restarted snap sync ([#28124](https://github.com/ethereum/go-ethereum/pull/28124), [#28126](https://github.com/ethereum/go-ethereum/pull/28126)).</br>- Fix `geth db inspect` command running against old `hash` scheme databases ([#28108](https://github.com/ethereum/go-ethereum/pull/28108)).</br>- Fix an effective gas price calculation regression on the RPC APIs ([#28130](https://github.com/ethereum/go-ethereum/pull/28130)).</br></br>Apart from the fixes, v1.13.1 introduces support for configuring Geth via environmental variables ([#28103](https://github.com/ethereum/go-ethereum/pull/28103), [#28119](https://github.com/ethereum/go-ethereum/pull/28119))!</br></br>For a full rundown of the changes please consult the Geth 1.13.1 [release milestone](https://github.com/ethereum/go-ethereum/milestone/149?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-09-17 08:55:05.604353 UTC</td>
+      <td>2023-09-17 16:55:05.480949 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-09-17 08:55:05.807156 UTC</td>
+      <td>2023-09-17 16:55:05.685053 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-09-17 08:55:06.013584 UTC</td>
+      <td>2023-09-17 16:55:05.891190 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-09-17 08:55:06.301162 UTC</td>
+      <td>2023-09-17 16:55:06.252579 UTC</td>
       <td>1.8.1</td>
       <td>1.12.0</td>
       <td>1.12.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-09-17 08:55:06.504247 UTC</td>
+      <td>2023-09-17 16:55:06.465372 UTC</td>
       <td>23.1.0</td>
       <td>26.1.0</td>
       <td>26.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-09-17 08:55:06.726098 UTC</td>
+      <td>2023-09-17 16:55:06.630672 UTC</td>
       <td>6.7.1</td>
       <td>10.9.1</td>
       <td>10.9.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-09-17 08:55:06.989325 UTC</td>
+      <td>2023-09-17 16:55:06.783798 UTC</td>
       <td>1.2.19</td>
       <td>7.0.1</td>
       <td>7.0.1</td>
