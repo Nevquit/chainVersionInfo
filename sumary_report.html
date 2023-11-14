@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-11-14 08:55:04.635825 UTC</td>
+      <td>2023-11-14 16:55:04.600007 UTC</td>
       <td>22.0</td>
       <td>25.1</td>
       <td>25.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-11-14 08:55:04.987275 UTC</td>
+      <td>2023-11-14 16:55:04.859014 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-11-14 08:55:05.169281 UTC</td>
+      <td>2023-11-14 16:55:05.182190 UTC</td>
       <td>1.10.8</td>
-      <td>1.13.4</td>
-      <td>1.13.4</td>
-      <td>Version Behind</td>
-      <td>2023-10-17T11:19:18Z</td>
-      <td>Geth v1.13.4 is a non-urgent hotfix release. The previous version of Geth (v1.13.3) introduced a warning log for bad transaction announcements, and on mainnet it generated too much logging noise due to a protocol violation in Erigon. To prevent overwhelming logging systems, Geth v1.13.4 lower the log to a more reasonable level until the bug in Erigon is fixed [#28356](https://github.com/ethereum/go-ethereum/pull/28356).</br></br>Apart from the above reason, the release contains:</br></br>- Fix a snap sync corner-case that could cause a hang by a maliciously constructed contract storage ([#28306](https://github.com/ethereum/go-ethereum/pull/28306)).</br>- Update various dependencies to unstick versions of Go libs ([#28329](https://github.com/ethereum/go-ethereum/pull/28329), [#28333](https://github.com/ethereum/go-ethereum/pull/28333), [#28334](https://github.com/ethereum/go-ethereum/pull/28334), [#28332](https://github.com/ethereum/go-ethereum/pull/28332), [#28336](https://github.com/ethereum/go-ethereum/pull/28336)).</br>- Enable Pebble database support on 32bit platforms and on OpenBSD too ([#28335](https://github.com/ethereum/go-ethereum/pull/28335)).</br>- Fix returning the correct code hash for eth_getProof with empty storage ([#28357](https://github.com/ethereum/go-ethereum/pull/28357)).</br>- Simplify trie range prover for some upcoming snap sync optimisations ([#28311](https://github.com/ethereum/go-ethereum/pull/28311)).</br>- Fix a timeout mechanism in the transaction fetcher ([#28220](https://github.com/ethereum/go-ethereum/pull/28220)).</br></br>For a full rundown of the changes please consult the Geth 1.13.4 [release milestone](https://github.com/ethereum/go-ethereum/milestone/152?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
+      <td>1.13.5</td>
+      <td>1.13.5</td>
+      <td>Node version has update</td>
+      <td>2023-11-14T12:05:18Z</td>
+      <td>Geth v1.13.5 is a scheduled maintenance release fixing a potential data corruption in path scheme which could occur due to a power failure (i.e. entire OS / machine crash).</br></br>- Extend `ethclient` and the `simulated` backend to allow `eth_call` against specific block hashes ([#28084](https://github.com/ethereum/go-ethereum/pull/28084)).</br>- Downgrade annoying stale transaction propagation logs from warning to debug ([#28364](https://github.com/ethereum/go-ethereum/pull/28364)).</br>- Switch to the new KZG trusted setup parameters ([#28383](https://github.com/ethereum/go-ethereum/pull/28383)).</br>- Return an error on GraphQL if querying invalid block ranges ([#28393](https://github.com/ethereum/go-ethereum/pull/28393), [#28412](https://github.com/ethereum/go-ethereum/pull/28412)).</br>- Start publishing Apple Silicon pre-built binaries ([#28474](https://github.com/ethereum/go-ethereum/pull/28474), [#28475](https://github.com/ethereum/go-ethereum/pull/28475)).</br></br>And bugfixes: </br></br>- Fix a number of corner-cases in path scheme state management ([#28198](https://github.com/ethereum/go-ethereum/pull/28198), [#28426](https://github.com/ethereum/go-ethereum/pull/28426), [#28483](https://github.com/ethereum/go-ethereum/pull/28483)).</br>- Fix an issue when allocating excessively large Pebble caches ([#28444](https://github.com/ethereum/go-ethereum/pull/28444)).</br>- Fix a potential snap sync issue with the path based storage ([#28327](https://github.com/ethereum/go-ethereum/pull/28327)).</br>- Fix ethclient to properly forwarding explicit 1559 gas caps ([#28462](https://github.com/ethereum/go-ethereum/pull/28462)).</br>- Fix gas estimation for 0 priced txs accessing the basefee ([#28470](https://github.com/ethereum/go-ethereum/pull/28470)).</br>- Fix an issue where resubscribing to events would hang ([#28359](https://github.com/ethereum/go-ethereum/pull/28359)).</br>- Fix ethstats transaction count report regressiob ([#28398](https://github.com/ethereum/go-ethereum/pull/28398)).</br>- Fix negative number encoding in ethclient/rpc ([#28358](https://github.com/ethereum/go-ethereum/pull/28358)).</br>- Fix GraphQL content type in the response ([#28417](https://github.com/ethereum/go-ethereum/pull/28417)).</br></br></br>For a full rundown of the changes please consult the Geth 1.13.5 [release milestone](https://github.com/ethereum/go-ethereum/milestone/153?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-11-14 08:55:05.355560 UTC</td>
+      <td>2023-11-14 16:55:05.376449 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-11-14 08:55:05.562493 UTC</td>
+      <td>2023-11-14 16:55:05.611725 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-11-14 08:55:05.858365 UTC</td>
+      <td>2023-11-14 16:55:05.830724 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-11-14 08:55:06.209609 UTC</td>
+      <td>2023-11-14 16:55:06.118526 UTC</td>
       <td>1.8.1</td>
       <td>1.12.0</td>
       <td>1.12.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-11-14 08:55:06.523182 UTC</td>
+      <td>2023-11-14 16:55:06.319797 UTC</td>
       <td>23.1.0</td>
       <td>26.1.0</td>
       <td>26.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-11-14 08:55:06.773531 UTC</td>
+      <td>2023-11-14 16:55:06.500982 UTC</td>
       <td>6.7.1</td>
       <td>10.10.1</td>
       <td>10.10.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-11-14 08:55:07.061037 UTC</td>
+      <td>2023-11-14 16:55:06.681527 UTC</td>
       <td>1.2.19</td>
       <td>7.1.1</td>
       <td>7.1.1</td>
