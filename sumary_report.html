@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2023-12-19 08:55:04.680234 UTC</td>
+      <td>2023-12-19 16:55:04.444367 UTC</td>
       <td>22.0</td>
       <td>26.0</td>
       <td>26.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2023-12-19 08:55:04.991940 UTC</td>
+      <td>2023-12-19 16:55:04.780820 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2023-12-19 08:55:05.221466 UTC</td>
+      <td>2023-12-19 16:55:04.973691 UTC</td>
       <td>1.10.8</td>
-      <td>1.13.6</td>
-      <td>1.13.6</td>
-      <td>Version Behind</td>
-      <td>2023-12-18T18:09:46Z</td>
-      <td>Geth v1.13.6 is a scheduled maintenance release, but it also contains some changes which might affect node operators, concerning logging. </br></br>### Gas estimation changes</br></br>The gas estimator was heavily reworked  ([#28600](https://github.com/ethereum/go-ethereum/pull/28600), [#28618](https://github.com/ethereum/go-ethereum/pull/28618)). The new version runs quite a bit faster (normally completing in 7-8 attempts rather than 18-20). However, the results have an error ratio of `1.5%`, and the estimation outcome won't always be deterministic. </br></br>### Logging changes</br></br>In the absence of an 'official' Go logging framework, go-ethereum has, for a very long time, used a custom in-house logger.  However, just such an 'official' Go logging framework has now arrived, with the [`slog`](https://go.dev/blog/slog) package. </br></br>As of `v1.13.6` , geth now uses `slog`, which will affect Geth users in different ways. </br>    </br>Main changes are as follows:</br></br>* Verbosity level constants are changed to match slog constant values.  Internal translation is done to make this opaque to the user and backwards compatible with existing `--verbosity` and `--vmodule` options.</br>* `--log.backtraceat` and `--log.debug` are removed.</br>* Removes interface `log.Format` and the method `log.FormatFunc`,</br>* Unexports `TerminalHandler.TerminalFormat` formatting methods (renamed to `TerminalHandler.format`)</br>* Removes the notion of `log.Lazy` values</br>    </br> The external-facing API is largely the same as the existing Geth logger.  Method signatures remain unchanged. A small semantic difference is that a `Handler` can only be set once per `Logger` and not changed dynamically.  This just means that a new logger must be instantiated every time the handler of the root logger is changed.</br>    </br>For users of the `github.com/ethereum/go-ethereum/log` package: If you were using this package for your own project, you will need to change the initialization. If you previously did</br></br>```go</br>    log.Root().SetHandler(log.LvlFilterHandler(log.LvlInfo, log.StreamHandler(os.Stderr, log.TerminalFormat(true))))</br>```</br></br>You now instead need to do</br></br>```go</br>    log.SetDefault(log.NewLogger(log.NewTerminalHandlerWithLevel(os.Stderr, log.LevelInfo, true)))</br>```</br></br>The lazy handler was useful in the old log package, since it could defer the evaluation of costly attributes until later in the log pipeline. Thus, if the logging was done at 'Trace', we could skip evaluation if logging only was set to 'Info'. With the move to slog, this way of deferring evaluation is no longer needed, since slog introduced 'Enabled'. Thus the caller can do the evaluate-or-not decision at the callsite, which is much more straight-forward than dealing with lazy reflect-based evaluation.</br></br>See more about reasoning here: https://github.com/ethereum/go-ethereum/issues/28558#issuecomment-1820606613</br></br>More detailed information can be found in the PRs [#28187](https://github.com/ethereum/go-ethereum/pull/28187), [#28621](https://github.com/ethereum/go-ethereum/pull/28621), [#28622](https://github.com/ethereum/go-ethereum/pull/28622) )</br></br>### Other changes</br></br>* Fixes a database corruption issue that could occur during state healing ([#28595](https://github.com/ethereum/go-ethereum/pull/28595))</br>* Fixes an issue where node liveness was not always verified correctly in discv5 ([#28686](https://github.com/ethereum/go-ethereum/pull/28686))</br>* Fix so state-dump can be performed after test execution ([#28650](https://github.com/ethereum/go-ethereum/pull/28650), [#28504](https://github.com/ethereum/go-ethereum/pull/28504))</br>* Fix a `ns/µs` mismatch in metrics for rpc-methods ([#28649](https://github.com/ethereum/go-ethereum/pull/28649))</br>* Fix a bug with wrong priority for `HTTPHost`, `WSHost` flags ([#28669](https://github.com/ethereum/go-ethereum/pull/28669))</br>* Fix type inconsistencies in tracer framework ([#28488](https://github.com/ethereum/go-ethereum/pull/28488))</br>* Add contextual information to errors returned by abi unpack ([#28529](https://github.com/ethereum/go-ethereum/pull/28529))</br>* Make `evm t8n` support custom tracers ([#28557](https://github.com/ethereum/go-ethereum/pull/28557))</br></br></br>For a full rundown of the changes please consult the Geth 1.13.6 [release milestone](https://github.com/ethereum/go-ethereum/milestone/154?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
+      <td>1.13.7</td>
+      <td>1.13.7</td>
+      <td>Node version has update</td>
+      <td>2023-12-19T13:04:09Z</td>
+      <td>We're issuing this release to fix an issue with our build pipeline. There are also some other changes:</br></br>- The `eth_sendTransaction` RPC method now behaves more correctly for low-fee transactions. ([#27834](https://github.com/ethereum/go-ethereum/pull/27834))</br>- We have upgraded the golang.org/x/crypto module dependency. The Go team has issued a new version to fix a vulnerability in the ssh package. While we do not use this package, we have upgraded the dependency in order to stop dependabot warnings. ([#28702](https://github.com/ethereum/go-ethereum/pull/28702))</br></br>For a full rundown of the changes please consult the Geth 1.13.7 [release milestone](https://github.com/ethereum/go-ethereum/milestone/155?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2023-12-19 08:55:05.449107 UTC</td>
+      <td>2023-12-19 16:55:05.247919 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2023-12-19 08:55:05.664080 UTC</td>
+      <td>2023-12-19 16:55:05.461558 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2023-12-19 08:55:05.874655 UTC</td>
+      <td>2023-12-19 16:55:05.740662 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2023-12-19 08:55:06.191006 UTC</td>
+      <td>2023-12-19 16:55:06.071502 UTC</td>
       <td>1.8.1</td>
       <td>1.12.0</td>
       <td>1.12.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2023-12-19 08:55:06.405700 UTC</td>
+      <td>2023-12-19 16:55:06.280548 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2023-12-19 08:55:06.610145 UTC</td>
+      <td>2023-12-19 16:55:06.534451 UTC</td>
       <td>6.7.1</td>
       <td>10.11.2</td>
       <td>10.11.2</td>
@@ -155,13 +155,13 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2023-12-19 08:55:06.814127 UTC</td>
+      <td>2023-12-19 16:55:06.753582 UTC</td>
       <td>1.2.19</td>
-      <td>7.1.1</td>
-      <td>7.1.1</td>
-      <td>Version Behind</td>
-      <td>2023-10-23T13:42:41Z</td>
-      <td>## [7.1.1](https://github.com/paritytech/txwrapper-core/compare/v7.1.0...v7.1.1) (2023-10-23)</br></br>### Chore</br></br>- chore(yarn): bunp yarn ([#334](https://github.com/paritytech/txwrapper-core/pull/334)) ([6c11c7](https://github.com/paritytech/txwrapper-core/commit/6c11c795956642745c4c86564fbfe50ac82ae951))</br>- chore(deps): bump @babel/traverse from 7.21.4 to 7.23.2 ([#331](https://github.com/paritytech/txwrapper-core/pull/331)) ([a24c9ad](https://github.com/paritytech/txwrapper-core/commit/a24c9ad828a692e90eb4859b3a6621232464abaf))</br>- chore(deps): update polkadot-js ([#329](https://github.com/paritytech/txwrapper-core/pull/329)) ([f0b4850](https://github.com/paritytech/txwrapper-core/commit/f0b485076da2b820b2e5eeb87291ab9c0e56231d))</br></br></br></br></td>
+      <td>7.2.0</td>
+      <td>7.2.0</td>
+      <td>Node version has update</td>
+      <td>2023-12-19T16:32:24Z</td>
+      <td># [7.2.0](https://github.com/paritytech/txwrapper-core/compare/v7.1.1...v7.2.0) (2023-12-19)### Features* added support for large tip ([#343](https://github.com/paritytech/txwrapper-core/issues/343)) ([bb9e677](https://github.com/paritytech/txwrapper-core/commit/bb9e677624c168f2e735383821c44eda191e52d3))* modified types to support new ChargeAssetTxPayment ([#340](https://github.com/paritytech/txwrapper-core/issues/340)) ([fb79142](https://github.com/paritytech/txwrapper-core/commit/fb79142b512029ef43094613af0ce1a54c242a77))</td>
     </tr>
   </tbody>
 </table></body>
