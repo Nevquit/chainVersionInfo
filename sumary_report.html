@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-01-11 16:55:04.965182 UTC</td>
+      <td>2024-01-12 00:55:04.736413 UTC</td>
       <td>22.0</td>
       <td>26.0</td>
       <td>26.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-01-11 16:55:05.241011 UTC</td>
+      <td>2024-01-12 00:55:05.004483 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-01-11 16:55:05.495955 UTC</td>
+      <td>2024-01-12 00:55:05.178471 UTC</td>
       <td>1.10.8</td>
-      <td>1.13.9</td>
-      <td>1.13.9</td>
-      <td>Version Behind</td>
-      <td>2024-01-10T16:32:21Z</td>
-      <td>This release fixes a few issues and **enables the Cancun upgrade for the Goerli network** at block timestamp 1705473120 ([#28719](https://github.com/ethereum/go-ethereum/pull/28719)) which is 6:32:am 17. Jan. 2024 UTC.</br></br>:warning: **If you are running Goerli, this is a required update!**</br></br>Apart from the Goerli configuration update, we have a few other changes.</br></br>- The 'simulated backend' in package `accounts/abi/backends` was rewritten. The improved version is available from the new package `ethclient/simulated`. A backwards-compatibility wrapper remains in the old location. ([#28202](https://github.com/ethereum/go-ethereum/pull/28202))</br>- Fix ABI-encoding of negative big.Int in topics ([#28764](https://github.com/ethereum/go-ethereum/pull/28764))</br>- In JSON logging output, the "error" level is now correctly emitted as `"error"`. ([#28774](https://github.com/ethereum/go-ethereum/pull/28774), [#28780](https://github.com/ethereum/go-ethereum/pull/28780))</br>- Fixed an issue with configuration of stdlib package `log` for consumers of the geth library ([#28747](https://github.com/ethereum/go-ethereum/pull/28747))</br>- `geth removedb` can now be run non-interactively ([#28725](https://github.com/ethereum/go-ethereum/pull/28725))</br>- We're building a package for ubuntu 23.10: mantic minotaur now ([#28728](https://github.com/ethereum/go-ethereum/pull/28728))</br></br>### Testing</br>- Add `currentExcessBlobGas` to the state tests for better coverage of state tests ([#28735](https://github.com/ethereum/go-ethereum/pull/28735))</br>- Fixed an issue in t8n regarding blob gas usage ([#28735](https://github.com/ethereum/go-ethereum/pull/28734))</br></br>For a full rundown of the changes please consult the Geth 1.13.9 [release milestone](https://github.com/ethereum/go-ethereum/milestone/157?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.13.10</td>
+      <td>1.13.10</td>
+      <td>Node version has update</td>
+      <td>2024-01-11T17:30:03Z</td>
+      <td>**This release is equivalent to v1.13.9, just contains a version bump. The reason is that a bad commit was tagged on 1.13.9 originally and whilst it was untagged and fixed, some caches (Go's package manager (`go mod`)) managed to store the temporary bad version. As there is no way for us to flush the bad version out, it's cleaner to tag a next version instead. Apologies about the mess.**</br></br>---</br></br>This release fixes a few issues and **enables the Cancun upgrade for the Goerli network** at block timestamp 1705473120 ([#28719](https://github.com/ethereum/go-ethereum/pull/28719)) which is 6:32:am 17. Jan. 2024 UTC.</br></br>:warning: **If you are running Goerli, this is a required update!**</br></br>Apart from the Goerli configuration update, we have a few other changes.</br></br>- The 'simulated backend' in package `accounts/abi/backends` was rewritten. The improved version is available from the new package `ethclient/simulated`. A backwards-compatibility wrapper remains in the old location. ([#28202](https://github.com/ethereum/go-ethereum/pull/28202))</br>- Fix ABI-encoding of negative big.Int in topics ([#28764](https://github.com/ethereum/go-ethereum/pull/28764))</br>- In JSON logging output, the "error" level is now correctly emitted as `"error"`. ([#28774](https://github.com/ethereum/go-ethereum/pull/28774), [#28780](https://github.com/ethereum/go-ethereum/pull/28780))</br>- Fixed an issue with configuration of stdlib package `log` for consumers of the geth library ([#28747](https://github.com/ethereum/go-ethereum/pull/28747))</br>- `geth removedb` can now be run non-interactively ([#28725](https://github.com/ethereum/go-ethereum/pull/28725))</br>- We're building a package for ubuntu 23.10: mantic minotaur now ([#28728](https://github.com/ethereum/go-ethereum/pull/28728))</br></br>### Testing</br>- Add `currentExcessBlobGas` to the state tests for better coverage of state tests ([#28735](https://github.com/ethereum/go-ethereum/pull/28735))</br>- Fixed an issue in t8n regarding blob gas usage ([#28735](https://github.com/ethereum/go-ethereum/pull/28734))</br></br>For a full rundown of the changes please consult the Geth 1.13.9 [release milestone](https://github.com/ethereum/go-ethereum/milestone/157?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-01-11 16:55:05.704049 UTC</td>
+      <td>2024-01-12 00:55:05.420056 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-01-11 16:55:05.968183 UTC</td>
+      <td>2024-01-12 00:55:05.595840 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-01-11 16:55:06.229451 UTC</td>
+      <td>2024-01-12 00:55:05.822587 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-01-11 16:55:06.598142 UTC</td>
+      <td>2024-01-12 00:55:06.223582 UTC</td>
       <td>1.8.1</td>
       <td>2.0.0</td>
       <td>2.0.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-01-11 16:55:06.872015 UTC</td>
+      <td>2024-01-12 00:55:06.437861 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-01-11 16:55:07.124745 UTC</td>
+      <td>2024-01-12 00:55:06.582864 UTC</td>
       <td>6.7.1</td>
       <td>10.11.2</td>
       <td>10.11.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-01-11 16:55:07.388066 UTC</td>
+      <td>2024-01-12 00:55:06.752866 UTC</td>
       <td>1.2.19</td>
       <td>7.2.0</td>
       <td>7.2.0</td>
