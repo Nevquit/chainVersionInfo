@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-02-09 00:55:04.351384 UTC</td>
+      <td>2024-02-09 08:55:04.451834 UTC</td>
       <td>22.0</td>
       <td>26.0</td>
       <td>26.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-02-09 00:55:04.635371 UTC</td>
+      <td>2024-02-09 08:55:04.739878 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-02-09 00:55:04.905204 UTC</td>
+      <td>2024-02-09 08:55:04.958634 UTC</td>
       <td>1.10.8</td>
-      <td>1.13.11</td>
-      <td>1.13.11</td>
-      <td>Version Behind</td>
-      <td>2024-01-24T10:56:36Z</td>
-      <td>This release fixes a few bugs and enables the Cancun upgrade for the Sepolia and Holesky networks; Sepolia will upgrade on Jan 31, and Holesky on Feb 7, and naturally this is a required upgrade if you intend to follow either chain.  </br></br>- Enable Cancun on Sepolia and Holesky, plus Cancun-related changes ([#28834](https://github.com/ethereum/go-ethereum/pull/28834), [#28246](https://github.com/ethereum/go-ethereum/pull/28246), [#28230](https://github.com/ethereum/go-ethereum/pull/28230), [#28827](https://github.com/ethereum/go-ethereum/pull/28827))</br>- Support EIP-4844 transactions in API-methods ([#28786](https://github.com/ethereum/go-ethereum/pull/28786))</br>- Change how transaction indexing operates. As of 1.13.11, the behaviour of `eth_syncing` is slightly changed, so that it now</br>  does reports `true` until transaction indexing is finished. ([#28703](https://github.com/ethereum/go-ethereum/pull/28703))</br>- `rlpdump`: add `-pos` flag for displaying byte positions ([#28785](https://github.com/ethereum/go-ethereum/pull/28785))</br>- Fixes logging configuration ([#28801](https://github.com/ethereum/go-ethereum/pull/28801))</br></br>For a full rundown of the changes please consult the Geth 1.13.11 [release milestone](https://github.com/ethereum/go-ethereum/milestone/159?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.13.12</td>
+      <td>1.13.12</td>
+      <td>Node version has update</td>
+      <td>2024-02-09T07:00:58Z</td>
+      <td>This release embeds the mainnet fork number for Cancun, scheduled to go live on 13th March, 2024 (unix `1710338135`). The specification can be read [here](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md), and it contains the following changes:</br></br>* [EIP-1153: Transient storage opcodes](https://eips.ethereum.org/EIPS/eip-1153)</br>* [EIP-4788: Beacon block root in the EVM ](https://eips.ethereum.org/EIPS/eip-4788)</br>* [EIP-4844: Shard Blob Transactions](https://eips.ethereum.org/EIPS/eip-4844)</br>* [EIP-5656: MCOPY - Memory copying instruction](https://eips.ethereum.org/EIPS/eip-5656)</br>* [EIP-6780: SELFDESTRUCT only in same transaction](https://eips.ethereum.org/EIPS/eip-6780)</br>* [EIP-7516: BLOBBASEFEE opcode](https://eips.ethereum.org/EIPS/eip-7516)</br></br>To go along Cancun, we're providing refreshed Grafana dashboards:</br></br>- [Geth Cancun InfluxDB Dashboard](https://github.com/ethereum/go-ethereum/files/14211069/Geth-Cancun-InfluxDB.json)</br>- [Geth Cancun Prometheus Dashboard](https://github.com/ethereum/go-ethereum/files/14211070/Geth-Cancun-Prometheus.json)</br></br>Other than that, the following assorted fixes and features are included in this release:</br></br>- Initial implementation of the `era` format. The `era` format is meant to provide a cross-client archive format </br>  for block data ([#26621](https://github.com/ethereum/go-ethereum/pull/26621), [#28959](https://github.com/ethereum/go-ethereum/pull/28959))</br>- Make rpc request limits configurable ([#28948](https://github.com/ethereum/go-ethereum/pull/28948))</br>- Fix memory-leak with blob transactions ([#28917](https://github.com/ethereum/go-ethereum/pull/28917))</br>- Stricter adherence to engine api spec ([#28882](https://github.com/ethereum/go-ethereum/pull/28882))</br>- Fix enforcement of minimum miner tip ([#28933](https://github.com/ethereum/go-ethereum/pull/28933))</br></br></br>For a full rundown of the changes please consult the Geth 1.13.12 [release milestone](https://github.com/ethereum/go-ethereum/milestone/160?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-02-09 00:55:05.096179 UTC</td>
+      <td>2024-02-09 08:55:05.120731 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-02-09 00:55:05.346924 UTC</td>
+      <td>2024-02-09 08:55:05.327787 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-02-09 00:55:05.538160 UTC</td>
+      <td>2024-02-09 08:55:05.507735 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-02-09 00:55:05.833673 UTC</td>
+      <td>2024-02-09 08:55:05.866133 UTC</td>
       <td>1.8.1</td>
       <td>2.0.1</td>
       <td>2.0.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-02-09 00:55:06.009346 UTC</td>
+      <td>2024-02-09 08:55:06.114262 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-02-09 00:55:06.201046 UTC</td>
+      <td>2024-02-09 08:55:06.343146 UTC</td>
       <td>6.7.1</td>
       <td>10.11.2</td>
       <td>10.11.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-02-09 00:55:06.372873 UTC</td>
+      <td>2024-02-09 08:55:06.554477 UTC</td>
       <td>1.2.19</td>
       <td>7.2.0</td>
       <td>7.2.0</td>
