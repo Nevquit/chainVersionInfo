@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-02-21 16:55:02.471931 UTC</td>
+      <td>2024-02-22 00:55:02.486201 UTC</td>
       <td>22.0</td>
       <td>26.0</td>
       <td>26.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-02-21 16:55:02.662455 UTC</td>
+      <td>2024-02-22 00:55:02.682297 UTC</td>
       <td>1.14.4</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-02-21 16:55:02.819597 UTC</td>
+      <td>2024-02-22 00:55:02.873178 UTC</td>
       <td>1.10.8</td>
       <td>1.13.13</td>
       <td>1.13.13</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2024-02-21T14:49:30Z</td>
       <td>This is a minor release with fixes for several issues related to the upcoming Cancun mainnet fork. As such, it is recommended for all mainnet users.</br></br>Changes in this release:</br></br>- Block-building performance with blob transactions has been improved a lot. ([#29026](https://github.com/ethereum/go-ethereum/pull/29026), [#29008](https://github.com/ethereum/go-ethereum/pull/29008), [#29005](https://github.com/ethereum/go-ethereum/pull/29005))</br>- A corner case in the EVM related to out-of-order fork scheduling has been fixed. ([#29023](https://github.com/ethereum/go-ethereum/pull/29023))</br>- `eth_fillTransaction` has seen some bug fixes related to blob transactions as well. ([#28929](https://github.com/ethereum/go-ethereum/pull/28929), [#29037](https://github.com/ethereum/go-ethereum/pull/29037))</br>- A rare panic in the ethstats client related to chain reorgs is resolved. ([#29020](https://github.com/ethereum/go-ethereum/pull/29020))</br>- The blobpool database will now recover from disk corruption faults instead of crashing geth on startup. ([#29001](https://github.com/ethereum/go-ethereum/pull/29001))</br>- Geth now implements `getClientVersionV1` on the Engine API endpoint. ([#28915](https://github.com/ethereum/go-ethereum/pull/28915), [#28994](https://github.com/ethereum/go-ethereum/pull/28994))</br></br>Go API changes:</br></br>- `ethereum.CallMsg` now contains EIP-4844 related fields ([#28989](https://github.com/ethereum/go-ethereum/pull/28989))</br>- `core.GenesisAlloc` is now available from package `core/types`. We hope this change will reduce external dependencies on package `core`. ([#29003](https://github.com/ethereum/go-ethereum/pull/29003))</br></br>For a full rundown of the changes please consult the Geth [1.13.13 release milestone](https://github.com/ethereum/go-ethereum/milestone/161?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-02-21 16:55:02.977025 UTC</td>
+      <td>2024-02-22 00:55:03.028375 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-02-21 16:55:03.134850 UTC</td>
+      <td>2024-02-22 00:55:03.191600 UTC</td>
       <td>0.18.1</td>
       <td>0.21.2.2</td>
       <td>0.21.2.2</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-02-21 16:55:03.307650 UTC</td>
+      <td>2024-02-22 00:55:03.350681 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-02-21 16:55:03.581649 UTC</td>
+      <td>2024-02-22 00:55:03.617754 UTC</td>
       <td>1.8.1</td>
-      <td>2.0.1</td>
-      <td>2.0.1</td>
-      <td>Version Behind</td>
-      <td>2024-01-30T02:55:31Z</td>
-      <td>This release fixes a few bugs. There are no new features over version 2.0.0.</br></br>- [Full Release Notes for 2.0.1 (xrpl.org)](https://xrpl.org/blog/2024/rippled-2.0.1.html)</br></br>Highlights:</br>- Fixes unbounded memory growth when running the path_find command.</br>- Fixes a bug that, in some situations, results in online deletion causing delays in persisting records to disk.</br>- A new line in `cfg/rippled-example.cfg` sets `send_queue_limit = 500`. Consider adopting this setting in your own `rippled.cfg` in the appropriate stanza(s) for `ws` and `wss` port(s).</br>  - When the setting is not specified, the default value is `100`. At `100`, during times when there are &gt;200 transactions per ledger, `rippled` will disconnect WebSocket clients that [subscribe](https://xrpl.org/subscribe.html) to the `transactions` stream.</br>  - Clients receive a `disconnected` message with code `1008` or a `Client too slow` disconnection.</br>  - Using `send_queue_limit = 500` fixes this issue.</br>- Fixes an assert which could occur under heavy load from unprivileged WebSocket connections. (Assertions are disabled in release builds.)</br></br>## Testing Credits</br>* Thanks to @sgramkumar and others for continued testing.</br></br>## What's Changed</br>* Websocket should only call async_close once by @ximinez in https://github.com/XRPLF/rippled/pull/4848 (originally reported by @lathanbritz https://github.com/XRPLF/rippled/pull/4822#issuecomment-1840908787)</br>* Improve lifetime management of ledger objects (`SLE`s) to prevent runaway memory usage. AKA "Is it caching? It's always caching." by @ximinez in https://github.com/XRPLF/rippled/pull/4822</br>* clang warning about deprecated sprintf usage by @ckeshava in https://github.com/XRPLF/rippled/pull/4747</br>* Change recommended send_queue_limit to 500 by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4867 (originally reported by @nixer89 https://github.com/XRPLF/rippled/issues/4866)</br>* Add DeliverMax to more JSONRPC tests by @Bronek in https://github.com/XRPLF/rippled/pull/4826</br>* PR Template - add Type of Change: `Performance` by @intelliot in https://github.com/XRPLF/rippled/pull/4875</br>* Proposed 2.0.1-b1 by @intelliot in https://github.com/XRPLF/rippled/pull/4888</br>* Revert "Asynchronously write batches to NuDB. (#4503)" by @mtrippled in https://github.com/XRPLF/rippled/pull/4882</br>* Update help message about unit test-suite pattern matching by @ckeshava in https://github.com/XRPLF/rippled/pull/4846</br>* test: improve code coverage reporting + codecov by @Bronek in https://github.com/XRPLF/rippled/pull/4849</br>* Proposed 2.0.1-rc1 by @intelliot in https://github.com/XRPLF/rippled/pull/4895</br>* [TRIVIAL] Fix broken links in documentation by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4699</br>* [TRIVIAL] Retry codecov uploads by @Bronek in https://github.com/XRPLF/rippled/pull/4896</br>* Proposed 2.0.1 by @intelliot in https://github.com/XRPLF/rippled/pull/4905</br></br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.0.0...2.0.1</td>
+      <td>2.1.0</td>
+      <td>2.1.0</td>
+      <td>Node version has update</td>
+      <td>2024-02-21T19:57:23Z</td>
+      <td>Version 2.1.0 introduces two new amendments:</br>- [fixInnerObjTemplate](https://github.com/XRPLF/rippled/pull/4906)</br>- [fixNFTokenReserve](https://github.com/XRPLF/rippled/pull/4767)</br></br></br>## What's Changed</br></br>[Full Release Notes for 2.1.0 (xrpl.org)](https://xrpl.org/blog/2024/rippled-2.1.0.html)</br></br>* [TRIVIAL] Add unit test for redundant payment by @Bronek in https://github.com/XRPLF/rippled/pull/4860</br>* Windows CI unit tests need to pass by @ximinez in https://github.com/XRPLF/rippled/pull/4871</br>* Use platform-agnostic library names in Conan recipe by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4831</br>* `fixNFTokenReserve`: Throw error when NFT buyer does not meet reserve requirement by @shawnxie999 in https://github.com/XRPLF/rippled/pull/4767</br>* Headers needed in Conan package to build xbridge witness server by @legleux in https://github.com/XRPLF/rippled/pull/4885</br>* Validate grpc port info in GRPCServer ctor by @ckeshava in https://github.com/XRPLF/rippled/pull/4728</br>* `fixInnerObjTemplate`: Add STObject constructor to explicitly set inner object template by @gregtatcam in https://github.com/XRPLF/rippled/pull/4906</br>* Proposed 2.1.0-rc1 by @intelliot in https://github.com/XRPLF/rippled/pull/4910</br>* Improve object lifetime management when creating temporary Rules object: by @ximinez in https://github.com/XRPLF/rippled/pull/4917</br>* Proposed 2.1.0 by @seelabs in https://github.com/XRPLF/rippled/pull/4920</br></br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.0.1...2.1.0</br></br>Bug Bounties and Responsible Disclosures:</br></br>We welcome reviews of the `rippled` code and urge researchers to responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to: &lt;bugs@xrpl.org&gt;</br></br></td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-02-21 16:55:03.744374 UTC</td>
+      <td>2024-02-22 00:55:03.773392 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-02-21 16:55:03.890961 UTC</td>
+      <td>2024-02-22 00:55:03.930709 UTC</td>
       <td>6.7.1</td>
       <td>10.11.2</td>
       <td>10.11.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-02-21 16:55:04.050446 UTC</td>
+      <td>2024-02-22 00:55:04.077478 UTC</td>
       <td>1.2.19</td>
       <td>7.2.0</td>
       <td>7.2.0</td>
