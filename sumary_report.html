@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-06-05 00:55:02.693513 UTC</td>
+      <td>2024-06-05 08:55:02.403751 UTC</td>
       <td>22.0</td>
       <td>27.0</td>
       <td>27.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-06-05 00:55:02.843054 UTC</td>
+      <td>2024-06-05 08:55:02.545649 UTC</td>
       <td>1.14.4</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-06-05 00:55:03.033571 UTC</td>
+      <td>2024-06-05 08:55:02.695986 UTC</td>
       <td>1.10.8</td>
-      <td>1.14.3</td>
-      <td>1.14.3</td>
-      <td>Version Behind</td>
-      <td>2024-05-09T10:40:10Z</td>
-      <td>We're issuing this (v1.14.3) release to finally publish v1.14 on the Ubuntu PPA. It is otherwise identical to [v1.14.2](https://github.com/ethereum/go-ethereum/releases/tag/v1.14.2).</br></br>---</br></br>This is a maintenance release containing bug-fixes. In case you are wondering where v1.14.1 (and v1.14.2) went, let's just say, the continuous integration gods have not been good to us.</br></br>List of changes in detail:</br></br>#### Geth</br></br>- When using `geth --dev` with a custom genesis block, the genesis file must now set difficulty and terminal total difficulty to zero. ([#29579](https://github.com/ethereum/go-ethereum/pull/29579))</br>- For fork scheduling errors in `geth init`, fork timestamps will now be printed correctly. ([#29514](https://github.com/ethereum/go-ethereum/pull/29514))</br>- Certain aspects of state handling are now parallelized resulting in a 5-10% speedup for block processing. ([#29681](https://github.com/ethereum/go-ethereum/pull/29681))</br></br>#### RPC</br></br>- `eth_feeHistory` was changed to apply a limit on the number of requested percentiles ([#29644](https://github.com/ethereum/go-ethereum/pull/29644))</br>- `eth_createAccessList` now honors request cancellation and terminates background work ([#29686](https://github.com/ethereum/go-ethereum/pull/29686))</br>- `eth_estimateGas` takes tx blobs into account for low-balance scenarios ([#29703](https://github.com/ethereum/go-ethereum/pull/29703))</br></br>#### Tracing</br></br>- The live tracing interface has new hooks around EVM system calls ([#29355](https://github.com/ethereum/go-ethereum/pull/29355))</br>- flatCallTracer was fixed to return the correct error result when interrupted ([#29623](https://github.com/ethereum/go-ethereum/pull/29623))</br></br>#### Build</br></br>- This release is built with Go 1.22.3 ([#29725](https://github.com/ethereum/go-ethereum/pull/29725))</br>- We no longer provide deb packages for Ubunty 14.04 Trusty Tahr ([#29651](https://github.com/ethereum/go-ethereum/pull/29651), [#29649](https://github.com/ethereum/go-ethereum/pull/29649), [#29648](https://github.com/ethereum/go-ethereum/pull/29648), [#29647](https://github.com/ethereum/go-ethereum/pull/29647))</br>- CI builders have been updated to Ubuntu 24.04 Noble Numbat ([#29723](https://github.com/ethereum/go-ethereum/pull/29723))</br></br>For a full rundown of the changes please consult the Geth [1.14.1 release milestone](https://github.com/ethereum/go-ethereum/milestone/165?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.14.4</td>
+      <td>1.14.4</td>
+      <td>Node version has update</td>
+      <td>2024-06-05T08:12:17Z</td>
+      <td>Geth v1.14.4 in a usual maintenance release, but it does ship a 5-7% block import [speed improvement](https://github.com/ethereum/go-ethereum/pull/29519). Furthermore, v1.14.4 also finally includes an [Ether supply live tracer](https://github.com/ethereum/go-ethereum/pull/29347), that you can enable via `--vmtrace supply`. Also please note, the default value for miner tip enforcement was dropped from 1 gwei to 0.001 gwei (block producers can change this via `--miner.gasprice`).</br></br>Shipped features:</br></br>- Reduce the default required minimum miner tip from 1 gwei to 0.001 gwei to cater better for network conditions ([#29895](https://github.com/ethereum/go-ethereum/pull/29895)).</br>- Load trie nodes concurrently with trie updates, speeding up block import by 5-7% ([#29519](https://github.com/ethereum/go-ethereum/pull/29519), [#29768](https://github.com/ethereum/go-ethereum/pull/29768), [#29919](https://github.com/ethereum/go-ethereum/pull/29919)).</br>- Introduce an Ether supply tracker as a live chain tracer ([#29347](https://github.com/ethereum/go-ethereum/pull/29347)).</br>- Implement Verkle stateless gas accounting ([EIP-4762](https://eips.ethereum.org/EIPS/eip-4762)) ([#29338](https://github.com/ethereum/go-ethereum/pull/29338)).</br>- Optimise trie dirty tracking to reduce disk loads a bit ([#29731](https://github.com/ethereum/go-ethereum/pull/29731)).</br>- Ensure the [beacon chain roots system contract](https://eips.ethereum.org/EIPS/eip-4788) is deployed in dev mode ([#29655](https://github.com/ethereum/go-ethereum/pull/29655)).</br>- Add an additional snap sync check for data validity before inserting into the database ([#29485](https://github.com/ethereum/go-ethereum/pull/29485)).</br>- Improve the discovery protocol's node revalidation ([#29572](https://github.com/ethereum/go-ethereum/pull/29572), [#29864](https://github.com/ethereum/go-ethereum/pull/29864), [#29836](https://github.com/ethereum/go-ethereum/pull/29836)).</br>- Continue working towards pathdb support in archive mode ([#29530](https://github.com/ethereum/go-ethereum/pull/29530), [#29924](https://github.com/ethereum/go-ethereum/pull/29924)).</br></br>Shipped bugfixes:</br></br>- Fix a gas estimation regression that caused longer runtimes ([#29738](https://github.com/ethereum/go-ethereum/pull/29738)).</br>- Fix a potential crash in JSON logging for EVM blocktests ([#29795](https://github.com/ethereum/go-ethereum/pull/29795)).</br>- Fix utility commands to support post-merge opcodes ([#29799](https://github.com/ethereum/go-ethereum/pull/29799)).</br>- Fix a txpool synchronicity issue in simulated chains ([#29876](https://github.com/ethereum/go-ethereum/pull/29876)).</br>- Fix a iteration order when using a trie node iterator ([#27838](https://github.com/ethereum/go-ethereum/pull/27838)).</br>- Fix a TCP/UDP discovery port test in cmd/devp2p ([#29879](https://github.com/ethereum/go-ethereum/pull/29879)).</br>- Fix IPv6 endpoint determination ([#29801](https://github.com/ethereum/go-ethereum/pull/29801), [#29827](https://github.com/ethereum/go-ethereum/pull/29827)).</br></br>For a full rundown of the changes please consult the Geth [1.14.4 release milestone](https://github.com/ethereum/go-ethereum/milestone/167?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-06-05 00:55:03.219459 UTC</td>
+      <td>2024-06-05 08:55:02.864508 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-06-05 00:55:03.401295 UTC</td>
+      <td>2024-06-05 08:55:03.048098 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-06-05 00:55:03.553108 UTC</td>
+      <td>2024-06-05 08:55:03.217647 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-06-05 00:55:03.825600 UTC</td>
+      <td>2024-06-05 08:55:03.474872 UTC</td>
       <td>1.8.1</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2024-06-04T23:09:54Z</td>
       <td>Version 2.2.0 introduces five new amendments:</br></br></br>- featurePriceOracle amendment: Implements a price oracle as defined in the [XLS-47](https://github.com/XRPLF/XRPL-Standards/blob/master/XLS-47d-PriceOracles/README.md) spec. A Price Oracle is used to bring real-world data, such as market prices, onto the blockchain, enabling dApps to access and utilize information that resides outside the blockchain. [#4789](https://github.com/XRPLF/rippled/pull/4789) </br></br>- fixEmptyDID amendment: Modifies the behavior of the DID amendment: adds an additional check to ensure that DIDs are non-empty when created, and returns a `tecEMPTY_DID` error if the DID would be empty. [#4950](https://github.com/XRPLF/rippled/pull/4950)</br></br>- fixXChainRewardRounding amendment: Modifies the behavior of the XChainBridge amendment: fixes rounding so reward shares are always rounded down, even when the `fixUniversalNumber` amendment is active. [#4933](https://github.com/XRPLF/rippled/pull/4933)</br></br>- fixPreviousTxnID amendment: Adds `PreviousTxnID` and `PreviousTxnLgrSequence` as fields to all ledger entries that did not already have them included (`DirectoryNode`, `Amendments`, `FeeSettings`, `NegativeUNL`, and `AMM`). Existing ledger entries will gain the fields whenever transactions modify those entries. [#4751](https://github.com/XRPLF/rippled/pull/4751). </br></br>- fixAMMv1_1 amendment: Fixes AMM offer rounding and low quality order book offers from blocking the AMM. [#4983](https://github.com/XRPLF/rippled/pull/4983)</br></br>## Note for Clio operators</br></br>If you operate a Clio server, Clio needs to be updated to 2.1.2 before updating to rippled 2.2.0. Clio will be blocked if it is not updated.</br></br>## What's Changed</br></br>[Full Release Notes for 2.2.0 (xrpl.org)](https://xrpl.org/blog/2024/rippled-2.2.0)</br></br>* `PriceOracle`: Price Oracle (XLS-47d) by @gregtatcam in https://github.com/XRPLF/rippled/pull/4789</br>* Fix gcc 13 compile error in Price Oracle unit-test by @gregtatcam in https://github.com/XRPLF/rippled/pull/4932</br>* Proposed 2.2.0-b1 by @seelabs in https://github.com/XRPLF/rippled/pull/4935</br>* Remove default constructor from SecretKey class by @ckeshava in https://github.com/XRPLF/rippled/pull/4607</br>* Fast base58 codec by @seelabs in https://github.com/XRPLF/rippled/pull/4327</br>* feat: add user version of `feature` RPC by @mvadari in https://github.com/XRPLF/rippled/pull/4781</br>* Add STCurrency.h to xrpl_core to fix clio build by @gregtatcam in https://github.com/XRPLF/rippled/pull/4939</br>* Embed patched recipe for RocksDB 6.29.5 by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4947</br>* fix: order book update variable swap: by @seelabs in https://github.com/XRPLF/rippled/pull/4890</br>* Fix workflows by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4948</br>* Upgrade to xxhash 0.8.2 as conan dependency, enable SIMD hashing by @Bronek in https://github.com/XRPLF/rippled/pull/4893</br>* Update remaining actions by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4949</br>* Relocate RPCErr to ripple/protocol - fix previous PR by @legleux in https://github.com/XRPLF/rippled/pull/4940</br>* test: env unit test RPC errors return a unique result: by @ximinez in https://github.com/XRPLF/rippled/pull/4887</br>* Fix workflows by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4951</br>* RIPD-1847 fix select query condition by @oleks-rip in https://github.com/XRPLF/rippled/pull/4955</br>* Add the`fixEmptyDID` amendment by @mvadari in https://github.com/XRPLF/rippled/pull/4950</br>* Enforce no duplicate slots from incoming connections by @Bronek in https://github.com/XRPLF/rippled/pull/4944</br>* Remove zaphod.alloy.ee from bootstrap by @alloynetworks in https://github.com/XRPLF/rippled/pull/4903</br>* Write proper `forAllApiVersions` used in NetworkOPs.cpp by @Bronek in https://github.com/XRPLF/rippled/pull/4833</br>* Don't reach consensus as fast if no other proposals seen. by @mtrippled in https://github.com/XRPLF/rippled/pull/4763</br>* Fix sidechain reward share rounding with new number class by @seelabs in https://github.com/XRPLF/rippled/pull/4933</br>* Proposed 2.1.1 by @seelabs in https://github.com/XRPLF/rippled/pull/4968</br>* chore: change Github Action triggers for build/test jobs by @ximinez in https://github.com/XRPLF/rippled/pull/4956</br>* Merge master (v2.1.1) into develop by @ximinez in https://github.com/XRPLF/rippled/pull/4970</br>* [TRIVIAL] chore: Default validator-keys-tool to build from master branch by @ximinez in https://github.com/XRPLF/rippled/pull/4943</br>* [TRIVIAL] Remove unused lambdas from MultiApiJson_test by @Bronek in https://github.com/XRPLF/rippled/pull/4980</br>* Proposed 2.2.0-b2 by @ximinez in https://github.com/XRPLF/rippled/pull/4979</br>* amendment fix to add `sfPreviousTxnID`/`sfPreviousTxnLgrSequence` to all ledger objects by @mvadari in https://github.com/XRPLF/rippled/pull/4751</br>* Unit tests for AMM offer overflow fix by @Bronek in https://github.com/XRPLF/rippled/pull/4986</br>* Codecov coverage reporting fixes by @Bronek in https://github.com/XRPLF/rippled/pull/4977</br>* Increase test coverage by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4971</br>* AMM Unit tests: rounding down of equal asset deposit LPToken calculation by @ckeshava in https://github.com/XRPLF/rippled/pull/4982</br>* fix: resolve database deadlock: by @seelabs in https://github.com/XRPLF/rippled/pull/4989</br>* [TRIVIAL] fix: Remove redundant STAmount conversion in test by @ximinez in https://github.com/XRPLF/rippled/pull/4996</br>* Proposed 2.2.0-b3 by @ximinez in https://github.com/XRPLF/rippled/pull/4995</br>* Less contentious restructure by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4966</br>* Add RPC error checking support to unit tests by @ximinez in https://github.com/XRPLF/rippled/pull/4987</br>* [TRIVIAL] chore: fix typos in comments by @xiaoxianBoy in https://github.com/XRPLF/rippled/pull/4958</br>* fix: AMM swap rounding by @seelabs in https://github.com/XRPLF/rippled/pull/5002</br>* Proposed 2.2.0-rc1 by @ximinez in https://github.com/XRPLF/rippled/pull/5003</br>* Update list of maintainers: by @nbougalis in https://github.com/XRPLF/rippled/pull/4984</br>* Remove flow assert: by @seelabs in https://github.com/XRPLF/rippled/pull/5009</br>* [trivial] Add missing includes by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/5011</br>* Add external directory for Conan recipe's exports by @legleux in https://github.com/XRPLF/rippled/pull/5006</br>* Price Oracle: validate input parameters and extend test coverage: by @gregtatcam in https://github.com/XRPLF/rippled/pull/5013</br>* Update CONTRIBUTING.md by @dangell7 in https://github.com/XRPLF/rippled/pull/4904</br>* `fixAMMv1_1`: improve the quality of the generated AMM offer in certain cases by @gregtatcam in https://github.com/XRPLF/rippled/pull/4983</br>* Fix offer crossing with transfer fee over AMM and other fixes by @gregtatcam in https://github.com/XRPLF/rippled/pull/5016</br>* Proposed 2.2.0-rc2 by @seelabs in https://github.com/XRPLF/rippled/pull/5018</br>* Fix Oracle's token pair deterministic order by @gregtatcam in https://github.com/XRPLF/rippled/pull/5021</br>* Add `xrpl.libpb` as an exported lib by @godexsoft in https://github.com/XRPLF/rippled/pull/5022</br>* Proposed 2.2.0-rc3 by @seelabs in https://github.com/XRPLF/rippled/pull/5023</br>* Proposed 2.2.0 by @seelabs in https://github.com/XRPLF/rippled/pull/5037</br></br>## New Contributors</br>* @oleks-rip made their first contribution in https://github.com/XRPLF/rippled/pull/4955</br>* @xiaoxianBoy made their first contribution in https://github.com/XRPLF/rippled/pull/4958</br>* @godexsoft made their first contribution in https://github.com/XRPLF/rippled/pull/5022</br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.1.0...2.2.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-06-05 00:55:03.981840 UTC</td>
+      <td>2024-06-05 08:55:03.634387 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-06-05 00:55:04.126260 UTC</td>
+      <td>2024-06-05 08:55:03.788843 UTC</td>
       <td>6.7.1</td>
       <td>11.2.1</td>
       <td>11.2.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-06-05 00:55:04.287799 UTC</td>
+      <td>2024-06-05 08:55:03.921925 UTC</td>
       <td>1.2.19</td>
       <td>7.4.0</td>
       <td>7.4.0</td>
