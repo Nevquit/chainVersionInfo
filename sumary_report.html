@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-06-06 16:55:02.424343 UTC</td>
+      <td>2024-06-07 00:55:02.399095 UTC</td>
       <td>22.0</td>
       <td>27.0</td>
       <td>27.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-06-06 16:55:02.566275 UTC</td>
+      <td>2024-06-07 00:55:02.557115 UTC</td>
       <td>1.14.4</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-06-06 16:55:02.714425 UTC</td>
+      <td>2024-06-07 00:55:02.697357 UTC</td>
       <td>1.10.8</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2024-06-06T13:41:53Z</td>
       <td>Geth v1.14.5 is a hotfix release that addresses a regression introduced in v1.14.4, which prevented the node from discovering other peers in certain networking setups ([#29944](https://github.com/ethereum/go-ethereum/pull/29944)). It is otherwise identical to [v1.14.4](https://github.com/ethereum/go-ethereum/releases/tag/v1.14.4).</br></br>---</br></br>Geth v1.14.4 in a usual maintenance release, but it does ship a 5-7% block import [speed improvement](https://github.com/ethereum/go-ethereum/pull/29519). Furthermore, v1.14.4 also finally includes an [Ether supply live tracer](https://github.com/ethereum/go-ethereum/pull/29347), that you can enable via `--vmtrace supply`. Also please note, the default value for miner tip enforcement was dropped from 1 gwei to 0.001 gwei (block producers can change this via `--miner.gasprice`).</br></br>Shipped features:</br></br>- Reduce the default required minimum miner tip from 1 gwei to 0.001 gwei to cater better for network conditions ([#29895](https://github.com/ethereum/go-ethereum/pull/29895)).</br>- Load trie nodes concurrently with trie updates, speeding up block import by 5-7% ([#29519](https://github.com/ethereum/go-ethereum/pull/29519), [#29768](https://github.com/ethereum/go-ethereum/pull/29768), [#29919](https://github.com/ethereum/go-ethereum/pull/29919)).</br>- Introduce an Ether supply tracker as a live chain tracer ([#29347](https://github.com/ethereum/go-ethereum/pull/29347)).</br>- Implement Verkle stateless gas accounting ([EIP-4762](https://eips.ethereum.org/EIPS/eip-4762)) ([#29338](https://github.com/ethereum/go-ethereum/pull/29338)).</br>- Optimise trie dirty tracking to reduce disk loads a bit ([#29731](https://github.com/ethereum/go-ethereum/pull/29731)).</br>- Ensure the [beacon chain roots system contract](https://eips.ethereum.org/EIPS/eip-4788) is deployed in dev mode ([#29655](https://github.com/ethereum/go-ethereum/pull/29655)).</br>- Add an additional snap sync check for data validity before inserting into the database ([#29485](https://github.com/ethereum/go-ethereum/pull/29485)).</br>- Improve the discovery protocol's node revalidation ([#29572](https://github.com/ethereum/go-ethereum/pull/29572), [#29864](https://github.com/ethereum/go-ethereum/pull/29864), [#29836](https://github.com/ethereum/go-ethereum/pull/29836)).</br>- Continue working towards pathdb support in archive mode ([#29530](https://github.com/ethereum/go-ethereum/pull/29530), [#29924](https://github.com/ethereum/go-ethereum/pull/29924)).</br></br>Shipped bugfixes:</br></br>- Fix a gas estimation regression that caused longer runtimes ([#29738](https://github.com/ethereum/go-ethereum/pull/29738)).</br>- Fix a potential crash in JSON logging for EVM blocktests ([#29795](https://github.com/ethereum/go-ethereum/pull/29795)).</br>- Fix utility commands to support post-merge opcodes ([#29799](https://github.com/ethereum/go-ethereum/pull/29799)).</br>- Fix a txpool synchronicity issue in simulated chains ([#29876](https://github.com/ethereum/go-ethereum/pull/29876)).</br>- Fix a iteration order when using a trie node iterator ([#27838](https://github.com/ethereum/go-ethereum/pull/27838)).</br>- Fix a TCP/UDP discovery port test in cmd/devp2p ([#29879](https://github.com/ethereum/go-ethereum/pull/29879)).</br>- Fix IPv6 endpoint determination ([#29801](https://github.com/ethereum/go-ethereum/pull/29801), [#29827](https://github.com/ethereum/go-ethereum/pull/29827)).</br></br>For a full rundown of the changes please consult the Geth [1.14.4 release milestone](https://github.com/ethereum/go-ethereum/milestone/167?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-06-06 16:55:02.858333 UTC</td>
+      <td>2024-06-07 00:55:02.851482 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-06-06 16:55:03.018293 UTC</td>
+      <td>2024-06-07 00:55:03.050356 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-06-06 16:55:03.159163 UTC</td>
+      <td>2024-06-07 00:55:03.188763 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-06-06 16:55:03.403015 UTC</td>
+      <td>2024-06-07 00:55:03.439323 UTC</td>
       <td>1.8.1</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-06-06 16:55:03.550650 UTC</td>
+      <td>2024-06-07 00:55:03.600950 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-06-06 16:55:03.676137 UTC</td>
+      <td>2024-06-07 00:55:03.746319 UTC</td>
       <td>6.7.1</td>
       <td>11.2.1</td>
       <td>11.2.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-06-06 16:55:03.816864 UTC</td>
+      <td>2024-06-07 00:55:03.881785 UTC</td>
       <td>1.2.19</td>
       <td>7.4.0</td>
       <td>7.4.0</td>
