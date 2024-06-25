@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-06-25 00:55:02.487740 UTC</td>
+      <td>2024-06-25 08:55:02.392677 UTC</td>
       <td>22.0</td>
       <td>27.1</td>
       <td>27.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-06-25 00:55:02.684942 UTC</td>
+      <td>2024-06-25 08:55:02.570639 UTC</td>
       <td>1.14.4</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-06-25 00:55:02.839967 UTC</td>
+      <td>2024-06-25 08:55:02.729143 UTC</td>
       <td>1.10.8</td>
       <td>1.14.5</td>
       <td>1.14.5</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-06-25 00:55:03.000816 UTC</td>
+      <td>2024-06-25 08:55:02.869854 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-06-25 00:55:03.143586 UTC</td>
+      <td>2024-06-25 08:55:03.019308 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-06-25 00:55:03.292869 UTC</td>
+      <td>2024-06-25 08:55:03.213733 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-06-25 00:55:03.528757 UTC</td>
+      <td>2024-06-25 08:55:03.469451 UTC</td>
       <td>1.8.1</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-06-25 00:55:03.668755 UTC</td>
+      <td>2024-06-25 08:55:03.631766 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-06-25 00:55:03.804589 UTC</td>
+      <td>2024-06-25 08:55:03.767897 UTC</td>
       <td>6.7.1</td>
-      <td>11.3.1</td>
-      <td>11.3.1</td>
-      <td>Version Behind</td>
-      <td>2024-06-17T18:52:37Z</td>
-      <td>Changes:</br></br>- Fix period assumption on signingInfo (derive)</br>- Bump dev to 0.79.3</br>- Update {Polkadot, Kusama, Westend} types-known</br>- Bump Substrate metadata to latest</br>    - NOTE: Moving forward when bumping the metadata for {Polkadot, Kusama, Substrate} the version will</br>    always be a minor bump since it can add, modify, remove augmented types.</td>
+      <td>12.0.1</td>
+      <td>12.0.1</td>
+      <td>Node version has update</td>
+      <td>2024-06-25T03:04:23Z</td>
+      <td>**Important Changes**:</br></br>- Addition of an optional `signedTransaction` field to the [`SignerResult`](https://github.com/polkadot-js/api/blob/586f02f8310529f16e4047fd94e31bc6c6573366/packages/types/src/types/extrinsic.ts#L138-L158) response for injected signers. This only applies to the `signPayload` method exposed in the [`Signer`](https://github.com/polkadot-js/api/blob/586f02f8310529f16e4047fd94e31bc6c6573366/packages/types/src/types/extrinsic.ts#L160-L175) interface for polkadot-js. As the name suggests the field expects a signed transaction (extrinsic) when inputted. When its present, the api will not add the signature to the payload, but instead broadcast the inputted signed transaction. This means the signer may modify the payload it's given. The only part of the payload that may not be modified is the call data. This is verified on the api, and will throw an error if it does not match the initial payloads call data.</br>  - This is very useful for signers that want to adjust the `mode` and `metadataHash` field for the `CheckMetadataHash` signed extension.</br>  - Note that this is not your traditional breaking change since it more-so acts as an addition, but since this is a high magnitude change it is going to be considered a MAJOR bump.</br>  - For more info please review the following PR [(#5914)](https://github.com/polkadot-js/api/pull/5914)</br></br>Changes:</br></br>- Replace `system_accountNextIndex` with runtime api call `accountNonceApi` for `api.derive.tx.signingInfo`</br>- Sanitize `eras` for `api.derive.staking._stakerRewards`</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-06-25 00:55:03.984286 UTC</td>
+      <td>2024-06-25 08:55:03.900152 UTC</td>
       <td>1.2.19</td>
       <td>7.5.1</td>
       <td>7.5.1</td>
