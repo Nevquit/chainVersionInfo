@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-07-03 08:55:02.461568 UTC</td>
+      <td>2024-07-03 16:55:02.482213 UTC</td>
       <td>22.0</td>
       <td>27.1</td>
       <td>27.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-07-03 08:55:02.615881 UTC</td>
+      <td>2024-07-03 16:55:02.706966 UTC</td>
       <td>1.14.4</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-07-03 08:55:02.786787 UTC</td>
+      <td>2024-07-03 16:55:02.874086 UTC</td>
       <td>1.10.8</td>
       <td>1.14.6</td>
       <td>1.14.6</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-07-03 08:55:02.939400 UTC</td>
+      <td>2024-07-03 16:55:03.028818 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-07-03 08:55:03.090022 UTC</td>
+      <td>2024-07-03 16:55:03.176476 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-07-03 08:55:03.248485 UTC</td>
+      <td>2024-07-03 16:55:03.345394 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-07-03 08:55:03.513349 UTC</td>
+      <td>2024-07-03 16:55:03.646673 UTC</td>
       <td>1.8.1</td>
       <td>2.2.0</td>
       <td>2.2.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-07-03 08:55:03.672941 UTC</td>
+      <td>2024-07-03 16:55:03.801893 UTC</td>
       <td>23.1.0</td>
       <td>27.0.0</td>
       <td>27.0.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-07-03 08:55:03.809151 UTC</td>
+      <td>2024-07-03 16:55:03.966661 UTC</td>
       <td>6.7.1</td>
-      <td>12.0.2</td>
-      <td>12.0.2</td>
-      <td>Version Behind</td>
-      <td>2024-06-27T21:05:37Z</td>
-      <td>**Important Changes**:</br></br>- `withSignedTransaction`: This option has been added to `SignerOptions`. When using `signAndSend`, `signAsync`, and `dryRun` you may now enable or disable the use of the `signedTransaction` field by adding the `withSignedTransaction` option. When withSignedTransaction is not enabled but the signer adds a signedTransaction the api will error.</br>  - Always disabled by default.</br>  - This ensures no big breaking changes happen to the interface of `signPayload`.</br>  - `withSignedTransaction` has also been added to the `SignerPayload` type which allows for `payload.toPayload()` to include the option.</br>- `signAsync`: now accepts the `signedTransaction` field as well. This means that if `withSignedTransaction` is enabled, and `signedTransaction` is present the api will adjust the current payload attached to the SubmittableExtrinsic, and add the signature. Then the user can call `.send()` as they please.</br>- `dryRun`: All steps will be the same as signAsync with the exception that .send() has never needed to be called.</br></br>Contributed:</br></br>- Add LocationToAccountApi::convert_location runtime API (Thanks to https://github.com/bkontur)</td>
+      <td>12.1.1</td>
+      <td>12.1.1</td>
+      <td>Node version has update</td>
+      <td>2024-07-03T12:17:36Z</td>
+      <td>Contributed:</br></br>- Implement xcm payment api (Thanks to https://github.com/girazoki)</br></br>Changes:</br></br>- Update Augmented types for polkadot 1002005 </br>- Update Augmented types for kusama 1002006</br>  - Note: This removes type support for the Identity pallet for Kusama, and stateTrieMigration</br>- Update upgrade blocks for {Kusama, Polkadot}</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-07-03 08:55:03.964916 UTC</td>
+      <td>2024-07-03 16:55:04.132893 UTC</td>
       <td>1.2.19</td>
       <td>7.5.1</td>
       <td>7.5.1</td>
