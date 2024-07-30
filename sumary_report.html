@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-07-29 16:55:02.386503 UTC</td>
+      <td>2024-07-30 00:55:02.745848 UTC</td>
       <td>22.0</td>
       <td>26.2</td>
       <td>26.2</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-07-29 16:55:02.546166 UTC</td>
+      <td>2024-07-30 00:55:02.901769 UTC</td>
       <td>1.14.4</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-07-29 16:55:02.683322 UTC</td>
+      <td>2024-07-30 00:55:03.090000 UTC</td>
       <td>1.10.8</td>
       <td>1.14.7</td>
       <td>1.14.7</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-07-29 16:55:02.851485 UTC</td>
+      <td>2024-07-30 00:55:03.229547 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-07-29 16:55:03.002486 UTC</td>
+      <td>2024-07-30 00:55:03.395228 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-07-29 16:55:03.165979 UTC</td>
+      <td>2024-07-30 00:55:03.539680 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-07-29 16:55:03.424023 UTC</td>
+      <td>2024-07-30 00:55:03.784432 UTC</td>
       <td>1.8.1</td>
-      <td>2.2.0</td>
-      <td>2.2.0</td>
-      <td>Version Behind</td>
-      <td>2024-06-04T23:09:54Z</td>
-      <td>Version 2.2.0 introduces five new amendments:</br></br></br>- PriceOracle amendment: Implements a price oracle as defined in the [XLS-47](https://github.com/XRPLF/XRPL-Standards/blob/master/XLS-47d-PriceOracles/README.md) spec. A Price Oracle is used to bring real-world data, such as market prices, onto the blockchain, enabling dApps to access and utilize information that resides outside the blockchain. [#4789](https://github.com/XRPLF/rippled/pull/4789) </br></br>- fixEmptyDID amendment: Modifies the behavior of the DID amendment: adds an additional check to ensure that DIDs are non-empty when created, and returns a `tecEMPTY_DID` error if the DID would be empty. [#4950](https://github.com/XRPLF/rippled/pull/4950)</br></br>- fixXChainRewardRounding amendment: Modifies the behavior of the XChainBridge amendment: fixes rounding so reward shares are always rounded down, even when the `fixUniversalNumber` amendment is active. [#4933](https://github.com/XRPLF/rippled/pull/4933)</br></br>- fixPreviousTxnID amendment: Adds `PreviousTxnID` and `PreviousTxnLgrSequence` as fields to all ledger entries that did not already have them included (`DirectoryNode`, `Amendments`, `FeeSettings`, `NegativeUNL`, and `AMM`). Existing ledger entries will gain the fields whenever transactions modify those entries. [#4751](https://github.com/XRPLF/rippled/pull/4751). </br></br>- fixAMMv1_1 amendment: Fixes AMM offer rounding and low quality order book offers from blocking the AMM. [#4983](https://github.com/XRPLF/rippled/pull/4983)</br></br>## Note for Clio operators</br></br>If you operate a Clio server, Clio needs to be updated to 2.1.2 before updating to rippled 2.2.0. Clio will be blocked if it is not updated.</br></br>## What's Changed</br></br>[Full Release Notes for 2.2.0 (xrpl.org)](https://xrpl.org/blog/2024/rippled-2.2.0)</br></br>* `PriceOracle`: Price Oracle (XLS-47d) by @gregtatcam in https://github.com/XRPLF/rippled/pull/4789</br>* Fix gcc 13 compile error in Price Oracle unit-test by @gregtatcam in https://github.com/XRPLF/rippled/pull/4932</br>* Proposed 2.2.0-b1 by @seelabs in https://github.com/XRPLF/rippled/pull/4935</br>* Remove default constructor from SecretKey class by @ckeshava in https://github.com/XRPLF/rippled/pull/4607</br>* Fast base58 codec by @seelabs in https://github.com/XRPLF/rippled/pull/4327</br>* feat: add user version of `feature` RPC by @mvadari in https://github.com/XRPLF/rippled/pull/4781</br>* Add STCurrency.h to xrpl_core to fix clio build by @gregtatcam in https://github.com/XRPLF/rippled/pull/4939</br>* Embed patched recipe for RocksDB 6.29.5 by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4947</br>* fix: order book update variable swap: by @seelabs in https://github.com/XRPLF/rippled/pull/4890</br>* Fix workflows by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4948</br>* Upgrade to xxhash 0.8.2 as conan dependency, enable SIMD hashing by @Bronek in https://github.com/XRPLF/rippled/pull/4893</br>* Update remaining actions by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4949</br>* Relocate RPCErr to ripple/protocol - fix previous PR by @legleux in https://github.com/XRPLF/rippled/pull/4940</br>* test: env unit test RPC errors return a unique result: by @ximinez in https://github.com/XRPLF/rippled/pull/4887</br>* Fix workflows by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4951</br>* RIPD-1847 fix select query condition by @oleks-rip in https://github.com/XRPLF/rippled/pull/4955</br>* Add the`fixEmptyDID` amendment by @mvadari in https://github.com/XRPLF/rippled/pull/4950</br>* Enforce no duplicate slots from incoming connections by @Bronek in https://github.com/XRPLF/rippled/pull/4944</br>* Remove zaphod.alloy.ee from bootstrap by @alloynetworks in https://github.com/XRPLF/rippled/pull/4903</br>* Write proper `forAllApiVersions` used in NetworkOPs.cpp by @Bronek in https://github.com/XRPLF/rippled/pull/4833</br>* Don't reach consensus as fast if no other proposals seen. by @mtrippled in https://github.com/XRPLF/rippled/pull/4763</br>* Fix sidechain reward share rounding with new number class by @seelabs in https://github.com/XRPLF/rippled/pull/4933</br>* Proposed 2.1.1 by @seelabs in https://github.com/XRPLF/rippled/pull/4968</br>* chore: change Github Action triggers for build/test jobs by @ximinez in https://github.com/XRPLF/rippled/pull/4956</br>* Merge master (v2.1.1) into develop by @ximinez in https://github.com/XRPLF/rippled/pull/4970</br>* [TRIVIAL] chore: Default validator-keys-tool to build from master branch by @ximinez in https://github.com/XRPLF/rippled/pull/4943</br>* [TRIVIAL] Remove unused lambdas from MultiApiJson_test by @Bronek in https://github.com/XRPLF/rippled/pull/4980</br>* Proposed 2.2.0-b2 by @ximinez in https://github.com/XRPLF/rippled/pull/4979</br>* amendment fix to add `sfPreviousTxnID`/`sfPreviousTxnLgrSequence` to all ledger objects by @mvadari in https://github.com/XRPLF/rippled/pull/4751</br>* Unit tests for AMM offer overflow fix by @Bronek in https://github.com/XRPLF/rippled/pull/4986</br>* Codecov coverage reporting fixes by @Bronek in https://github.com/XRPLF/rippled/pull/4977</br>* Increase test coverage by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4971</br>* AMM Unit tests: rounding down of equal asset deposit LPToken calculation by @ckeshava in https://github.com/XRPLF/rippled/pull/4982</br>* fix: resolve database deadlock: by @seelabs in https://github.com/XRPLF/rippled/pull/4989</br>* [TRIVIAL] fix: Remove redundant STAmount conversion in test by @ximinez in https://github.com/XRPLF/rippled/pull/4996</br>* Proposed 2.2.0-b3 by @ximinez in https://github.com/XRPLF/rippled/pull/4995</br>* Less contentious restructure by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/4966</br>* Add RPC error checking support to unit tests by @ximinez in https://github.com/XRPLF/rippled/pull/4987</br>* [TRIVIAL] chore: fix typos in comments by @xiaoxianBoy in https://github.com/XRPLF/rippled/pull/4958</br>* fix: AMM swap rounding by @seelabs in https://github.com/XRPLF/rippled/pull/5002</br>* Proposed 2.2.0-rc1 by @ximinez in https://github.com/XRPLF/rippled/pull/5003</br>* Update list of maintainers: by @nbougalis in https://github.com/XRPLF/rippled/pull/4984</br>* Remove flow assert: by @seelabs in https://github.com/XRPLF/rippled/pull/5009</br>* [trivial] Add missing includes by @thejohnfreeman in https://github.com/XRPLF/rippled/pull/5011</br>* Add external directory for Conan recipe's exports by @legleux in https://github.com/XRPLF/rippled/pull/5006</br>* Price Oracle: validate input parameters and extend test coverage: by @gregtatcam in https://github.com/XRPLF/rippled/pull/5013</br>* Update CONTRIBUTING.md by @dangell7 in https://github.com/XRPLF/rippled/pull/4904</br>* `fixAMMv1_1`: improve the quality of the generated AMM offer in certain cases by @gregtatcam in https://github.com/XRPLF/rippled/pull/4983</br>* Fix offer crossing with transfer fee over AMM and other fixes by @gregtatcam in https://github.com/XRPLF/rippled/pull/5016</br>* Proposed 2.2.0-rc2 by @seelabs in https://github.com/XRPLF/rippled/pull/5018</br>* Fix Oracle's token pair deterministic order by @gregtatcam in https://github.com/XRPLF/rippled/pull/5021</br>* Add `xrpl.libpb` as an exported lib by @godexsoft in https://github.com/XRPLF/rippled/pull/5022</br>* Proposed 2.2.0-rc3 by @seelabs in https://github.com/XRPLF/rippled/pull/5023</br>* Proposed 2.2.0 by @seelabs in https://github.com/XRPLF/rippled/pull/5037</br></br>## New Contributors</br>* @oleks-rip made their first contribution in https://github.com/XRPLF/rippled/pull/4955</br>* @xiaoxianBoy made their first contribution in https://github.com/XRPLF/rippled/pull/4958</br>* @godexsoft made their first contribution in https://github.com/XRPLF/rippled/pull/5022</br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.1.0...2.2.0</td>
+      <td>2.2.1</td>
+      <td>2.2.1</td>
+      <td>Node version has update</td>
+      <td>2024-07-29T19:37:30Z</td>
+      <td>Version 2.2.1 introduces no new amendments:</br></br>## What's Changed</br></br>* Fixed a critical bug, introduced in 2.2.0, when handling some types of RPC requests.</br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.2.0...2.2.1</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-07-29 16:55:03.586027 UTC</td>
+      <td>2024-07-30 00:55:03.940590 UTC</td>
       <td>23.1.0</td>
       <td>27.1.0</td>
       <td>27.1.0</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-07-29 16:55:03.793955 UTC</td>
+      <td>2024-07-30 00:55:04.079719 UTC</td>
       <td>6.7.1</td>
-      <td>12.2.2</td>
-      <td>12.2.2</td>
-      <td>Version Behind</td>
-      <td>2024-07-25T10:20:45Z</td>
-      <td>Changes:</br></br>- Fix toHuman error on mode</td>
+      <td>12.2.3</td>
+      <td>12.2.3</td>
+      <td>Node version has update</td>
+      <td>2024-07-29T19:48:07Z</td>
+      <td>Contributed:</br></br>- Fix Fungible Api (Thanks to https://github.com/bkontur)</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-07-29 16:55:03.950989 UTC</td>
+      <td>2024-07-30 00:55:04.237928 UTC</td>
       <td>1.2.19</td>
       <td>7.5.1</td>
       <td>7.5.1</td>
