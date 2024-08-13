@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-08-12 16:55:02.607376 UTC</td>
+      <td>2024-08-13 00:55:02.638131 UTC</td>
       <td>22.0</td>
       <td>26.2</td>
       <td>26.2</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-08-12 16:55:02.758792 UTC</td>
+      <td>2024-08-13 00:55:02.793151 UTC</td>
       <td>1.14.4</td>
       <td>1.14.8</td>
       <td>1.14.8</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-08-12 16:55:02.906657 UTC</td>
+      <td>2024-08-13 00:55:02.940849 UTC</td>
       <td>1.10.8</td>
       <td>1.14.8</td>
       <td>1.14.8</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2024-08-12T12:18:33Z</td>
       <td>This is a maintenance release with bug fixes only.</br></br>### Command changes</br></br>- Blobpool related flags in Geth now actually work. ([#30203](https://github.com/ethereum/go-ethereum/pull/30203))</br>- The `evm run` command no longer overwrites the sender account in genesis.json. ([#30259](https://github.com/ethereum/go-ethereum/pull/30259))</br>- `evm run` now allows configuring `baseFeePerGas` in genesis.json. ([#30281](https://github.com/ethereum/go-ethereum/pull/30281))</br></br>### Go API</br></br>- `core/types.Transaction.ChainID` had a bug where it modified the signature for very large ChainID (&gt;= 2^64). ([#30157](https://github.com/ethereum/go-ethereum/pull/30157))</br>- `ethclient.Client.NetworkID` now supports values returned in hex format by the server. ([#30263](https://github.com/ethereum/go-ethereum/pull/30263))</br>- `ethclient/simulated.Backend.AdjustTime` was fixed to apply the correct time divison. ([#30138](https://github.com/ethereum/go-ethereum/pull/30138))</br>- `accounts/abi/bind.TransactOpts` now supports setting an access list for created transactions. ([#30195](https://github.com/ethereum/go-ethereum/pull/30195))</br>- The package `p2p/simulations` has been removed. ([#30250](https://github.com/ethereum/go-ethereum/pull/30250))</br></br>### Core</br></br>- A snap-sync database corruption related to sync restarts is fixed in this release. ([#30258](https://github.com/ethereum/go-ethereum/pull/30258))</br>- `eth_call` storage overrides now work as originally intended: if a storage replacement object is specified in the call, previous storage values of the account are cleared. ([#30185](https://github.com/ethereum/go-ethereum/pull/30185))</br>- The txpool did not use the transaction's inline sender cache in some cases. ([#30208](https://github.com/ethereum/go-ethereum/pull/30208))</br>- The performance of EVM stack swaps was improved a bit. ([#30249](https://github.com/ethereum/go-ethereum/pull/30249))</br></br>### Networking</br></br>- The downloader now takes withdrawals into account when sizing its queue. ([#30276](https://github.com/ethereum/go-ethereum/pull/30276))</br>- The new discovery node revalidation could hot-spin in certain rare scenarios. ([#30239](https://github.com/ethereum/go-ethereum/pull/30239))</br>- Configuring an external IP using `--nat=extip:...` could lead to invalid discovery packets being generated. ([#30234](https://github.com/ethereum/go-ethereum/pull/30234))</br></br>### Build</br></br>- github.com/btcsuite/btcd/btcec has been upgraded to resolve a build error caused by upstream API changes. ([#30181](https://github.com/ethereum/go-ethereum/pull/30181))</br>- This release is built with Go 1.22.6. ([#30273](https://github.com/ethereum/go-ethereum/pull/30273))</br></br>For a full rundown of the changes please consult the Geth [1.14.8 release milestone](https://github.com/ethereum/go-ethereum/milestone/171?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-08-12 16:55:03.095328 UTC</td>
+      <td>2024-08-13 00:55:03.116571 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-08-12 16:55:03.264459 UTC</td>
+      <td>2024-08-13 00:55:03.280255 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-08-12 16:55:03.446138 UTC</td>
+      <td>2024-08-13 00:55:03.439943 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-08-12 16:55:03.696376 UTC</td>
+      <td>2024-08-13 00:55:03.691771 UTC</td>
       <td>1.8.1</td>
       <td>2.2.1</td>
       <td>2.2.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-08-12 16:55:03.849338 UTC</td>
+      <td>2024-08-13 00:55:03.837575 UTC</td>
       <td>23.1.0</td>
       <td>27.1.0</td>
       <td>27.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-08-12 16:55:03.997478 UTC</td>
+      <td>2024-08-13 00:55:03.963400 UTC</td>
       <td>6.7.1</td>
       <td>12.3.1</td>
       <td>12.3.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-08-12 16:55:04.148150 UTC</td>
+      <td>2024-08-13 00:55:04.106304 UTC</td>
       <td>1.2.19</td>
       <td>7.5.1</td>
       <td>7.5.1</td>
