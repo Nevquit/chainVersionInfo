@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-09-19 00:55:02.405350 UTC</td>
+      <td>2024-09-19 08:55:02.420966 UTC</td>
       <td>22.0</td>
       <td>26.2</td>
       <td>26.2</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-09-19 00:55:02.572178 UTC</td>
+      <td>2024-09-19 08:55:02.587494 UTC</td>
       <td>1.14.4</td>
       <td>1.14.8</td>
       <td>1.14.8</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-09-19 00:55:02.723932 UTC</td>
+      <td>2024-09-19 08:55:02.736486 UTC</td>
       <td>1.10.8</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2024-09-18T17:54:48Z</td>
       <td>This is a maintenance release, but also introduces support for the new multicall spec, which is a much anticipated feature providing a `eth_simulateV1` call, that takes a list of blocks and executes them as if calling multiple `eth_call`s sequentially. It accepts optional state and precompile overrides, as well as transfer log events. This release also ships with improved verkle support.</br></br>## Command line</br></br>* Remove Goerli flag and config (https://github.com/ethereum/go-ethereum/pull/30289)</br></br>## Pectra</br></br>* Implement [EIP-6110: Supply validator deposits on chain](https://eips.ethereum.org/EIPS/eip-6110) (https://github.com/ethereum/go-ethereum/pull/29431)</br>* Implement [EIP-2935: Serve historical block hashes from state](https://eips.ethereum.org/EIPS/eip-2935) (https://github.com/ethereum/go-ethereum/pull/29465)</br></br>## Core</br></br>* Refactorings in the internal journaling (https://github.com/ethereum/go-ethereum/pull/28880)</br>* Fix a flaw in which the system halts if snapshot generation is stopped while it's not running (https://github.com/ethereum/go-ethereum/pull/30040)</br>* Fix potential out-of-bound issue in mempool (https://github.com/ethereum/go-ethereum/pull/30430)</br>* Add state reader abstraction (https://github.com/ethereum/go-ethereum/pull/29761)</br></br>## Txpool</br></br>* Fetch transactions from a peer in the order they were announced in order to minimize nonce gap, causing blob txs to rejected. A special rule is applied to blob transactions: they are retrieved from the network upon reception of the announcement, as blob transactions are never broadcast over the p2p network (https://github.com/ethereum/go-ethereum/pull/30125)</br></br>## Networking</br></br>* Add support for quic entry in ENR (https://github.com/ethereum/go-ethereum/pull/30283)</br>* fix Write method in metered connection (https://github.com/ethereum/go-ethereum/pull/30355)</br>* Enable discv5 by default (https://github.com/ethereum/go-ethereum/pull/30327)</br>* Proper handling for count=0 requests (https://github.com/ethereum/go-ethereum/pull/30305)</br>* Fix permissions for cloudflare deploy (https://github.com/ethereum/go-ethereum/pull/30326)</br>* Dial nodes from discv5 (https://github.com/ethereum/go-ethereum/pull/30302)</br> </br>## RPC / tracing</br></br>* support for `eth_simulateV1`, which allows for the simulation a chain of blocks or simply a processing a sequence of eth_calls in one go. It is the implementation of the latest [multicall spec](https://github.com/ethereum/execution-apis/pull/484) (https://github.com/ethereum/go-ethereum/pull/27720)</br>* Add timeout to `Client.Unsubscribe` (https://github.com/ethereum/go-ethereum/pull/30318)</br>* Add coinbase addr to js tracing context (https://github.com/ethereum/go-ethereum/pull/30231)</br></br>## Misc</br></br>* Handle ABIs with `contract` type parameters (https://github.com/ethereum/go-ethereum/pull/30315)</br>* Support fixed-size arrays in eip-712 txs (https://github.com/ethereum/go-ethereum/pull/30175)</br>* Fix txpool deadlock in `--dev` mode (https://github.com/ethereum/go-ethereum/pull/30264)</br>* Use post-interop verkle costs (https://github.com/ethereum/go-ethereum/pull/30409, https://github.com/ethereum/go-ethereum/pull/30357)</br>* Verkle witness builder (https://github.com/ethereum/go-ethereum/pull/30129)</br> </br>## Build</br></br>* Work towards [reproducible builds](https://github.com/ethereum/go-ethereum/issues/28987) (https://github.com/ethereum/go-ethereum/pull/30344, https://github.com/ethereum/go-ethereum/pull/30342, [#30346](https://github.com/ethereum/go-ethereum/pull/30346), [#30325](https://github.com/ethereum/go-ethereum/pull/30325), [#30321](https://github.com/ethereum/go-ethereum/pull/30321), [#30320](https://github.com/ethereum/go-ethereum/pull/30320), [#29723](https://github.com/ethereum/go-ethereum/pull/29723))</br></br>**Full Changelog**: https://github.com/ethereum/go-ethereum/compare/v1.14.8...v1.14.9</br></br>For a full rundown of the changes please consult the Geth [1.14.9 release milestone](https://github.com/ethereum/go-ethereum/milestone/172?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-09-19 00:55:02.878679 UTC</td>
+      <td>2024-09-19 08:55:02.897147 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-09-19 00:55:03.020726 UTC</td>
+      <td>2024-09-19 08:55:03.066120 UTC</td>
       <td>0.18.1</td>
       <td>0.21.3</td>
       <td>0.21.3</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-09-19 00:55:03.172708 UTC</td>
+      <td>2024-09-19 08:55:03.244939 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-09-19 00:55:03.447017 UTC</td>
+      <td>2024-09-19 08:55:03.532503 UTC</td>
       <td>1.8.1</td>
       <td>2.2.3</td>
       <td>2.2.3</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-09-19 00:55:03.611912 UTC</td>
+      <td>2024-09-19 08:55:03.689690 UTC</td>
       <td>23.1.0</td>
       <td>27.1.0</td>
       <td>27.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-09-19 00:55:03.751197 UTC</td>
+      <td>2024-09-19 08:55:03.865087 UTC</td>
       <td>6.7.1</td>
       <td>13.1.1</td>
       <td>13.1.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-09-19 00:55:03.891894 UTC</td>
+      <td>2024-09-19 08:55:04.015830 UTC</td>
       <td>1.2.19</td>
       <td>7.5.1</td>
       <td>7.5.1</td>
