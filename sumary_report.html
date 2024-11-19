@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2024-11-19 08:55:02.457169 UTC</td>
+      <td>2024-11-19 16:55:02.490748 UTC</td>
       <td>22.0</td>
       <td>28.0</td>
       <td>28.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2024-11-19 08:55:02.628920 UTC</td>
+      <td>2024-11-19 16:55:02.675669 UTC</td>
       <td>1.14.4</td>
       <td>1.14.8</td>
       <td>1.14.8</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2024-11-19 08:55:02.888223 UTC</td>
+      <td>2024-11-19 16:55:02.849542 UTC</td>
       <td>1.10.8</td>
-      <td>1.14.11</td>
-      <td>1.14.11</td>
-      <td>Version Behind</td>
-      <td>2024-10-01T13:25:38Z</td>
-      <td>This is a minor release, with the primary goal of publishing new `stable` and `latest` docker images. A problem in the CI pipeline prevented the publishing of docker images. We have now resolved the problem, and hope that the `v1.14.11`-release will be published as usual on Docker hub. </br></br>We have now switched the way the docker images are built, and the `-amd64` and `-arm64`-tagged versions  **will no longer be maintained**: </br>- `alltools-latest-amd64`, `alltools-latest-arm64` -&gt; **`alltools-latest`**</br>- `latest-amd64`,`latest-arm64` -&gt; **`latest`**</br>- `v1.14.10-amd64`, `v1.14.10-arm64` -&gt; **`v1.14.10`**</br></br></br>**NOTE:** If you are a docker user on `stable`/`latest`, there's a high chance that you are not using any of the last two releases. If so, you are advised to look through the release-notes of those releases respectively: [v1.14.10](https://github.com/ethereum/go-ethereum/releases/tag/v1.14.10) and [v1.14.9](https://github.com/ethereum/go-ethereum/releases/tag/v1.14.9). </br></br>Other changes since v1.14.10 include</br>- Remove `totalDifficulty` field from RPC, in accordance with [spec update](https://github.com/ethereum/execution-apis/pull/570),  [#30386](https://github.com/ethereum/go-ethereum/pull/30386)</br>- Fix flaw in simulated backend  [#30465](https://github.com/ethereum/go-ethereum/pull/30465)</br>- New method of building multi-platform docker images [#30530](https://github.com/ethereum/go-ethereum/pull/30530)</br>- Ability to disable `FINDNODE` liveness checks in tests [#30512](https://github.com/ethereum/go-ethereum/pull/30512)</br></br>For a full rundown of the changes please consult the Geth 1.14.11 [release milestone](https://github.com/ethereum/go-ethereum/milestone/174?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
+      <td>1.14.12</td>
+      <td>1.14.12</td>
+      <td>Node version has update</td>
+      <td>2024-11-19T13:53:28Z</td>
+      <td>This release covers quite a lot of time, and has many changes across the codebase. In particular; changes in tracing and account management, optimizations in database, trie and evm, and, as always bugfixes. </br></br>This release removes the `personal` RPC namespace. It was already previously deprecated, and has not been accessible by default for nearly two years. We also removed the `--unlock` command-line parameter, with a view towards removing key/account management from the `geth` binary.</br></br>- Key management:</br>  - Remove `--unlock` command line flag from `geth` ([#30737](https://github.com/ethereum/go-ethereum/pull/30737))</br>  - Remove `personal` RPC namespace ([#30704](https://github.com/ethereum/go-ethereum/pull/30704))</br>- Builds:</br>  - RISC-V docker images ([#30739](https://github.com/ethereum/go-ethereum/pull/30739))</br>  - ppa-builds for ubuntu `24.10` ([#30580](https://github.com/ethereum/go-ethereum/pull/30580))</br>- Tracing:</br>  - invoke OnCodeChange-hook on selfdestruct ([#30686](https://github.com/ethereum/go-ethereum/pull/30686), [#30497](https://github.com/ethereum/go-ethereum/pull/30497))</br>  - improvements to `flatCallTracer` ([#30539](https://github.com/ethereum/go-ethereum/pull/30539))</br>  - invoke tx-end hook in runtime helpers ([#30711](https://github.com/ethereum/go-ethereum/pull/30711))</br>  - `disableCode` and `disableStorage` options for `prestateTracer` ([#30648](https://github.com/ethereum/go-ethereum/pull/30648))</br>  - tracing of system calls ([#30666](https://github.com/ethereum/go-ethereum/pull/30666))</br>  - Change to how chainconfig is passed to tracers (**breaking change**) ([#30540](https://github.com/ethereum/go-ethereum/pull/30540))</br>  - add `GetTransientState` method to StateDB interface ([#30531](https://github.com/ethereum/go-ethereum/pull/30531))</br>- Signing:</br>  - improved support for EIP-712 array types ([#30620](https://github.com/ethereum/go-ethereum/pull/30620))</br>  - non-legacy transactions support for ledger wallets ([#30180](https://github.com/ethereum/go-ethereum/pull/30180))</br>- Bugfixes:</br>  - Set basefee for `AccessList` based on given block, not chain tip ([#30538](https://github.com/ethereum/go-ethereum/pull/30538))</br>  - Multiple issues in benchmarks  ([#30667](https://github.com/ethereum/go-ethereum/pull/30667))</br>  - Fix bug with resolving a payload ([#30615](https://github.com/ethereum/go-ethereum/pull/30615))</br>- Database optimizations</br>  - Run pebble in non-sync mode ([#30573](https://github.com/ethereum/go-ethereum/pull/30573), [#29792](https://github.com/ethereum/go-ethereum/pull/29792)). This change makes quite a big difference on certain OS:es, particularly MacOSX/Darwin, where</br>    it has been noted that `fsync` is notoriously slow.</br>  - Use to increasing level sizes ([#30602](https://github.com/ethereum/go-ethereum/pull/30602)), This change makes pebble use larger files, reducing the number of files from 160K to 10K.</br>- Assorted:</br>  - Make jwtsecretflag expand tilde</br>  - Work on verkle ([#30672](https://github.com/ethereum/go-ethereum/pull/30672))</br>  - Work on `EIP-7002` and `EIP 7251` ([#30571](https://github.com/ethereum/go-ethereum/pull/30571))</br>  - Implement `EIP-7685` and `EIP-6110` (flat requests enconding) ([#30425](https://github.com/ethereum/go-ethereum/pull/30425))</br>  - Validation of EOF containers ([#30418](https://github.com/ethereum/go-ethereum/pull/30418))</br>  - More helpful responses for rejected transactions ([#30715](https://github.com/ethereum/go-ethereum/pull/30715))</br>  - Work on cross-execution witness ([#30698](https://github.com/ethereum/go-ethereum/pull/30698))</br>  - EVM speed optimizations ([#30662](https://github.com/ethereum/go-ethereum/pull/30662), [#30629](https://github.com/ethereum/go-ethereum/pull/30629))</br>  - Reduce peak memory usage during reorg ([#30600](https://github.com/ethereum/go-ethereum/pull/30600))</br>  - Speed up trie commit via concurrent workers ([#30545](https://github.com/ethereum/go-ethereum/pull/30545))</br>  - Fuzzing improvments ([#30585](https://github.com/ethereum/go-ethereum/pull/30585))</br>   - Implement new `engine_getBlobsV1` API method ([#30537](https://github.com/ethereum/go-ethereum/pull/30537))</br></br></br></br>For a full rundown of the changes please consult the Geth [1.14.12 release milestone](https://github.com/ethereum/go-ethereum/milestone/175?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2024-11-19 08:55:03.052445 UTC</td>
+      <td>2024-11-19 16:55:03.015828 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2024-11-19 08:55:03.225813 UTC</td>
+      <td>2024-11-19 16:55:03.186251 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2024-11-19 08:55:03.410588 UTC</td>
+      <td>2024-11-19 16:55:03.370898 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2024-11-19 08:55:03.667471 UTC</td>
+      <td>2024-11-19 16:55:03.650720 UTC</td>
       <td>1.8.1</td>
       <td>2.2.3</td>
       <td>2.2.3</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2024-11-19 08:55:03.828268 UTC</td>
+      <td>2024-11-19 16:55:03.830166 UTC</td>
       <td>23.1.0</td>
       <td>27.1.0</td>
       <td>27.1.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2024-11-19 08:55:04.078329 UTC</td>
+      <td>2024-11-19 16:55:04.023996 UTC</td>
       <td>6.7.1</td>
       <td>14.3.1</td>
       <td>14.3.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2024-11-19 08:55:04.301711 UTC</td>
+      <td>2024-11-19 16:55:04.189012 UTC</td>
       <td>1.2.19</td>
       <td>7.5.2</td>
       <td>7.5.2</td>
