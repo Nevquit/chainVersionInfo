@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-02-13 08:55:02.528916 UTC</td>
+      <td>2025-02-13 16:55:02.464992 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-02-13 08:55:02.703279 UTC</td>
+      <td>2025-02-13 16:55:02.632375 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-02-13 08:55:02.880431 UTC</td>
+      <td>2025-02-13 16:55:02.786810 UTC</td>
       <td>1.10.8</td>
-      <td>1.15.0</td>
-      <td>1.15.0</td>
-      <td>Version Behind</td>
-      <td>2025-02-06T14:06:28Z</td>
-      <td>We are proud to announce the Geth 1.15.0 release.</br></br>This release contains some breaking changes to the database. Downgrading to v1.14.x requires re-syncing the chain.</br></br>### Prague Fork</br></br>As of this release, Geth implements the Prague fork specifications up to devnet-6.</br></br>- [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537) - BLS12-381 curve operations - has seen some updates. ([#30978](https://github.com/ethereum/go-ethereum/pull/30978))</br>- [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) - Increase calldata cost - was implemented this cycle. ([#30946](https://github.com/ethereum/go-ethereum/pull/30946))</br>- [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685) - Execution layer requests - support was updated. ([#30670](https://github.com/ethereum/go-ethereum/pull/30670), [#30829](https://github.com/ethereum/go-ethereum/pull/30829), [#31103](https://github.com/ethereum/go-ethereum/pull/31103), [#31010](https://github.com/ethereum/go-ethereum/pull/31010), [#31071](https://github.com/ethereum/go-ethereum/pull/31071), [#30938](https://github.com/ethereum/go-ethereum/pull/30938), [#31102](https://github.com/ethereum/go-ethereum/pull/31102))</br>- [EIP-7702](https://eips.ethereum.org/EIPS/eip-7685) - Set EOA account code - was implemented this cycle. Note Geth does not support EIP-7702 transactions in the txpool just yet. ([#30078](https://github.com/ethereum/go-ethereum/pull/30078), [#30935](https://github.com/ethereum/go-ethereum/pull/30935), [#30936](https://github.com/ethereum/go-ethereum/pull/30936), [#31054](https://github.com/ethereum/go-ethereum/pull/31054), [#31032](https://github.com/ethereum/go-ethereum/pull/31032), [#30933](https://github.com/ethereum/go-ethereum/pull/30933), [#30982](https://github.com/ethereum/go-ethereum/pull/30982), [#31089](https://github.com/ethereum/go-ethereum/pull/31089), [#30926](https://github.com/ethereum/go-ethereum/pull/30926))</br>- [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) - Blob schedule in EL config - was implemented this cycle. ([#31002](https://github.com/ethereum/go-ethereum/pull/31002), [#31101](https://github.com/ethereum/go-ethereum/pull/31101), [#31128](https://github.com/ethereum/go-ethereum/pull/31128))</br></br>### Command changes</br></br>- The `evm` command has seen lots of updates, improving its command-line interface and internals. ([#30633](https://github.com/ethereum/go-ethereum/pull/30633), [#30849](https://github.com/ethereum/go-ethereum/pull/30849), [#30806](https://github.com/ethereum/go-ethereum/pull/30806), [#30927](https://github.com/ethereum/go-ethereum/pull/30927), [#30780](https://github.com/ethereum/go-ethereum/pull/30780), [#30854](https://github.com/ethereum/go-ethereum/pull/30854), [#31055](https://github.com/ethereum/go-ethereum/pull/31055), [#30805](https://github.com/ethereum/go-ethereum/pull/30805), [#30804](https://github.com/ethereum/go-ethereum/pull/30804), )</br>- Geth metrics can now be enabled via the TOML config file. This used to require the `--metrics` flag. ([#30814](https://github.com/ethereum/go-ethereum/pull/30814))</br>- Similarly, you can now set the NAT traversal method (`--nat` flag) with the config file. ([#31041](https://github.com/ethereum/go-ethereum/pull/31041))</br>- The `geth --trace` flag is now called `--go-execution-trace` to avoid confusion with EVM tracing. ([#30846](https://github.com/ethereum/go-ethereum/pull/30846))</br>- The `bootnode` utility has been removed. ([#30813](https://github.com/ethereum/go-ethereum/pull/30813))</br></br>### RPC &amp; Tracing</br></br>- The live tracing Go API has been updated with new hooks and optional EVM revert tracking. See the [tracing API changelog](https://github.com/ethereum/go-ethereum/blob/master/core/tracing/CHANGELOG.md) for more information. ([#30441](https://github.com/ethereum/go-ethereum/pull/30441), [#30786](https://github.com/ethereum/go-ethereum/pull/30786), [#30830](https://github.com/ethereum/go-ethereum/pull/30830), [#30784](https://github.com/ethereum/go-ethereum/pull/30784), [#31007](https://github.com/ethereum/go-ethereum/pull/31007))</br>- RPC method `eth_estimateGas` now supports block overrides like `eth_call`. ([#30695](https://github.com/ethereum/go-ethereum/pull/30695))</br>- RPC method `eth_simulateV1` now advances the timestamp by 12 seconds per block. ([#30981](https://github.com/ethereum/go-ethereum/pull/30981))</br>- Package `accounts/abi` now supports unpacking Solidity error types. ([#30738](https://github.com/ethereum/go-ethereum/pull/30738))</br>- Package `accounts/abi/bind` has new functions `WaitMinedHash`, `WaitDeployedHash`. ([#30079](https://github.com/ethereum/go-ethereum/pull/30079))</br>- Package `accounts/usbwallet` was updated to support new Ledger firmware and the Ledger Flex device. ([#31004](https://github.com/ethereum/go-ethereum/pull/31004))</br>- In package `ethclient/simulated`, a bug was fixed where transactions couldn't be sent after `Rollback` of the simulated chain. ([#31020](https://github.com/ethereum/go-ethereum/pull/31020))</br>- The struct logger reports the EVM revert reason correctly again. ([#31013](https://github.com/ethereum/go-ethereum/pull/31013))</br></br>### Database</br></br>This release introduces a new database schema version. **A downgrade to v1.14.x requires a resync.**</br></br>- The 'total difficulty' of the chain is no longer stored in the database. ([#30744](https://github.com/ethereum/go-ethereum/pull/30744))</br>- The ancient store employs a new strategy for avoiding fsync on each update. This change should improve block import latency on some systems. ([#30392](https://github.com/ethereum/go-ethereum/pull/30392))</br>- Reverse state diffs use a new encoding for future compatibility with the Verkle Tree. ([#30107](https://github.com/ethereum/go-ethereum/pull/30107), [#31060](https://github.com/ethereum/go-ethereum/pull/31060))</br>- Internal handling of the SELFDESTRUCT operation has been simplified. This is possible since classic selfdestruct is no longer supported by the EVM after the Cancun fork. ([#30752](https://github.com/ethereum/go-ethereum/pull/30752), [#30802](https://github.com/ethereum/go-ethereum/pull/30802))</br>- Work towards a re-implementation of the state snapshot system is ongoing. ([#30643](https://github.com/ethereum/go-ethereum/pull/30643), [#30650](https://github.com/ethereum/go-ethereum/pull/30650), [#30654](https://github.com/ethereum/go-ethereum/pull/30654))</br>- Work on the Verkle Tree integration is also progressing. ([#31036](https://github.com/ethereum/go-ethereum/pull/31036), [#30856](https://github.com/ethereum/go-ethereum/pull/30856), [#30907](https://github.com/ethereum/go-ethereum/pull/30907), [#31097](https://github.com/ethereum/go-ethereum/pull/31097))</br></br>### Core Library &amp; Networking</br></br>- The fix for [CVE-2025-24883](https://github.com/ethereum/go-ethereum/security/advisories/GHSA-q26p-9cq4-7fc2) (recent v1.14.13 hotfix release) is also in v1.15.0 ([#31100](https://github.com/ethereum/go-ethereum/pull/31100)).</br>- The transaction pool's notion of "locals" has been changed. This is a breaking change in some ways, and requires some explanation. Geth used to accept transactions at any fee level via RPC, storing them into the node's pool, and marking the sender as "local". When creating a new block (or the pending block), it would choose "local" transactions first. Finally, Geth tracks "local" transactions in a persistent journal file, and restores them on startup. The effect of all this is that once you had sent a transaction to Geth via RPC, it would keep prioritizing the sender account and its transactions (even ones received through p2p).</br></br>  In Geth v1.15, we are changing this model to a different one. When receiving a transaction via RPC, it is stored into the pool like any other transaction, but it is also inserted into a separate "locals tracker" that keeps reinjecting the tx into the main pool periodically. When building a block, Geth no longer prefers the txpool locals, but you can configure a set of addresses that should get priority using the `--txpool.locals` CLI flag. ([#30559](https://github.com/ethereum/go-ethereum/pull/30559), [#31127](https://github.com/ethereum/go-ethereum/pull/31127))</br>- For static nodes (from configuration or RPC `admin_addPeer`), the node URL can contain a DNS name. Geth will now resolve these names when attempting to connect to the peer, instead of at configuration parsing time. This is useful for setting up testing networks in Docker or Kubernetes where the IP address of a node might not be known ahead of time. ([#30822](https://github.com/ethereum/go-ethereum/pull/30822))</br>- Geth can now use the STUN protocol to figure out its own IP. There is a built-in list of public servers, or you can specify your own. Use `--nat=stun` to enable. ([#31064](https://github.com/ethereum/go-ethereum/pull/31064))</br>- Some minor bugs in the p2p protocol implementation got fixed. ([#30855](https://github.com/ethereum/go-ethereum/pull/30855), [#30918](https://github.com/ethereum/go-ethereum/pull/30918))</br></br>### Build</br></br>- This release is built with Go 1.23.6 ([#31130](https://github.com/ethereum/go-ethereum/pull/31130))</br>- The 'toolchain' line has been removed from go.mod ([#31057](https://github.com/ethereum/go-ethereum/pull/31057))</br>- go-ethereum library functionality should now build and run on wasip1 ([#31090](https://github.com/ethereum/go-ethereum/pull/31090))</br></br>For a full rundown of the changes please consult the Geth 1.15.0 [release milestone](https://github.com/ethereum/go-ethereum/milestone/177?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.15.1</td>
+      <td>1.15.1</td>
+      <td>Node version has update</td>
+      <td>2025-02-13T15:25:10Z</td>
+      <td>This release enables the Prague fork for the Holesky and Sepolia testnets.</br>It is a required upgrade if you want to participate in these networks.</br></br>The fork is set to activate at</br></br>- **Holesky** slot: 3710976, timestamp: Mon, Feb 24 at 21:55:12 UTC</br>- **Sepolia** slot: 7118848, timestamp: Wed, Mar 5 at 07:29:36 UTC</br></br>Other user-facing changes in this release:</br></br>- Support for EIP-7702 transactions has been enabled in the transaction pool. (#31073)</br>- A v1.15.0 regression was identified in genesis handling for custom networks, related to the new `blobSchedule` setting. Geth v1.15.1 has been updated no longer crash in this case, and we will have an improved fix in v1.15.2 (#31171)</br>- A v1.15.0 regression in the `evm` command related to state dumps has been fixed. (#31158)</br>- A v1.15.0 regression with the ancient store in read-only mode has been fixed. (#31173)</br>- A crash in `debug_getRaw*` RPC methods has been fixed. (#31157)</br>- The supranational/blst dependency has been upgraded to v0.3.14 in order to allow building Geth with Go 1.24. (#31165)</br></br>For a full rundown of the changes please consult the Geth 1.15.1 [release milestone](https://github.com/ethereum/go-ethereum/milestone/178?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-02-13 08:55:03.057112 UTC</td>
+      <td>2025-02-13 16:55:02.960699 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-02-13 08:55:03.209423 UTC</td>
+      <td>2025-02-13 16:55:03.102819 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-02-13 08:55:03.365401 UTC</td>
+      <td>2025-02-13 16:55:03.265531 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-02-13 08:55:03.609796 UTC</td>
+      <td>2025-02-13 16:55:03.508199 UTC</td>
       <td>1.8.1</td>
       <td>2.3.1</td>
       <td>2.3.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-02-13 08:55:03.756178 UTC</td>
+      <td>2025-02-13 16:55:03.656150 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-02-13 08:55:03.895618 UTC</td>
+      <td>2025-02-13 16:55:03.796591 UTC</td>
       <td>6.7.1</td>
       <td>15.5.2</td>
       <td>15.5.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-02-13 08:55:04.040944 UTC</td>
+      <td>2025-02-13 16:55:03.965365 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
