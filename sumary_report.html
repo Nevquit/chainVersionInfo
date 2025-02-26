@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-02-25 16:55:02.584197 UTC</td>
+      <td>2025-02-26 00:55:02.604177 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-02-25 16:55:02.745288 UTC</td>
+      <td>2025-02-26 00:55:02.769015 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-02-25 16:55:02.933236 UTC</td>
+      <td>2025-02-26 00:55:02.914397 UTC</td>
       <td>1.10.8</td>
       <td>1.15.3</td>
       <td>1.15.3</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2025-02-25T15:20:28Z</td>
       <td>Oh look, another hotfix release! We are issuing this Geth release to correct the predefined fork configuration of the Holesky and Sepolia testnets. The deposit contract address was missing in the configuration for these networks, causing a chain validation failure.</br></br>This issue was discovered on the Holesky network after it had already forked into Pectra (Prague). As a reminder, the Sepolia network will fork to Pectra at slot 7118848 (Wed, Mar 5 at 07:29:36 UTC). You need to upgrade to Geth v1.15.3 until then in order to use the testnet after the fork.</br></br>All changes in this release:</br></br>- Deposit contract addresses are now defined in testnet fork configuration. (#31247)</br>- The `eth_simulateV1` has been improved to match regular block processing semantics. (#31176, #31122)</br>- A peer-finding issue with discovery v5 is fixed in this release. (#31251)</br>- An invalid `--discovery.dns` flag value will now cause an error at Geth startup. (#31233)</br>- Geth `--dev` mode can now handle custom genesis configs with forks older than the latest. (#31084)</br>- The EVM assembler/disassembler (package `core/asm`) has been removed. (#31211)</br>- Encoding of nested byte arrays in EIP-712 signature processing was fixed. (#31049)</br>- The cloudflare-go dependency has been updated to resolve a dependabot warning. (#31240)</br>- This release is built with Go 1.24.0 (#31159)</br></br>For a full rundown of the changes please consult the Geth 1.15.3 [release milestone](https://github.com/ethereum/go-ethereum/milestone/180?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-02-25 16:55:03.120456 UTC</td>
+      <td>2025-02-26 00:55:03.090133 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-02-25 16:55:03.269241 UTC</td>
+      <td>2025-02-26 00:55:03.264573 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-02-25 16:55:03.423558 UTC</td>
+      <td>2025-02-26 00:55:03.427114 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-02-25 16:55:03.746032 UTC</td>
+      <td>2025-02-26 00:55:03.706573 UTC</td>
       <td>1.8.1</td>
       <td>2.3.1</td>
       <td>2.3.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-02-25 16:55:03.891329 UTC</td>
+      <td>2025-02-26 00:55:03.877566 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,18 +144,18 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-02-25 16:55:04.066849 UTC</td>
+      <td>2025-02-26 00:55:04.015127 UTC</td>
       <td>6.7.1</td>
       <td>15.7.1</td>
       <td>15.7.1</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2025-02-25T15:15:06Z</td>
       <td>Changes:</br></br>-  Upgrade Kusama types to 1.4.0 ([#6098](https://github.com/polkadot-js/api/pull/6098))</br>- Api-Derives documentation generator ([#6099](https://github.com/polkadot-js/api/pull/6099))</br>- Upgrade Polkadot types to v1.4.0 ([#6100](https://github.com/polkadot-js/api/pull/6100))</br>- Add WeightReclaim transaction extension to known extensions ([#6102](https://github.com/polkadot-js/api/pull/6102))</br>- Add westend code upgrades ([#6103 ](https://github.com/polkadot-js/api/pull/6103))</td>
     </tr>
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-02-25 16:55:04.218776 UTC</td>
+      <td>2025-02-26 00:55:04.173287 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
