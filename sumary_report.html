@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-03-05 08:55:02.715080 UTC</td>
+      <td>2025-03-05 16:55:02.611699 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-03-05 08:55:02.893993 UTC</td>
+      <td>2025-03-05 16:55:02.806540 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-03-05 08:55:03.057078 UTC</td>
+      <td>2025-03-05 16:55:02.972202 UTC</td>
       <td>1.10.8</td>
-      <td>1.15.4</td>
-      <td>1.15.4</td>
-      <td>Version Behind</td>
-      <td>2025-03-01T20:38:36Z</td>
-      <td>This is a bug fix release. </br></br>**Note: you need to upgrade to v1.15.3 or this release to be compatible with the Pectra fork on the Sepolia network (activates Wed, Mar 5 at 07:29:36 UTC)**.</br></br>- Fixed a v1.15.0 regression in `eth_feeHistory` that caused incorrect `blobGasRatio` return values. (#31246, #31270)</br>- A v1.15.0 regression in RPC transaction submission has been fixed: if a transaction did not pass txpool verification (e.g. low fees), an error was returned by RPC, but the transaction would be added to the local pool anyway. This is now fixed and no error will be returned by the API in this case. (#31202)</br>- Txpool logic was reworked to avoid an error log flood about EIP-7702 authorities. (#31249)</br>- Certain invalid blob transactions no longer cause disconnect issues in the p2p layer. (#31219)</br>- ethclient now provides a `BlobBaseFee` method to request the current blob basefee. (#31290)</br>- The PPA package build was fixed after being broken in v1.15.3 by the upgrade to Go 1.24. (#31282, #31283)</br></br>For a full rundown of the changes please consult the Geth 1.15.4 [release milestone](https://github.com/ethereum/go-ethereum/milestone/181?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.15.5</td>
+      <td>1.15.5</td>
+      <td>Node version has update</td>
+      <td>2025-03-05T10:56:34Z</td>
+      <td>Alright 🥲 This is a hotfix release for an issue on the Sepolia testnet. Shortly after the Pectra fork activation, an issue in deposit contract logs parsing was discovered. Sepolia has a custom version of the deposit contract that also implements ERC-20, and thus unexpected log events may be created by transactions to it. This issue affects all Ethereum execution clients.</br></br>The Sepolia testnet may take a short while to recover while the update is adopted by nodes. An incident report will be published once the network has fully recovered. ❤️‍🩹 </br></br>Other changes in this release:</br></br>- In output of `debug_traceTransaction`, the "memory" and "storage" fields will be omitted if empty. (#31289)</br>- This release is built with Go 1.24.1 (#31313)</br></br>For a full rundown of the changes please consult the Geth 1.15.5 [release milestone](https://github.com/ethereum/go-ethereum/milestone/182?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-03-05 08:55:03.234669 UTC</td>
+      <td>2025-03-05 16:55:03.166523 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-03-05 08:55:03.388102 UTC</td>
+      <td>2025-03-05 16:55:03.335874 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-03-05 08:55:03.563758 UTC</td>
+      <td>2025-03-05 16:55:03.489517 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-03-05 08:55:03.847517 UTC</td>
+      <td>2025-03-05 16:55:03.857129 UTC</td>
       <td>1.8.1</td>
       <td>2.3.1</td>
       <td>2.3.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-03-05 08:55:03.983262 UTC</td>
+      <td>2025-03-05 16:55:04.017695 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-03-05 08:55:04.129650 UTC</td>
+      <td>2025-03-05 16:55:04.154026 UTC</td>
       <td>6.7.1</td>
       <td>15.7.2</td>
       <td>15.7.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-03-05 08:55:04.268975 UTC</td>
+      <td>2025-03-05 16:55:04.464745 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
