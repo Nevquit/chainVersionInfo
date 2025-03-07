@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-03-06 16:55:03.340515 UTC</td>
+      <td>2025-03-07 00:55:03.112796 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-03-06 16:55:03.499013 UTC</td>
+      <td>2025-03-07 00:55:03.264650 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-03-06 16:55:03.670183 UTC</td>
+      <td>2025-03-07 00:55:03.411051 UTC</td>
       <td>1.10.8</td>
       <td>1.15.5</td>
       <td>1.15.5</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-03-06 16:55:03.853291 UTC</td>
+      <td>2025-03-07 00:55:03.567014 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-03-06 16:55:04.004342 UTC</td>
+      <td>2025-03-07 00:55:03.709302 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-03-06 16:55:04.183869 UTC</td>
+      <td>2025-03-07 00:55:03.935943 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-03-06 16:55:04.461769 UTC</td>
+      <td>2025-03-07 00:55:04.193562 UTC</td>
       <td>1.8.1</td>
-      <td>2.3.1</td>
-      <td>2.3.1</td>
-      <td>Version Behind</td>
-      <td>2025-01-29T23:02:07Z</td>
-      <td>This hotfix release is strongly recommended for any operators currently running 2.3.0, and upgrading from prior versions. It fixes an ongoing issue where normal peer traffic is charged incorrectly, causing peers to be disconnected inappropriately during normal operations. This affects network connectivity and the ability of some UNL validators to reach consensus with the others.</br></br>Version 2.3.1 does not introduce any new amendments over 2.3.0.</br></br>## What's Changed</br>* Proposed 2.3.1-rc1: Reduce the peer charges for well-behaved peers by @vlntb in https://github.com/XRPLF/rippled/pull/5243</br>  * Peer charges are completely different from [transaction cost/fees](https://xrpl.org/docs/concepts/transactions/transaction-cost#beneficiaries-of-the-transaction-cost). They are used to rate limit other `rippled` nodes, and to detect and disconnect peers putting too much demand on the server.</br>* Proposed version 2.3.1 by @ximinez in https://github.com/XRPLF/rippled/pull/5259</br></br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.3.0...2.3.1</br></br>## Bug Bounties and Responsible Disclosures:</br></br>We welcome reviews of the `rippled` code and urge researchers to responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to: &lt;bugs@xrpl.org&gt;</td>
+      <td>2.4.0</td>
+      <td>2.4.0</td>
+      <td>Node version has update</td>
+      <td>2025-03-04T19:00:43Z</td>
+      <td># Release Notes</br></br>![XRP](docs/images/xrp-text-mark-black-small@2x.png)</br></br>This document contains the release notes for `rippled`, the reference server implementation of the XRP Ledger protocol. To learn more about how to build, run or update a `rippled` server, visit https://xrpl.org/install-rippled.html</br></br>Have new ideas? Need help with setting up your node? [Please open an issue here](https://github.com/xrplf/rippled/issues/new/choose).</br>## Full Changelog</br></br>### Amendments</br></br>The following amendments are open for voting with this release:</br></br>- **DynamicNFT (XLS-46)** - Adds the ability to mint mutable `NFToken` objects whose URI can be changed. ([#5048](https://github.com/XRPLF/rippled/pull/5048))</br>- **PermissionedDomains (XLS-80)** - Adds Permissioned Domains, which act as part of broader systems on the XRP Ledger to restrict access to satisfy compliance rules. ([#5161](https://github.com/XRPLF/rippled/pull/5161))</br>- **DeepFreeze (XLS-77)** - Adds the ability to deep freeze trust lines, enabling token issuers to block the transfer of assets for holders who have been deep frozen. ([#5187](https://github.com/XRPLF/rippled/pull/5187))</br>- **fixFrozenLPTokenTransfer** - Prohibits the transfer of LP tokens when the associated liquidity pool contains at least one frozen asset. ([#5227](https://github.com/XRPLF/rippled/pull/5227))</br>- **fixInvalidTxFlags** - Adds transaction flag checking for `CredentialCreate`, `CredentialAccept`, and `CredentialDelete` transactions. ([#5250](https://github.com/XRPLF/rippled/pull/5250))</br></br></br>### New Features</br></br>- Added a new `simulate` API method to execute dry runs of transactions and see the simulated metadata. ([#5069](https://github.com/XRPLF/rippled/pull/5069), [#5265](https://github.com/XRPLF/rippled/pull/5265))</br>- Added the ability to specify MPTs when defining assets in transactions. ([#5200](https://github.com/XRPLF/rippled/pull/5200))</br>- Added a `state` alias for `ripple_state` in the `ledger_entry` API method. Also refactored `LedgerEntry.cpp` to make it easier to read.  ([#5199](https://github.com/XRPLF/rippled/pull/5199))</br>- Improved UNL security by enabling validators to set a minimum number of UNL publishers to agree on validators. ([#5112](https://github.com/XRPLF/rippled/pull/5112))</br>- Updated the XRPL Foundation UNL keys. ([#5289](https://github.com/XRPLF/rippled/pull/5289))</br>- Added a new XRPL Foundation subdomain to enable a staged migration without modifying the key for the current UNL list. ([#5326](https://github.com/XRPLF/rippled/pull/5326))</br>- Added support to filter ledger entry types by their canonical names in the `ledger`, `ledger_data`, and `account_objects` API methods. ([#5271](https://github.com/XRPLF/rippled/pull/5271))</br>- Added detailed logging for each validation and proposal received from the network. ([#5291](https://github.com/XRPLF/rippled/pull/5291))</br>- Improved git commit hash lookups when checking the version of a `rippled` debug build. Also added git commit hash info when using the `server_info` API method on an admin connection. ([#5225](https://github.com/XRPLF/rippled/pull/5225))</br></br></br>### Bug fixes</br></br>- Fixed an issue with overlapping data types in the `Expected` class. ([#5218](https://github.com/XRPLF/rippled/pull/5218))</br>- Fixed an issue that prevented `rippled` from building on Windows with VS2022. ([#5197](https://github.com/XRPLF/rippled/pull/5197))</br>- Fixed `server_definitions` prefixes. ([#5231](https://github.com/XRPLF/rippled/pull/5231))</br>- Added missing dependency installations for generic MasOS runners. ([#5233](https://github.com/XRPLF/rippled/pull/5233))</br>- Updated deprecated Github actions. ([#5241](https://github.com/XRPLF/rippled/pull/5241))</br>- Fixed a failing assert scenario when submitting the `connect` admin RPC. ([#5235](https://github.com/XRPLF/rippled/pull/5235))</br>- Fixed the levelization script to ignore single-line comments during dependency analysis. ([#5194](https://github.com/XRPLF/rippled/pull/5194))</br>- Fixed the assert name used in `PermissionedDomainDelete`. ([#5245](https://github.com/XRPLF/rippled/pull/5245))</br>- Fixed macOS unit tests. ([#5196](https://github.com/XRPLF/rippled/pull/5196))</br>- Fixed an issue with validators not accurately reflecting amendment votes. Also added debug logging of amendment votes. ([#5173](https://github.com/XRPLF/rippled/pull/5173), [#5312](https://github.com/XRPLF/rippled/pull/5312))</br>- Fixed a potential issue with double-charging fees. ([#5269](https://github.com/XRPLF/rippled/pull/5269))</br>- Removed the `new parent hash` assert and replaced it with a log message. ([#5313](https://github.com/XRPLF/rippled/pull/5313))</br>- Fixed an issue that prevented previously-failed inbound ledgers to not be acquired if a new trusted proposal arrived. ([#5318](https://github.com/XRPLF/rippled/pull/5318))</br></br></br>### Other Improvements</br></br>- Added unit tests for `AccountID` handling. ([#5174](https://github.com/XRPLF/rippled/pull/5174))</br>- Added enforced levelization in `libxrpl` with CMake. ([#5199](https://github.com/XRPLF/rippled/pull/5111))</br>- Updated `libxrpl` and all submodules to use the same compiler options. ([#5228](https://github.com/XRPLF/rippled/pull/5228))</br>- Added Antithesis instrumentation. ([#5042](https://github.com/XRPLF/rippled/pull/5042), [#5213](https://github.com/XRPLF/rippled/pull/5213))</br>- Added `rpcName` to the `LEDGER_ENTRY` macro to help prevent future bugs. ([#5202](https://github.com/XRPLF/rippled/pull/5202))</br>- Updated the contribution guidelines to introduce a new workflow that avoids code freezes. Also added scripts that can be used by maintainers in branch management, and a CI job to check that code is consistent across the three main branches: `master`, `release`, and `develop`. ([#5215](https://github.com/XRPLF/rippled/pull/5215))</br>- Added unit tests to check for caching issues fixed in `rippled 2.3.0`. ([#5242](https://github.com/XRPLF/rippled/pull/5242))</br>- Cleaned up the API changelog. ([#5207](https://github.com/XRPLF/rippled/pull/5207))</br>- Improved logs readability. ([#5251](https://github.com/XRPLF/rippled/pull/5251))</br>- Updated Visual Studio CI to VS 2022, and added VS Debug builds. ([#5240](https://github.com/XRPLF/rippled/pull/5240))</br>- Updated the `secp256k1` library to version 0.6.0. ([#5254](https://github.com/XRPLF/rippled/pull/5254))</br>- Changed the `[port_peer]` parameter in `rippled` example config back to `51235`; also added the recommendation to use the default port of `2459` for new deployments. ([#5290](https://github.com/XRPLF/rippled/pull/5290), [#5299](https://github.com/XRPLF/rippled/pull/5299))</br>- Improved CI management. ([#5268](https://github.com/XRPLF/rippled/pull/5268))</br>- Updated the git commit message rules for contributors. ([#5283](https://github.com/XRPLF/rippled/pull/5283))</br>- Fixed unnecessary `setCurrentThreadName` calls. ([#5280](https://github.com/XRPLF/rippled/pull/5280))</br>- Added a check to prevent permissioned domains from being created in the event the Permissioned Domains amendement is enabled before the Credentials amendement. ([#5275](https://github.com/XRPLF/rippled/pull/5275))</br>- Updated Conan dependencies. ([#5256](https://github.com/XRPLF/rippled/pull/5256))</br>- Fixed minor typos in code comments. ([#5279](https://github.com/XRPLF/rippled/pull/5279))</br>- Fixed incorrect build instructions. ([#5274](https://github.com/XRPLF/rippled/pull/5274))</br>- Refactored `rotateWithLock()` to not hold a lock during callbacks. ([#5276](https://github.com/XRPLF/rippled/pull/5276))</br>- Cleaned up debug logging by combining multiple data points into a single message. ([#5302](https://github.com/XRPLF/rippled/pull/5302))</br>- Updated build flags to fix performance regressions. ([#5325](https://github.com/XRPLF/rippled/pull/5325))</br></br></br>## Credits</br></br>The following people contributed directly to this release:</br></br>- Aanchal Malhotra &lt;amalhotra@ripple.com&gt;</br>- Bart Thomee &lt;11445373+bthomee@users.noreply.github.com&gt;</br>- Bronek Kozicki &lt;brok@incorrekt.com&gt;</br>- code0xff &lt;ian.jungyong.um@gmail.com&gt;</br>- Darius Tumas &lt;tokeiito@tokeiito.eu&gt;</br>- David Fuelling &lt;fuelling@ripple.com&gt;</br>- Donovan Hide &lt;donovanhide@gmail.com&gt;</br>- Ed Hennis &lt;ed@ripple.com&gt;</br>- Elliot Lee &lt;github.public@intelliot.com&gt;</br>- Javier Romero &lt;jromero@ripple.com&gt;</br>- Kenny Lei &lt;klei@ripple.com&gt;</br>- Mark Travis &lt;7728157+mtrippled@users.noreply.github.com&gt;</br>- Mayukha Vadari &lt;mvadari@gmail.com&gt;</br>- Michael Legleux &lt;mlegleux@ripple.com&gt;</br>- Oleksandr &lt;115580134+oleks-rip@users.noreply.github.com&gt;</br>- Qi Zhao &lt;qzhao@ripple.com&gt;</br>- Ramkumar Srirengaram Gunasegharan &lt;rgunasegharan@ripple.com&gt;</br>- Shae Wang &lt;swang@ripple.com&gt;</br>- Shawn Xie &lt;shawnxie920@gmail.com&gt;</br>- Sophia Xie &lt;sxie@ripple.com&gt;</br>- Vijay Khanna Raviraj &lt;vraviraj@ripple.com&gt;</br>- Vladislav Vysokikh &lt;vvysokikh@gmail.com&gt;</br>- Xun Zhao &lt;xzhao@ripple.com&gt;</br></br>## Bug Bounties and Responsible Disclosures</br></br>We welcome reviews of the `rippled` code and urge researchers to responsibly disclose any issues they may find.</br></br>To report a bug, please send a detailed report to: &lt;bugs@xrpl.org&gt;</br></br>**Full Changelog**: https://github.com/XRPLF/rippled/compare/2.3.1...2.4.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-03-06 16:55:04.646846 UTC</td>
+      <td>2025-03-07 00:55:04.337127 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-03-06 16:55:04.789340 UTC</td>
+      <td>2025-03-07 00:55:04.488822 UTC</td>
       <td>6.7.1</td>
       <td>15.7.2</td>
       <td>15.7.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-03-06 16:55:04.961755 UTC</td>
+      <td>2025-03-07 00:55:04.649486 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
