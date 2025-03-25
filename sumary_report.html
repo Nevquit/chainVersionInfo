@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-03-25 08:55:03.209103 UTC</td>
+      <td>2025-03-25 16:55:03.251025 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-03-25 08:55:03.386987 UTC</td>
+      <td>2025-03-25 16:55:03.446719 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-03-25 08:55:03.538945 UTC</td>
+      <td>2025-03-25 16:55:03.583524 UTC</td>
       <td>1.10.8</td>
-      <td>1.15.5</td>
-      <td>1.15.5</td>
-      <td>Version Behind</td>
-      <td>2025-03-05T10:56:34Z</td>
-      <td>Alright 🥲 This is a hotfix release for an issue on the Sepolia testnet. Shortly after the Pectra fork activation, an issue in deposit contract logs parsing was discovered. Sepolia has a custom version of the deposit contract that also implements ERC-20, and thus unexpected log events may be created by transactions to it. This issue affects all Ethereum execution clients.</br></br>The Sepolia testnet may take a short while to recover while the update is adopted by nodes. An incident report will be published once the network has fully recovered. ❤️‍🩹 </br></br>Other changes in this release:</br></br>- In output of `debug_traceTransaction`, the "memory" and "storage" fields will be omitted if empty. (#31289)</br>- This release is built with Go 1.24.1 (#31313)</br></br>For a full rundown of the changes please consult the Geth 1.15.5 [release milestone](https://github.com/ethereum/go-ethereum/milestone/182?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></br></td>
+      <td>1.15.6</td>
+      <td>1.15.6</td>
+      <td>Node version has update</td>
+      <td>2025-03-25T11:25:58Z</td>
+      <td>This is a feature release, with two exciting upgrades:</br></br>- Log filtering in Geth receives a huge performance upgrade with the introduction of our new 'filtermaps' index. Unlike the previous 'bloombits' index, query performance no longer suffers as the density of logs in a block increases. The new index design is also a step towards a future where filtering results can be proven by the server. See [the PR](https://github.com/ethereum/go-ethereum/pull/31079) and associated design documents for more information.</br></br>  In practical terms, the new index is a bit larger than the old one. As before, you can choose the amount of historical blocks to be indexed using the `--history.logs` command-line flag. We have adjusted the default value of this flag to cover one year of history, and the resulting index has a size of ~10GB for Ethereum mainnnet. Indexing of the entire chain with `--history.logs=0` will take up ~61GB.</br></br>  Once the index is built, searches will be fast, but note that querying outside of the indexed block range will fall back to a very slow unindexed search. We will continue optimizing log searches in future releases, and welcome your feedback and bug reports in this area. (#31065, #31079, #31080, #31081, #31419, #31429, #31450, #31463, #31455)</br></br>- [abigen v2](https://geth.ethereum.org/docs/developers/dapp-developer/native-bindings-v2) is finally here. abigen is a tool for creating Go bindings for Solidity contracts. In v1, the generated bindings presented an API for sending transactions, filtering logs, and performing read-only calls as Go methods on the contract object. In the new version, we have updated the interface of the generated code to focus purely on encoding and decoding ABI payloads. Generic helper functions are provided in a library package to enable the same interactions as before, but you can also use your own custom method of signing &amp; sending transactions. Generated bindings are also significantly smaller. (#31379)</br></br>Other changes in this release:</br></br>#### RPC</br></br>- A regression in `eth_sendRawTransaction` - where transactions with too-low nonce would be accepted by the API - has been fixed. (#31473)</br>- `eth_call`/`estimateGas` RPC methods will now always return error code 3 for reverts. It previously only returned this code when the EVM produced revert data. (#31456)</br>- `eth_simulateV1` now returns a correct logs bloom value in the simulated block (#31411)</br>- `eth_simulateV1` supports block overrides for the beacon root and withdrawals (#31304)</br>- `debug_traceCall`: the `movePrecompileTo` override feature should now work correctly (#31348)</br>- `debug_traceCall` and other related RPC methods now hex-encode the EVM return value. **This is a breaking change.** (#31216, #31445)</br>- `ethclient` has a new method `EstimateGasAtBlock` (#27508)</br></br>#### Geth</br></br>- Support for the [Hoodi testnet](https://github.com/eth-clients/hoodi) has been added. (#31406)</br>- The beacon chain light client has been updated to support the Electra fork. (#31243, #31470)</br>- `geth import` now properly handles Ctrl-C interrupts (#31360)</br>- `geth --dev` mode will now pre-fund all precompile accounts supported by the Pectra upgrade (#31342)</br>- `geth --dev` now respects the `--miner.pending.feeRecipient` flag (#31316)</br></br>#### Core library</br></br>- The performance of transaction signature validation has improved significantly (#31242, #31258, #31434)</br>- The transaction pool has seen some correctness and performance improvements. (#31430, #31307, #31332)</br>- We have added a lot of preliminary changes for History Expiry (EIP-4444). There shouldn't be any user-facing consequences of these just yet, just reporting it here since this area was a big focus this cycle. (#31424, #31355, #31362, #31383, #31365, #31117, #31356, #31384, #31393)</br></br>For a full rundown of the changes please consult the Geth 1.15.6 [release milestone](https://github.com/ethereum/go-ethereum/milestone/183?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-03-25 08:55:03.705274 UTC</td>
+      <td>2025-03-25 16:55:03.738891 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-03-25 08:55:03.861499 UTC</td>
+      <td>2025-03-25 16:55:03.904041 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-03-25 08:55:04.037547 UTC</td>
+      <td>2025-03-25 16:55:04.089788 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-03-25 08:55:04.328956 UTC</td>
+      <td>2025-03-25 16:55:04.415844 UTC</td>
       <td>1.8.1</td>
       <td>2.4.0</td>
       <td>2.4.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-03-25 08:55:04.482682 UTC</td>
+      <td>2025-03-25 16:55:04.570572 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-03-25 08:55:04.632851 UTC</td>
+      <td>2025-03-25 16:55:04.717149 UTC</td>
       <td>6.7.1</td>
       <td>15.8.1</td>
       <td>15.8.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-03-25 08:55:04.819809 UTC</td>
+      <td>2025-03-25 16:55:04.860701 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
