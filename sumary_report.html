@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-04-11 08:55:02.849578 UTC</td>
+      <td>2025-04-11 16:55:02.929140 UTC</td>
       <td>22.0</td>
       <td>28.1</td>
       <td>28.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-04-11 08:55:03.014589 UTC</td>
+      <td>2025-04-11 16:55:03.138066 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-04-11 08:55:03.192420 UTC</td>
+      <td>2025-04-11 16:55:03.287421 UTC</td>
       <td>1.10.8</td>
-      <td>1.15.7</td>
-      <td>1.15.7</td>
-      <td>Version Behind</td>
-      <td>2025-03-31T16:31:42Z</td>
-      <td>This is a bug fix release. We are putting is out specifically to address a critical issue that could break archive node databases.</br></br>- Fixed an issue for `--state.scheme=hash` where the log indexer would accidentally delete trie nodes. (#31525)</br>- Fixed an issue with tx submission, where the local pool didn't track pending nonces correctly. (#31496)</br>- The log indexer will now disable itself when hitting missing receipts in the database. (#31500)</br>- Another txpool issue reorg issue in `ethclient/simulated.Backend` is fixed in this release. (#31228)</br>- Memory allocation for trie operations has been reduced significantly. (#30932)</br>- `eth_createAccessList` now supports state overrides like `eth_call`. (#31497)</br>- `eth_createAccessList` will now exclude 7702 authorities from the result. (#31336)</br>- The abigen library now correctly forwards access lists to `eth_estimateGas`. (#31394)</br></br>For a full rundown of the changes please consult the Geth 1.15.7 [release milestone](https://github.com/ethereum/go-ethereum/milestone/184?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.15.8</td>
+      <td>1.15.8</td>
+      <td>Node version has update</td>
+      <td>2025-04-11T09:32:49Z</td>
+      <td>This is a bug-fix release with some performance improvements.</br></br>#### Geth</br></br>- `geth import` now applies database and cache flags correctly. (#31577, #31534)</br>- The new log indexer now exports metrics about its operation. (#31511)</br>- The beacon chain light client, `blsync` now has a feature to export checkpoint files. (#31469)</br></br>#### Core library</br></br>- Database writes have been made fully synchronous again. We disabled the use of `fsync` a while ago to improve performance on slow filesystems, but it has lead to reports of instability. The performance hit from enabling data sync is negligible. (#31519)</br>- The transaction pool now takes pending blob transactions into account when limiting pending EIP-7702 authorizations for an account. (#31526)</br>- A logic race in EIP-7702 transaction validation is resolved. (#31373)</br>- The blob transaction pool performs less disk reads when sending transaction announcements. (#31433)</br>- The EVM now has a special fast-path for PUSH2, which is the most common instruction. (#31267)</br>- The Trezor hardware wallet implementation now supports 32-bit chain IDs. (#17439)</br>- Geth can now stop syncing history at the PoS merge point. This behavior is not enabled yet. (#31414)</br></br>#### RPC</br></br>- When trying to access pruned history, all RPC APIs now return error code 4444. (#31361)</br></br>#### P2P networking</br></br>- UPnP support has been improved and some bugs got fixed. (#30265, #31486, #31566)</br>- The discv5 'talk request' API has been changed to pass `*enode.Node` to handlers. This is a breaking change, but the only known user of this API is the shisui portal network client. (#31075)</br>- A flaw in the recently added discv5 challenge resend logic was fixed. (#31543)</br>- The eth protocol now properly handles very large `skip` values when processing `GetBlockHeaders` messages from peers. This is not a security fix, despite looking like one, it's more about correctness. (#31522)</br></br>#### Build</br></br>- This release is built with Go 1.24.2 (#31538)</br>- Note: due to issues with our build environment, we can no longer provide binary builds for macOS. These may be restored at a later date, hopefully soon. For now, you'll have to install from Homebrew.</br>- The previous release's git tag, v1.15.7, was published twice, leading to an issue with the Go module cache.</br></br>For a full rundown of the changes please consult the Geth 1.15.8 [release milestone](https://github.com/ethereum/go-ethereum/milestone/185?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-04-11 08:55:03.392900 UTC</td>
+      <td>2025-04-11 16:55:03.436772 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-04-11 08:55:03.559509 UTC</td>
+      <td>2025-04-11 16:55:03.614079 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-04-11 08:55:03.814179 UTC</td>
+      <td>2025-04-11 16:55:03.796948 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-04-11 08:55:04.086410 UTC</td>
+      <td>2025-04-11 16:55:04.093718 UTC</td>
       <td>1.8.1</td>
       <td>2.4.0</td>
       <td>2.4.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-04-11 08:55:04.251681 UTC</td>
+      <td>2025-04-11 16:55:04.246219 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-04-11 08:55:04.414177 UTC</td>
+      <td>2025-04-11 16:55:04.390728 UTC</td>
       <td>6.7.1</td>
       <td>15.9.1</td>
       <td>15.9.1</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-04-11 08:55:04.593424 UTC</td>
+      <td>2025-04-11 16:55:04.556559 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
