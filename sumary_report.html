@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-04-25 08:55:02.878456 UTC</td>
+      <td>2025-04-25 16:55:02.827745 UTC</td>
       <td>22.0</td>
       <td>29.0</td>
       <td>29.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-04-25 08:55:03.088552 UTC</td>
+      <td>2025-04-25 16:55:02.989413 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-04-25 08:55:03.248320 UTC</td>
+      <td>2025-04-25 16:55:03.169748 UTC</td>
       <td>1.10.8</td>
-      <td>1.15.9</td>
-      <td>1.15.9</td>
-      <td>Version Behind</td>
-      <td>2025-04-21T12:56:58Z</td>
-      <td>This release enables the Prague execution-layer fork on mainnet.</br></br>#### Prague</br></br>As of this release, the Prague fork is scheduled to occur on mainnet at block timestamp `1746612311` (Wed May 07 10:05:11 2025 UTC). As a reminder, the fork contains the following EIPs:</br></br>- [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537): Precompile for BLS12-381 curve operations</br>- [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935): Save historical block hashes in state</br>- [EIP-6110](https://eips.ethereum.org/EIPS/eip-6110): Supply validator deposits on chain</br>- [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002): Execution layer triggerable exits</br>- [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251): Increase the `MAX_EFFECTIVE_BALANCE`</br>- [EIP-7549](https://eips.ethereum.org/EIPS/eip-7549): Move committee index outside Attestation</br>- [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623): Increase calldata cost</br>- [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685): General purpose execution layer requests</br>- [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691): Blob throughput increase</br>- [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702): Set EOA account code</br>- [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840): Add blob schedule to EL config files</br></br>#### All changes</br></br>- The Prague fork timestamp was added for mainnet. (#31535)</br>- Transaction-sending RPCs will now add txs to the 'locals' tracker only when they have any chance of inclusion. This is a bit of a revert from the behavior we added in v1.15.4, where APIs such as `eth_sendRawTransaction` would always return a txhash, even if the transaction wasn't includable on chain. (#31618)</br>- If an EVM system call fails during block execution, the block is considered invalid. (#31639)</br>- An corner-case crash in `eth_feeHistory` related to blob fees is resolved. (#31663)</br>- Several correctness bugs in the new log indexer have been fixed. (#31590, #31680, #31671, #31668, #31642)</br>- The history pruning implementation was further improved. (#31638, #31636, #31656)</br>- Geth will now print periodic logs when a non-activated fork is configured. (#31340)</br>- Geth will now occasionally drop peers at random after being fully synced. (#31476)</br>- CPU usage of tx propagation has been optimized. (#31657)</br>- Peer disconnect metrics are improved. (#31629, #31621)</br></br>For a full rundown of the changes please consult the Geth 1.15.9 [release milestone](https://github.com/ethereum/go-ethereum/milestone/186?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.15.10</td>
+      <td>1.15.10</td>
+      <td>Node version has update</td>
+      <td>2025-04-25T11:27:07Z</td>
+      <td>This is a bug-fix release that corrects an issue with the new log indexer and configures the beacon chain light client for the Electra fork on mainnet (we forgot about this in v1.15.9).</br></br>### All changes</br></br>- A deadlock condition in the log indexer is resolved. This only affected deployments of Geth in archive mode, and old databases still using LevelDB. (#31708)</br>- The beacon chain light client is now configured for the Pectra fork on mainnet. (#31706)</br>- The default block gas limit has been increased to 36M. (#31705)</br>- ethclient now allows passing an EIP-7702 `authorizationList` to calls. (#31198)</br>- A new RPC endpoint `debug_setMemoryLimit` has been added for tweaking Go garbage collector behavior. We do not recommended using this, it's just a facility for debugging Geth. (#31441)</br></br></br>For a full rundown of the changes please consult the Geth 1.15.10 [release milestone](https://github.com/ethereum/go-ethereum/milestone/187?closed=1)</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-04-25 08:55:03.409313 UTC</td>
+      <td>2025-04-25 16:55:03.360040 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-04-25 08:55:03.575203 UTC</td>
+      <td>2025-04-25 16:55:03.531171 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-04-25 08:55:03.734234 UTC</td>
+      <td>2025-04-25 16:55:03.693044 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-04-25 08:55:03.994191 UTC</td>
+      <td>2025-04-25 16:55:03.937367 UTC</td>
       <td>1.8.1</td>
       <td>2.4.0</td>
       <td>2.4.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-04-25 08:55:04.150746 UTC</td>
+      <td>2025-04-25 16:55:04.103827 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-04-25 08:55:04.522200 UTC</td>
+      <td>2025-04-25 16:55:04.288811 UTC</td>
       <td>6.7.1</td>
       <td>15.9.2</td>
       <td>15.9.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-04-25 08:55:04.683383 UTC</td>
+      <td>2025-04-25 16:55:04.446992 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
