@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-06-25 00:55:02.860609 UTC</td>
+      <td>2025-06-25 08:55:02.956906 UTC</td>
       <td>22.0</td>
       <td>29.0</td>
       <td>29.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-06-25 00:55:03.039288 UTC</td>
+      <td>2025-06-25 08:55:03.157256 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-06-25 00:55:03.176045 UTC</td>
+      <td>2025-06-25 08:55:03.324892 UTC</td>
       <td>1.10.8</td>
       <td>1.15.11</td>
       <td>1.15.11</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-06-25 00:55:03.342995 UTC</td>
+      <td>2025-06-25 08:55:03.530471 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-06-25 00:55:03.512840 UTC</td>
+      <td>2025-06-25 08:55:03.722549 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-06-25 00:55:03.655726 UTC</td>
+      <td>2025-06-25 08:55:03.916640 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-06-25 00:55:03.954225 UTC</td>
+      <td>2025-06-25 08:55:04.184844 UTC</td>
       <td>1.8.1</td>
       <td>2.5.0</td>
       <td>2.5.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2025-06-24T18:19:49Z</td>
       <td># Release Notes</br></br>![XRP](docs/images/xrp-text-mark-black-small@2x.png)</br>This document contains the notes for the release `2.5.0` of `rippled` , the reference server implementation of the XRP Ledger protocol. To learn more about how to build, run or update a `rippled` server, visit https://xrpl.org/install-rippled.html</br></br>This release adds new features and bug fixes.</br></br>## `2.5.0` - 2025-06-23</br></br>### 📝 Amendments </br></br>- [XLS-56d Batch](https://github.com/XRPLF/XRPL-Standards/tree/master/XLS-0056d-batch) (#5060)</br>- [XLS-81d Permissioned DEX](https://github.com/XRPLF/XRPL-Standards/pull/281) (#5404)</br>- [XLS-85d Token Escrow](https://github.com/XRPLF/XRPL-Standards/pull/272/) (#5185)</br>- [XLS-74d and XLS-75d Permission Delegation](https://github.com/XRPLF/XRPL-Standards/pull/257) (#5354)</br></br>### 🦟📝 Fix Amendments</br></br>- [`fixPayChanCancelAfter`](https://xrpl.org/resources/known-amendments#fixpaychancancelafter) (#4717)</br>- [`fixAMMv1_3`](https://xrpl.org/resources/known-amendments#fixammv1_3) (#5203)</br>- [`fixEnforceNFTokenTrustlineV2`](https://xrpl.org/resources/known-amendments#fixenforcenftokentrustlinev2) (#5297) </br></br>### 🐛 Bug Fixes</br></br>- Fix RPC responses for tem codes (#5503)</br>- Adds CTID to RPC tx and updates error (#4738)</br>- Admin RPC webhook queue limit removal and timeout reduction (#5163)</br>- Address NFT interactions with trustlines (#5297)</br>- Handle invalid marker parameter in grpc call (#5317)</br>- Remove null pointer deref, just do abort (#5338)</br>- Error message for ledger_entry rpc (#5344)</br>- Trust line RPC no ripple flag (#5345)</br>- Replaces random endpoint resolution with sequential (#5365)</br>- Update validators-example.txt fix xrplf example URL (#5384)</br>- Disable `channel_authorize` when `signing_support` is disabled (#5385)</br>- Uint128 ambiguousness breaking macos unity build (#5386)</br>- Use the build image from ghcr.io (#5390)</br>- Resolve slow test on macOS pipeline (#5392)</br>- CTID to use correct ledger_index (#5408)</br>- Ensure that coverage file generation is atomic. (#5426)</br>- Enable LedgerStateFix for delegation (#5427)</br>- Update path in `CODEOWNERS` (#5440)</br>- Fix pseudo-account ID calculation (#5447)</br>- Improve handling of expired credentials in `VaultDeposit` (#5452)</br>- Specify transitive_headers when building with Conan 2 (#5462)</br>- Add tecNO_DELEGATE_PERMISSION and fix flags (#5465)</br>- Amendment-guard `TokenEscrow` preclaim and expand tests (#5473)</br>- Ensure delegate tests do not silently fail with batch (#5476)</br>- Improve multi-sign usage of `simulate` (#5479)</br></br>### 🚜 Refactor</br></br>- Remove unused and add missing includes (#5293)</br>- Calculate numFeatures automatically (#5324)</br>- Updates Conan dependencies: RocksDB (#5335)</br>- Improve ordering of headers with clang-format (#5343)</br>- Collapse some split log messages into one (#5347)</br>- Move integration tests from 'examples/' into 'tests/' (#5367)</br>- Reorganize ledger entry tests and helper functions (#5376)</br>- Clean up test logging to make it easier to search (#5396)</br>- Use east const convention (#5409)</br>- Improve squelching configuration (#5438)</br>- Change getNodeFat Missing Node State Tree error into warning (#5455)</br></br>### 📚 Documentation</br></br>- Add `-j $(nproc)` to `BUILD.md` (#5288)</br>- Update build instructions for Ubuntu 22.04+ (#5292)</br></br>### 🧪 Testing</br></br>- Enable TxQ unit tests work with variable reference fee (#5118)</br>- Enable unit tests to work with variable reference fee (#5145)</br>- Enable compile time param to change reference fee value (#5159)</br></br>### ⚙️ Miscellaneous Tasks</br></br>- Require a message on "Application::signalStop" (#5255)</br>- Add PR number to payload (#5310)</br>- Update link to ripple-binary-codec (#5355)</br>- Rename docs job (#5398)</br>- Run CI on PRs that are Ready or have the "DraftRunCI" label (#5400)</br>- Small clarification to lsfDefaultRipple comment (#5410)</br>- Update CPP ref source (#5453)</br>- Improve env.meta usage (#5457)</br>- Remove external project build cores division (#5475)</br>- Change libXRPL check conan remote to dev (#5482)</br>- Amendment work in progress [XLS-65d Single Asset Vault](https://github.com/XRPLF/XRPL-Standards/tree/master/XLS-0065d-single-asset-vault) (#5224)</br></td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-06-25 00:55:04.104755 UTC</td>
+      <td>2025-06-25 08:55:04.349475 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-06-25 00:55:04.243533 UTC</td>
+      <td>2025-06-25 08:55:04.516476 UTC</td>
       <td>6.7.1</td>
       <td>16.2.2</td>
       <td>16.2.2</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-06-25 00:55:04.394127 UTC</td>
+      <td>2025-06-25 08:55:04.683276 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
