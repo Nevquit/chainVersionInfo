@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-08-28 00:55:02.580754 UTC</td>
+      <td>2025-08-28 08:55:02.348571 UTC</td>
       <td>22.0</td>
       <td>29.0</td>
       <td>29.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-08-28 00:55:02.783205 UTC</td>
+      <td>2025-08-28 08:55:02.564162 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-08-28 00:55:02.934831 UTC</td>
+      <td>2025-08-28 08:55:02.713778 UTC</td>
       <td>1.10.8</td>
       <td>1.16.2</td>
       <td>1.16.2</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-08-28 00:55:03.118892 UTC</td>
+      <td>2025-08-28 08:55:02.903180 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-08-28 00:55:03.275652 UTC</td>
+      <td>2025-08-28 08:55:03.042605 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-08-28 00:55:03.421906 UTC</td>
+      <td>2025-08-28 08:55:03.197769 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,18 +122,18 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-08-28 00:55:03.678324 UTC</td>
+      <td>2025-08-28 08:55:03.454431 UTC</td>
       <td>1.8.1</td>
       <td>2.6.0</td>
       <td>2.6.0</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2025-08-27T20:37:19Z</td>
       <td># Release Notes</br></br>![XRP](docs/images/xrp-text-mark-black-small@2x.png)</br>This document contains the notes for the release `2.6.0` of `rippled` , the reference server implementation of the XRP Ledger protocol. To learn more about how to build, run or update a `rippled` server, visit https://xrpl.org/install-rippled.html</br></br>This release adds new features and bug fixes.</br></br>## [2.6.0] - 2025-08-27</br></br>### 🐛 Bug Fixes</br>- Change log to debug level for AMM offer retrieval and IOU payment check (#5686) by @intelliot</br>- Add -Wno-deprecated-declarations for Clang only (#5680) by @bthomee</br>- Improve logging of the reason to refuse a peer connection (#5664) by @Tapanito</br>- Make test suite names match the directory name (#5597) by @Afformativ</br>- Don't flag consensus as stalled prematurely (#5627) by @ximinez</br>- VaultWithdraw destination account bugfix (#5572) by @Bronek</br>- Add allowTrustLineLocking flag for account_info (#5525) by @dangell7</br>- Link with boost libraries explicitly (#5546) by @mathbunnyru</br>- Crash when trace-logging in tests (#5529) by @mvadari</br>- Crash in Slot::deletePeer (#5635) by @Bronek</br>- Clang-format CI job (#5598) by @Bronek</br>- macOS runner (#5585) by @a1q123456</br></br>### 🚀 Features</br></br>- Include `network_id` in validations and subscription stream responses (#5579) by @ckeshava</br>- Add support for `DomainID` in `MPTokenIssuance` transactions (#5509) by @Bronek</br>- Add MPT related txns into issuer's account history  (#5530) by @shawnxie999</br>- Add nftoken_id, nftoken_ids, offer_id to meta for transaction stream (#5230) by @tequdev</br></br>### 💼 Other</br></br>- Set version to 2.6.0 by @legleux</br>- Set version to 2.6.0-rc3 by @ximinez</br>- Set version to 2.6.0-rc2 by @legleux</br>- Update .git-blame-ignore-revs for #5657 (#5675) by @intelliot</br>- Fix BUILD.md instruction (#5676) by @Bronek</br>- Set version to 2.6.0-rc1 by @legleux</br>- Switch Conan 1 commands to Conan 2 and fix credentials (#5655) by @bthomee</br>- Upload Conan dependencies upon merge into develop (#5654) by @bthomee</br>- Build options cleanup (#5581) by @Bronek</br>- Updates Conan dependencies: Boost 1.86 (#5264) by @bthomee</br>- Update rocksdb (#5568) by @bthomee</br>- Switch instrumentation workflow to use dependencies (#5607) by @Bronek</br>- Remove the type filter from "ledger" RPC command (#4934) by @ckeshava</br>- Retire Flow Cross amendment (#5562) by @vvysokikh1</br>- Downgrade required CMake version for Antithesis SDK (#5548) by @Bronek</br>- Remove OwnerPaysFee as it's never fully supported (#5435) by @a1q123456</br>- Removes release notes from codebase (#5508) by @bthomee</br></br>### 🚜 Refactor</br></br>- Decouple CredentialHelpers from xrpld/app/tx (#5487) by @a1q123456</br>- Add XRPL_ABANDON and use it to abandon OwnerPaysFee (#5510) by @a1q123456</br>- Remove obsolete owner pays fee feature and XRPL_ABANDON stanza (#5550) by @a1q123456</br>- Restructure beast::rngfill (#5563) by @lmaisons</br>- Remove external libraries as they are hosted in our Conan Center Index fork (#5643) by @bthomee</br>- Decouple ledger from xrpld/app (#5492) by @a1q123456</br>- Makes HashRouter flags more type-safe (#5371) by @vlntb</br>- Change boost::shared_mutex to std::shared_mutex (#5576) by @Tapanito</br>- Update date, libarchive, nudb, openssl, sqlite3, xxhash packages (#5567) by @bthomee</br></br>### 📚 Documentation</br></br>- Updates list of maintainers and reviewers (#5687) by @bthomee</br>- Update BUILD.md for Conan 2 (#5478) by @Bronek</br>- Set up developer environment with specific XCode version (#5645) by @dangell7</br></br>### ⚡ Performance</br>- Revert ["perf: Move mutex to the partition level](https://github.com/XRPLF/rippled/pull/5486)" @ximinez </br>- Optimize hash performance by avoiding allocating hash state object (#5469) by @a1q123456</br>- Move mutex to the partition level (#5486) by @vlntb</br></br>### 🧪 Testing</br></br>- Run unit tests regardless of 'Supported' amendment status (#5537) by @vvysokikh1</br>- Remove circular jtx.h dependencies (#5544) by @Bronek</br>- switch some unit tests to doctest (#5383) by @vvysokikh1</br></br>### ⚙️ Miscellaneous Tasks</br></br>- Run prettier on all files (#5657) by @mvadari</br>- Set CONAN_REMOTE_URL also for forks (#5662) by @Bronek</br>- Cleanup bin/ directory (#5660) by @bthomee</br>- Remove `include(default)` from libxrpl profile (#5587) by @Bronek</br>- Rename conan profile to `default` (#5599) by @Bronek</br>- Remove unused code after flow cross retirement (#5575) by @vvysokikh1</br>- Update CI to use Conan 2 (#5556) by @legleux</br>- Add gcc-12 workaround (#5554) by @Bronek</br>- Remove unused headers (#5526) by @vvysokikh1</br>- Fix compilation error with clang-20 and cleanup (#5543) by @Bronek</br></td>
     </tr>
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-08-28 00:55:03.849767 UTC</td>
+      <td>2025-08-28 08:55:03.635609 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-08-28 00:55:04.002115 UTC</td>
+      <td>2025-08-28 08:55:03.810857 UTC</td>
       <td>6.7.1</td>
       <td>16.4.6</td>
       <td>16.4.6</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-08-28 00:55:04.139645 UTC</td>
+      <td>2025-08-28 08:55:03.975660 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
