@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-09-26 08:55:02.461399 UTC</td>
+      <td>2025-09-26 16:55:02.451589 UTC</td>
       <td>22.0</td>
       <td>29.1</td>
       <td>29.1</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-09-26 08:55:02.628274 UTC</td>
+      <td>2025-09-26 16:55:02.646300 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-09-26 08:55:02.801374 UTC</td>
+      <td>2025-09-26 16:55:02.822090 UTC</td>
       <td>1.10.8</td>
-      <td>1.16.3</td>
-      <td>1.16.3</td>
-      <td>Version Behind</td>
-      <td>2025-09-02T08:42:44Z</td>
-      <td>## What's Changed</br></br>This is a maintenance release to prepare for the Fusaka release next week. It contains a state history rewrite, fixes for the Osaka devnets, performance improvements, and a few bug fixes.</br></br>### Fusaka</br></br> * Fix: use blob parameters from current header [#32424](https://github.com/ethereum/go-ethereum/pull/32424)</br> * Convert legacy sidecar in Osaka [#32347](https://github.com/ethereum/go-ethereum/pull/32347)</br></br>### Core</br></br> * Stabilize tx relay peer selection [#31714](https://github.com/ethereum/go-ethereum/pull/31714)</br> * Reduced number of allocation when comparing transactions [#31912](https://github.com/ethereum/go-ethereum/pull/31912)</br> * Rework tracer and track origin value of dirty nodes [#32306](https://github.com/ethereum/go-ethereum/pull/32306)</br> * Avoids loading the same blob tx multiple times [#32190](https://github.com/ethereum/go-ethereum/pull/32190)</br> * Fix modexp input check [#32363](https://github.com/ethereum/go-ethereum/pull/32363)</br> * `GetBlockReceipts` also handles pending blocks [#32461](https://github.com/ethereum/go-ethereum/pull/32461)</br> * Tree node prefetching for increased loader performance [#32134](https://github.com/ethereum/go-ethereum/pull/32134)</br> * Parallelized `db inspect` [#32506](https://github.com/ethereum/go-ethereum/pull/32506)</br></br>### RPC</br></br> * Apply precompile overrides in `DoEstimateGas` [#31795](https://github.com/ethereum/go-ethereum/pull/31795)</br> * Fix uncle reward accounting in supply_tracer [#31882](https://github.com/ethereum/go-ethereum/pull/31882)</br> * Checks ErrGasLimitTooHigh in conditions in gas estimator [#32348](https://github.com/ethereum/go-ethereum/pull/32348)</br> * Implement EIP-7910 - eth_config JSON-RPC Method [#32239](https://github.com/ethereum/go-ethereum/pull/32239)</br> * Add SetWebsocketReadLimit in RPC Server [#32279](https://github.com/ethereum/go-ethereum/pull/32279)</br> * graphql: add query depth limit to prevent DoS attacks [#32344](https://github.com/ethereum/go-ethereum/pull/32344)</br> * Adds codeHash to prestateTracer's account structure [#32391](https://github.com/ethereum/go-ethereum/pull/32391)</br> * Remove deprecated method `debug_seedHash` [#32495](https://github.com/ethereum/go-ethereum/pull/32495)</br> </br></br>### Others</br></br> * Introduce the TransitionState object [#31634](https://github.com/ethereum/go-ethereum/pull/31634) and [#32366](https://github.com/ethereum/go-ethereum/pull/32366)</br> * Fix ledger version check for EIP-155 support [#32417](https://github.com/ethereum/go-ethereum/pull/32417)</br> * Fix: don't return an error when a nil peer is found in  GetHeader [#32369](https://github.com/ethereum/go-ethereum/pull/32369)</br> * Add support for Go 1.25  [#32425](https://github.com/ethereum/go-ethereum/pull/32425) and [#32412](https://github.com/ethereum/go-ethereum/pull/32412)</br> * Add trie depth-tracking metrics [#32388](https://github.com/ethereum/go-ethereum/pull/32388) and  [#32507](https://github.com/ethereum/go-ethereum/pull/32507)</br> * Implement EIP-7864 - binary trees [32365](https://github.com/ethereum/go-ethereum/pull/32365)</br> * Improved ETA calculation [#32521](https://github.com/ethereum/go-ethereum/pull/32521)</br></br>For a full rundown of the changes please consult the Geth 1.16.3 [release milestone](https://github.com/ethereum/go-ethereum/milestone/192?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br> * Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br> * Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br> * Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br> * OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</td>
+      <td>1.16.4</td>
+      <td>1.16.4</td>
+      <td>Node version has update</td>
+      <td>2025-09-26T09:41:54Z</td>
+      <td>&lt;!-- Bioelectric Infusers (v1.16.4) --&gt;</br></br>This release enables the Osaka (Fusaka) fork on testnets. We also enable two blob-parameter only (BPO) forks for the testnets.</br></br>- Holesky</br>  - Osaka at time `1759308480` (2025-10-01 08:48:00 UTC)</br>  - BPO1 at time `1759800000` (2025-10-07 01:20:00 UTC)</br>  - BPO2 at time `1760389824` (2025-10-13 21:10:24 UTC)</br></br>- Sepolia</br>  - Osaka at time `1760427360` (2025-10-14 07:36:00 UTC)</br>  - BPO1 at time `1761017184` (2025-10-21 03:26:24 UTC)</br>  - BPO2 at time `1761607008` (2025-10-27 23:16:48 UTC)</br></br>- Hoodi</br>  - Osaka at time `1761677592` (2025-10-28 18:53:12 UTC)</br>  - BPO1 at time `1762365720` (2025-11-05 18:02:00 UTC)</br>  - BPO2 at time `1762955544` (2025-11-12 13:52:24 UTC)</br></br>With BPO1 and BPO2, the blob capacity of these networks will increase as follows:</br></br>- BPO1: max blobs/block: `15`, target: `10`</br>- BPO2: max blobs/block: `21`, target: `14`</br></br>As of this release, the default block gas limit is set to **60M gas**.</br>This is the recommended limit that we, as client authors, feel comfortable with.</br></br>### CLI commands</br></br>- `geth snapshot` and related commands no longer fail due to not finding the trie journal file. (#32531)</br>- A regression in `geth snapshot dump` and `geth export-preimages` is resolved. (#32650)</br>- We have added an experimental zkVM 'guest program', `keeper`, to the source tree. (#32543, #32638, #32736)</br></br>### RPC</br></br>- `eth_call` and related operations were fixed to not apply the EIP-7825 per-transaction gas limit when executing under Osaka fork rules. (#32641)</br>- For `eth_getLogs` and other log filtering operations, it is now possible to configure the number of addresses allowed in the filter using the `--rpc.logquerylimit` flag. (#32327)</br>- Starting Geth with the `--state.size-tracking` option enables collection of precise state size numbers, which can be read using the `debug_stateSize` endpoint. (#32362)</br>- The new `debug_executionWitness` and `debug_executionWitnessByHash` methods create a block witness for stateless execution. (#32216)</br></br>### Tracing &amp; ABIGEN</br></br>- There is a new `CodeChangeV2` hook, with a `CodeChangeReason` parameter. (#32525, #32535)</br>- In certain corner-cases related to SELFDESTRUCT, `OnBalanceChange` was not invoked. (#32526)</br>- `BoundContract` in `accounts/abi/bind/v2` now exposes an `Address` method. (#32559)</br></br>### Core</br></br>- The EVM MODEXP precompiled account has seen some optimizations to improve performance for worst-case inputs. We are especially grateful for @GottfriedHerold's work on improving the underlying math/big library. (#32527, #32553, #32568, #32576)</br>- The blobpool will now perform a migration to the v1 blob proof format around the time of the fork. (#31966, #32577, #32534, #32656, #32716)</br>- `engine_getBlobs` has been updated for improved spec compliance and to deal with the conversion of the blob tx proofs. (#32536, #32538, #32578)</br>- The path-based state database has seen some fixes to prevent database corruption, which could sometimes occur when Geth is terminated abnormally, e.g. by a short stop timeout in Docker. (#32557, #32447)</br>- All `engine` API operations, and `eth_config`, now support BPO-style forks. (#32589, #32615, #32636, #32579)</br>- This release includes some work towards supporting historical state proofs in the path-based archive node implementation. (#32418, #32523, #32649)</br>- Pebble stall counter are now correctly reported for each opened database. (#32563)</br></br>### Networking</br></br>- The node discovery iterator was updated to improved geth startup time and reactivity when the node table becomes empty. (#32517, #32518)</br>- A hang in the 'eth' protocol test suite was resolved. (#32551)</br></br>### Build</br></br>- The KZG proof libraries have been updated to the latest release to fix a vulnerability. Fortunately, the vulnerability would only have become usable after the Osaka fork, so there is no risk for users of current versions. (#32640, #32639)</br>- go-ethereum now requires Go 1.24 or later. (#32584, #32598)</br>- This release is built with Go 1.25.1 (#32593)</br>- execution-spec-tests has been bumped to v5.1.0 (#32592, #32742)</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-09-26 08:55:02.972836 UTC</td>
+      <td>2025-09-26 16:55:02.977490 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-09-26 08:55:03.187206 UTC</td>
+      <td>2025-09-26 16:55:03.186838 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-09-26 08:55:03.360122 UTC</td>
+      <td>2025-09-26 16:55:03.362757 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-09-26 08:55:03.677718 UTC</td>
+      <td>2025-09-26 16:55:03.641735 UTC</td>
       <td>1.8.1</td>
       <td>2.5.1</td>
       <td>2.5.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-09-26 08:55:03.888158 UTC</td>
+      <td>2025-09-26 16:55:03.805815 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-09-26 08:55:04.065564 UTC</td>
+      <td>2025-09-26 16:55:03.978201 UTC</td>
       <td>6.7.1</td>
       <td>16.4.8</td>
       <td>16.4.8</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-09-26 08:55:04.323012 UTC</td>
+      <td>2025-09-26 16:55:04.144926 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
