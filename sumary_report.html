@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-10-16 00:55:02.523381 UTC</td>
+      <td>2025-10-16 08:55:02.400988 UTC</td>
       <td>22.0</td>
       <td>30.0</td>
       <td>30.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-10-16 00:55:02.704528 UTC</td>
+      <td>2025-10-16 08:55:02.572041 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-10-16 00:55:02.873212 UTC</td>
+      <td>2025-10-16 08:55:02.761809 UTC</td>
       <td>1.10.8</td>
-      <td>1.16.4</td>
-      <td>1.16.4</td>
-      <td>Version Behind</td>
-      <td>2025-09-26T09:41:54Z</td>
-      <td>&lt;!-- Bioelectric Infusers (v1.16.4) --&gt;</br></br>This release enables the Osaka (Fusaka) fork on testnets. We also enable two blob-parameter only (BPO) forks for the testnets.</br></br>- Holesky</br>  - Osaka at time `1759308480` (2025-10-01 08:48:00 UTC)</br>  - BPO1 at time `1759800000` (2025-10-07 01:20:00 UTC)</br>  - BPO2 at time `1760389824` (2025-10-13 21:10:24 UTC)</br></br>- Sepolia</br>  - Osaka at time `1760427360` (2025-10-14 07:36:00 UTC)</br>  - BPO1 at time `1761017184` (2025-10-21 03:26:24 UTC)</br>  - BPO2 at time `1761607008` (2025-10-27 23:16:48 UTC)</br></br>- Hoodi</br>  - Osaka at time `1761677592` (2025-10-28 18:53:12 UTC)</br>  - BPO1 at time `1762365720` (2025-11-05 18:02:00 UTC)</br>  - BPO2 at time `1762955544` (2025-11-12 13:52:24 UTC)</br></br>With BPO1 and BPO2, the blob capacity of these networks will increase as follows:</br></br>- BPO1: max blobs/block: `15`, target: `10`</br>- BPO2: max blobs/block: `21`, target: `14`</br></br>As of this release, the default block gas limit is set to **60M gas**.</br>This is the recommended limit that we, as client authors, feel comfortable with.</br></br>### CLI commands</br></br>- `geth snapshot` and related commands no longer fail due to not finding the trie journal file. (#32531)</br>- A regression in `geth snapshot dump` and `geth export-preimages` is resolved. (#32650)</br>- We have added an experimental zkVM 'guest program', `keeper`, to the source tree. (#32543, #32638, #32736)</br></br>### RPC</br></br>- `eth_call` and related operations were fixed to not apply the EIP-7825 per-transaction gas limit when executing under Osaka fork rules. (#32641)</br>- For `eth_getLogs` and other log filtering operations, it is now possible to configure the number of addresses allowed in the filter using the `--rpc.logquerylimit` flag. (#32327)</br>- Starting Geth with the `--state.size-tracking` option enables collection of precise state size numbers, which can be read using the `debug_stateSize` endpoint. (#32362)</br>- The new `debug_executionWitness` and `debug_executionWitnessByHash` methods create a block witness for stateless execution. (#32216)</br></br>### Tracing &amp; ABIGEN</br></br>- There is a new `CodeChangeV2` hook, with a `CodeChangeReason` parameter. (#32525, #32535)</br>- In certain corner-cases related to SELFDESTRUCT, `OnBalanceChange` was not invoked. (#32526)</br>- `BoundContract` in `accounts/abi/bind/v2` now exposes an `Address` method. (#32559)</br></br>### Core</br></br>- The EVM MODEXP precompiled account has seen some optimizations to improve performance for worst-case inputs. We are especially grateful for @GottfriedHerold's work on improving the underlying math/big library. (#32527, #32553, #32568, #32576)</br>- The blobpool will now perform a migration to the v1 blob proof format around the time of the fork. (#31966, #32577, #32534, #32656, #32716)</br>- `engine_getBlobs` has been updated for improved spec compliance and to deal with the conversion of the blob tx proofs. (#32536, #32538, #32578)</br>- The path-based state database has seen some fixes to prevent database corruption, which could sometimes occur when Geth is terminated abnormally, e.g. by a short stop timeout in Docker. (#32557, #32447)</br>- All `engine` API operations, and `eth_config`, now support BPO-style forks. (#32589, #32615, #32636, #32579)</br>- This release includes some work towards supporting historical state proofs in the path-based archive node implementation. (#32418, #32523, #32649)</br>- Pebble stall counter are now correctly reported for each opened database. (#32563)</br></br>### Networking</br></br>- The node discovery iterator was updated to improved geth startup time and reactivity when the node table becomes empty. (#32517, #32518)</br>- A hang in the 'eth' protocol test suite was resolved. (#32551)</br></br>### Build</br></br>- The KZG proof libraries have been updated to the latest release to fix a vulnerability. Fortunately, the vulnerability would only have become usable after the Osaka fork, so there is no risk for users of current versions. (#32640, #32639)</br>- go-ethereum now requires Go 1.24 or later. (#32584, #32598)</br>- This release is built with Go 1.25.1 (#32593)</br>- execution-spec-tests has been bumped to v5.1.0 (#32592, #32742)</br></td>
+      <td>1.16.5</td>
+      <td>1.16.5</td>
+      <td>Node version has update</td>
+      <td>2025-10-16T08:01:02Z</td>
+      <td>&lt;!-- Coolant Cells (v1.16.5) --&gt;</br></br>This is a maintenance release. We are issuing this release mostly to add a conversion path for blob proofs submitted via `eth_sendRawTransaction`. See https://blog.ethereum.org/2025/10/15/fusaka-blob-update for more information.</br></br>### RPC</br></br>- `eth_sendRawTransaction` has an upgrade path for blob proofs after the Fusaka fork. Note this conversion is temporary. We will remove support for this conversion during the v1.17.x release cycle, please update RPC client libraries to support cell-level proofs. (#32849)</br>- `eth_subscribe` now supports a `transactionReceipts` subscription. There is also a wrapper in ethclient for this new subscription type. (#32697, #32869)</br>- `eth_simulateV1` was fixed to return the block timestamp in logs, like `eth_getLogs` does. (#32831)</br>- In the abigen v2 runtime, `BoundContract.Transfer` will now verify that the contract has a payable fallback or receive method. (#32374)</br>- A `keccak256preimage` tracer has been added. (#32569)</br></br>### Networking</br></br>- The eth protocol handler will now drop peers sending duplicated transactions. This is to unify behavior with other client implementations. (#32728)</br>- A regression in the discovery system could cause high CPU usage under synthetic conditions (i.e. in tests). (#32912)</br>- A very rare shutdown hang related to peer discovery is resolved. (#32572)</br>- The eth protocol test suite has a new post-merge test chain and saw some bug fixes for flakey tests. (#32834, #32850)</br></br>### Core</br></br>- Our freezer implementation now supports partial reads, i.e. reading just a slice out of a larger stored value. This functionality is used for the archive node state history. (#32132)</br>- The trie database now implements a storage layer for 'trie history', a precursor to serving historical state proofs for the path-based archive node. (#32596)</br>- The `txpool/valid.meter` metric has been corrected. (#32845)</br>- The engine API saw some fixes related to fork compatibility checks. (#32800, #32731)</br></br>For a full rundown of the changes please consult the Geth 1.16.5 [release milestone](https://github.com/ethereum/go-ethereum/milestone/194?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-10-16 00:55:03.070226 UTC</td>
+      <td>2025-10-16 08:55:02.949069 UTC</td>
       <td>2.2.0</td>
       <td>3.0.1</td>
       <td>3.0.1</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-10-16 00:55:03.248958 UTC</td>
+      <td>2025-10-16 08:55:03.117252 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-10-16 00:55:03.440195 UTC</td>
+      <td>2025-10-16 08:55:03.312508 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-10-16 00:55:03.697553 UTC</td>
+      <td>2025-10-16 08:55:03.646323 UTC</td>
       <td>1.8.1</td>
       <td>2.6.1</td>
       <td>2.6.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-10-16 00:55:03.863624 UTC</td>
+      <td>2025-10-16 08:55:03.851802 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-10-16 00:55:04.047103 UTC</td>
+      <td>2025-10-16 08:55:04.026368 UTC</td>
       <td>6.7.1</td>
       <td>16.4.9</td>
       <td>16.4.9</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-10-16 00:55:04.192349 UTC</td>
+      <td>2025-10-16 08:55:04.223457 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
