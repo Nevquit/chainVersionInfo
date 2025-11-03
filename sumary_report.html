@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2025-11-03 08:55:02.409078 UTC</td>
+      <td>2025-11-03 16:55:02.347554 UTC</td>
       <td>22.0</td>
       <td>30.0</td>
       <td>30.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2025-11-03 08:55:02.628580 UTC</td>
+      <td>2025-11-03 16:55:02.510425 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2025-11-03 08:55:02.783734 UTC</td>
+      <td>2025-11-03 16:55:02.742036 UTC</td>
       <td>1.10.8</td>
-      <td>1.16.5</td>
-      <td>1.16.5</td>
-      <td>Version Behind</td>
-      <td>2025-10-16T08:01:02Z</td>
-      <td>&lt;!-- Coolant Cells (v1.16.5) --&gt;</br></br>This is a maintenance release. We are issuing this release mostly to add a conversion path for blob proofs submitted via `eth_sendRawTransaction`. See https://blog.ethereum.org/2025/10/15/fusaka-blob-update for more information.</br></br>### RPC</br></br>- `eth_sendRawTransaction` has an upgrade path for blob proofs after the Fusaka fork. Note this is temporary. We will remove support for blob proof conversion during the v1.17.x release cycle, please update RPC client libraries to support cell-level (v1) proofs. (#32849)</br>- `eth_subscribe` now supports a `transactionReceipts` subscription. There is also a wrapper in ethclient for this new subscription type. (#32697, #32869)</br>- `eth_simulateV1` was fixed to return the block timestamp in logs, like `eth_getLogs` does. (#32831)</br>- In the abigen v2 runtime, `BoundContract.Transfer` will now verify that the contract has a payable fallback or receive method. (#32374)</br>- A `keccak256preimage` tracer has been added. (#32569)</br></br>### Networking</br></br>- The eth protocol handler will now drop peers sending duplicated transactions. This is to unify behavior with other client implementations. (#32728)</br>- A regression in the discovery system could cause high CPU usage under synthetic conditions (i.e. in tests). (#32912)</br>- A very rare shutdown hang related to peer discovery is resolved. (#32572)</br>- The eth protocol test suite has a new post-merge test chain and saw some bug fixes for flakey tests. (#32834, #32850)</br></br>### Core</br></br>- Our freezer implementation now supports partial reads, i.e. reading just a slice out of a larger stored value. This functionality is used for the archive node state history. (#32132)</br>- The trie database now implements a storage layer for 'trie history', a precursor to serving historical state proofs for the path-based archive node. (#32596)</br>- The `txpool/valid.meter` metric has been corrected. (#32845)</br>- The engine API saw some fixes related to fork compatibility checks. (#32800, #32731)</br></br>For a full rundown of the changes please consult the Geth 1.16.5 [release milestone](https://github.com/ethereum/go-ethereum/milestone/194?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.16.6</td>
+      <td>1.16.6</td>
+      <td>Node version has update</td>
+      <td>2025-11-03T16:54:25Z</td>
+      <td>&lt;!-- Leather Wrapping (v1.16.6) --&gt;</br></br>**This release enables the Fusaka hardfork on Ethereum mainnet**.</br>The fork is scheduled to occur at `2025-12-03 21:49:11 UTC`. Please upgrade your node in time.</br></br>This release also enables the BPO1 and BPO2 forks for mainnet at `2025-12-09` and</br>`2026-01-07` respectively.</br></br>### Fusaka</br></br>* Set mainnet timestamps for Osaka ([#33063](https://github.com/ethereum/go-ethereum/pull/33063))</br>* Enable Fusaka for `geth --dev` mode ([#32917](https://github.com/ethereum/go-ethereum/pull/32917))</br></br>### RPC</br></br>* Add `eth_sendRawTransactionSync` which waits until either a timeout or the transaction is mined. This feature is mostly useful on L2s with lower blocktimes. ([#32830](https://github.com/ethereum/go-ethereum/pull/32830), [#32930](https://github.com/ethereum/go-ethereum/pull/32930), [#32929](https://github.com/ethereum/go-ethereum/pull/32929/))</br>* Add support for `eth_simulateV1` in ethclient ([#32856](https://github.com/ethereum/go-ethereum/pull/32856))</br>* Fix for an issue that might crash `debug_traceCall` ([#33015](https://github.com/ethereum/go-ethereum/pull/33015))</br>* Fix for an issuer where local transactions were not persisted to the journal ([#32921](https://github.com/ethereum/go-ethereum/pull/32921))</br></br>### Core</br></br>* Add `geth --genesis` flag as an alternative to running `geth init genesis.json` ([#32844](https://github.com/ethereum/go-ethereum/pull/32844))</br>* Fix for receipt insertion during ERA file import. ([#32934](https://github.com/ethereum/go-ethereum/pull/32934))</br>* Work on getting the trie node history in order to serve historical `eth_getProof` request with the new path-based archive node. ([#32907](https://github.com/ethereum/go-ethereum/pull/32907), [#32914](https://github.com/ethereum/go-ethereum/pull/32914), [#32937](https://github.com/ethereum/go-ethereum/pull/32937))</br>* Further work on cmd/keeper, our guest program for zkVMs ([#32816](https://github.com/ethereum/go-ethereum/pull/32816))</br>* Various optimizations ([#32971](https://github.com/ethereum/go-ethereum/pull/32971), [#32916](https://github.com/ethereum/go-ethereum/pull/32916), [#32965](https://github.com/ethereum/go-ethereum/pull/32965), [#32946](https://github.com/ethereum/go-ethereum/pull/32946))</br></br>### Networking</br></br>* New metrics for tracking slow peers ([#32964](https://github.com/ethereum/go-ethereum/pull/32964))</br>* Fix for an issue where disconnected peers were not removed in txFetcher ([#32947](https://github.com/ethereum/go-ethereum/pull/32947))</br></br>For a full rundown of the changes please consult the Geth 1.16.6 [release milestone](https://github.com/ethereum/go-ethereum/milestone/195?closed=1).</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://cloud.docker.com/u/ethereum/repository/docker/ethereum/client-go).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- OSX packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2025-11-03 08:55:02.951569 UTC</td>
+      <td>2025-11-03 16:55:02.953125 UTC</td>
       <td>2.2.0</td>
       <td>3.0.2</td>
       <td>3.0.2</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2025-11-03 08:55:03.120710 UTC</td>
+      <td>2025-11-03 16:55:03.137081 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2025-11-03 08:55:03.280902 UTC</td>
+      <td>2025-11-03 16:55:03.299671 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2025-11-03 08:55:03.569157 UTC</td>
+      <td>2025-11-03 16:55:03.628838 UTC</td>
       <td>1.8.1</td>
       <td>2.6.1</td>
       <td>2.6.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2025-11-03 08:55:03.720775 UTC</td>
+      <td>2025-11-03 16:55:03.791616 UTC</td>
       <td>23.1.0</td>
       <td>28.0.1</td>
       <td>28.0.1</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2025-11-03 08:55:03.862120 UTC</td>
+      <td>2025-11-03 16:55:03.955105 UTC</td>
       <td>6.7.1</td>
       <td>16.4.9</td>
       <td>16.4.9</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2025-11-03 08:55:04.044124 UTC</td>
+      <td>2025-11-03 16:55:04.234242 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
