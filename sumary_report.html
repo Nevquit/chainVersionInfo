@@ -56,18 +56,18 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2026-01-13 08:55:01.563180 UTC</td>
+      <td>2026-01-13 16:55:02.023394 UTC</td>
       <td>22.0</td>
-      <td>30.1</td>
-      <td>30.1</td>
-      <td>Version Behind</td>
-      <td>2026-01-02T16:15:41Z</td>
-      <td>Bitcoin Core version 30.1 is now available from:</br></br>https://bitcoincore.org/bin/bitcoin-core-30.1/</br></br>For the release notes please see the git repository:</br></br>https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-30.1.md</br></br>Do not use the links provided by GitHub, rather use the above download links, they are guaranteed to be generated deterministically and signed.</td>
+      <td>30.2</td>
+      <td>30.2</td>
+      <td>Node version has update</td>
+      <td>2026-01-13T09:36:00Z</td>
+      <td>Bitcoin Core version 30.2 is now available from:</br></br>https://bitcoincore.org/bin/bitcoin-core-30.2/</br></br>For the release notes please see the git repository:</br></br>https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-30.2.md</br></br>Do not use the links provided by GitHub, rather use the above download links, they are guaranteed to be generated deterministically and signed.</td>
     </tr>
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2026-01-13 08:55:01.708623 UTC</td>
+      <td>2026-01-13 16:55:02.199968 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2026-01-13 08:55:01.874963 UTC</td>
+      <td>2026-01-13 16:55:02.354861 UTC</td>
       <td>1.10.8</td>
-      <td>1.16.7</td>
-      <td>1.16.7</td>
-      <td>Version Behind</td>
-      <td>2025-11-04T12:28:55Z</td>
-      <td>&lt;!-- Ballistic Drift Stabilizer (v1.16.7) --&gt;</br></br>This is a re-roll of v1.16.6, including an important fix in the KZG cryptography library.</br></br>**This release enables the Fusaka hardfork on Ethereum mainnet**.</br></br>The Fusaka fork is scheduled to occur at `2025-12-03 21:49:11 UTC`.</br>Please upgrade your node to v1.16.7 in time for the fork.</br></br>This release also enables two blob-parameter-only (BPO) upgrades.</br>These upgrades change protocol parameters to increase the available blob capacity.</br></br>- BPO1 on`2025-12-09`</br>- BPO2 on `2026-01-07`</br></br>### Fusaka</br></br>* Set mainnet timestamps for Osaka ([#33063](https://github.com/ethereum/go-ethereum/pull/33063))</br>* Enable Fusaka for `geth --dev` mode ([#32917](https://github.com/ethereum/go-ethereum/pull/32917))</br></br>### RPC</br></br>* Add `eth_sendRawTransactionSync` which waits until either a timeout or the transaction is mined. This feature is mostly useful on L2s with lower blocktimes. ([#32830](https://github.com/ethereum/go-ethereum/pull/32830), [#32930](https://github.com/ethereum/go-ethereum/pull/32930), [#32929](https://github.com/ethereum/go-ethereum/pull/32929/))</br>* Add support for `eth_simulateV1` in ethclient ([#32856](https://github.com/ethereum/go-ethereum/pull/32856))</br>* Fix for an issue that might crash `debug_traceCall` ([#33015](https://github.com/ethereum/go-ethereum/pull/33015))</br>* Fix for an issuer where local transactions were not persisted to the journal ([#32921](https://github.com/ethereum/go-ethereum/pull/32921))</br></br>### Core</br></br>* Fix for a cryptographic [vulnerability in c-kzg-4844](https://github.com/ethereum/c-kzg-4844/pull/607). This is only exploitable post-Fusaka. ([#33093](https://github.com/ethereum/go-ethereum/pull/33093))</br>* Add `geth --genesis` flag as an alternative to running `geth init genesis.json` ([#32844](https://github.com/ethereum/go-ethereum/pull/32844))</br>* Fix for receipt insertion during ERA file import. ([#32934](https://github.com/ethereum/go-ethereum/pull/32934))</br>* Work on getting the trie node history in order to serve historical `eth_getProof` request with the new path-based archive node. ([#32907](https://github.com/ethereum/go-ethereum/pull/32907), [#32914](https://github.com/ethereum/go-ethereum/pull/32914), [#32937](https://github.com/ethereum/go-ethereum/pull/32937))</br>* Further work on cmd/keeper, our guest program for zkVMs ([#32816](https://github.com/ethereum/go-ethereum/pull/32816))</br>* Various optimizations ([#32971](https://github.com/ethereum/go-ethereum/pull/32971), [#32916](https://github.com/ethereum/go-ethereum/pull/32916), [#32965](https://github.com/ethereum/go-ethereum/pull/32965), [#32946](https://github.com/ethereum/go-ethereum/pull/32946))</br></br>### Networking</br></br>* New metrics for tracking slow peers ([#32964](https://github.com/ethereum/go-ethereum/pull/32964))</br>* Fix for an issue where disconnected peers were not removed in txFetcher ([#32947](https://github.com/ethereum/go-ethereum/pull/32947))</br></br>---</br></br>For a full rundown of the changes please consult the Geth [1.16.6](https://github.com/ethereum/go-ethereum/milestone/195?closed=1) and [1.16.7](https://github.com/ethereum/go-ethereum/milestone/195?closed=1) release milestones.</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://hub.docker.com/r/ethereum/client-go) (use "stable" tag).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- macOS packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
+      <td>1.16.8</td>
+      <td>1.16.8</td>
+      <td>Node version has update</td>
+      <td>2026-01-13T16:05:32Z</td>
+      <td>This is a security fix release and is recommended for all users. It resolves two p2p</br>vulnerabilities reported through the Ethereum Foundation bug bounty program.</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://hub.docker.com/r/ethereum/client-go) (use "stable" tag).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- macOS packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2026-01-13 08:55:02.031531 UTC</td>
+      <td>2026-01-13 16:55:02.545769 UTC</td>
       <td>2.2.0</td>
       <td>3.0.2</td>
       <td>3.0.2</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2026-01-13 08:55:02.184415 UTC</td>
+      <td>2026-01-13 16:55:02.722881 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2026-01-13 08:55:02.375266 UTC</td>
+      <td>2026-01-13 16:55:02.914308 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2026-01-13 08:55:02.672145 UTC</td>
+      <td>2026-01-13 16:55:03.218000 UTC</td>
       <td>1.8.1</td>
       <td>3.0.0</td>
       <td>3.0.0</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2026-01-13 08:55:02.845228 UTC</td>
+      <td>2026-01-13 16:55:03.395897 UTC</td>
       <td>23.1.0</td>
       <td>29.0.0</td>
       <td>29.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2026-01-13 08:55:03.036103 UTC</td>
+      <td>2026-01-13 16:55:03.573094 UTC</td>
       <td>6.7.1</td>
       <td>16.5.5</td>
       <td>16.5.5</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2026-01-13 08:55:03.219952 UTC</td>
+      <td>2026-01-13 16:55:03.751443 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
