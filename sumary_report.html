@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2026-03-03 16:55:02.378520 UTC</td>
+      <td>2026-03-04 00:55:02.401728 UTC</td>
       <td>22.0</td>
       <td>30.2</td>
       <td>30.2</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2026-03-03 16:55:02.558646 UTC</td>
+      <td>2026-03-04 00:55:02.575894 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2026-03-03 16:55:02.708983 UTC</td>
+      <td>2026-03-04 00:55:02.738716 UTC</td>
       <td>1.10.8</td>
       <td>1.17.1</td>
       <td>1.17.1</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2026-03-03T12:47:43Z</td>
       <td>&lt;!-- Eezo Shunt (v1.17.1) --&gt;</br></br>This is a bug fix release and is recommended for all users. It resolves a regression in snap sync, as well as several security issues.</br></br>### Geth</br></br>- The engine API no longer enables plain-text HTTP2, due to some reports of incompatibilities with the teku CL (#33922)</br>- The new `--metrics.influxdb.interval` flag allows changing the metrics reporting interval. (#33767)</br>- Geth has a new `inspect-trie` subcommand that prints information about node counts at all state trie depths (#28892)</br></br>### Core</br></br>- Some Amsterdam fork-related changes:</br>  - EIP-7834 SLOTNUM opcode (#33589)</br>  - EIP-8024 is now enabled in Amsterdam mode (#33928)</br>  - Several fixes for EIP-7928 Block-Level Access Lists (#33741, #33743, #33742, #33774)</br>- Payload building had a fix that could prevent the CL from receiving the latest built payloads (#33908)</br></br>### Networking</br></br>- Geth no longer supports p2p protocol version eth/68 (#33511)</br>- A rare crash in p2p request tracking is resolved (#33940)</br>- The transaction pool, and specifically the blobpool, saw some fixes that reduce relaying transactions that likely won't make it into the chain, or have already been included on chain recently. This should reduce txpool traffic (#33607, #33887, #33923, #33893)</br>- In v1.17.0, a regression in snap-sync was introduced that would cause sync to fail when using --history.chain=postmerge (#33865)</br>- Snap-sync had a bug where peer connections would stop being used after a timeout or similar event. This wasn't too noticeable for mainnet sync because of peer churn (#33790)</br>- Unexpected state delivered by peers is now reported during snap-sync (#33898)</br>- P2P listener metrics now record handshake timeouts correctly  (#33539)</br></br>### RPC</br></br>- `eth_estimateGas` now honors the user-supplied access list (#33849)</br>- New RPC method: `eth_getStorageValues` (#32591)</br>- New RPC method: `testing_buildBlockV1` (#33656)</br></br>### Build</br></br>- This release is built with Go 1.25.7 (#33874)</br>- Our official Docker images are experimentally built with Go 1.26 (#33899)</br></br>For a full rundown of the changes please consult the Geth [1.17.1](https://github.com/ethereum/go-ethereum/milestone/198?closed=1) release milestone.</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://hub.docker.com/r/ethereum/client-go) (use "stable" tag).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- macOS packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2026-03-03 16:55:02.877544 UTC</td>
+      <td>2026-03-04 00:55:02.901373 UTC</td>
       <td>2.2.0</td>
       <td>3.0.2</td>
       <td>3.0.2</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2026-03-03 16:55:03.063713 UTC</td>
+      <td>2026-03-04 00:55:03.062236 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2026-03-03 16:55:03.228839 UTC</td>
+      <td>2026-03-04 00:55:03.237204 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2026-03-03 16:55:03.534968 UTC</td>
+      <td>2026-03-04 00:55:03.527559 UTC</td>
       <td>1.8.1</td>
       <td>3.1.1</td>
       <td>3.1.1</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2026-03-03 16:55:03.710184 UTC</td>
+      <td>2026-03-04 00:55:03.676030 UTC</td>
       <td>23.1.0</td>
       <td>29.0.0</td>
       <td>29.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2026-03-03 16:55:03.881606 UTC</td>
+      <td>2026-03-04 00:55:03.858618 UTC</td>
       <td>6.7.1</td>
       <td>16.5.5</td>
       <td>16.5.5</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2026-03-03 16:55:04.029974 UTC</td>
+      <td>2026-03-04 00:55:04.029235 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
