@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2026-03-30 16:55:02.361895 UTC</td>
+      <td>2026-03-31 00:55:02.459032 UTC</td>
       <td>22.0</td>
       <td>30.2</td>
       <td>30.2</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2026-03-30 16:55:02.533243 UTC</td>
+      <td>2026-03-31 00:55:02.643751 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,18 +78,18 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2026-03-30 16:55:02.673232 UTC</td>
+      <td>2026-03-31 00:55:02.806158 UTC</td>
       <td>1.10.8</td>
       <td>1.17.2</td>
       <td>1.17.2</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2026-03-30T11:24:52Z</td>
       <td>&lt;!-- EMF Suppressor (v1.17.2) --&gt;</br></br>This is a maintenance release with several important bug fixes. Notably, a critical issue in `debug_executionWitness` could previously corrupt node data, users relying on this RPC endpoint are strongly advised to upgrade.</br></br>Geth now also supports syncing with chains where pre-Prague history has been pruned, and allows explicitly removing it via `geth prune-history --history.chain postprague`.</br></br>### Geth</br>- Set default cache size to 4GB across all networks (#33836, #33975)</br>- Added support for pruning chain history prior to the Prague fork (#33657, #34036)</br>- Added `fetchpayload` command to build execution witnesses for specific blocks (#33919)</br>- Optimized Era history import with batched insertion (#33894)</br>- Added `womir` target for keeper (#34079)</br>- Added support for iterating a single storage trie in `geth snapshot traverse-state` and `geth snapshot traverse-rawstate` (#34051)</br></br>### Core</br>- Amsterdam fork updates:</br>\t- EIP-8024: Switch to branchless normalization and extend EXCHANGE (#33869)</br>\t- EIP-7778: Block gas accounting without refunds (#33593)</br>\t- EIP-7954: Increase maximum contract size (#33832)</br>\t- EIP-7708: ETH transfers now emit logs (#33645)</br>\t- Reworked gas measurement order (prerequisite for EIP-7928) (#33648)</br>- Improved payload building by prewarming trie nodes for state hash computation (#33945)</br>- Various binary trie improvements (#33951, #33961, #33989, #34021, #34032, #34022, #34056)</br>- Upgraded go-eth-kzg to v1.5.0, significantly reducing allocations in `VerifyCellProofBatch` (#33963)</br>- Refactored state database in preparation for binary trie integration (#33816)</br>- Enabled trie node history retention on existing nodes (#33934)</br>- Optimized historical state indexer with batch processing (#33640)</br>- Fixed potential deadlock in txlookup (#34039)</br>- Added new RLP APIs (#34052, #34048)</br>- Fix dir.Sync() failure in freezer on Windows (#34115)</br></br>### Networking</br>- Avoid duplicate connections by skipping simultaneous inbound/outbound dials (#33198)</br>- Fixed session key mismatch by using consistent remote address handling in discv5 tests (#34031)</br>- Added DNS hostname resolution for bootstrap nodes (#34101)</br></br>### RPC</br>- Fixed state corruption issue in `debug_executionWitness`; deprecated `debug_executionWitnessByHash` (#33931)</br>- Added MaxUsedGas field to `eth_simulateV1` response (#32789)</br>- Fixed gas cap handling in `eth_simulateV1` (#33952)</br>- Fixed nonce revert edge case during contract creation in tracer (#33978)</br>- Fixed `eth_createAccessList` to return an empty list instead of null for storage keys (#33976)</br>- `eth_getFilterLogs` now returns an error if the requested chain segment has been pruned (#33823)</br>- Fixed slot number encoding in RPC responses (#34005)</br>- Enforce RPC call limits for `eth_simulateV1` (#34616)</br>- Enforce storage slot limits for proofs in `eth_getProof` (#34617)</br></br>### Observability</br>- Various OpenTelemetry fixes (#33927, #33955)</br>- Added OpenTelemetry support for payload building (#33773)</br></br>### Build</br>- Fixed build issues on FreeBSD (#34008)</br></br>For a full rundown of the changes please consult the Geth [1.17.2](https://github.com/ethereum/go-ethereum/milestone/199?closed=1) release milestone.</br></br>---</br></br>As with all our previous releases, you can find the:</br></br>- Pre-built binaries for all platforms on our [downloads page](https://geth.ethereum.org/downloads/).</br>- Docker images published under [`ethereum/client-go`](https://hub.docker.com/r/ethereum/client-go) (use "stable" tag).</br>- Ubuntu packages in our [Launchpad PPA repository](https://launchpad.net/~ethereum/+archive/ubuntu/ethereum).</br>- macOS packages in our [Homebrew Tap repository](https://github.com/ethereum/homebrew-ethereum).</br></td>
     </tr>
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2026-03-30 16:55:02.849128 UTC</td>
+      <td>2026-03-31 00:55:02.985196 UTC</td>
       <td>2.2.0</td>
       <td>3.0.2</td>
       <td>3.0.2</td>
@@ -100,7 +100,7 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2026-03-30 16:55:03.015537 UTC</td>
+      <td>2026-03-31 00:55:03.169771 UTC</td>
       <td>0.18.1</td>
       <td>0.21.4</td>
       <td>0.21.4</td>
@@ -111,7 +111,7 @@
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2026-03-30 16:55:03.192885 UTC</td>
+      <td>2026-03-31 00:55:03.354007 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2026-03-30 16:55:03.467308 UTC</td>
+      <td>2026-03-31 00:55:03.631153 UTC</td>
       <td>1.8.1</td>
       <td>3.1.2</td>
       <td>3.1.2</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2026-03-30 16:55:03.639460 UTC</td>
+      <td>2026-03-31 00:55:03.818067 UTC</td>
       <td>23.1.0</td>
       <td>29.0.0</td>
       <td>29.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2026-03-30 16:55:03.804071 UTC</td>
+      <td>2026-03-31 00:55:03.969681 UTC</td>
       <td>6.7.1</td>
       <td>16.5.6</td>
       <td>16.5.6</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2026-03-30 16:55:03.979300 UTC</td>
+      <td>2026-03-31 00:55:04.139977 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
