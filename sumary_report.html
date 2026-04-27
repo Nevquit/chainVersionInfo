@@ -56,7 +56,7 @@
     <tr>
       <th>1</th>
       <td>bitcoin</td>
-      <td>2026-04-26 16:55:02.338472 UTC</td>
+      <td>2026-04-27 00:55:02.320979 UTC</td>
       <td>22.0</td>
       <td>31.0</td>
       <td>31.0</td>
@@ -67,7 +67,7 @@
     <tr>
       <th>2</th>
       <td>dogecoin</td>
-      <td>2026-04-26 16:55:02.544301 UTC</td>
+      <td>2026-04-27 00:55:02.504624 UTC</td>
       <td>1.14.4</td>
       <td>1.14.9</td>
       <td>1.14.9</td>
@@ -78,7 +78,7 @@
     <tr>
       <th>3</th>
       <td>geth</td>
-      <td>2026-04-26 16:55:02.719208 UTC</td>
+      <td>2026-04-27 00:55:02.672308 UTC</td>
       <td>1.10.8</td>
       <td>1.17.2</td>
       <td>1.17.2</td>
@@ -89,7 +89,7 @@
     <tr>
       <th>4</th>
       <td>gwan</td>
-      <td>2026-04-26 16:55:02.895107 UTC</td>
+      <td>2026-04-27 00:55:02.847885 UTC</td>
       <td>2.2.0</td>
       <td>3.0.2</td>
       <td>3.0.2</td>
@@ -100,18 +100,18 @@
     <tr>
       <th>5</th>
       <td>litecoin</td>
-      <td>2026-04-26 16:55:03.068744 UTC</td>
+      <td>2026-04-27 00:55:03.029627 UTC</td>
       <td>0.18.1</td>
       <td>0.21.5.4</td>
       <td>0.21.5.4</td>
-      <td>Node version has update</td>
+      <td>Version Behind</td>
       <td>2026-04-26T15:13:05Z</td>
       <td>0.21.5.4 Release Notes</br>====================</br></br>Litecoin Core version 0.21.5.4 is now available from:</br></br> &lt;https://download.litecoin.org/litecoin-0.21.5.4/&gt;.</br></br>This release includes important security updates. All node operators and wallet users are strongly encouraged to upgrade ASAP.</br></br>Please report bugs using the issue tracker at GitHub:</br></br>  &lt;https://github.com/litecoin-project/litecoin/issues&gt;</br></br>Notable changes</br>===============</br></br>Important Security Updates</br>--------------------------</br></br>This release contains fixes for the following security issues:</br></br>- `e7cbf1d`: Belt-and-suspenders input commitment and public key checks on MWEB inputs, providing additional defense-in-depth</br>during MWEB transaction validation.</br>- `1dcbf3f`: MWEB consensus fix addressing an input validation issue that could allow the MWEB kernel sum to become unbalanced.</br>This corrects MWEB input/output accounting going forward and is a required upgrade for all node operators, miners, and wallet users.</br>- `42e7071`: Prevent kernel fee overflow during MWEB transaction validation.</br>- `742ee94`: Erase block data for mutated blocks to avoid miner DoS</br>- `f423a84`: Miners no longer include MWEB transactions when the input and output commitments in the block would sum to zero.</br></br>MWEB stability and durability fixes</br>-----------------------------------</br></br>- `23e5eac`: fix data corruption issue on PMMR rewind</br>- `bf25a7c`, `3110a7e`: improve file write durability for MMRs</br></br>Wallet</br>------</br></br>- `eae9e47`: add MWEB view keys to `dumpwallet` output</br>- `3c3aedb`, `c882663`: fix wallet with Boost library &gt;= 1.78</br>- `1cc1cee`: wallet: quick pegout accounting fix</br></br>RPC and indexing</br>----------------</br></br>- `455aff8`: allow `getblocktemplate` for test chains when unconnected or in IBD</br>- `eb7f68a`: fix an issue where transaction indexes of a block could be lost when `WriteBlock` failed after `Commit`</br></br>Build changes</br>-------------</br></br>- `6fc0530`: fix debug build conflict with logger symbol</br>- `58f89ba`: add missing `&lt;cstdint&gt;` include</br>- `dcc7bc5`: convert CRLF (Windows) line endings to LF (Linux) line endings</br></br>Test related fixes</br>------------------</br></br>- `0c59e99`: functional test framework fix</br>- `7eb181b`: functional test demonstrating handling of mutated blocks</br></br>Misc</br>----</br></br>- `0f5f7d5`: fix broken Transifex link from README</br></br>Hashes for verification</br>------------------</br></br>These are the SHA-256 hashes of the released files:</br>```</br>f0213853817d0ba7854aa718dc43bf991aba80a7db8b47969ae979dc083acce2  litecoin-0.21.5.4-aarch64-linux-gnu.tar.gz</br>b8677c329d66306c727067a3a26bd6f93944ffab84a36b12f35dbeb14ee1f6f8  litecoin-0.21.5.4-arm-linux-gnueabihf.tar.gz</br>f4f61ef20f91f4bc9ca3d24ebb912a4e5624be8ad4319b8f954ac281c5062833  litecoin-0.21.5.4-riscv64-linux-gnu.tar.gz</br>91621306bafcadeebc266c264c95576536b5b2658e0ba03b05262ed4b9ab611f  litecoin-0.21.5.4-x86_64-linux-gnu.tar.gz</br>c6d21013c41d255e0dd2b2bd2f69395ef7d1ba3e1cfcad41cbf39a4f97078526  litecoin-osx-signed.dmg</br>023b0ff0cdec7d440fb62d95aae4bf7b7c892242372d33de10e2f889c94c15ad  litecoin-0.21.5.4-win64-setup.exe</br>```</br></br>Credits</br>=======</br></br>Thanks to everyone who directly contributed to this release:</br></br>- [The Bitcoin Core Developers](https://github.com/bitcoin/bitcoin/)</br>- [David Burkett](https://github.com/DavidBurkett/)</br>- [Hector Chu](https://github.com/hectorchu)</br>- [Loshan](https://github.com/losh11)</br>- [Luke E. McKay](https://github.com/luke-mckay)</br>- [Soren Stoutner](https://github.com/sorenstoutner)</br>- [Jorge Maldonado Ventura](https://github.com/jorgesumle)</br>- [yujianxian](https://github.com/yujianxian)</br>- [AlexRadik](https://github.com/AleksandrRadik)</br></td>
     </tr>
     <tr>
       <th>6</th>
       <td>polkadot</td>
-      <td>2026-04-26 16:55:03.259795 UTC</td>
+      <td>2026-04-27 00:55:03.208481 UTC</td>
       <td>0.9.16</td>
       <td>1.0.0</td>
       <td>1.0.0</td>
@@ -122,7 +122,7 @@
     <tr>
       <th>7</th>
       <td>xrp</td>
-      <td>2026-04-26 16:55:03.564804 UTC</td>
+      <td>2026-04-27 00:55:03.558308 UTC</td>
       <td>1.8.1</td>
       <td>3.1.2</td>
       <td>3.1.2</td>
@@ -133,7 +133,7 @@
     <tr>
       <th>8</th>
       <td>bch</td>
-      <td>2026-04-26 16:55:03.754950 UTC</td>
+      <td>2026-04-27 00:55:03.734369 UTC</td>
       <td>23.1.0</td>
       <td>29.0.0</td>
       <td>29.0.0</td>
@@ -144,7 +144,7 @@
     <tr>
       <th>9</th>
       <td>@polkadot/api</td>
-      <td>2026-04-26 16:55:03.924813 UTC</td>
+      <td>2026-04-27 00:55:03.909862 UTC</td>
       <td>6.7.1</td>
       <td>16.5.6</td>
       <td>16.5.6</td>
@@ -155,7 +155,7 @@
     <tr>
       <th>10</th>
       <td>@substrate/txwrapper-polkadot</td>
-      <td>2026-04-26 16:55:04.096633 UTC</td>
+      <td>2026-04-27 00:55:04.081191 UTC</td>
       <td>1.2.19</td>
       <td>7.5.3</td>
       <td>7.5.3</td>
